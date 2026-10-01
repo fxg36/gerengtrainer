@@ -1,0 +1,48 @@
+{
+  "dictionary": {
+    "source": "Wiktionary via Kaikki raw Wiktextract",
+    "url": "https://kaikki.org/dictionary/raw-wiktextract-data.jsonl.gz",
+    "retrievedAt": "2026-10-01T09:04:27Z",
+    "lastModified": "Mon, 28 Sep 2026 15:20:07 GMT",
+    "etag": "\"6aba85a7-b1aec2df\"",
+    "records": 780385,
+    "license": "CC-BY-SA-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "attribution": "Wiktionary contributors. Source page URLs are stored per meaning. Extracted by Kaikki/Wiktextract. German glosses, selection and thematic mapping edited for Wortnah; draft, not human approved.",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "classification": {
+    "method": "assistant-authored topic assignments from a fixed taxonomy; source metadata preserved",
+    "status": "draft"
+  },
+  "grammar": {
+    "method": "assistant-authored structured task drafts; no paid API calls",
+    "humanApproved": 0
+  },
+  "catalogue": {
+    "schemaVersion": 2,
+    "count": 53587,
+    "words": 7242,
+    "phrases": 115,
+    "files": [
+      "/dictionary/part-00.json",
+      "/dictionary/part-01.json",
+      "/dictionary/part-02.json",
+      "/dictionary/part-03.json",
+      "/dictionary/part-04.json",
+      "/dictionary/part-05.json",
+      "/dictionary/part-06.json",
+      "/dictionary/part-07.json"
+    ],
+    "status": "compact-source-candidates",
+    "selection": {
+      "minObservedWordZipf": 3.8,
+      "phrases": "explicit-list-and-training-vocabulary",
+      "grouping": "normalized-headword",
+      "senses": "distinct-source-senses-preserved"
+    },
+    "frequencySource": "wordfreq 3.1.1; data through approximately 2021",
+    "source": "https://kaikki.org/dictionary/rawdata.html",
+    "license": "CC-BY-SA-4.0"
+  }
+}

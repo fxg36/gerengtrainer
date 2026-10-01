@@ -1,0 +1,70 @@
+# Deliberate everyday additions to phrases already in vocabulary.txt.
+# Inclusion is an editorial draft, not a measured phrase frequency.
+get up
+wake up
+sit down
+stand up
+go out
+come back
+go back
+come in
+get in
+get out
+get on
+get off
+put on
+take off
+turn on
+turn off
+pick up
+put down
+look for
+look at
+give back
+call back
+pay back
+fill in
+fill out
+check in
+check out
+set up
+show up
+grow up
+break down
+calm down
+clean up
+tidy up
+throw away
+put away
+take away
+eat out
+hang out
+point out
+sort out
+try on
+try out
+write down
+slow down
+hurry up
+hold on
+take care
+take care of
+make sure
+of course
+in fact
+for example
+as well
+as soon as
+even though
+at first
+at last
+all right
+right away
+more or less
+up to date
+in case
+on time
+in time
+as usual
+no problem
+you're welcome

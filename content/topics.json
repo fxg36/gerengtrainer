@@ -1,0 +1,15 @@
+[
+ {"id":"home","title":"Zuhause & Wohnen","description":"Von der Schublade bis zum Türscharnier.","icon":"House","color":"sage"},
+ {"id":"repair","title":"Handwerk & Materialien","description":"Reparieren, einrichten und anpacken.","icon":"Wrench","color":"sand"},
+ {"id":"nature","title":"Natur & Pflanzen","description":"Draußen die richtigen Worte finden.","icon":"Leaf","color":"green"},
+ {"id":"weather","title":"Wetter & Landschaft","description":"Von Nieselregen bis zur Bergspitze.","icon":"CloudSun","color":"blue"},
+ {"id":"body","title":"Körper & Gesundheit","description":"Beschwerden und Körperteile benennen.","icon":"HeartPulse","color":"rose"},
+ {"id":"clothes","title":"Kleidung & Stoffe","description":"Was du trägst und woraus es besteht.","icon":"Shirt","color":"lilac"},
+ {"id":"food","title":"Essen & Kochen","description":"Am Herd, am Tisch und im Supermarkt.","icon":"CookingPot","color":"peach"},
+ {"id":"road","title":"Auto & Unterwegs","description":"Sicher durch Verkehr und Werkstatt.","icon":"CarFront","color":"blue"},
+ {"id":"travel","title":"Reisen & Entdecken","description":"Entspannt ankommen und Neues erleben.","icon":"Plane","color":"sand"},
+ {"id":"people","title":"Menschen & Gefühle","description":"Beziehungen und Gefühle ausdrücken.","icon":"Users","color":"rose"},
+ {"id":"work","title":"Arbeit & Beruf","description":"Im Gespräch, im Team und im Alltag.","icon":"BriefcaseBusiness","color":"lilac"},
+ {"id":"phrases","title":"Wendungen & Gespräche","description":"Kleine Ausdrücke, die viel verändern.","icon":"MessagesSquare","color":"sage"},
+ {"id":"grammar","title":"Praktische Grammatik","description":"Natürlich formulieren, Schritt für Schritt.","icon":"SpellCheck","color":"peach"}
+]

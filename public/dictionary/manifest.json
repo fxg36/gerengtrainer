@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "count": 53587,
+  "words": 7242,
+  "phrases": 115,
+  "files": [
+    "/dictionary/part-00.json",
+    "/dictionary/part-01.json",
+    "/dictionary/part-02.json",
+    "/dictionary/part-03.json",
+    "/dictionary/part-04.json",
+    "/dictionary/part-05.json",
+    "/dictionary/part-06.json",
+    "/dictionary/part-07.json"
+  ],
+  "status": "compact-source-candidates",
+  "selection": {
+    "minObservedWordZipf": 3.8,
+    "phrases": "explicit-list-and-training-vocabulary",
+    "grouping": "normalized-headword",
+    "senses": "distinct-source-senses-preserved"
+  },
+  "frequencySource": "wordfreq 3.1.1; data through approximately 2021",
+  "source": "https://kaikki.org/dictionary/rawdata.html",
+  "license": "CC-BY-SA-4.0"
+}

@@ -1,0 +1,6154 @@
+[
+  {
+    "id": "wkt-535d9e6308fbb291941e",
+    "word": "hinge",
+    "pos": "noun",
+    "gloss": "A jointed or flexible device that allows the pivoting of a door etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-fb0a134012e2c234edee",
+    "word": "outlet",
+    "pos": "noun",
+    "gloss": "A wall-mounted socket connected to an electrical power supply, at which current can be taken to run electrical devices.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "I had to move the cupboard to get to the power outlet."
+  },
+  {
+    "id": "wkt-7a1fcc889ca069229f48",
+    "word": "porcelain",
+    "pos": "noun",
+    "gloss": "A hard white translucent ceramic, originally made by firing kaolin, quartz, and feldspar at high temperatures but now also inclusive of similar artificial materials; also often (figurative) such a material as a symbol of the fragility, elegance, etc. traditionally associated with porcelain goods.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "Tableware and toilets are both made of porcelain."
+  },
+  {
+    "id": "wkt-90451c03ec08bbf45cb4",
+    "word": "china",
+    "pos": "noun",
+    "gloss": "Synonym of porcelain, a hard white translucent ceramic made from kaolin, now (chiefly US) sometimes distinguished in reference to tableware as fine or good china.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "It's a china doll."
+  },
+  {
+    "id": "wkt-6efebb9f259449a3d0ce",
+    "word": "shelf",
+    "pos": "noun",
+    "gloss": "A flat, rigid structure, fixed at right angles to a wall or forming a part of a cabinet, desk, etc., and used to display, store, or support objects.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "We keep the old newspapers on the bottom shelf of the cupboard, and our photos on the top shelf."
+  },
+  {
+    "id": "wkt-216f99ad347d5331d678",
+    "word": "drawer",
+    "pos": "noun",
+    "gloss": "An open-topped box that can be slid in and out of the cabinet that contains it, used for storing clothing or other articles.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-17731599304869e8784f",
+    "word": "cupboard",
+    "pos": "noun",
+    "gloss": "A cabinet, closet, or other piece of furniture with shelves intended for storing cookware, dishware, or food; similar cabinets or closets used for storing other items.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Put the cups back into the cupboard."
+  },
+  {
+    "id": "wkt-fb9dff25bd8e36f7301f",
+    "word": "wardrobe",
+    "pos": "noun",
+    "gloss": "A movable cupboard or cabinet designed for storing clothes, particularly as a large piece of bedroom furniture.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-d55b1b5ad14d8edfe15f",
+    "word": "ceiling",
+    "pos": "noun",
+    "gloss": "The overhead closure of a room.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The dining room had an ornate ceiling."
+  },
+  {
+    "id": "wkt-efef9d3c17af155f16b6",
+    "word": "floor",
+    "pos": "noun",
+    "gloss": "The interior bottom or surface of a house or building; the supporting surface of a room.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": "The room has a wooden floor."
+  },
+  {
+    "id": "wkt-c24deb7d6e8f0f596c9f",
+    "word": "curtain",
+    "pos": "noun",
+    "gloss": "A piece of cloth covering a window, bed, etc. to offer privacy and keep out light.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "business",
+      "fabrics",
+      "furniture",
+      "lifestyle",
+      "manufacturing",
+      "textiles"
+    ],
+    "example": "He drew the curtains at 11:00pm before falling asleep."
+  },
+  {
+    "id": "wkt-3222c11c45f8745b27c0",
+    "word": "carpet",
+    "pos": "noun",
+    "gloss": "A fabric used as a complete floor covering.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-a857a3f43610fdcf64be",
+    "word": "rug",
+    "pos": "noun",
+    "gloss": "A partial covering for a floor.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-39ad24d280fd06dbfb39",
+    "word": "cushion",
+    "pos": "noun",
+    "gloss": "A soft mass of material stuffed into a cloth bag, used for comfort or support.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-005df5ebeb22a683dcb7",
+    "word": "pillow",
+    "pos": "noun",
+    "gloss": "A soft cushion used to support the head in bed.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-adcf9e951b136877eb00",
+    "word": "blanket",
+    "pos": "noun",
+    "gloss": "A heavy, loosely woven fabric, usually large and woollen, used for warmth while sleeping or resting.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The baby was cold, so his mother put a blanket over him."
+  },
+  {
+    "id": "wkt-77b0b3d4a78fde65bdb2",
+    "word": "duvet",
+    "pos": "noun",
+    "gloss": "A quilt or usually flat cloth bag with a filling (traditionally down) and usually an additional washable cover, used instead of blankets; often called a comforter or quilt, especially in US English.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "Ireland",
+      "New-Zealand",
+      "UK"
+    ],
+    "topics": [],
+    "example": "He pulled the thick duvet over his head to block out the morning light."
+  },
+  {
+    "id": "wkt-d7d96830f71a7be477b9",
+    "word": "mattress",
+    "pos": "noun",
+    "gloss": "A pad on which a person can recline and sleep, usually having an inner section of coiled springs covered with foam or other cushioning material then enclosed with cloth fabric.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-567bbbe8dbff13650b28",
+    "word": "pillowcase",
+    "pos": "noun",
+    "gloss": "A washable, easily removable cloth cover for pillows.",
+    "de": [
+      "Kopfkissenbezug"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-19e1a4adf6df06981f29",
+    "word": "towel",
+    "pos": "noun",
+    "gloss": "A cloth used for wiping, especially one used for drying anything wet, such as a person after a bath.",
+    "de": [
+      "Handtuch"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "He needed a towel for wiping the slippery floor."
+  },
+  {
+    "id": "wkt-773d73b2a71a7176a6a0",
+    "word": "faucet",
+    "pos": "noun",
+    "gloss": "An exposed plumbing fitting; a tap or spigot; a regulator for controlling the flow of a liquid from a reservoir.",
+    "de": [
+      "Armatur",
+      "Auslaufventil",
+      "Hahn",
+      "Kran",
+      "Mischbatterie",
+      "Spund",
+      "Zapfen",
+      "Wasserhahn"
+    ],
+    "tags": [
+      "Canada",
+      "US"
+    ],
+    "topics": [],
+    "example": "The rain ceased as if a faucet had been turned off."
+  },
+  {
+    "id": "wkt-ea945b7fda12482bfbbf",
+    "word": "sink",
+    "pos": "noun",
+    "gloss": "A basin used for holding water for washing.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-5e224d44700ddfac0aba",
+    "word": "bathtub",
+    "pos": "noun",
+    "gloss": "A large container for holding water in which a person may bathe (take a bath).",
+    "de": [
+      "Badewanne"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "I had a long, leisurely soak in the bathtub."
+  },
+  {
+    "id": "wkt-58731a2d17dcb43d73f0",
+    "word": "shower",
+    "pos": "noun",
+    "gloss": "A device for bathing by which water is made to fall on the body from a height, either from a tank or by the action of a pump.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-ed5a4cbe83120234f6e9",
+    "word": "drain",
+    "pos": "noun",
+    "gloss": "A conduit allowing liquid to flow out of an otherwise contained volume; a plughole (UK)",
+    "de": [],
+    "tags": [
+      "Canada",
+      "US"
+    ],
+    "topics": [],
+    "example": "The drain in the kitchen sink is clogged."
+  },
+  {
+    "id": "wkt-95164e07e917dcb70cd2",
+    "word": "mirror",
+    "pos": "noun",
+    "gloss": "A smooth surface, usually made of glass with reflective material painted on the underside, that reflects light so as to give an image of what is in front of it.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "I had a look in the mirror to see if the blood had come off my face."
+  },
+  {
+    "id": "wkt-e4b7f3e585afdc115203",
+    "word": "doormat",
+    "pos": "noun",
+    "gloss": "A coarse mat at the entrance to a house, upon which one wipes one's shoes.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Wipe your shoes on the doormat before you start plodding around in the house."
+  },
+  {
+    "id": "wkt-99e2781551897a7e970c",
+    "word": "doorbell",
+    "pos": "noun",
+    "gloss": "A bell, buzzer, or chime device mounted on or adjacent to a door's exterior, meant to be rung by a visitor to announce one's presence.",
+    "de": [
+      "Türklingel",
+      "Klingel",
+      "Türglocke",
+      "Hausglocke"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-ef61e4e8538a5dca9c94",
+    "word": "threshold",
+    "pos": "noun",
+    "gloss": "The lowermost part of a doorway that one crosses to enter; a sill.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Near-synonym: doorstep"
+  },
+  {
+    "id": "wkt-6e914a4ce14c70651b3b",
+    "word": "staircase",
+    "pos": "noun",
+    "gloss": "A flight of stairs; a stairway.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-7f540898e903aa033862",
+    "word": "railing",
+    "pos": "noun",
+    "gloss": "A fence or barrier consisting of one or more horizontal rails and vertical supports.",
+    "de": [
+      "Geländer"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "During the war, everyone's railings were taken away to make bombers."
+  },
+  {
+    "id": "wkt-1db08934a5808830a3fb",
+    "word": "attic",
+    "pos": "noun",
+    "gloss": "The space, often unfinished and with sloped walls, directly below the roof in the uppermost part of a house or other building, generally used for storage or habitation.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "We went up to the attic to look for the boxes containing our childhood keepsakes."
+  },
+  {
+    "id": "wkt-1a0cf5c22c1e40509e53",
+    "word": "basement",
+    "pos": "noun",
+    "gloss": "A floor of a building below ground level.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "architecture"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-2fda0b5880e3739bf3e5",
+    "word": "balcony",
+    "pos": "noun",
+    "gloss": "An accessible structure extending from a building, especially outside a window.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "architecture"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-a04673f2ebdbbc177963",
+    "word": "chimney",
+    "pos": "noun",
+    "gloss": "A vertical tube or hollow column used to emit environmentally polluting gaseous and solid matter (including but not limited to by-products of burning carbon- or hydrocarbon-based fuels); a flue.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-9add42bc577de4ab0847",
+    "word": "fireplace",
+    "pos": "noun",
+    "gloss": "An open hearth for holding a fire at the base of a chimney.",
+    "de": [
+      "Kamin",
+      "Feuerstelle",
+      "Herd"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-9f4cf3cba2b1e82c7e08",
+    "word": "radiator",
+    "pos": "noun",
+    "gloss": "A finned metal fixture that carries hot water or steam in order to heat a room.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The radiator kept the apartment warm during winter."
+  },
+  {
+    "id": "wkt-bb3c36b8652b92417dda",
+    "word": "thermostat",
+    "pos": "noun",
+    "gloss": "A device that automatically responds to changes in temperature by activating a heating or cooling system to maintain the temperature at a desired setting.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-84e23d624c2e53fa578d",
+    "word": "vacuum cleaner",
+    "pos": "noun",
+    "gloss": "A device that uses suction, and often agitation, in order to remove dirt and other debris from carpets and hard floors.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-cfa26fd17b389b0bc45a",
+    "word": "broom",
+    "pos": "noun",
+    "gloss": "A domestic utensil with fibers bound together at the end of a long handle, used for sweeping.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": "Meronyms: broomstick (handle), bavin (head)"
+  },
+  {
+    "id": "wkt-4d80c8fbd76738faa2e9",
+    "word": "dustpan",
+    "pos": "noun",
+    "gloss": "A flat scoop with a handle, into which dust, dirt and other material is conveyed with a brush or broom.",
+    "de": [
+      "Kehrblech",
+      "Kehrschaufel",
+      "Kutterschaufel"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-a92542ff5541751f5245",
+    "word": "mop",
+    "pos": "noun",
+    "gloss": "An implement for washing floors or similar, made of a piece of cloth, or a collection of thrums, or coarse yarn, fastened to a handle.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-c414592860be27169800",
+    "word": "detergent",
+    "pos": "noun",
+    "gloss": "Any non-soap cleaning agent, especially a synthetic surfactant.",
+    "de": [
+      "Reinigungsmittel"
+    ],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "Near-synonym: cleaner (sometimes coordinate)"
+  },
+  {
+    "id": "wkt-ae481a093cec83330587",
+    "word": "laundry",
+    "pos": "noun",
+    "gloss": "A place or room where laundering is done - including, by extension, other forms of laundering than clothes washing.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-2a69239a2d48f34fc21b",
+    "word": "clothespin",
+    "pos": "noun",
+    "gloss": "A clip or fastener used to secure garments to a clothesline while drying, and sometimes for other applications requiring holding or pinching.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "US"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-f84830be2046781c00f6",
+    "word": "furniture",
+    "pos": "noun",
+    "gloss": "Large movable item(s), usually in a room, which enhance(s) the room's characteristics, functionally or decoratively.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "The woman does not even have one stick of furniture moved in yet."
+  },
+  {
+    "id": "wkt-d8a85c63b050bcbfd90c",
+    "word": "landlord",
+    "pos": "noun",
+    "gloss": "A person that leases real property; a lessor.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-eb588ec395bdbfe55475",
+    "word": "tenant",
+    "pos": "noun",
+    "gloss": "One who holds a lease (a tenancy).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-f9972f6d2927e1f62a5b",
+    "word": "rent",
+    "pos": "noun",
+    "gloss": "A payment made by a tenant at intervals in order to lease a property.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "I am asking £300 a week rent."
+  },
+  {
+    "id": "wkt-8bc1b23aeebb9fa7ed85",
+    "word": "screw",
+    "pos": "noun",
+    "gloss": "A (usually) metal fastener consisting of a partially or completely threaded shank, sometimes with a threaded point, and a head used to both hold the top material and to drive the screw either directly into a soft material or into a prepared hole.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-476de38765a5e8b739e2",
+    "word": "screwdriver",
+    "pos": "noun",
+    "gloss": "A hand tool or power tool which engages with the head of a screw and allows torque to be applied to turn the screw, thus driving it in or loosening it.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-01a5b06d43fb0a9def78",
+    "word": "nail",
+    "pos": "noun",
+    "gloss": "A spike-shaped metal fastener used for joining wood or similar materials. The nail is generally driven through two or more layers of material by means of impacts from a hammer or other device. It is then held in place by friction.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Yesterday my shirt got torn after I caught it on a nail."
+  },
+  {
+    "id": "wkt-0c14f48d253e1eddfd10",
+    "word": "hammer",
+    "pos": "noun",
+    "gloss": "A tool with a heavy head and a handle used for pounding.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Bobby used a hammer and nails to fix the two planks together."
+  },
+  {
+    "id": "wkt-e68476dd1b719e1be160",
+    "word": "pliers",
+    "pos": "noun",
+    "gloss": "A pincer-like gripping tool that multiplies the strength of the user's hand, often used for bending things.",
+    "de": [
+      "Zange",
+      "Kneifzange"
+    ],
+    "tags": [
+      "plural",
+      "plural-only"
+    ],
+    "topics": [],
+    "example": "I need a pair of pliers to get a good grip on that broken screw."
+  },
+  {
+    "id": "wkt-4a9e31b10880dea70f24",
+    "word": "wrench",
+    "pos": "noun",
+    "gloss": "A hand tool for making rotational adjustments, such as fitting nuts and bolts, or fitting pipes.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "Philippines",
+      "US"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-515a30b6f8cb7a2339d3",
+    "word": "drill",
+    "pos": "noun",
+    "gloss": "A tool or machine used to remove material so as to create a hole, typically by plunging a rotating cutting bit into a stationary workpiece.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Wear safety glasses when operating an electric drill."
+  },
+  {
+    "id": "wkt-962f77334bb05f8efc6d",
+    "word": "saw",
+    "pos": "noun",
+    "gloss": "Such a tool with a toothed blade.",
+    "de": [],
+    "tags": [
+      "usually"
+    ],
+    "topics": [],
+    "example": "Meronyms: sawtooth < sawblade"
+  },
+  {
+    "id": "wkt-15b9bf639c6b13dee922",
+    "word": "ladder",
+    "pos": "noun",
+    "gloss": "A frame, usually portable, of wood, metal, or rope, used for ascent and descent, consisting of two side pieces to which are fastened rungs (cross strips or rounds acting as steps).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-d59a9c217f392c590ccf",
+    "word": "tape measure",
+    "pos": "noun",
+    "gloss": "A graduated flexible ribbon used for measuring lengths.",
+    "de": [
+      "Maßband"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-adb0c690a982bd23d06b",
+    "word": "spirit level",
+    "pos": "noun",
+    "gloss": "A tool employing a chamber with a colored liquid (usually alcohol, hence spirit) and an air bubble, used to determine a horizontal or vertical reference line.",
+    "de": [
+      "Wasserwaage"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-80b067072b0878b40611",
+    "word": "sandpaper",
+    "pos": "noun",
+    "gloss": "Strong paper coated with (traditionally) sand or (today) manufactured aluminum oxide, silicon carbide, or other abrasive material, used for smoothing and polishing.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "Near-synonym: emery paper"
+  },
+  {
+    "id": "wkt-559106ced4bb057028bc",
+    "word": "paintbrush",
+    "pos": "noun",
+    "gloss": "A thin brush for applying paint.",
+    "de": [
+      "Pinsel",
+      "Farbpinsel",
+      "Malerpinsel"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-b4a389191eae0a3b6f2c",
+    "word": "roller",
+    "pos": "noun",
+    "gloss": "A cylindrical tool for applying paint or ink.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "heading"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-14f1eaf3675b108a35a3",
+    "word": "varnish",
+    "pos": "noun",
+    "gloss": "A clear or translucent liquid coating composed of resin dissolved in a solvent, which dries by evaporation to form a hard, protective, and typically glossy finish.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-efe576db7651d570ed8f",
+    "word": "glue",
+    "pos": "noun",
+    "gloss": "A hard gelatin made by boiling bones and hides, used in solution as an adhesive; or any sticky adhesive substance.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "Near-synonyms: adhesive, cement"
+  },
+  {
+    "id": "wkt-b4215500270284ad5483",
+    "word": "adhesive tape",
+    "pos": "noun",
+    "gloss": "Tape with an adhesive film on one side, used to attach materials to something.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-7f18e6d9b8ae0c116787",
+    "word": "bolt",
+    "pos": "noun",
+    "gloss": "A (usually) metal fastener consisting of a cylindrical body that is threaded, with a larger head on one end. It can be inserted into an unthreaded hole up to the head, with a nut then threaded on the other end; a heavy machine screw.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-5a1127801655e0581b6c",
+    "word": "nut",
+    "pos": "noun",
+    "gloss": "A piece of hardware, typically metal and typically hexagonal or square in shape, with a hole through it having internal screw threads, intended to be screwed onto a threaded bolt or other threaded shaft.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-41bb76c339e7d7b0f347",
+    "word": "washer",
+    "pos": "noun",
+    "gloss": "A flat piece of material, often of metal and often an annulus, placed beneath a nut or at some joint, to distribute pressure, alleviate friction, provide directionally differentiated friction (e.g. making the nut turn counter-clockwise only with difficulty), or prevent leakage.",
+    "de": [
+      "Scheibe",
+      "Unterlegscheibe"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-9478ebf2644e637994cb",
+    "word": "wire",
+    "pos": "noun",
+    "gloss": "Metal formed into a thin, even thread, now usually by being drawn through a hole in a steel die.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "Holonyms: cable; wire rope; wiring harness; wire wool"
+  },
+  {
+    "id": "wkt-1ec0e24a96c4a59fa5a4",
+    "word": "cable",
+    "pos": "noun",
+    "gloss": "An assembly of two or more wires, used for electrical power or data circuits; one or more and/or the whole may be insulated.",
+    "de": [],
+    "tags": [
+      "material"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-d2da799cb34d16d94ccf",
+    "word": "plug",
+    "pos": "noun",
+    "gloss": "A pronged connecting device which fits into a mating socket, especially an electrical one.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "business",
+      "electrical-engineering",
+      "electricity",
+      "electromagnetism",
+      "energy",
+      "engineering",
+      "natural-sciences",
+      "physical-sciences",
+      "physics"
+    ],
+    "example": "I pushed the plug back into the electrical socket and the lamp began to glow again."
+  },
+  {
+    "id": "wkt-f102da39413f13925788",
+    "word": "fuse",
+    "pos": "noun",
+    "gloss": "A device to prevent excessive overcurrent from overload or short circuit in an electrical circuit, containing a component that melts and interrupts the current when too high a load is passed through it.",
+    "de": [
+      "Sicherung"
+    ],
+    "tags": [],
+    "topics": [
+      "business",
+      "electrical",
+      "electrical-engineering",
+      "electricity",
+      "electromagnetism",
+      "energy",
+      "engineering",
+      "natural-sciences",
+      "physical-sciences",
+      "physics"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-73bfa964f908b29446a8",
+    "word": "pipe",
+    "pos": "noun",
+    "gloss": "A rigid tube that transports water, steam, or other fluid, as used in plumbing and numerous other applications.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-87194c9f22ef05641cbb",
+    "word": "leak",
+    "pos": "noun",
+    "gloss": "A crack, crevice, fissure, or hole which admits water or other fluid, or lets it escape.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "a leak in a roof"
+  },
+  {
+    "id": "wkt-01f72bfcbf0252d9e18c",
+    "word": "seal",
+    "pos": "noun",
+    "gloss": "A tight closure, secure against leakage.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Close the lid tightly to get a good seal."
+  },
+  {
+    "id": "wkt-2641c22695a1e38796fa",
+    "word": "rust",
+    "pos": "noun",
+    "gloss": "The deteriorated state of iron or steel as a result of moisture and oxidation; it consists mostly of iron(III) oxide (ferric oxide) and iron(II) oxide (ferrous oxide).",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "The rust on my bicycle chain made cycling to work very dangerous."
+  },
+  {
+    "id": "wkt-2f5c0f6aade86386961e",
+    "word": "scratch",
+    "pos": "noun",
+    "gloss": "A disruption, mark or shallow cut on a surface made by scratching.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "I can’t believe there is a scratch in the paint already."
+  },
+  {
+    "id": "wkt-641956cc8538249e0f9c",
+    "word": "dent",
+    "pos": "noun",
+    "gloss": "A shallow deformation in the surface of an object, produced by an impact.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The crash produced a dent in the left side of the car."
+  },
+  {
+    "id": "wkt-e2edc2d91582ec4148f5",
+    "word": "crack",
+    "pos": "noun",
+    "gloss": "The sharp sound made when solid material breaks.",
+    "de": [],
+    "tags": [
+      "countable",
+      "onomatopoeic",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "The crack of the falling branch could be heard for miles."
+  },
+  {
+    "id": "wkt-287ab0e3bdbe2134ab97",
+    "word": "wood",
+    "pos": "noun",
+    "gloss": "The substance making up the central part of the trunk and branches of a tree. Used as a material for construction, to manufacture various items, etc. or as fuel.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "This table is made of wood."
+  },
+  {
+    "id": "wkt-c55d1a676f18fec948cb",
+    "word": "plywood",
+    "pos": "noun",
+    "gloss": "Construction material supplied in sheets, and made of three or more layers of wood veneer glued together, laid up with alternating layers having their grain perpendicular to each other.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "After the hurricane there was a severe regional shortage of plywood, especially exterior plywood."
+  },
+  {
+    "id": "wkt-f5de309dfa210b273f57",
+    "word": "steel",
+    "pos": "noun",
+    "gloss": "An artificial metal produced from iron, harder and more elastic than elemental iron; used figuratively as a symbol of hardness.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-2c2d7c0adb9471ca7383",
+    "word": "copper",
+    "pos": "noun",
+    "gloss": "A reddish-brown metallic chemical element (symbol Cu) with the atomic number 29; also, the metal made up of this element.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [
+      "chemistry",
+      "natural-sciences",
+      "physical-sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-ac31db4192fe0e1ed0ea",
+    "word": "concrete",
+    "pos": "noun",
+    "gloss": "A building material created by mixing cement, water, and aggregate such as gravel and sand.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "Various types of concrete have been used in the construction of this highway."
+  },
+  {
+    "id": "wkt-60bc49222f59b502dc95",
+    "word": "brick",
+    "pos": "noun",
+    "gloss": "A hardened rectangular block of mud, clay etc., used for building.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": "This wall is made of bricks."
+  },
+  {
+    "id": "wkt-3e2197e72126ac8230d2",
+    "word": "tile",
+    "pos": "noun",
+    "gloss": "A regularly-shaped slab of clay or other material, affixed to cover or decorate a surface, as in a roof-tile, glazed tile, stove tile, carpet tile, etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-82c8a79448d14cd4e36b",
+    "word": "tighten",
+    "pos": "verb",
+    "gloss": "To make tighter.",
+    "de": [
+      "anziehen",
+      "straffen"
+    ],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "Please tighten that screw a quarter-turn."
+  },
+  {
+    "id": "wkt-f2b1f64dd4da29ac65e8",
+    "word": "loosen",
+    "pos": "verb",
+    "gloss": "To make loose.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "to loosen a knot; to loosen one's grip / hold on something"
+  },
+  {
+    "id": "wkt-990c394cb1e208cb87fb",
+    "word": "replace",
+    "pos": "verb",
+    "gloss": "To supply or substitute an equivalent with.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "I replaced my car with a newer model."
+  },
+  {
+    "id": "wkt-aa4b9c9e9edb019df671",
+    "word": "repair",
+    "pos": "verb",
+    "gloss": "To restore to good working order, fix, or improve damaged condition; to mend; to remedy.",
+    "de": [],
+    "tags": [
+      "ambitransitive"
+    ],
+    "topics": [],
+    "example": "to repair a house, a road, a shoe, a ship"
+  },
+  {
+    "id": "wkt-d7f3ecfeedf60026a1de",
+    "word": "assemble",
+    "pos": "verb",
+    "gloss": "To put together.",
+    "de": [
+      "zusammensetzen",
+      "versammeln"
+    ],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "He assembled the model ship."
+  },
+  {
+    "id": "wkt-1f7a5a222c9330aeb07a",
+    "word": "measure",
+    "pos": "verb",
+    "gloss": "To ascertain the quantity of a unit of material via calculated comparison with respect to a standard.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "We measured the temperature with a thermometer."
+  },
+  {
+    "id": "wkt-c82ae3546db76accec52",
+    "word": "install",
+    "pos": "verb",
+    "gloss": "To connect, set up or prepare something for use",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-27c2017b5afe0326e250",
+    "word": "unplug",
+    "pos": "verb",
+    "gloss": "To disconnect from a supply, especially an electrical socket.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "To save electricity, I unplug my computer when I am not at home."
+  },
+  {
+    "id": "wkt-db629ea3a7622570c629",
+    "word": "insulation",
+    "pos": "noun",
+    "gloss": "Any of a variety of materials designed to reduce the flow of heat, either from or into a building.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-5ebe76de9cb757a8ce27",
+    "word": "socket",
+    "pos": "noun",
+    "gloss": "An opening into which a plug or other connecting part is designed to fit (e.g. a light bulb socket).",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "business",
+      "electrical-engineering",
+      "electricity",
+      "electromagnetism",
+      "energy",
+      "engineering",
+      "natural-sciences",
+      "physical-sciences",
+      "physics"
+    ],
+    "example": "Near-synonyms: jack, outlet, receptacle, wall socket"
+  },
+  {
+    "id": "wkt-340fe5f4fcb7a5bf79cc",
+    "word": "spruce",
+    "pos": "noun",
+    "gloss": "Any of various large coniferous evergreen trees or shrubs from the genus Picea, found in northern temperate and boreal regions; originally and more fully spruce fir.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-82d8c6f8e0c89e7cf733",
+    "word": "pine",
+    "pos": "noun",
+    "gloss": "Any coniferous tree of the genus Pinus.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "The northern slopes were covered mainly in pine."
+  },
+  {
+    "id": "wkt-72af911f2ae30ee45ac3",
+    "word": "oak",
+    "pos": "noun",
+    "gloss": "A deciduous tree with distinctive deeply lobed leaves, acorns, and notably strong wood, typically of England and northeastern North America, included in genus Quercus.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-98c4cbc1b0c39c2db2fd",
+    "word": "beech",
+    "pos": "noun",
+    "gloss": "A tree of the genus Fagus having a smooth, light grey trunk, oval, pointed leaves, and many branches.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-4a4ee230a88fc956ef1d",
+    "word": "birch",
+    "pos": "noun",
+    "gloss": "Any of various trees of the genus Betula, native to countries in the Northern Hemisphere.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-44c1a92a3a22a7530dde",
+    "word": "willow",
+    "pos": "noun",
+    "gloss": "Any of various deciduous trees or shrubs in the genus Salix, in the willow family Salicaceae, found primarily on moist soils in cooler zones in the northern hemisphere.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-38c9fbff47acd92ad25c",
+    "word": "maple",
+    "pos": "noun",
+    "gloss": "A small tree (Acer campestre), known as the common maple, field maple, or hedge maple, which has palmate leaves with five lobes and winged seeds, and is chiefly native to East Asia, Europe, North Africa, and North America.",
+    "de": [],
+    "tags": [
+      "UK",
+      "countable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-49a8f0f87029ca0d5e29",
+    "word": "chestnut",
+    "pos": "noun",
+    "gloss": "An edible nut (technically a fruit) of the Spanish chestnut or sweet chestnut tree (Castanea sativa); also (chiefly preceded by a descriptive word), a nut from a related shrub or tree; or a similar nut from an unrelated plant.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-a9baccc7b045baf8ecbb",
+    "word": "ash",
+    "pos": "noun",
+    "gloss": "A shade tree of the genus Fraxinus.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "The ash trees are dying off due to emerald ash borer."
+  },
+  {
+    "id": "wkt-aa66c023f74368c127c7",
+    "word": "fir",
+    "pos": "noun",
+    "gloss": "A conifer of the genus Abies.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-2b9c9b8c93c64222c0de",
+    "word": "trunk",
+    "pos": "noun",
+    "gloss": "The usually single, more or less upright part of a tree, between the roots and the branches.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "biology",
+      "heading",
+      "natural-sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-d50cdf46b0fb23d3cea3",
+    "word": "bark",
+    "pos": "noun",
+    "gloss": "The exterior covering of the trunk and branches of a tree or of various other woody plants.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-af7c6ee612c6ff793021",
+    "word": "branch",
+    "pos": "noun",
+    "gloss": "The woody part of a tree arising from the trunk and usually dividing.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-9e9a60341ab4bf28dd6e",
+    "word": "twig",
+    "pos": "noun",
+    "gloss": "A small thin branch of a tree or bush.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "They used twigs and leaves as a base to start the fire."
+  },
+  {
+    "id": "wkt-93d3146d54ae81a203ae",
+    "word": "root",
+    "pos": "noun",
+    "gloss": "The part of a plant, generally underground, that anchors and supports the plant body, absorbs and stores water and nutrients, and in some plants is able to perform vegetative reproduction.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "This tree's roots can go as deep as twenty metres underground."
+  },
+  {
+    "id": "wkt-9ba7dc14e3eba8950002",
+    "word": "leaf",
+    "pos": "noun",
+    "gloss": "The usually green and flat organ that represents the most prominent feature of most vegetative plants.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-2b6701eb3789f9110aff",
+    "word": "needle",
+    "pos": "noun",
+    "gloss": "A needle-like leaf found on some conifers.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3027e4e8bf9f961b2602",
+    "word": "cone",
+    "pos": "noun",
+    "gloss": "The fruit of a conifer or a similarly shaped fruit or flower head of certain other plants, such as banksias and proteas.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-88680660789cad02fbc3",
+    "word": "acorn",
+    "pos": "noun",
+    "gloss": "The fruit of the oak, being an oval nut growing in a woody cup or cupule.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-120c68e90ef2498eef9e",
+    "word": "moss",
+    "pos": "noun",
+    "gloss": "Any alga, lichen, bryophyte, or other plant of seemingly simple structure.",
+    "de": [],
+    "tags": [
+      "countable",
+      "informal",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "Spanish moss"
+  },
+  {
+    "id": "wkt-ee5cfd99da4654bfc21b",
+    "word": "fern",
+    "pos": "noun",
+    "gloss": "Any of a group of some twenty thousand species of vascular plants classified in the division Pteridophyta that lack seeds and reproduce by shedding spores to initiate an alternation of generations.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-4d4ab53bb39e3dce1b17",
+    "word": "ivy",
+    "pos": "noun",
+    "gloss": "Any of several woody, climbing, or trailing evergreen plants of the genus Hedera.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-d893157e15786f0de2d8",
+    "word": "hedge",
+    "pos": "noun",
+    "gloss": "A thicket of bushes or other shrubbery, especially one planted as a fence between two portions of land, or to separate the parts of a garden.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "He trims the hedge once a week."
+  },
+  {
+    "id": "wkt-766294fc7715c8e196eb",
+    "word": "shrub",
+    "pos": "noun",
+    "gloss": "A woody plant smaller than a tree, and usually with several stems from the same base.",
+    "de": [
+      "Busch",
+      "Strauch"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-4bd892cd315ad5fd1ed5",
+    "word": "weed",
+    "pos": "noun",
+    "gloss": "Any plant unwanted at the place where and at the time when it is growing.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": "If it isn't in a straight line or marked with a label, it's a weed."
+  },
+  {
+    "id": "wkt-54103f28cc30dc77aec6",
+    "word": "lawn",
+    "pos": "noun",
+    "gloss": "Ground (generally in front of or around a house) covered with grass kept closely mown.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-cc520a5f613434797094",
+    "word": "soil",
+    "pos": "noun",
+    "gloss": "A mixture of mineral particles and organic material, used to support plant growth.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "We bought a bag of soil for the houseplants."
+  },
+  {
+    "id": "wkt-42d65e967c0c2a340802",
+    "word": "pebble",
+    "pos": "noun",
+    "gloss": "A small stone, especially one rounded by the action of water.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-138ce53ded9289ba1e2c",
+    "word": "gravel",
+    "pos": "noun",
+    "gloss": "Small fragments of rock, used for laying on the beds of roads and railways, and as ballast.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-fa9e5a2bac73b61596a2",
+    "word": "meadow",
+    "pos": "noun",
+    "gloss": "A field or pasture; a piece of land either intentionally cultivated with grass or (especially) naturally covered with grass, especially one that is intended to be mown for hay or to be grazed.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "alpine meadows"
+  },
+  {
+    "id": "wkt-2e9916ddfbbb34d23f36",
+    "word": "pasture",
+    "pos": "noun",
+    "gloss": "Ground covered with grass or herbage, used or suitable for the grazing of livestock.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-0f5a47f7e760ed80f10c",
+    "word": "forest",
+    "pos": "noun",
+    "gloss": "A dense uncultivated tract of trees and undergrowth, larger than woods.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-79716bd35d0f0f4e7ba9",
+    "word": "clearing",
+    "pos": "noun",
+    "gloss": "An area of land within a wood or forest devoid of trees.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3f985d396dd577f78022",
+    "word": "pond",
+    "pos": "noun",
+    "gloss": "An inland body of standing water, either natural or man-made, that is smaller than a lake.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-72e154a9b02086956ecd",
+    "word": "stream",
+    "pos": "noun",
+    "gloss": "A small river; a large creek; a body of moving water confined by banks.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-7aedb1cdb2a06cf74723",
+    "word": "riverbank",
+    "pos": "noun",
+    "gloss": "A sloped side of a river acting as a barrier between the water and level ground to either side.",
+    "de": [
+      "Ufer"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-9315665cbdb006c3ed16",
+    "word": "squirrel",
+    "pos": "noun",
+    "gloss": "Any of the rodents of the family Sciuridae.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "tree squirrels"
+  },
+  {
+    "id": "wkt-3b57f3875634bd69d6df",
+    "word": "hedgehog",
+    "pos": "noun",
+    "gloss": "A small mammal of the subfamily Erinaceinae, characterized by their spiny back and often by the habit of rolling up into a ball when attacked, native to Afro-Eurasia.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-5f9d2cc66d201b2ef279",
+    "word": "deer",
+    "pos": "noun",
+    "gloss": "A ruminant mammal with hooves and often antlers, of the family Cervidae, or one of several similar animals from related families of the order Artiodactyla, such as the musk deer or mouse deer.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-bb1b9ba67a71ca74a3d6",
+    "word": "fox",
+    "pos": "noun",
+    "gloss": "Any member of the genus Vulpes; a true fox.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3900cd4744478cded6f7",
+    "word": "badger",
+    "pos": "noun",
+    "gloss": "Any member of species of the genera Meles, Arctonyx, Mellivora or Taxidea, of mammals.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-789da8d7ef12649f2773",
+    "word": "owl",
+    "pos": "noun",
+    "gloss": "Any of various birds of prey of the order Strigiformes, families Strigidae and Tytonidae, that are primarily nocturnal and have forward-looking, binocular vision, limited eye movement, and good hearing.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-e4af7106597c568e5886",
+    "word": "sparrow",
+    "pos": "noun",
+    "gloss": "The house sparrow, Passer domesticus; a small bird with a short bill, and brown, white and gray feathers.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-1333194abd83eece9700",
+    "word": "robin",
+    "pos": "noun",
+    "gloss": "A European robin, Erithacus rubecula.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-d069b1c13846b2e8649b",
+    "word": "beetle",
+    "pos": "noun",
+    "gloss": "Any of numerous species of insect in the order Coleoptera characterized by a pair of hard, shell-like front wings which cover and protect a pair of rear wings when at rest.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-381065a805b02b934937",
+    "word": "wasp",
+    "pos": "noun",
+    "gloss": "Any of many types of stinging flying insect resembling a hornet.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-d467df124c04aecc6aef",
+    "word": "caterpillar",
+    "pos": "noun",
+    "gloss": "The larva of a butterfly or moth; leafworm.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The bird just ate that green caterpillar."
+  },
+  {
+    "id": "wkt-9c525564e752d5b62a94",
+    "word": "snail",
+    "pos": "noun",
+    "gloss": "Any of very many animals (either hermaphroditic or nonhermaphroditic), of the class Gastropoda, having a coiled shell.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-c7ce2dbb70f250fa8141",
+    "word": "earthworm",
+    "pos": "noun",
+    "gloss": "A worm that lives in the ground.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-ee80ee605b9063fdf25b",
+    "word": "dandelion",
+    "pos": "noun",
+    "gloss": "Any of the several species of plant in the genus Taraxacum, characterised by yellow flower heads and notched, broad-ended leaves, especially the common dandelion (Taraxacum officinale).",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-85a2200300b0802cf71b",
+    "word": "drizzle",
+    "pos": "noun",
+    "gloss": "Light rain.",
+    "de": [
+      "Nieselregen",
+      "Sprühregen"
+    ],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-063c03020457be4e95fe",
+    "word": "downpour",
+    "pos": "noun",
+    "gloss": "A heavy fall of rain.",
+    "de": [
+      "Regenguss",
+      "Platzregen",
+      "Wolkenbruch"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "They got caught in a downpour without an umbrella and came back soaked."
+  },
+  {
+    "id": "wkt-543c2acca406717f32d2",
+    "word": "shower",
+    "pos": "noun",
+    "gloss": "A brief fall of precipitation (spell of rain, or a similar fall of snow, sleet, or cascade); burst of hefty precipitation.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Today there will be frequent showers and some sunny spells."
+  },
+  {
+    "id": "wkt-d10c22c081368b8bae0b",
+    "word": "hail",
+    "pos": "noun",
+    "gloss": "Balls or pieces of ice falling as precipitation, often in connection with a thunderstorm.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [
+      "climatology",
+      "meteorology",
+      "natural-sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-6c3c42511ad1c13cbac0",
+    "word": "sleet",
+    "pos": "noun",
+    "gloss": "Pellets of ice made of mostly-frozen raindrops or refrozen melted snowflakes.",
+    "de": [],
+    "tags": [
+      "US",
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-499cad11b0e5ba948e3f",
+    "word": "frost",
+    "pos": "noun",
+    "gloss": "A cover of minute ice crystals on objects that are exposed to the air. Frost is formed by the same process as dew, except that the temperature of the frosted object is below freezing.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-f8bd9bf42477435318c8",
+    "word": "dew",
+    "pos": "noun",
+    "gloss": "Any moisture from the atmosphere condensed by cool bodies upon their surfaces.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-c0de203e9296dbd46238",
+    "word": "fog",
+    "pos": "noun",
+    "gloss": "A thick cloud that forms near the ground; the obscurity of such a cloud.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "a bank of fog"
+  },
+  {
+    "id": "wkt-f8c9ae1d0a4f8ea4ba16",
+    "word": "mist",
+    "pos": "noun",
+    "gloss": "Water or other liquid finely suspended in air. (Compare fog, haze.)",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "It was difficult to see through the morning mist."
+  },
+  {
+    "id": "wkt-711b2bb68ca8433c5000",
+    "word": "breeze",
+    "pos": "noun",
+    "gloss": "A light, gentle wind.",
+    "de": [
+      "Brise",
+      "Windchen"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "The breeze rustled the papers on her desk."
+  },
+  {
+    "id": "wkt-0bef941067d865b1c9fd",
+    "word": "gust",
+    "pos": "noun",
+    "gloss": "A strong, abrupt rush of wind.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3715b9ca7095f03486e0",
+    "word": "thunder",
+    "pos": "noun",
+    "gloss": "The loud rumbling, cracking, or crashing sound caused by expansion of rapidly heated air around a lightning bolt.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "Thunder is preceded by lightning."
+  },
+  {
+    "id": "wkt-75482c22d6c4d5a9cbdc",
+    "word": "lightning",
+    "pos": "noun",
+    "gloss": "A flash of light produced by short-duration, high-voltage discharge of electricity within a cloud, between clouds, or between a cloud and the earth.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "Although we did not see the lightning, we did hear the thunder."
+  },
+  {
+    "id": "wkt-ef05a9fc997062f32301",
+    "word": "drought",
+    "pos": "noun",
+    "gloss": "A period of unusually low rainfall, longer and more severe than a dry spell.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "His village had faced a drought twice."
+  },
+  {
+    "id": "wkt-33ebc9cc486a24d82d2b",
+    "word": "flood",
+    "pos": "noun",
+    "gloss": "An overflow of a large amount of water (usually disastrous) from a lake or other body of water due to excessive rainfall or other input of water.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-c04b8f597cbc6794b361",
+    "word": "humidity",
+    "pos": "noun",
+    "gloss": "Dampness, especially that of the air.",
+    "de": [
+      "Feuchtigkeit"
+    ],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "The high humidity made the air feel sticky and hot."
+  },
+  {
+    "id": "wkt-c3bf82449aec5b83d941",
+    "word": "forecast",
+    "pos": "noun",
+    "gloss": "A prediction of the weather.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The forecast said it'll be blowy tomorrow"
+  },
+  {
+    "id": "wkt-5f5917d3a0f7e9eb016b",
+    "word": "overcast",
+    "pos": "adj",
+    "gloss": "Covered with clouds; overshadowed; darkened; (meteorology) more than 90% covered by clouds.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-4d21d5f6093e036e9404",
+    "word": "chilly",
+    "pos": "adj",
+    "gloss": "Cold enough to cause discomfort.",
+    "de": [
+      "kalt",
+      "kühl"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-bfff702ad9813feec495",
+    "word": "mild",
+    "pos": "adj",
+    "gloss": "Moderately warm, especially less cold than expected.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "a mild day"
+  },
+  {
+    "id": "wkt-98156d431b79ab687a80",
+    "word": "slippery",
+    "pos": "adj",
+    "gloss": "Of a surface, having low friction, often due to being covered in a non-viscous liquid, and therefore hard to grip, hard to stand on without falling, etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Oily substances render things slippery."
+  },
+  {
+    "id": "wkt-d14863f465d167dc38ce",
+    "word": "muddy",
+    "pos": "adj",
+    "gloss": "Covered or splashed with, or full of, mud (“wet soil”).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "He slogged across the muddy field."
+  },
+  {
+    "id": "wkt-aad5ccc462a28720803f",
+    "word": "steep",
+    "pos": "adj",
+    "gloss": "Of a near-vertical gradient; of a slope, surface, curve, etc. that proceeds upward or downward at an angle approaching vertical.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "a steep hill or mountain; a steep roof; a steep ascent; a steep barometric gradient"
+  },
+  {
+    "id": "wkt-fcdc8156bf8e81216507",
+    "word": "slope",
+    "pos": "noun",
+    "gloss": "A surface that either inclines or declines in a regular manner from the perspective of an observer.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "the slope"
+  },
+  {
+    "id": "wkt-2124710fc6deaa200ece",
+    "word": "cliff",
+    "pos": "noun",
+    "gloss": "A vertical (or nearly vertical) rock face.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": ", scar"
+  },
+  {
+    "id": "wkt-416b6f66ff4733659eed",
+    "word": "valley",
+    "pos": "noun",
+    "gloss": "An elongated depression cast between hills or mountains, often with a river flowing through it.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The Indus River valley was the site of an ancient civilization."
+  },
+  {
+    "id": "wkt-4b37cefe1c8cda6d852c",
+    "word": "ridge",
+    "pos": "noun",
+    "gloss": "A chain of mountains.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-ca54134b5b0630fdd652",
+    "word": "summit",
+    "pos": "noun",
+    "gloss": "The highest point of a hill, mountain, or similar geographical feature.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "In summer, it is possible to hike to the summit of Mount Shasta."
+  },
+  {
+    "id": "wkt-1ea4e04789fabc4d66fa",
+    "word": "shore",
+    "pos": "noun",
+    "gloss": "Land adjoining a non-flowing body of water, such as an ocean, lake or pond.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "lake shore; bay shore; gulf shore; island shore; mainland shore; river shore; estuary shore; pond shore; sandy shore; rocky shore"
+  },
+  {
+    "id": "wkt-d5dad99347a785a97f5a",
+    "word": "tide",
+    "pos": "noun",
+    "gloss": "The daily fluctuation in the level of the sea caused by the gravitational influence of the moon and the sun.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The Bristol Channel has some of the world's largest tides."
+  },
+  {
+    "id": "wkt-38b6b44c53d3633a1048",
+    "word": "wave",
+    "pos": "noun",
+    "gloss": "A moving disturbance in the level of a body of liquid; an undulation.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The wave traveled from the center of the lake before breaking on the shore."
+  },
+  {
+    "id": "wkt-19a9fe44cf58b4c88f77",
+    "word": "current",
+    "pos": "noun",
+    "gloss": "The generally unidirectional movement of a gas or fluid.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-9dbda67b5d10423da251",
+    "word": "bay",
+    "pos": "noun",
+    "gloss": "A body of water (especially the sea) contained by a concave shoreline.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "geography",
+      "natural-sciences"
+    ],
+    "example": "This hotel has a great view across the bay."
+  },
+  {
+    "id": "wkt-222e13e87f0a34a91e2f",
+    "word": "peninsula",
+    "pos": "noun",
+    "gloss": "A piece of land projecting into water from a larger land mass.",
+    "de": [
+      "Halbinsel"
+    ],
+    "tags": [],
+    "topics": [
+      "geography",
+      "natural-sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-84a04cdd38bd04b2e2f3",
+    "word": "waterfall",
+    "pos": "noun",
+    "gloss": "A flow of water over the edge of a cliff.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-f6ef7de152991cb9c3e2",
+    "word": "trail",
+    "pos": "noun",
+    "gloss": "A route for travel over land, especially a narrow, unpaved pathway for use by hikers, horseback riders, etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-50972a0603880871732f",
+    "word": "puddle",
+    "pos": "noun",
+    "gloss": "A small, often temporary, pool of water, usually on a path or road.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-ce07e63aaf247d28484a",
+    "word": "sunrise",
+    "pos": "noun",
+    "gloss": "The time of day when the sun appears above the eastern horizon.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "I'll meet you at the docks at sunrise."
+  },
+  {
+    "id": "wkt-68450e09ab0c2dfeac31",
+    "word": "sunset",
+    "pos": "noun",
+    "gloss": "The moment each evening when the sun disappears below the western horizon.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "at sunset"
+  },
+  {
+    "id": "wkt-b6dde31754716e743737",
+    "word": "ankle",
+    "pos": "noun",
+    "gloss": "The skeletal joint which connects the foot with the leg; the uppermost portion of the foot and lowermost portion of the leg, which contain this skeletal joint.",
+    "de": [
+      "Knöchel",
+      "Fußknöchel"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-da0ebb9b4df74285aa12",
+    "word": "wrist",
+    "pos": "noun",
+    "gloss": "The complex joint between forearm bones, carpus, and metacarpals where the hand is attached to the arm; the carpus in a narrow sense.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "anatomy",
+      "medicine",
+      "sciences"
+    ],
+    "example": "With a flick of the wrist, he threw the frisbee to a team-mate."
+  },
+  {
+    "id": "wkt-a3e50c68d7dfa5ec686b",
+    "word": "elbow",
+    "pos": "noun",
+    "gloss": "The joint between the upper arm and the forearm.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "anatomy",
+      "medicine",
+      "sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-7b145ff202a4f912a688",
+    "word": "shoulder",
+    "pos": "noun",
+    "gloss": "The joint between the arm and the torso, sometimes including the surrounding muscles, tendons, and ligaments.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "anatomy",
+      "medicine",
+      "sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-01bc07a03f8b21073c15",
+    "word": "chin",
+    "pos": "noun",
+    "gloss": "The bottom of a face, (specifically) the typically jutting jawline below the mouth.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "What does it mean to have a pointy chin instead of a flat chin?"
+  },
+  {
+    "id": "wkt-31af05bdc4896b15e23c",
+    "word": "jaw",
+    "pos": "noun",
+    "gloss": "One of the bones, usually bearing teeth, which form the framework of the mouth.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-99fe8af359e8bb643c8c",
+    "word": "forehead",
+    "pos": "noun",
+    "gloss": "The part of the face above the eyebrows and below the hairline.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-45cea74f34b1994749cc",
+    "word": "eyebrow",
+    "pos": "noun",
+    "gloss": "The hair that grows over the bone ridge above the eye socket.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-a4839357b914071ee7fe",
+    "word": "eyelid",
+    "pos": "noun",
+    "gloss": "A thin skin membrane that covers and moves over an eye.",
+    "de": [
+      "Augenlid",
+      "Lid"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-ae5cb958bb12be728816",
+    "word": "cheek",
+    "pos": "noun",
+    "gloss": "The soft skin on each side of the face, below the eyes; the outer surface of the sides of the oral cavity.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "anatomy",
+      "medicine",
+      "sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-2bc2f6adbf53153e1462",
+    "word": "throat",
+    "pos": "noun",
+    "gloss": "The front part of the neck.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The wild pitch bounced and hit the catcher in the throat."
+  },
+  {
+    "id": "wkt-b0c31de1716b4f17b472",
+    "word": "chest",
+    "pos": "noun",
+    "gloss": "The portion of the human body from the base of the neck to the top of the abdomen; the homologous area in some other animals.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "anatomy",
+      "medicine",
+      "sciences"
+    ],
+    "example": "Holonyms: torso, trunk < body"
+  },
+  {
+    "id": "wkt-c2b2dfe653a3aae75174",
+    "word": "spine",
+    "pos": "noun",
+    "gloss": "A series of bones situated at the back from the head to the pelvis of a human, or from the head to the tail of an animal, enclosing the spinal cord and providing support for the thorax and abdomen.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "anatomy",
+      "biology",
+      "medicine",
+      "natural-sciences",
+      "sciences",
+      "zoology",
+      "zootomy"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-d4b6205472b5774f43ea",
+    "word": "rib",
+    "pos": "noun",
+    "gloss": "Any of a series of long curved bones occurring in 12 pairs in humans and other animals and extending from the spine to or toward the sternum.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "anatomy",
+      "medicine",
+      "sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-4a6888d52bf446b256bf",
+    "word": "hip",
+    "pos": "noun",
+    "gloss": "The outward-projecting parts of the pelvis and top of the femur and the overlying tissue.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "anatomy",
+      "medicine",
+      "sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-c1bc1a1fc8a60b6755c1",
+    "word": "thigh",
+    "pos": "noun",
+    "gloss": "The upper leg of a human, between the hip and the knee.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-fec044c4edf62e3ff7fa",
+    "word": "calf",
+    "pos": "noun",
+    "gloss": "The back of the leg below the knee.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "anatomy",
+      "medicine",
+      "sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-37f25605236f67bfcb6f",
+    "word": "heel",
+    "pos": "noun",
+    "gloss": "The rear part of the foot, where it joins the leg.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "anatomy",
+      "medicine",
+      "sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-2d0883b049b7f084baa6",
+    "word": "thumb",
+    "pos": "noun",
+    "gloss": "The shortest and thickest digit of the hand that for humans has the most mobility and can be made to oppose (moved to touch) all of the other fingers.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-16496675d7e29ad4fdba",
+    "word": "palm",
+    "pos": "noun",
+    "gloss": "The inner and somewhat concave part of the human hand or other primate hand that extends from the wrist to the bases of the fingers.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "On the boys' palms were handfuls of sand."
+  },
+  {
+    "id": "wkt-f46c1e22dc6dc135356d",
+    "word": "bruise",
+    "pos": "noun",
+    "gloss": "A purplish mark on the skin due to leakage of blood from capillaries under the surface that have been damaged by a blow.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-d7b03a1cc5a7fd802b21",
+    "word": "blister",
+    "pos": "noun",
+    "gloss": "A small bubble between the layers of the skin that contains watery or bloody fluid and is caused by friction and pressure, burning, freezing, chemical irritation, disease, or infection.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-0f4288abf059ab83d1ed",
+    "word": "rash",
+    "pos": "noun",
+    "gloss": "An area of inflamed and irritated skin characterized by reddened spots that may be filled with fluid or pus. Also, preceded by a descriptive word (rare or obsolete), an illness characterized by a type of rash.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "dermatology",
+      "medicine",
+      "sciences"
+    ],
+    "example": "He came out in a rash because of an allergy."
+  },
+  {
+    "id": "wkt-8daf239946363577d622",
+    "word": "wound",
+    "pos": "noun",
+    "gloss": "An injury, such as a cut, stab, or tear, to a (usually external) part of the body.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-17229172f172bfbb063d",
+    "word": "scar",
+    "pos": "noun",
+    "gloss": "A permanent mark on the skin, sometimes caused by the healing of a wound.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-a6e765c83641c04910e4",
+    "word": "sprain",
+    "pos": "noun",
+    "gloss": "The act or result of spraining; lameness caused by spraining",
+    "de": [
+      "Verstauchung"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "a bad sprain of the wrist"
+  },
+  {
+    "id": "wkt-9d65c9014e7ac8ce816c",
+    "word": "cramp",
+    "pos": "noun",
+    "gloss": "A painful contraction of a muscle which cannot be controlled; (sometimes) a similar pain even without noticeable contraction.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "He retired hurt at 31 due to a leg cramp."
+  },
+  {
+    "id": "wkt-255baead5f89c3babb23",
+    "word": "swelling",
+    "pos": "noun",
+    "gloss": "The state of being swollen.",
+    "de": [
+      "Anschwellen",
+      "Anschwellung"
+    ],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-8cf4404b25662265939a",
+    "word": "nausea",
+    "pos": "noun",
+    "gloss": "A feeling of illness or discomfort in the digestive system, usually characterized by a strong urge to vomit.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "He got nausea after two hours of travelling on the plane."
+  },
+  {
+    "id": "wkt-15fd36503006d74baac7",
+    "word": "dizziness",
+    "pos": "noun",
+    "gloss": "The state of being dizzy; the sensation of instability.",
+    "de": [
+      "Schwindel",
+      "Schwindelgefühl",
+      "Schwindelanfall",
+      "Benommenheit",
+      "Benommenheitsgefühl"
+    ],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-ff9df07cda3acf822179",
+    "word": "fever",
+    "pos": "noun",
+    "gloss": "A higher than normal body temperature of a person (or, generally, a mammal), usually caused by disease.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "medicine",
+      "sciences"
+    ],
+    "example": "There has been a rise in my fever. I think I've the flu."
+  },
+  {
+    "id": "wkt-5908dd27a3a8306bb477",
+    "word": "cough",
+    "pos": "noun",
+    "gloss": "A sudden, often involuntary expulsion of air from the lungs through the glottis (causing a short, explosive sound), and out through the mouth.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Behind me, I heard a distinct, dry cough."
+  },
+  {
+    "id": "wkt-3bd6ed6f6b195a10247f",
+    "word": "sneeze",
+    "pos": "verb",
+    "gloss": "To expel air as a reflex induced by an irritation in the nose.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [
+      "medicine",
+      "sciences"
+    ],
+    "example": "To avoid passing on your illness, you should sneeze into your sleeve."
+  },
+  {
+    "id": "wkt-2d57386447a5803e6faa",
+    "word": "itch",
+    "pos": "noun",
+    "gloss": "A sensation felt on an area of the skin that causes a person or animal to want to scratch said area.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-1250083cf42b6ed1bf25",
+    "word": "sore",
+    "pos": "adj",
+    "gloss": "Causing pain or discomfort; painfully sensitive.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Her feet were sore from walking so far."
+  },
+  {
+    "id": "wkt-b1b267b3c5c9448da9f4",
+    "word": "stiff",
+    "pos": "adj",
+    "gloss": "Rigid; hard to bend; inflexible.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-08e5710056e09555e984",
+    "word": "numb",
+    "pos": "adj",
+    "gloss": "Physically unable to feel, not having the power of sensation.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "fingers numb with cold"
+  },
+  {
+    "id": "wkt-60979c016e6b5ecfada0",
+    "word": "bandage",
+    "pos": "noun",
+    "gloss": "A strip of gauze or similar material used to protect or support a wound or injury.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-c8b004a94cda0ce9f62a",
+    "word": "ointment",
+    "pos": "noun",
+    "gloss": "A viscous preparation of oils and/or fats, usually containing medication, used as a treatment or as an emollient.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "medicine",
+      "sciences"
+    ],
+    "example": "The doctor prescribed an antibiotic ointment for the wound."
+  },
+  {
+    "id": "wkt-64d96ec770cb1f84ad90",
+    "word": "prescription",
+    "pos": "noun",
+    "gloss": "A written order from an authorized medical practitioner for provision of a medicine or other treatment, such as (ophthalmology) the specific lenses needed for a pair of glasses.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "medicine",
+      "pharmacology",
+      "sciences"
+    ],
+    "example": "The surgeon had written thousands of prescriptions for pain killers without proper examinations before the police raided the clinic."
+  },
+  {
+    "id": "wkt-5de37a499e8d092b6d68",
+    "word": "painkiller",
+    "pos": "noun",
+    "gloss": "A drug that numbs the pain in the body.",
+    "de": [
+      "Schmerzmittel"
+    ],
+    "tags": [],
+    "topics": [
+      "medicine",
+      "pharmacology",
+      "sciences"
+    ],
+    "example": "Near-synonym: analgesia"
+  },
+  {
+    "id": "wkt-4585328ebd4276116c16",
+    "word": "appointment",
+    "pos": "noun",
+    "gloss": "An arrangement between people to meet; an engagement.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "They made an appointment to meet at six."
+  },
+  {
+    "id": "wkt-180517ccd387fd6ad237",
+    "word": "checkup",
+    "pos": "noun",
+    "gloss": "A routine visit to the doctor, dentist, or the like.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The appointment was just for a checkup."
+  },
+  {
+    "id": "wkt-b4ea300a0578045e1b63",
+    "word": "allergy",
+    "pos": "noun",
+    "gloss": "A disorder of the immune system causing adverse reactions to substances (allergens) not harmful to most and marked by the body's production of histamines and associated with atopy, anaphylaxis, and asthma; any condition of hypersensitivity to a substance.",
+    "de": [],
+    "tags": [
+      "broadly"
+    ],
+    "topics": [
+      "immunology",
+      "medicine",
+      "sciences"
+    ],
+    "example": "My dad can't live with pets because of an allergy."
+  },
+  {
+    "id": "wkt-5a6c967f693989e803b2",
+    "word": "symptom",
+    "pos": "noun",
+    "gloss": "A perceived change in some function, sensation or appearance of a person that indicates a disease or disorder, such as fever, headache or rash; strictly, a symptom is felt or experienced by the patient, while a sign can be detected by an observer.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "medicine",
+      "sciences"
+    ],
+    "example": "The doctor told that his coughing and sneezing was the symptom of standing for too long in the rain."
+  },
+  {
+    "id": "wkt-ed1edf22221be0a2fd13",
+    "word": "sleeve",
+    "pos": "noun",
+    "gloss": "The part of a garment that covers the arm.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The sleeves on my coat are too long."
+  },
+  {
+    "id": "wkt-bb733a06535461898d4f",
+    "word": "collar",
+    "pos": "noun",
+    "gloss": "The part of an upper garment (shirt, jacket, etc.) that fits around the neck and throat, especially if sewn from a separate piece of fabric.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-84ab39c8d55f12665fc2",
+    "word": "cuff",
+    "pos": "noun",
+    "gloss": "The end of a shirt sleeve that covers the wrist.",
+    "de": [
+      "Manschette",
+      "Bündchen",
+      "Ärmelbündchen",
+      "Hemdmanschette",
+      "Luftmanschette"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-a95a429ff2bcc0a7e2f9",
+    "word": "hem",
+    "pos": "noun",
+    "gloss": "An utterance or sound of the voice like \"hem\", often indicative of hesitation or doubt, sometimes used to call attention.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-c06e9904d9c7563b64db",
+    "word": "seam",
+    "pos": "noun",
+    "gloss": "A folded-back and stitched piece of fabric; especially, the stitching that joins two or more pieces of fabric.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "business",
+      "manufacturing",
+      "sewing",
+      "textiles"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-ff3764d0dada53a91664",
+    "word": "lining",
+    "pos": "noun",
+    "gloss": "A covering for the inside surface of something.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-c0c17f2db8b5293d10e3",
+    "word": "zipper",
+    "pos": "noun",
+    "gloss": "A zip fastener.",
+    "de": [],
+    "tags": [
+      "Australia",
+      "US"
+    ],
+    "topics": [],
+    "example": "He got his T-shirt stuck in the zipper of his jacket."
+  },
+  {
+    "id": "wkt-44785d815a93ff167fd9",
+    "word": "button",
+    "pos": "noun",
+    "gloss": "A knob or disc that is passed through a loop or (buttonhole), serving as a fastener.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "business",
+      "clothing",
+      "fashion",
+      "lifestyle",
+      "manufacturing",
+      "textiles"
+    ],
+    "example": "April fastened the buttons of her overcoat to keep out the wind."
+  },
+  {
+    "id": "wkt-1b73d52b5801a833e282",
+    "word": "buckle",
+    "pos": "noun",
+    "gloss": "A metal clasp with a hinged tongue or a spike through which a belt or strap is passed and penetrated by the tongue or spike, in order to fasten the ends of the belt together or to secure the strap to something else.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-faec9848cfd109bdc9a3",
+    "word": "shoelace",
+    "pos": "noun",
+    "gloss": "A lace used for fastening a shoe.",
+    "de": [
+      "Schnürsenkel",
+      "Schuhband",
+      "Schnürband",
+      "Senkel",
+      "Litze",
+      "Schnur",
+      "Band"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "untied shoelace"
+  },
+  {
+    "id": "wkt-8d37da032bdf3c449957",
+    "word": "sole",
+    "pos": "noun",
+    "gloss": "The bottom of a shoe or boot.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-ee48f01868517c195923",
+    "word": "insole",
+    "pos": "noun",
+    "gloss": "The inside sole of a shoe or other footwear.",
+    "de": [
+      "Einlage",
+      "Einlegesohle"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-24dce7f9a95186247533",
+    "word": "pocket",
+    "pos": "noun",
+    "gloss": "A bag stitched to an item of clothing, used for carrying small items.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "business",
+      "clothing",
+      "fashion",
+      "lifestyle",
+      "manufacturing",
+      "textiles"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-a5c42f5e74701cd10711",
+    "word": "waistband",
+    "pos": "noun",
+    "gloss": "A band of fabric encircling the waist, especially a part of a pair of pants or a skirt.",
+    "de": [
+      "Bund",
+      "Taillenbund",
+      "Hosenbund"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-da1736dbd376c5faa8fa",
+    "word": "belt",
+    "pos": "noun",
+    "gloss": "A band worn around the waist to hold clothing to one's body (usually pants), hold weapons (such as a gun or sword), or serve as a decorative piece of clothing.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "business",
+      "clothing",
+      "fashion",
+      "lifestyle",
+      "manufacturing",
+      "textiles"
+    ],
+    "example": "As part of the act, the fat clown's belt broke, causing his pants to fall down."
+  },
+  {
+    "id": "wkt-0468b2002e3eaaab88a1",
+    "word": "scarf",
+    "pos": "noun",
+    "gloss": "A long, often knitted, garment worn around the neck.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-f561e5fcf03afb155016",
+    "word": "beanie",
+    "pos": "noun",
+    "gloss": "A cap that fits the head closely, usually knitted from wool.",
+    "de": [],
+    "tags": [
+      "uncommon"
+    ],
+    "topics": [
+      "business",
+      "clothing",
+      "fashion",
+      "lifestyle",
+      "manufacturing",
+      "textiles"
+    ],
+    "example": "Enrique Iglesias is often seen wearing a beanie."
+  },
+  {
+    "id": "wkt-ba7ac6138ff0841c0293",
+    "word": "cardigan",
+    "pos": "noun",
+    "gloss": "A type of sweater or jumper that fastens up the front with buttons or a zipper, usually machine- or hand-knitted from wool.",
+    "de": [
+      "Strickjacke",
+      "Cardigan"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-ccb689b47022a46a9cef",
+    "word": "sweatshirt",
+    "pos": "noun",
+    "gloss": "A loose shirt, usually made of a knit fleece, for athletic wear and now often used as casual apparel.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-f3039f87aea6c20e4281",
+    "word": "raincoat",
+    "pos": "noun",
+    "gloss": "A waterproof coat to be worn in the rain; (loosely) any coat or jacket with this purpose.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-5b006bdd36ee69c5cc16",
+    "word": "suit",
+    "pos": "noun",
+    "gloss": "A set of clothes to be worn together, now especially a man's matching jacket and trousers (also business suit or lounge suit), or a similar outfit for a woman.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "business",
+      "clothing",
+      "fashion",
+      "lifestyle",
+      "manufacturing",
+      "textiles"
+    ],
+    "example": "Nick hired a navy-blue suit for the wedding."
+  },
+  {
+    "id": "wkt-943e0992c4dcc08a3244",
+    "word": "waistcoat",
+    "pos": "noun",
+    "gloss": "An ornamental garment worn under a doublet.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-f011f22c375e1c91abbc",
+    "word": "tights",
+    "pos": "noun",
+    "gloss": "A close-fitting, sheer or non-sheer skin-tight garment worn principally by women and girls that covers the body completely from the waist down, usually including the feet.",
+    "de": [],
+    "tags": [
+      "plural",
+      "plural-only"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-a1055af772f4e778c19e",
+    "word": "cotton",
+    "pos": "noun",
+    "gloss": "A plant of genus Gossypium, used as a source of such fiber.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3c6e3f6a8dbd536e4e90",
+    "word": "wool",
+    "pos": "noun",
+    "gloss": "The hair of the sheep, llama and some other ruminants.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-381499b98553ca099397",
+    "word": "linen",
+    "pos": "noun",
+    "gloss": "Thread or cloth made from flax fiber.",
+    "de": [
+      "Leinen"
+    ],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-bf8743e1a8127bf50760",
+    "word": "silk",
+    "pos": "noun",
+    "gloss": "A fine fiber excreted by the silkworm or other arthropod (such as a spider).",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "We harvested a load of silk from the silkworm farm."
+  },
+  {
+    "id": "wkt-4dceccf0d4695a32eae8",
+    "word": "leather",
+    "pos": "noun",
+    "gloss": "A tough material produced from the skin of animals, by tanning or similar process, used e.g. for clothing; often denotes leather from cattle when no qualifier specifies otherwise.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-82f0c17cfdf30d767233",
+    "word": "suede",
+    "pos": "noun",
+    "gloss": "A type of soft leather, made from calfskin, with a brushed texture to resemble fabric, often used to make boots, clothing and fashion accessories.",
+    "de": [
+      "Wildleder",
+      "Veloursleder"
+    ],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-87f57d8339a2c38e07dd",
+    "word": "velvet",
+    "pos": "noun",
+    "gloss": "A closely woven fabric (originally of silk, now also of cotton or man-made fibres) with a thick short pile on one side.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3f62923a8b40e9016790",
+    "word": "striped",
+    "pos": "adj",
+    "gloss": "Having stripes, decorated or marked with bands differing in color.",
+    "de": [
+      "gestreift"
+    ],
+    "tags": [
+      "not-comparable"
+    ],
+    "topics": [],
+    "example": "Jim is the boy in the striped polo."
+  },
+  {
+    "id": "wkt-e1233e1e3394823af36b",
+    "word": "checked",
+    "pos": "adj",
+    "gloss": "Having a pattern of checks; checkered.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "US"
+    ],
+    "topics": [],
+    "example": "a checked tie"
+  },
+  {
+    "id": "wkt-70d52af1a3eb61720ec9",
+    "word": "wrinkled",
+    "pos": "adj",
+    "gloss": "Uneven, with many furrows and prominent points, often in reference to the skin or hide of animals.",
+    "de": [
+      "faltig"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "As the ocean receded from the beach it left the sand appearing wrinkled."
+  },
+  {
+    "id": "wkt-908f3dc7ebdbb1257993",
+    "word": "stain",
+    "pos": "noun",
+    "gloss": "A discolored spot or area caused by spillage or other contact with certain fluids or substances.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-2069eb58efc8ddff6390",
+    "word": "colander",
+    "pos": "noun",
+    "gloss": "A bowl-shaped kitchen utensil with holes in it used for draining food that has been cooking in water, such as pasta.",
+    "de": [
+      "Sieb",
+      "Küchensieb",
+      "Abtropfsieb",
+      "Seiher",
+      "Durchschlag"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-a4f4301d1df1c3396c0e",
+    "word": "sieve",
+    "pos": "noun",
+    "gloss": "A device with a mesh, grate, or otherwise perforated bottom to separate, in a granular material, larger particles from smaller ones, or to separate solid objects from a liquid.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Near-synonyms: sifter, strainer, temse"
+  },
+  {
+    "id": "wkt-6529d8c221c2ea40eccf",
+    "word": "whisk",
+    "pos": "noun",
+    "gloss": "A kitchen utensil, now usually made from stiff wire loops fixed to a handle (and formerly of twigs), used for whipping (or a mechanical device with the same function).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "He used a whisk to whip up a light and airy souffle."
+  },
+  {
+    "id": "wkt-ea5b82f0a6cdcb7bf01b",
+    "word": "spatula",
+    "pos": "noun",
+    "gloss": "A kitchen utensil consisting of a flat surface attached to a long handle, used for turning, lifting, or stirring food.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "cooking",
+      "food",
+      "lifestyle"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-403a468433756d11e3bb",
+    "word": "ladle",
+    "pos": "noun",
+    "gloss": "A deep-bowled spoonlike utensil with a long, usually curved, handle.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-f807b051dc1212df316b",
+    "word": "grater",
+    "pos": "noun",
+    "gloss": "a tool with which one grates, especially foods such as cheese, to facilitate getting small particles or shreds off a solid lump",
+    "de": [
+      "Reibe",
+      "Küchenreibe"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "I'm making coleslaw; do you know where the grater is?"
+  },
+  {
+    "id": "wkt-9ae3e621b69ceaec9435",
+    "word": "peeler",
+    "pos": "noun",
+    "gloss": "A household utensil for peeling fruit or vegetables.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "potato peeler"
+  },
+  {
+    "id": "wkt-6399fd374f6256d7d0a4",
+    "word": "chopping board",
+    "pos": "noun",
+    "gloss": "Synonym of cutting board.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-6730dfabad6e5dc9619e",
+    "word": "saucepan",
+    "pos": "noun",
+    "gloss": "A deep cooking vessel with a long protruding handle and sometimes a lid; used for boiling, stewing and making sauces.",
+    "de": [
+      "Topf"
+    ],
+    "tags": [
+      "countable"
+    ],
+    "topics": [
+      "cooking",
+      "food",
+      "lifestyle"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-908caf4834d77374ba81",
+    "word": "frying pan",
+    "pos": "noun",
+    "gloss": "A long-handled, shallow pan used for frying food.",
+    "de": [
+      "Bratpfanne",
+      "Pfanne"
+    ],
+    "tags": [],
+    "topics": [
+      "cooking",
+      "food",
+      "lifestyle"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-5bdc6ffaa0a4e6642f74",
+    "word": "lid",
+    "pos": "noun",
+    "gloss": "The top or cover of a container.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-67aedf633eeb800bc41f",
+    "word": "kettle",
+    "pos": "noun",
+    "gloss": "A vessel or appliance used to boil water for the preparation of hot beverages and other foodstuffs.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Stick the kettle on and we'll have a nice cup of tea."
+  },
+  {
+    "id": "wkt-a7850214905834b5cfed",
+    "word": "oven",
+    "pos": "noun",
+    "gloss": "A chamber used for baking or heating.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-be755d85363bdf2c1eb5",
+    "word": "stove",
+    "pos": "noun",
+    "gloss": "A device for heating food, (UK) a cooker.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-8ec05ae1a8d6a073f56c",
+    "word": "baking tray",
+    "pos": "noun",
+    "gloss": "An oven-proof metal tray used to hold foods in the oven.",
+    "de": [
+      "Backblech"
+    ],
+    "tags": [],
+    "topics": [
+      "cooking",
+      "food",
+      "lifestyle"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-b3ad5fb6b297cc7f2da4",
+    "word": "dough",
+    "pos": "noun",
+    "gloss": "A thick, malleable substance made by mixing flour with other ingredients such as water, eggs, or butter, that is made into a particular form and then baked.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "Pizza dough is very stretchy."
+  },
+  {
+    "id": "wkt-06f1993f8f7cad3b80c6",
+    "word": "batter",
+    "pos": "noun",
+    "gloss": "A beaten mixture of flour and liquid (usually egg and milk), used for baking (e.g. pancakes, cake, or Yorkshire pudding) or to coat food (e.g. fish) prior to frying.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "cooking",
+      "food",
+      "lifestyle"
+    ],
+    "example": "To the dismay of his mother, the boy put his finger into the pancake batter."
+  },
+  {
+    "id": "wkt-16615ebc6f6b43386d33",
+    "word": "yeast",
+    "pos": "noun",
+    "gloss": "A single-celled fungus of any of a wide variety of taxonomic families.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3db4f59f72b5df47298e",
+    "word": "flour",
+    "pos": "noun",
+    "gloss": "Powder obtained by grinding or milling cereal grains, especially wheat, or other foodstuffs such as soybeans and potatoes, and used to bake bread, cakes, and pastry.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-826563db9b0d42c128e7",
+    "word": "starch",
+    "pos": "noun",
+    "gloss": "Carbohydrates, as with grain and potato based foods.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-2b92a5af8b7275882918",
+    "word": "vinegar",
+    "pos": "noun",
+    "gloss": "A sour liquid formed by the fermentation of alcohol used as a condiment or preservative; a dilute solution of acetic acid.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-a142ca1b22da6287b70a",
+    "word": "broth",
+    "pos": "noun",
+    "gloss": "A soup made from broth and other ingredients such as vegetables, herbs or diced meat.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-88177b16b1dec4bab0b2",
+    "word": "gravy",
+    "pos": "noun",
+    "gloss": "A dark savoury sauce prepared from stock and usually meat juices; brown gravy.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "A roast dinner isn't complete without gravy."
+  },
+  {
+    "id": "wkt-ef0dda6fc2d9686c76c3",
+    "word": "portion",
+    "pos": "noun",
+    "gloss": "An allocated amount.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-de23e103f8718eafc371",
+    "word": "pinch",
+    "pos": "noun",
+    "gloss": "The action of squeezing a small amount of a person's skin and flesh, making it hurt.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-b1c488d39390857a968a",
+    "word": "clove",
+    "pos": "noun",
+    "gloss": "One of the small bulbs that make up the large, compound bulb in garlic, shallots, or similar plants.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "agriculture",
+      "business",
+      "cooking",
+      "food",
+      "horticulture",
+      "lifestyle"
+    ],
+    "example": "clove of garlic, garlic clove, clove of a sea-onion, clove of shallot, cloves of bulbs"
+  },
+  {
+    "id": "wkt-bb4d553a48ae756fcee8",
+    "word": "peel",
+    "pos": "verb",
+    "gloss": "To remove the skin or outer covering of.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "I sat by my sister's bed, peeling oranges for her."
+  },
+  {
+    "id": "wkt-777acd766c088fd58b31",
+    "word": "chop",
+    "pos": "verb",
+    "gloss": "To cut into pieces with short, vigorous cutting motions.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "chop wood; chop an onion"
+  },
+  {
+    "id": "wkt-4534899709fad9948e61",
+    "word": "slice",
+    "pos": "verb",
+    "gloss": "To cut into slices.",
+    "de": [
+      "schneiden",
+      "aufschneiden",
+      "hobeln",
+      "(histolog.) Schnitte anfertigen",
+      "in Scheiben schneiden"
+    ],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "Slice the cheese thinly."
+  },
+  {
+    "id": "wkt-746ec04338691c1e70ea",
+    "word": "dice",
+    "pos": "verb",
+    "gloss": "To cut into small cubes.",
+    "de": [
+      "würfeln",
+      "in Würfel schneiden"
+    ],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-e86bd5eb2596be17fdfd",
+    "word": "grate",
+    "pos": "verb",
+    "gloss": "To shred (things, usually foodstuffs), by rubbing across a grater.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [
+      "cooking",
+      "food",
+      "lifestyle"
+    ],
+    "example": "I need to grate the cheese before the potato is cooked."
+  },
+  {
+    "id": "wkt-ccbee785c573f6bc84f2",
+    "word": "stir",
+    "pos": "verb",
+    "gloss": "To disturb the relative position of the particles (of a liquid or similar) by passing an object through it.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "She stirred the pudding with a spoon."
+  },
+  {
+    "id": "wkt-e4868ab19e76e19c47c6",
+    "word": "whip",
+    "pos": "verb",
+    "gloss": "To mix in a rapid aerating fashion, especially food.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "to whip eggs or cream"
+  },
+  {
+    "id": "wkt-1813eb787b6dee922b52",
+    "word": "knead",
+    "pos": "verb",
+    "gloss": "To work and press into a mass, usually with the hands; especially, to work, as by repeated pressure with the knuckles, into a well mixed mass, the materials of bread, cake, etc.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-f3dad9e65479a461b3ac",
+    "word": "simmer",
+    "pos": "verb",
+    "gloss": "To cook or undergo heating slowly at or below the boiling point.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "example": "The soup simmered on the stove."
+  },
+  {
+    "id": "wkt-6cc042724b1aa2dbc70a",
+    "word": "boil",
+    "pos": "verb",
+    "gloss": "To heat to the point where it begins to turn into a gas.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "Boil some water in a pan."
+  },
+  {
+    "id": "wkt-9a1a82b3666520c27d33",
+    "word": "roast",
+    "pos": "verb",
+    "gloss": "To cook food by heating in an oven or over a fire without covering, resulting in a crisp, possibly even slightly charred appearance.",
+    "de": [],
+    "tags": [
+      "ergative",
+      "intransitive",
+      "transitive"
+    ],
+    "topics": [],
+    "example": "to roast meat on a spit"
+  },
+  {
+    "id": "wkt-2a5ffc9a51bc73036f4b",
+    "word": "bake",
+    "pos": "verb",
+    "gloss": "To cook (something) in an oven (for someone).",
+    "de": [],
+    "tags": [
+      "ditransitive",
+      "intransitive",
+      "transitive"
+    ],
+    "topics": [],
+    "example": "I baked a delicious cherry pie."
+  },
+  {
+    "id": "wkt-cc15de94c109b4d6419b",
+    "word": "steam",
+    "pos": "verb",
+    "gloss": "To cook with steam.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [
+      "cooking",
+      "food",
+      "lifestyle"
+    ],
+    "example": "The best way to cook artichokes is to steam them."
+  },
+  {
+    "id": "wkt-ff540edee7f9af015e32",
+    "word": "thaw",
+    "pos": "verb",
+    "gloss": "To gradually cause (something frozen, such as earth, ice, or snow) to melt or soften by raising the temperature.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-fb42bf7db8c91917cb97",
+    "word": "season",
+    "pos": "verb",
+    "gloss": "To flavour food with spices, herbs or salt.",
+    "de": [
+      "würzen",
+      "einlegen"
+    ],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-e6f574be02b606359325",
+    "word": "ripe",
+    "pos": "adj",
+    "gloss": "Of a fruit, vegetable, seed, etc., ready for reaping or gathering; having attained perfection; mature.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "ripe grain"
+  },
+  {
+    "id": "wkt-10074191e5cdce9321c3",
+    "word": "stale",
+    "pos": "adj",
+    "gloss": "No longer fresh, in reference to food, urine, straw, wounds, etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Near-synonyms: gone bad, spoiled; see also Thesaurus:rotten"
+  },
+  {
+    "id": "wkt-4f50a6ec392d3393b952",
+    "word": "bland",
+    "pos": "adj",
+    "gloss": "Lacking in taste or flavor.",
+    "de": [
+      "fad",
+      "geschmacklos",
+      "langweilig"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "The coffee was bland."
+  },
+  {
+    "id": "wkt-3c1e2c2f86bd2638c010",
+    "word": "savory",
+    "pos": "adj",
+    "gloss": "Either salty or spicy, but not sweet.",
+    "de": [],
+    "tags": [
+      "US"
+    ],
+    "topics": [],
+    "example": "The mushrooms, meat, bread, rice, peanuts and potatoes were all good savory foods."
+  },
+  {
+    "id": "wkt-502684462df723022690",
+    "word": "bitter",
+    "pos": "adj",
+    "gloss": "Having an acrid taste (usually from a basic substance).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The coffee tasted bitter."
+  },
+  {
+    "id": "wkt-12d6f067551b94a3eabd",
+    "word": "sour",
+    "pos": "adj",
+    "gloss": "Made rancid by fermentation, etc.",
+    "de": [
+      "sauer",
+      "sauer vergoren",
+      "gesäuert",
+      "angesäuert"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "Don't drink that milk; it's turned sour."
+  },
+  {
+    "id": "wkt-a52073d9ed3c3bd4ba37",
+    "word": "crunchy",
+    "pos": "adj",
+    "gloss": "Likely to crunch, especially with reference to food when it is eaten.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "I put some lettuce in the burger to make it more crunchy."
+  },
+  {
+    "id": "wkt-c57ed6e1e0329b6fb70a",
+    "word": "curb",
+    "pos": "noun",
+    "gloss": "A concrete margin along the edge of a road; a kerb (UK, Australia, New Zealand).",
+    "de": [],
+    "tags": [
+      "US"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-aac0caea3a8246df06d4",
+    "word": "sidewalk",
+    "pos": "noun",
+    "gloss": "A paved footpath located at the side of a road, for the use of pedestrians.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "Philippines",
+      "US"
+    ],
+    "topics": [],
+    "example": "Stay on the sidewalk."
+  },
+  {
+    "id": "wkt-d090b511d729d3f20cb8",
+    "word": "crosswalk",
+    "pos": "noun",
+    "gloss": "A point designated for pedestrians to cross a street.",
+    "de": [],
+    "tags": [
+      "US"
+    ],
+    "topics": [],
+    "example": "Keep together, kids, when we go across the street in/at the crosswalk."
+  },
+  {
+    "id": "wkt-01abfbf441f4a2db4c98",
+    "word": "intersection",
+    "pos": "noun",
+    "gloss": "The junction of two (or more) paths, streets, highways, or other thoroughfares.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Near-synonym: crossroads"
+  },
+  {
+    "id": "wkt-7ba35cafdbb980614fd7",
+    "word": "roundabout",
+    "pos": "noun",
+    "gloss": "A road junction at which traffic streams circularly around a central island.",
+    "de": [],
+    "tags": [
+      "Australia",
+      "Canada",
+      "Ireland",
+      "New-England",
+      "New-Zealand",
+      "UK",
+      "US",
+      "especially",
+      "sometimes"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-9ea2653fb85be6bb27ae",
+    "word": "lane",
+    "pos": "noun",
+    "gloss": "A lengthwise division of roadway intended for a single line of vehicles.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Drivers should overtake in the outside lane"
+  },
+  {
+    "id": "wkt-d47f4f9b8fccb53f3307",
+    "word": "shoulder",
+    "pos": "noun",
+    "gloss": "A usually unsealed strip of land bordering a road, where vehicles can drive or park in an emergency.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "geography",
+      "natural-sciences",
+      "topography"
+    ],
+    "example": "He stopped the car on the shoulder of the highway to change the flat tire."
+  },
+  {
+    "id": "wkt-004338c91577243914d2",
+    "word": "pothole",
+    "pos": "noun",
+    "gloss": "A shallow pit or other edged depression in a road's surface, especially when caused by erosion, weather or traffic.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-5c51cd2ab9087184d2d4",
+    "word": "detour",
+    "pos": "noun",
+    "gloss": "A diversion or deviation from one's original route.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-b6f4e96eb8d33f7c5623",
+    "word": "toll",
+    "pos": "noun",
+    "gloss": "A fee paid for some liberty or privilege, particularly for the privilege of passing over a bridge or on a highway, or for that of vending goods in a fair, market, etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3c7283fc7ec87fd56b5d",
+    "word": "traffic jam",
+    "pos": "noun",
+    "gloss": "A situation in which road traffic accumulates until it is stationary or very slow.",
+    "de": [
+      "Stau",
+      "Verkehrsstau",
+      "Verkehrsinfarkt"
+    ],
+    "tags": [],
+    "topics": [
+      "road",
+      "transport"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-023fc75a9737883eef32",
+    "word": "speed limit",
+    "pos": "noun",
+    "gloss": "The maximum speed permitted by law for vehicles.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "John is a careful driver. He never exceeds the speed limit."
+  },
+  {
+    "id": "wkt-93ac3da997e6a5ccdf99",
+    "word": "right of way",
+    "pos": "noun",
+    "gloss": "The right to proceed first in traffic, on land, on water or in the air. Also in metaphorical senses.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-15bb7f7ddab75926b539",
+    "word": "license plate",
+    "pos": "noun",
+    "gloss": "An identifying tag, usually made of metal, bearing a sequence of letters or numbers identifying the vehicle, and placed at the rear and, often, also at the front of a motor vehicle.",
+    "de": [
+      "Kfz-Kennzeichen",
+      "Nummernschild"
+    ],
+    "tags": [
+      "US"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-e7df84083836711fda76",
+    "word": "windshield",
+    "pos": "noun",
+    "gloss": "A transparent screen made of glass, located at the front and back of a vehicle in front of its occupants to protect them from the wind force generated by the vehicle's speed and inclement weather.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "Philippines",
+      "US"
+    ],
+    "topics": [],
+    "example": "The freezing rain covered our windshield with ice and we couldn't see a thing."
+  },
+  {
+    "id": "wkt-e1b4e94a328e5d2ae5a9",
+    "word": "wiper",
+    "pos": "noun",
+    "gloss": "Something, such as a windscreen wiper, that is designed for wiping.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-1a861cc6b650c2715187",
+    "word": "dashboard",
+    "pos": "noun",
+    "gloss": "A panel beneath the windshield of a vehicle or aircraft containing indicator gauges, compartments, and sometimes controls and indicator lights.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-29fb07f73ffb233f75cc",
+    "word": "steering wheel",
+    "pos": "noun",
+    "gloss": "A wheel-shaped control that is rotated by the driver to steer, existing in most modern land vehicles.",
+    "de": [
+      "Lenkrad",
+      "Steuer",
+      "Steuerrad",
+      "Volant"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3b49e84f476b2e40bb86",
+    "word": "gear",
+    "pos": "noun",
+    "gloss": "A configuration of the transmission of a motor car so as to achieve a particular ratio of engine to axle torque.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [
+      "automotive",
+      "cycling",
+      "hobbies",
+      "lifestyle",
+      "sports",
+      "transport",
+      "vehicles"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-9954236540b640d47054",
+    "word": "clutch",
+    "pos": "noun",
+    "gloss": "A device to interrupt power transmission, commonly used to separate the engine and gearbox in a car.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "automotive",
+      "transport",
+      "vehicles"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-54c371cd475a5266b46e",
+    "word": "brake",
+    "pos": "noun",
+    "gloss": "A device used to slow or stop the motion of a wheel, or of a vehicle, usually by friction (although other resistive forces, such as electromagnetic fields or aerodynamic drag, can also be used); also, the controls or apparatus used to engage such a mechanism such as the pedal in a car.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "She slammed the brakes when she saw a child run in front of the car."
+  },
+  {
+    "id": "wkt-399140af3b58226fe756",
+    "word": "accelerator",
+    "pos": "noun",
+    "gloss": "A pedal causing the vehicle to accelerate when it is pressed.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "transport",
+      "vehicles"
+    ],
+    "example": "As soon as you get onto the slipway, push the accelerator."
+  },
+  {
+    "id": "wkt-b685aaf43d1c7536406d",
+    "word": "headlight",
+    "pos": "noun",
+    "gloss": "A bright light, with a lens and reflector, on the front of a motor vehicle (or originally a ship or train), designed to illuminate the road when driving at night; normally one of a pair.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-af307ddc65bf06d6bece",
+    "word": "indicator",
+    "pos": "noun",
+    "gloss": "A turn signal; each of the flashing lights on each side of a vehicle which indicate a turn is being made to left or right, or a lane change etc.",
+    "de": [],
+    "tags": [
+      "Australia",
+      "Ireland",
+      "New-Zealand",
+      "South-Africa",
+      "UK"
+    ],
+    "topics": [
+      "automotive",
+      "transport",
+      "vehicles"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-44abe69d7c05b0ec56fa",
+    "word": "bumper",
+    "pos": "noun",
+    "gloss": "Parts at the front and back of a vehicle which are meant to absorb the impact of a collision; fender.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "automotive",
+      "transport",
+      "vehicles"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-3f2765c1b833243f3e8e",
+    "word": "trunk",
+    "pos": "noun",
+    "gloss": "The luggage storage compartment of a sedan/saloon-style car.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "US"
+    ],
+    "topics": [
+      "automotive",
+      "heading",
+      "transport",
+      "vehicles"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-b8854e7b54ec16e15023",
+    "word": "hood",
+    "pos": "noun",
+    "gloss": "The hinged cover over the engine of a motor vehicle, known as a bonnet in other countries.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "US"
+    ],
+    "topics": [
+      "automotive",
+      "transport",
+      "vehicles"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-7f3271a19ca2e8147741",
+    "word": "tire",
+    "pos": "noun",
+    "gloss": "US and Canada spelling of tyre: The rubber covering on a wheel.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-594462a5364ed745ee5b",
+    "word": "spare tire",
+    "pos": "noun",
+    "gloss": "Used other than figuratively or idiomatically: see spare, tire.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "US"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-fadb918b84badf3f29e1",
+    "word": "jack",
+    "pos": "noun",
+    "gloss": "A mechanical device used to raise and (temporarily) support a heavy object, now especially to lift one side of a motor vehicle when (e.g.) changing a tyre.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "She used a jack to lift her car and changed the tire."
+  },
+  {
+    "id": "wkt-36872499845a1b880ae6",
+    "word": "exhaust",
+    "pos": "noun",
+    "gloss": "A system consisting of the parts of an engine through which burned gases or steam are discharged; see also exhaust system.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-a9b6392e8d23579f0d5a",
+    "word": "fuel",
+    "pos": "noun",
+    "gloss": "Substance consumed to provide energy through combustion, or through chemical or nuclear reaction.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-084ab0f08e23d7f88346",
+    "word": "gas station",
+    "pos": "noun",
+    "gloss": "An establishment which sells gasoline (petrol) and often also diesel.",
+    "de": [
+      "Tankstelle",
+      "Tanke"
+    ],
+    "tags": [
+      "Canada",
+      "New-Zealand",
+      "US"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-07b084167ed6d44cde3d",
+    "word": "tow truck",
+    "pos": "noun",
+    "gloss": "A truck (lorry) typically equipped with winches, chains, and related equipment, and used to tow disabled vehicles.",
+    "de": [
+      "Abschleppwagen",
+      "Abschleppfahrzeug"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-12db2868e55b0e19b32a",
+    "word": "breakdown",
+    "pos": "noun",
+    "gloss": "A failure, particularly one which is mechanical in nature.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": "Whenever he was behind the wheel, he would panic at the first sign of a breakdown."
+  },
+  {
+    "id": "wkt-1d5923f9a548f91586c9",
+    "word": "seat belt",
+    "pos": "noun",
+    "gloss": "A restraining belt attached to a vehicle seat and fastened around occupants in order to keep them in place and decelerate them smoothly rather than suddenly in an accident, mitigating the risk of injury from uncontrolled impact with injurious objects.",
+    "de": [
+      "Sicherheitsgurt"
+    ],
+    "tags": [],
+    "topics": [
+      "automotive",
+      "transport",
+      "vehicles"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-152a3b0415a3ab22c507",
+    "word": "pedestrian",
+    "pos": "noun",
+    "gloss": "A walker; one who walks or goes on foot, especially as opposed to one who uses a vehicle.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-69a976384a41d1f635f6",
+    "word": "commute",
+    "pos": "verb",
+    "gloss": "To regularly travel from one's home to one's workplace or school, or vice versa.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "UK",
+      "US",
+      "intransitive"
+    ],
+    "topics": [],
+    "example": "I commute from Brooklyn to Manhattan by bicycle."
+  },
+  {
+    "id": "wkt-2e1567ba82b9837b8e9d",
+    "word": "overtake",
+    "pos": "verb",
+    "gloss": "To pass a slower moving object or entity (on the side closest to oncoming traffic).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "The racehorse overtook the lead pack on the last turn."
+  },
+  {
+    "id": "wkt-87f445aaf439670c7299",
+    "word": "boarding pass",
+    "pos": "noun",
+    "gloss": "A document or card, similar to a ticket, needed in order to board an airplane or other mode of transport.",
+    "de": [
+      "Bordkarte"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-0dd2fe48e182c89b7506",
+    "word": "departure",
+    "pos": "noun",
+    "gloss": "The act of departing or something that has departed.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "The departure was scheduled for noon."
+  },
+  {
+    "id": "wkt-132d2f0a32d50f702e9b",
+    "word": "arrival",
+    "pos": "noun",
+    "gloss": "The act of arriving (reaching a certain place).",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "The early arrival of the bride created a stir."
+  },
+  {
+    "id": "wkt-7e505e9eaf880daa8c7e",
+    "word": "layover",
+    "pos": "noun",
+    "gloss": "A break between stages of a journey.",
+    "de": [
+      "Aufenthalt"
+    ],
+    "tags": [
+      "Australia",
+      "Canada",
+      "New-Zealand",
+      "Philippines",
+      "US"
+    ],
+    "topics": [],
+    "example": "Near-synonyms: stopover, stayover (both sometimes synonymous)"
+  },
+  {
+    "id": "wkt-b2e8433df53c499e610f",
+    "word": "stopover",
+    "pos": "noun",
+    "gloss": "A short interruption in a journey or the place visited during such an interruption.",
+    "de": [
+      "Zwischenstopp",
+      "Zwischenlandung",
+      "Aufenthalt",
+      "Zwischenhalt"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "Near-synonyms: stayover, layover, lie-over (all sometimes synonymous)"
+  },
+  {
+    "id": "wkt-4b0cb66b2b850ce1ccf3",
+    "word": "luggage",
+    "pos": "noun",
+    "gloss": "The bags and other containers that hold a traveller's belongings.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "August 4, 1726, Jonathan Swift, letter to Alexander Pope\nI am gathering up my luggage, and preparing for my journey."
+  },
+  {
+    "id": "wkt-d97e86467d2642ba745b",
+    "word": "suitcase",
+    "pos": "noun",
+    "gloss": "A large (usually rectangular) piece of luggage used for carrying clothes, and sometimes suits, when travelling.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "My suitcase is stowed in the luggage rack."
+  },
+  {
+    "id": "wkt-e6de0177fdad0d5c2894",
+    "word": "carry-on",
+    "pos": "noun",
+    "gloss": "That luggage or baggage which is taken onto an airplane (or a ferry, etc.) with a passenger, rather than checked.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "Do you think they'll accept my ski poles as carry-on?"
+  },
+  {
+    "id": "wkt-897f35e81dea21896d86",
+    "word": "baggage claim",
+    "pos": "noun",
+    "gloss": "The designated location for receiving checked luggage, such as the baggage carousels at an airport.",
+    "de": [
+      "Gepäckausgabe",
+      "Gepäckrückgabe"
+    ],
+    "tags": [
+      "US"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-96cbb9466c04794d5edc",
+    "word": "customs",
+    "pos": "noun",
+    "gloss": "The duties or taxes imposed on imported or exported goods.",
+    "de": [
+      "Zoll",
+      "Zollgebühr"
+    ],
+    "tags": [
+      "countable",
+      "in-plural",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "Customs of £200 were due on all the wine we took back from France."
+  },
+  {
+    "id": "wkt-6b29a65c0c773b75beee",
+    "word": "aisle",
+    "pos": "noun",
+    "gloss": "A clear path/passage through rows of seating.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-130aa084f1a2465bfea2",
+    "word": "platform",
+    "pos": "noun",
+    "gloss": "A raised structure or other area alongside rails or a driveway alongside which vehicles stop to take in and discharge passengers.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "transport"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-236a81ab319b7c39d62b",
+    "word": "fare",
+    "pos": "noun",
+    "gloss": "Money paid for a transport ticket.",
+    "de": [
+      "Fahrpreis",
+      "Fahrgebühr",
+      "Fracht"
+    ],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": "train fare"
+  },
+  {
+    "id": "wkt-a397033a9092e4b4fe1b",
+    "word": "reservation",
+    "pos": "noun",
+    "gloss": "An arrangement by which accommodation or transport arrangements are secured in advance.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "I have a hotel reservation in the name of Mr Smith."
+  },
+  {
+    "id": "wkt-e1b0afb37d225dc5144f",
+    "word": "accommodation",
+    "pos": "noun",
+    "gloss": "Lodging in a dwelling or similar living quarters afforded to travellers in hotels or on cruise ships, or students, etc.",
+    "de": [],
+    "tags": [
+      "Australia",
+      "UK",
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "I have booked the accommodation for my trip to Paris."
+  },
+  {
+    "id": "wkt-9d75eb72a46c971ee540",
+    "word": "vacancy",
+    "pos": "noun",
+    "gloss": "An available room in a hotel; guest house, etc.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-73cfcd70000f3276f582",
+    "word": "reception",
+    "pos": "noun",
+    "gloss": "The desk of a hotel or office where guests are received.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "The reception of the hotel is on the second floor; exit the lift and turn right."
+  },
+  {
+    "id": "wkt-6aebaad54cc95f9615f3",
+    "word": "deposit",
+    "pos": "noun",
+    "gloss": "A sum of money given as a security for a borrowed item, which will be given back when the item is returned, e.g., a bottle deposit or can deposit",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-6c4604e86dda1a02d27f",
+    "word": "receipt",
+    "pos": "noun",
+    "gloss": "A written acknowledgment that a specified article or sum of money has been received.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-342a01b09fe59848b793",
+    "word": "refund",
+    "pos": "noun",
+    "gloss": "An amount of money returned.",
+    "de": [
+      "Erstattung",
+      "Rückerstattung",
+      "Rückzahlung"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "If the camera is faulty, you can return it to the store where you bought it for a full refund."
+  },
+  {
+    "id": "wkt-bc9c76e0d148d1c5e0f1",
+    "word": "cancellation",
+    "pos": "noun",
+    "gloss": "The act, process, or result of cancelling; as, the cancellation of certain words in a contract, or of the contract itself.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3e1879c9b4adbb6599d4",
+    "word": "delay",
+    "pos": "noun",
+    "gloss": "A period of time before an event occurs; the act of delaying; procrastination; lingering inactivity.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "the delay before the echo of a sound"
+  },
+  {
+    "id": "wkt-44ee6f0d369bbcaf3468",
+    "word": "itinerary",
+    "pos": "noun",
+    "gloss": "A route or proposed route of a journey.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-0835c95aa113235cfb96",
+    "word": "destination",
+    "pos": "noun",
+    "gloss": "The place set for the end of a journey or to which something is sent; place or point aimed at.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": "arrive at your destination"
+  },
+  {
+    "id": "wkt-dd8b76217a1671a39e1d",
+    "word": "landmark",
+    "pos": "noun",
+    "gloss": "A recognizable natural or man-made feature used for navigation.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3d17387ae9f17193b971",
+    "word": "rental",
+    "pos": "noun",
+    "gloss": "Something that is rented.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "It's just a rental, so I don't need to take very good care of it."
+  },
+  {
+    "id": "wkt-055f9848d0761b631a10",
+    "word": "insurance",
+    "pos": "noun",
+    "gloss": "A means of indemnity against a future occurrence of an uncertain event.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "The car was totalled, but fortunately I had insurance."
+  },
+  {
+    "id": "wkt-5cd32e0a95254aafb36d",
+    "word": "passport",
+    "pos": "noun",
+    "gloss": "An official document normally used for international journeys, which proves the identity and nationality of the person for whom it was issued.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "You will have to bring your passport to prove who you are."
+  },
+  {
+    "id": "wkt-417ad68cd69ac1d69bbb",
+    "word": "visa",
+    "pos": "noun",
+    "gloss": "A permit to enter and leave a country, normally issued by the authorities of the country to be visited.",
+    "de": [
+      "Visum"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "I came on a six-month tourist visa."
+  },
+  {
+    "id": "wkt-d8d93b1ef54a5fe71f3c",
+    "word": "currency",
+    "pos": "noun",
+    "gloss": "Money or other items used to facilitate transactions.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "Wampum was used as a currency by Amerindians."
+  },
+  {
+    "id": "wkt-5a54ed51336221a0404d",
+    "word": "exchange rate",
+    "pos": "noun",
+    "gloss": "The rate at which one currency may be exchanged for another currency.",
+    "de": [
+      "Wechselkurs"
+    ],
+    "tags": [],
+    "topics": [
+      "business",
+      "economics",
+      "finance",
+      "sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-7bf4c0ed945fc6f47bd1",
+    "word": "cash",
+    "pos": "noun",
+    "gloss": "Money in the form of notes or bills and coins, as opposed to checks, credit or electronic transactions.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "How are you off for cash? After you bounced those checks last time, they want to be paid in cash."
+  },
+  {
+    "id": "wkt-02f8917af3ef878190d4",
+    "word": "tip",
+    "pos": "noun",
+    "gloss": "A gratuity; a small amount of money left for a bartender, waiter, taxi driver or other service worker as a token of appreciation, often calculated as a percentage of the bill.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Workers in the American service industry usually depend on tips to even make minimum wage."
+  },
+  {
+    "id": "wkt-bdb55fb9cc31ac8bc664",
+    "word": "sightseeing",
+    "pos": "noun",
+    "gloss": "The activity of going out looking at things; tourism.",
+    "de": [
+      "Sightseeing",
+      "Tourismus",
+      "Besichtigen n von Sehenswürdigkeiten",
+      "Besichtigung f von Sehenswürdigkeiten"
+    ],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "Sightseeing is a frequent reason to visit San Francisco."
+  },
+  {
+    "id": "wkt-216e5cb29d9576c34d51",
+    "word": "souvenir",
+    "pos": "noun",
+    "gloss": "An item of sentimental value, that is given or kept to remember an event or location.",
+    "de": [
+      "Andenken",
+      "Reisemitbringsel",
+      "Souvenir",
+      "Erinnerungsstück",
+      "Mitbringsel"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3af5cec564cffd50aa45",
+    "word": "queue",
+    "pos": "noun",
+    "gloss": "A line of people, vehicles or other objects, usually one to be dealt with in sequence (i.e., the one at the front end is dealt with first, the one behind is dealt with next, and so on), and which newcomers join at the opposite end (the back).",
+    "de": [],
+    "tags": [
+      "Commonwealth",
+      "Ireland",
+      "UK",
+      "uncommon"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-b92e9637ff2dfa278eeb",
+    "word": "colleague",
+    "pos": "noun",
+    "gloss": "A fellow member of a profession, staff, academic faculty or other organization; an associate, a workmate.",
+    "de": [
+      "Kollege",
+      "Kollegin",
+      "Mitarbeiter",
+      "Mitarbeiterin"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-e6defb8b9d57c3f217d4",
+    "word": "acquaintance",
+    "pos": "noun",
+    "gloss": "A state of being acquainted with a person; originally indicating friendship, intimacy, but now suggesting a slight knowledge less deep than that of friendship; acquaintanceship.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "I know of the man; but have no acquaintance with him."
+  },
+  {
+    "id": "wkt-2fe682e33645da374d17",
+    "word": "relative",
+    "pos": "noun",
+    "gloss": "Someone connected by blood, marriage, or adoption; someone in the same family.",
+    "de": [
+      "Verwandter",
+      "Blutsverwandter",
+      "Verwandte",
+      "Blutsverwandte",
+      "Angehöriger",
+      "Angehörige",
+      "Familienangehöriger",
+      "Familienangehörige",
+      "Freund",
+      "Blutsfreund",
+      "Freundin",
+      "Blutsfreundin"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-d3504bc09f1672cefb33",
+    "word": "sibling",
+    "pos": "noun",
+    "gloss": "A person who shares a parent; one's brother or sister who one shares a parent with.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "None of my siblings are married yet."
+  },
+  {
+    "id": "wkt-76a82bafda8bb974ef9e",
+    "word": "nephew",
+    "pos": "noun",
+    "gloss": "A son of one's sibling, brother-in-law, or sister-in-law; either a son of one's brother (fraternal nephew) or a son of one's sister (sororal nephew).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-9b7d3c06a32a2b9436cb",
+    "word": "niece",
+    "pos": "noun",
+    "gloss": "A daughter of one’s sibling, brother-in-law, or sister-in-law; either the daughter of one's brother (\"fraternal niece\"), or of one's sister (\"sororal niece\").",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "My niece just celebrated her 15th birthday."
+  },
+  {
+    "id": "wkt-9b58b6536ec72c8a06a9",
+    "word": "in-law",
+    "pos": "noun",
+    "gloss": "A relative by marriage (or through affinity).",
+    "de": [],
+    "tags": [
+      "in-plural",
+      "often"
+    ],
+    "topics": [],
+    "example": "The house got a complete going-over before the arrival of the in-laws."
+  },
+  {
+    "id": "wkt-e544d42029e6f414eb75",
+    "word": "roommate",
+    "pos": "noun",
+    "gloss": "A person with whom one shares a room, as in a dormitory, barracks, rooming house, or apartment.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-5904ec3a5750f21bea37",
+    "word": "stranger",
+    "pos": "noun",
+    "gloss": "A person whom one does not know; a person who is neither a friend nor an acquaintance.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "That gentleman is a stranger to me."
+  },
+  {
+    "id": "wkt-98b4004bb92cd0ddec2d",
+    "word": "reliable",
+    "pos": "adj",
+    "gloss": "Suitable or fit to be relied on; worthy of dependence, reliance or trust; dependable, trustworthy",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-27b613bfa38a53f6d0b7",
+    "word": "thoughtful",
+    "pos": "adj",
+    "gloss": "Demonstrating thought or careful consideration.",
+    "de": [
+      "nachdenklich",
+      "bedächtig",
+      "gedankenvoll"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "Most thoughtful people eventually solve the puzzle."
+  },
+  {
+    "id": "wkt-9c84919c10962cb3baee",
+    "word": "considerate",
+    "pos": "adj",
+    "gloss": "Consciously thoughtful and observant (often of other people and their rights, needs, feelings and comfort).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "It was very considerate of you to give up your place for your friend."
+  },
+  {
+    "id": "wkt-0aa7f91f4b7a43ea4697",
+    "word": "stubborn",
+    "pos": "adj",
+    "gloss": "Refusing to move or to change one's opinion; obstinate; firmly resisting; persistent in doing something.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "People are pretty stubborn about their political beliefs, so why bother arguing?"
+  },
+  {
+    "id": "wkt-de6b9d9dbb563c98facf",
+    "word": "shy",
+    "pos": "adj",
+    "gloss": "Easily frightened; timid.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-1a215c07167f868d3a74",
+    "word": "outgoing",
+    "pos": "adj",
+    "gloss": "Extroverted: talkative, friendly, and social, especially with respect to meeting new people easily and comfortably; outgiving.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Tom is very outgoing and enjoys meeting people; his brother, on the other hand, is painfully shy."
+  },
+  {
+    "id": "wkt-975e1cadbb4350d474a2",
+    "word": "generous",
+    "pos": "adj",
+    "gloss": "Willing to give and share unsparingly; showing a readiness to give more (especially money) than is expected or needed.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "She's been extremely generous with her winnings."
+  },
+  {
+    "id": "wkt-2c5470b0b4e2723349a7",
+    "word": "stingy",
+    "pos": "adj",
+    "gloss": "Unwilling to spend, give, or share; ungenerous; mean.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-fb238340a24778e1c51e",
+    "word": "honest",
+    "pos": "adj",
+    "gloss": "Scrupulous with regard to telling the truth; not given to swindling, lying, or fraud; upright.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "brutally honest"
+  },
+  {
+    "id": "wkt-64cdbf2ffab31fe3307a",
+    "word": "polite",
+    "pos": "adj",
+    "gloss": "Well-mannered, civilized.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "It's not polite to use a mobile phone in a restaurant."
+  },
+  {
+    "id": "wkt-9a2f3018ee1c686946d0",
+    "word": "rude",
+    "pos": "adj",
+    "gloss": "Lacking in refinement or civility; bad-mannered; discourteous.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "This girl was so rude towards the cashier by screaming at him for no apparent reason."
+  },
+  {
+    "id": "wkt-dd9fb778586bb317dc23",
+    "word": "awkward",
+    "pos": "adj",
+    "gloss": "Not easily managed or effected; embarrassing.",
+    "de": [
+      "peinlich",
+      "betreten",
+      "unangenehm",
+      "umständlich",
+      "patschert",
+      "beklemmend",
+      "awkward"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "That was an extremely awkward moment. Everyone was watching."
+  },
+  {
+    "id": "wkt-436b6396af36e351c287",
+    "word": "confident",
+    "pos": "adj",
+    "gloss": "Very sure of something; positive.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "I'm pretty confident that she's not lying, she's acting normally."
+  },
+  {
+    "id": "wkt-2c64890392dd0c069b4c",
+    "word": "embarrassed",
+    "pos": "adj",
+    "gloss": "Having a feeling of shameful discomfort.",
+    "de": [
+      "verlegen"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "After returning from the pool, Aleshia felt significantly better, though she was still slightly embarrassed."
+  },
+  {
+    "id": "wkt-b5c82236ee6371781fd2",
+    "word": "disappointed",
+    "pos": "adj",
+    "gloss": "Defeated of expectations or hope; experiencing disappointment; let down.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "After all his anticipation, the trip left him deeply disappointed."
+  },
+  {
+    "id": "wkt-6b5d39489c6c8734d2ce",
+    "word": "relieved",
+    "pos": "adj",
+    "gloss": "Experiencing or exhibiting relief; freed from stress or discomfort.",
+    "de": [
+      "erleichtert"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "She was extremely relieved when the lesson finished."
+  },
+  {
+    "id": "wkt-bba5b4498497cc6db43e",
+    "word": "grateful",
+    "pos": "adj",
+    "gloss": "Of a person or their actions, feelings, etc.: expressing gratitude or appreciation; appreciative, thankful.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "I’m grateful that you helped me out."
+  },
+  {
+    "id": "wkt-c79f85e3e10642a46039",
+    "word": "curious",
+    "pos": "adj",
+    "gloss": "Tending to ask questions, or to want to explore or investigate; inquisitive; (with a negative connotation) nosy, prying.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Young children are naturally curious about the world and everything in it."
+  },
+  {
+    "id": "wkt-065ba5118eb520b4226f",
+    "word": "jealous",
+    "pos": "adj",
+    "gloss": "Suspecting rivalry in love; troubled by worries that one might have been replaced in someone's affections; suspicious of a lover's or spouse's fidelity.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "jealous lover"
+  },
+  {
+    "id": "wkt-d10c6e8d4f4cc0a305be",
+    "word": "proud",
+    "pos": "adj",
+    "gloss": "Feeling honoured (by something); feeling happy or satisfied about an event or fact; gratified.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "We're proud of having won / to have won."
+  },
+  {
+    "id": "wkt-8f8aef6e96e69b97ab0a",
+    "word": "trust",
+    "pos": "noun",
+    "gloss": "Confidence in or reliance on some person or quality.",
+    "de": [
+      "Vertrauen"
+    ],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "He needs to regain her trust if he is ever going to win her back."
+  },
+  {
+    "id": "wkt-a5b626da5a128b231fca",
+    "word": "apologize",
+    "pos": "verb",
+    "gloss": "To make an apology or excuse; to acknowledge some fault or offense, with expression of regret for it, by way of amends",
+    "de": [],
+    "tags": [
+      "British",
+      "English",
+      "Oxford",
+      "US",
+      "intransitive",
+      "often"
+    ],
+    "topics": [],
+    "example": "My correspondent apologized for not answering my letter."
+  },
+  {
+    "id": "wkt-d41f84f5fd01fd4750cc",
+    "word": "forgive",
+    "pos": "verb",
+    "gloss": "To pardon (someone); to waive any negative feeling towards or desire for punishment or retribution against.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "Please forgive me if my phone goes off - I'm expecting an urgent call from my boss."
+  },
+  {
+    "id": "wkt-80798126caa3938ac981",
+    "word": "blame",
+    "pos": "verb",
+    "gloss": "To censure (someone or something); to criticize.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-ecee7f1c39d7f9a8e86e",
+    "word": "argue",
+    "pos": "verb",
+    "gloss": "To debate, disagree, or discuss opposing or differing viewpoints; to controvert; to wrangle.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "example": "He also argued for stronger methods to be used against China."
+  },
+  {
+    "id": "wkt-5626441edf912e3cf9d2",
+    "word": "persuade",
+    "pos": "verb",
+    "gloss": "To successfully convince (someone) to agree to, accept, or do something, usually through reasoning and verbal influence.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "That salesman was able to persuade me into buying this bottle of lotion."
+  },
+  {
+    "id": "wkt-65647383e9c525f8d199",
+    "word": "encourage",
+    "pos": "verb",
+    "gloss": "To mentally support; to motivate, give courage, hope or spirit.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "I encouraged him during his race."
+  },
+  {
+    "id": "wkt-a89f0f770c17d22e6e2b",
+    "word": "reassure",
+    "pos": "verb",
+    "gloss": "To assure anew; to restore confidence to; to free from fear or self-doubt.",
+    "de": [
+      "versichern",
+      "beruhigen",
+      "zusichern"
+    ],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "The boy's mother reassured him that there was no monster hiding under the bed."
+  },
+  {
+    "id": "wkt-a96e59b2281e24ffa41a",
+    "word": "compliment",
+    "pos": "noun",
+    "gloss": "An expression of praise, congratulation, or respect.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "pay someone a compliment"
+  },
+  {
+    "id": "wkt-d6fc4057a93d3b6fe324",
+    "word": "favor",
+    "pos": "noun",
+    "gloss": "A kind or helpful deed; an instance of voluntarily assisting (someone).",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "He did me a favor when he took the time to drive me home."
+  },
+  {
+    "id": "wkt-f7f3cb0a5052442d6e43",
+    "word": "deadline",
+    "pos": "noun",
+    "gloss": "A time limit in the form of a date on or before which something must be completed.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "I must make this deadline or my boss will kill me!"
+  },
+  {
+    "id": "wkt-1ed038adef6557f6d2e3",
+    "word": "schedule",
+    "pos": "noun",
+    "gloss": "A procedural plan, usually but not necessarily tabular in nature, indicating a sequence of operations and the planned times at which those operations are to occur.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Near-synonyms: timeline, timetable"
+  },
+  {
+    "id": "wkt-aed33d25debf635ce1f4",
+    "word": "agenda",
+    "pos": "noun",
+    "gloss": "A list of matters to be taken up (as at a meeting).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-b9694a504e2c71b2d75a",
+    "word": "minutes",
+    "pos": "noun",
+    "gloss": "The official notes kept during a meeting.",
+    "de": [
+      "Protokoll",
+      "Mitschrift",
+      "Niederschrift"
+    ],
+    "tags": [
+      "plural",
+      "plural-only"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-09b73a5bf331e871274d",
+    "word": "proposal",
+    "pos": "noun",
+    "gloss": "A scheme or design.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "proposals for the construction of a new building"
+  },
+  {
+    "id": "wkt-6c59eb05b6717f58bf50",
+    "word": "quote",
+    "pos": "noun",
+    "gloss": "A summary of work to be done with a set price; a quotation.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "After going over the hefty quotes, the board decided it was cheaper to have the project executed by its own staff."
+  },
+  {
+    "id": "wkt-ce4c87c05f735502b326",
+    "word": "invoice",
+    "pos": "noun",
+    "gloss": "A bill; a commercial document issued by a seller to a buyer indicating the products, quantities and agreed prices for products or services that the seller has already provided the buyer with. An invoice indicates that, unless paid in advance, payment is due by the buyer to the seller, according to the agreed terms.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "I've already rendered the invoices for payment."
+  },
+  {
+    "id": "wkt-995cbab3269b48780ec2",
+    "word": "expense",
+    "pos": "noun",
+    "gloss": "A spending or consuming, often a disbursement of funds.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "She went to great expense to ensure her children would get the best education."
+  },
+  {
+    "id": "wkt-8b072a0c666241ceda56",
+    "word": "revenue",
+    "pos": "noun",
+    "gloss": "The total sales; turnover.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "accounting",
+      "business",
+      "finance"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-77cdcf44e0c291ea5ba2",
+    "word": "profit",
+    "pos": "noun",
+    "gloss": "Total income or cash flow minus expenditures. The money or other benefit a non-governmental organization or individual receives in exchange for products and services sold at an advertised price.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "accounting",
+      "business",
+      "economics",
+      "finance",
+      "sciences"
+    ],
+    "example": null
+  },
+  {
+    "id": "wkt-a0604695bac2d4f7bd69",
+    "word": "budget",
+    "pos": "noun",
+    "gloss": "The amount of money or resources earmarked for a particular institution, activity or timeframe.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "limited budget"
+  },
+  {
+    "id": "wkt-d8081e7730142a66758b",
+    "word": "supplier",
+    "pos": "noun",
+    "gloss": "One who supplies; a provider.",
+    "de": [
+      "Lieferant",
+      "Lieferantin",
+      "Zulieferer",
+      "Zuliefererin",
+      "Versorger",
+      "Versorgerin"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-08ceeb601c7cad39df33",
+    "word": "customer",
+    "pos": "noun",
+    "gloss": "A person or company who purchases or receives a product or service from a business or merchant or intends to do so.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Every person who passes by is a potential customer."
+  },
+  {
+    "id": "wkt-9c68e8a29d02f963500e",
+    "word": "client",
+    "pos": "noun",
+    "gloss": "A customer, a buyer or receiver of goods or services.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-2313e787f59125555c8d",
+    "word": "contract",
+    "pos": "noun",
+    "gloss": "An agreement between two or more parties, to perform a specific job or work order, often temporary or of fixed duration and usually governed by a written agreement.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "sign a contract"
+  },
+  {
+    "id": "wkt-f207b5cc6927a2593ad4",
+    "word": "agreement",
+    "pos": "noun",
+    "gloss": "An understanding between entities to follow a specific course of conduct.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "example": "to enter an agreement"
+  },
+  {
+    "id": "wkt-7226e2ac549db17838d4",
+    "word": "requirement",
+    "pos": "noun",
+    "gloss": "Something asked.",
+    "de": [
+      "Anforderung"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": "Near-synonym: request"
+  },
+  {
+    "id": "wkt-e8b265c5f301c8bd6918",
+    "word": "feedback",
+    "pos": "noun",
+    "gloss": "Critical assessment of a process or activity or of their results.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "After you hand in your essays, I will give both grades and feedback."
+  },
+  {
+    "id": "wkt-093b5cc508b1c450c52d",
+    "word": "outcome",
+    "pos": "noun",
+    "gloss": "That which is produced or occurs as a result of an event or process.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "A quality automobile is the outcome of the work of skilled engineers and thousands of workers."
+  },
+  {
+    "id": "wkt-740cee4f34003973af06",
+    "word": "issue",
+    "pos": "noun",
+    "gloss": "Any question or situation to be resolved, particularly",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Please stand by. We are having technical issues."
+  },
+  {
+    "id": "wkt-c4eb3d872f6857d431a3",
+    "word": "priority",
+    "pos": "noun",
+    "gloss": "An item's relative importance.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "He set his e-mail message's priority to high."
+  },
+  {
+    "id": "wkt-83853f1a8fc35cc37704",
+    "word": "approach",
+    "pos": "noun",
+    "gloss": "A manner of making (a policy) or solving (a problem, etc.).",
+    "de": [],
+    "tags": [
+      "figuratively"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-8857e5a6307164e23266",
+    "word": "progress",
+    "pos": "noun",
+    "gloss": "Movement or advancement through a series of events, or points in time; development through time.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "example": "Testing for the new antidote is currently in progress."
+  },
+  {
+    "id": "wkt-dd1f78eaef8c59fc56ec",
+    "word": "setback",
+    "pos": "noun",
+    "gloss": "An obstacle, delay, disadvantage, or blow (an adverse event which slows down, or prevents progress towards a desired outcome).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "After some initial setbacks, the expedition went safely on its way."
+  },
+  {
+    "id": "wkt-10d93b133e21b164ea64",
+    "word": "workload",
+    "pos": "noun",
+    "gloss": "The amount of work assigned to a particular worker, normally in a specified time period.",
+    "de": [
+      "Arbeitsbelastung",
+      "Arbeitsauslastung"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-cff3fa3b5b36031aa12f",
+    "word": "overtime",
+    "pos": "noun",
+    "gloss": "Working time outside of one's regular hours.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "Workers are usually paid extra for working overtime."
+  },
+  {
+    "id": "wkt-e953aae6d2dd044d816e",
+    "word": "leave",
+    "pos": "noun",
+    "gloss": "Permission to be absent; time away from one's work.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "I've just been given three weeks' leave by my boss — I don't think I still have some leave owing to me."
+  },
+  {
+    "id": "wkt-5ca01dcfeff9f823825a",
+    "word": "salary",
+    "pos": "noun",
+    "gloss": "A fixed amount of money paid to a worker, usually calculated on a monthly or annual basis, not hourly, as wages. Implies a degree of professionalism and/or autonomy.",
+    "de": [
+      "Gehalt",
+      "Lohn"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-c4e3117a90826f0d1ab9",
+    "word": "wage",
+    "pos": "noun",
+    "gloss": "An amount of money paid to a worker for a specified quantity of work, usually calculated on an hourly basis and expressed in an amount of money per hour.",
+    "de": [
+      "Lohn",
+      "Arbeitsentgelt"
+    ],
+    "tags": [
+      "often",
+      "plural"
+    ],
+    "topics": [],
+    "example": "Before her promotion, her wages were 20% less."
+  },
+  {
+    "id": "wkt-4b9dfb5d9c72540b255c",
+    "word": "benefit",
+    "pos": "noun",
+    "gloss": "An advantage; help or aid from something.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "example": "She can't read, so the voice recording was made for her benefit."
+  },
+  {
+    "id": "wkt-a078829045c583c8cc30",
+    "word": "recruit",
+    "pos": "verb",
+    "gloss": "To enroll or enlist new members or potential employees on behalf of an employer, organization, sports team, the military, etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "We need to recruit more admin staff to deal with the massive surge in popularity of our products"
+  },
+  {
+    "id": "wkt-90fbb0fdd22ba6172970",
+    "word": "resign",
+    "pos": "verb",
+    "gloss": "To voluntarily leave (a job or position), in particular a hard-fought position of high status.",
+    "de": [],
+    "tags": [
+      "intransitive",
+      "transitive"
+    ],
+    "topics": [],
+    "example": "I am resigning in protest of the unfair treatment of our employees."
+  },
+  {
+    "id": "wkt-c7cb5df8b6530aa4f5f6",
+    "word": "negotiate",
+    "pos": "verb",
+    "gloss": "To confer with others in order to come to terms or reach an agreement.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-d76dd9958b01fa2ab662",
+    "word": "approve",
+    "pos": "verb",
+    "gloss": "To consider worthy (to); to be pleased (with); to accept.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "example": "Her mother never approves of any of her boyfriends. She thinks nobody is good enough for her little girl."
+  },
+  {
+    "id": "wkt-637272de1dee94d1fbf0",
+    "word": "postpone",
+    "pos": "verb",
+    "gloss": "To delay or put off an event, appointment, etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-55f70c50ef3883b4f9bf",
+    "word": "confirm",
+    "pos": "verb",
+    "gloss": "To assure the accuracy of previous statements.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-8af10863b2a29f54120a",
+    "word": "attach",
+    "pos": "verb",
+    "gloss": "To fasten, to join to (literally and figuratively).",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "You need to attach the carabiner to your harness."
+  },
+  {
+    "id": "wkt-54679f9997d613f43d96",
+    "word": "available",
+    "pos": "adj",
+    "gloss": "Such as one may avail oneself of; capable of being used for the accomplishment of a purpose.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "We have an available candidate."
+  },
+  {
+    "id": "wkt-e53c39373ee781ea9483",
+    "word": "fair enough",
+    "pos": "phrase",
+    "gloss": "Used to acknowledge a person's point or argument; denotes that, upon consideration, something is correct or reasonable; an expression of acknowledgment or understanding.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-3f66cd13243a44542508",
+    "word": "to be honest",
+    "pos": "phrase",
+    "gloss": "Frankly, honestly.",
+    "de": [],
+    "tags": [
+      "idiomatic"
+    ],
+    "topics": [],
+    "example": "I don't mind, to be honest."
+  },
+  {
+    "id": "wkt-850e7e792335ec8e6158",
+    "word": "never mind",
+    "pos": "verb",
+    "gloss": "It is not important; do not fret; used to reassure or comfort the person to whom it is said.",
+    "de": [],
+    "tags": [
+      "hortative"
+    ],
+    "topics": [],
+    "example": "I'm afraid I’ve broken your mug. — Never mind, it was old and I was going to throw it away."
+  },
+  {
+    "id": "wkt-68119eb565c06e3928ab",
+    "word": "it depends",
+    "pos": "phrase",
+    "gloss": "Used to indicate that different situations may produce different results.",
+    "de": [
+      "das kommt darauf an"
+    ],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-4aebafede290550c52e3",
+    "word": "in a nutshell",
+    "pos": "adv",
+    "gloss": "In summary; briefly or simply.",
+    "de": [
+      "kurzgesagt",
+      "mit einem Worte",
+      "in einer Nussschale"
+    ],
+    "tags": [
+      "idiomatic"
+    ],
+    "topics": [],
+    "example": "He had a lot to say, but his answer, in a nutshell, was no."
+  },
+  {
+    "id": "wkt-f0c97464647ff11bfde4",
+    "word": "so far",
+    "pos": "adv",
+    "gloss": "Until now; previously; yet.",
+    "de": [
+      "bislang",
+      "bisher",
+      "bis jetzt"
+    ],
+    "tags": [
+      "idiomatic"
+    ],
+    "topics": [],
+    "example": "So far, nothing unusual has happened."
+  },
+  {
+    "id": "wkt-8e4ca3973823d581bb5f",
+    "word": "sooner or later",
+    "pos": "adv",
+    "gloss": "Eventually, at some undetermined time in the not-too-distant future.",
+    "de": [
+      "früher oder später"
+    ],
+    "tags": [
+      "not-comparable"
+    ],
+    "topics": [],
+    "example": "He’ll turn up sooner or later."
+  },
+  {
+    "id": "wkt-25c6214dac1066c4d654",
+    "word": "once in a while",
+    "pos": "adv",
+    "gloss": "Occasionally; sometimes.",
+    "de": [
+      "ab und zu"
+    ],
+    "tags": [
+      "idiomatic",
+      "not-comparable"
+    ],
+    "topics": [],
+    "example": "I send her a note once in a while to let her know I'm thinking of her."
+  },
+  {
+    "id": "wkt-8bb581c0381130ba52cd",
+    "word": "all of a sudden",
+    "pos": "adv",
+    "gloss": "Suddenly, quickly, without warning.",
+    "de": [
+      "auf einmal",
+      "mit einem Mal"
+    ],
+    "tags": [
+      "colloquial",
+      "not-comparable"
+    ],
+    "topics": [],
+    "example": "All of a sudden I felt very hot and tired."
+  },
+  {
+    "id": "wkt-a63cdc1b2e477c4c647b",
+    "word": "for the time being",
+    "pos": "adv",
+    "gloss": "Temporarily; for now; until later; until the situation changes; in an indefinite period of time.",
+    "de": [
+      "fürs Erste",
+      "vorerst",
+      "einstweilen",
+      "vorläufig",
+      "zunächst einmal",
+      "bis auf Weiteres"
+    ],
+    "tags": [
+      "idiomatic",
+      "not-comparable"
+    ],
+    "topics": [],
+    "example": "I think I will ignore the problem for the time being."
+  },
+  {
+    "id": "wkt-d6ac8f4ec5e6ed3da1a9",
+    "word": "by accident",
+    "pos": "adv",
+    "gloss": "Accidentally; unintentionally; without meaning to; as the result of an event not expected, aided, or willingly planned.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Sorry. I knocked over the vase by accident."
+  },
+  {
+    "id": "wkt-3bc2726113372f55b810",
+    "word": "hang on",
+    "pos": "verb",
+    "gloss": "To wait a moment.",
+    "de": [],
+    "tags": [
+      "figuratively",
+      "idiomatic",
+      "imperative"
+    ],
+    "topics": [],
+    "example": "Hang on. Let me check."
+  },
+  {
+    "id": "wkt-b3929cb4e0cdbb0ec902",
+    "word": "figure out",
+    "pos": "verb",
+    "gloss": "To come to understand; to discover or find a solution; to deduce.",
+    "de": [],
+    "tags": [
+      "informal"
+    ],
+    "topics": [],
+    "example": "As soon as I figure out what is wrong with my car, I will fix it."
+  },
+  {
+    "id": "wkt-581b59871de506491011",
+    "word": "find out",
+    "pos": "verb",
+    "gloss": "To discover, as by asking or investigating.",
+    "de": [],
+    "tags": [
+      "idiomatic",
+      "transitive"
+    ],
+    "topics": [],
+    "example": "I don't know who the twenty-first president of the United States was, but it should be very easy to find out."
+  },
+  {
+    "id": "wkt-ade11a128a8f375df212",
+    "word": "look up",
+    "pos": "verb",
+    "gloss": "To obtain information about something from a reference book.",
+    "de": [],
+    "tags": [
+      "idiomatic",
+      "transitive"
+    ],
+    "topics": [],
+    "example": "I didn't know what a mitochondrion was until I looked it up in a dictionary."
+  },
+  {
+    "id": "wkt-de491963878e87ac2819",
+    "word": "look after",
+    "pos": "verb",
+    "gloss": "To care for; to keep safe.",
+    "de": [],
+    "tags": [
+      "also",
+      "reflexive",
+      "transitive"
+    ],
+    "topics": [],
+    "example": "He asked me to look after his daughter while he was away."
+  },
+  {
+    "id": "wkt-895d418940ffe9a6e2eb",
+    "word": "look forward to",
+    "pos": "verb",
+    "gloss": "To anticipate, expect, or wait for, especially with a feeling of approval or pleasure; to be excited or eager to.",
+    "de": [
+      "sich freuen auf"
+    ],
+    "tags": [
+      "idiomatic",
+      "transitive"
+    ],
+    "topics": [],
+    "example": "He was not looking forward to having to repair the downed power lines after the wind storm."
+  },
+  {
+    "id": "wkt-a5cb16afbd7f7e641f11",
+    "word": "put off",
+    "pos": "verb",
+    "gloss": "To postpone, especially through procrastination.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "Don't put off your homework to the last minute."
+  },
+  {
+    "id": "wkt-0cb2432a54abff3b06cf",
+    "word": "give up",
+    "pos": "verb",
+    "gloss": "To stop or quit (an activity, etc.).",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "They gave up the search when it got dark."
+  },
+  {
+    "id": "wkt-bde00c63c5db0b32230e",
+    "word": "get along",
+    "pos": "verb",
+    "gloss": "To interact or coexist well, without argument or trouble.",
+    "de": [],
+    "tags": [
+      "idiomatic",
+      "intransitive",
+      "often"
+    ],
+    "topics": [],
+    "example": "I wish the kids would get along better."
+  },
+  {
+    "id": "wkt-92f19074735d7bda157e",
+    "word": "bring up",
+    "pos": "verb",
+    "gloss": "To mention.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Don't bring up politics if you want to have a quiet conversation with that guy."
+  },
+  {
+    "id": "wkt-264f00471d7a9e3ca816",
+    "word": "turn down",
+    "pos": "verb",
+    "gloss": "To refuse, decline, or deny.",
+    "de": [],
+    "tags": [
+      "idiomatic"
+    ],
+    "topics": [],
+    "example": "He turned down all our offers of help."
+  },
+  {
+    "id": "wkt-a4353b22dfa40b9adff4",
+    "word": "turn up",
+    "pos": "verb",
+    "gloss": "To show up; to appear suddenly or unexpectedly.",
+    "de": [],
+    "tags": [
+      "copulative",
+      "intransitive"
+    ],
+    "topics": [],
+    "example": "Is this your t-shirt that turned up in my drawer?"
+  },
+  {
+    "id": "wkt-0dee54077df23e2f08e1",
+    "word": "work out",
+    "pos": "verb",
+    "gloss": "To resolve; to find a solution for.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "Near-synonyms: straighten out, sort out"
+  },
+  {
+    "id": "wkt-8d4272d6a1c2a7f1daee",
+    "word": "carry on",
+    "pos": "verb",
+    "gloss": "To continue or proceed as before.",
+    "de": [],
+    "tags": [
+      "idiomatic",
+      "intransitive"
+    ],
+    "topics": [],
+    "example": "I’ll be gone for a few days, but I hope you will carry on in my absence."
+  },
+  {
+    "id": "wkt-baad96d4cb501ab290b1",
+    "word": "catch up",
+    "pos": "verb",
+    "gloss": "To reach something that had been ahead.",
+    "de": [
+      "einholen"
+    ],
+    "tags": [
+      "ambitransitive"
+    ],
+    "topics": [],
+    "example": "Rose was three seconds behind, but managed to catch up with the race leader and eventually won."
+  },
+  {
+    "id": "wkt-3839e44fdf7d24004eaa",
+    "word": "take over",
+    "pos": "verb",
+    "gloss": "To assume control of something, such as a business or enterprise, and sometimes by force.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": null
+  },
+  {
+    "id": "wkt-cbab75e17e31768a39ac",
+    "word": "deal with",
+    "pos": "verb",
+    "gloss": "To handle verbally or in some form of artistic expression; to address or discuss as a subject.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": "This book deals with incest."
+  },
+  {
+    "id": "wkt-8a4bb4b5a1abd9d4201b",
+    "word": "get rid of",
+    "pos": "verb",
+    "gloss": "To rid oneself of; to cause oneself to be free of or released from.",
+    "de": [
+      "loswerden",
+      "entledigen"
+    ],
+    "tags": [
+      "idiomatic",
+      "transitive"
+    ],
+    "topics": [],
+    "example": "Over the weekend he spent some time getting rid of the clothes he no longer wears."
+  },
+  {
+    "id": "wkt-b918e29d5e6024f28523",
+    "word": "keep in mind",
+    "pos": "verb",
+    "gloss": "Synonym of bear in mind.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "example": "Keep in mind that he does not hear too well, so you may have to speak loudly."
+  }
+]

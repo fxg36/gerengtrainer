@@ -1,0 +1,536 @@
+# topic|English|Deutsch|optional English sense hint
+home|hinge|Scharnier|joint
+home|outlet|Steckdose|electric
+home|porcelain|Porzellan|ceramic
+home|china|Porzellangeschirr|tableware
+home|shelf|Regalbrett|horizontal
+home|drawer|Schublade|sliding
+home|cupboard|Schrank|storage
+home|wardrobe|Kleiderschrank|cabinet
+home|ceiling|Zimmerdecke|room
+home|floor|Fußboden|room
+home|curtain|Vorhang|cloth
+home|blinds|Jalousie|window
+home|carpet|Teppich|floor
+home|rug|kleiner Teppich|floor
+home|cushion|Sofakissen|soft
+home|pillow|Kopfkissen|head
+home|blanket|Decke|cloth
+home|duvet|Bettdecke|bedding
+home|mattress|Matratze|bed
+home|pillowcase|Kissenbezug|pillow
+home|towel|Handtuch|dry
+home|faucet|Wasserhahn|water
+home|sink|Waschbecken|basin
+home|bathtub|Badewanne|bathing
+home|shower|Dusche|water
+home|drain|Abfluss|liquid
+home|mirror|Spiegel|reflect
+home|doormat|Fußmatte|door
+home|doorbell|Türklingel|bell
+home|threshold|Türschwelle|door
+home|staircase|Treppe|stairs
+home|railing|Geländer|barrier
+home|attic|Dachboden|roof
+home|basement|Keller|ground
+home|balcony|Balkon|platform
+home|chimney|Schornstein|smoke
+home|fireplace|Kamin|fire
+home|radiator|Heizkörper|heat
+home|thermostat|Thermostat|temperature
+home|vacuum cleaner|Staubsauger|clean
+home|broom|Besen|sweep
+home|dustpan|Kehrschaufel|dust
+home|mop|Wischmopp|clean
+home|detergent|Reinigungsmittel|clean
+home|laundry|Wäsche|wash
+home|clothespin|Wäscheklammer|clothes
+home|furniture|Möbel|room
+home|landlord|Vermieter|rent
+home|tenant|Mieter|rent
+home|rent|Miete|payment
+repair|breaker box|Sicherungskasten mit Leitungsschutzschaltern|electric
+repair|screw|Schraube|thread
+repair|screwdriver|Schraubendreher|screw
+repair|nail|Nagel|fastener
+repair|hammer|Hammer|tool
+repair|pliers|Zange|grip
+repair|wrench|Schraubenschlüssel|tool
+repair|drill|Bohrmaschine|tool
+repair|saw|Säge|tool
+repair|ladder|Leiter|climb
+repair|tape measure|Maßband|measure
+repair|spirit level|Wasserwaage|horizontal
+repair|sandpaper|Schleifpapier|abrasive
+repair|paintbrush|Pinsel|paint
+repair|roller|Farbrolle|paint
+repair|varnish|Lack|coating
+repair|glue|Klebstoff|adhesive
+repair|adhesive tape|Klebeband|adhesive
+repair|bolt|Bolzen|fastener
+repair|nut|Schraubenmutter|thread
+repair|washer|Unterlegscheibe|fastener
+repair|wire|Draht|metal
+repair|cable|Kabel|electric
+repair|plug|Stecker|electric
+repair|fuse|Sicherung|electric
+repair|pipe|Rohr|tube
+repair|leak|Leck|fluid
+repair|seal|Dichtung|tight
+repair|rust|Rost|iron
+repair|scratch|Kratzer|mark
+repair|dent|Delle|depression
+repair|crack|Riss|break
+repair|wood|Holz|tree
+repair|plywood|Sperrholz|layer
+repair|steel|Stahl|iron
+repair|copper|Kupfer|metal
+repair|brass|Messing|alloy
+repair|concrete|Beton|cement
+repair|brick|Ziegelstein|building
+repair|tile|Fliese|cover
+repair|tighten|festziehen|tight
+repair|loosen|lockern|loose
+repair|replace|ersetzen|place
+repair|repair|reparieren|restore
+repair|assemble|zusammenbauen|together
+repair|measure|messen|quantity
+repair|install|einbauen|set
+repair|unplug|den Stecker ziehen|plug
+repair|insulation|Dämmung|heat
+repair|socket|Steckdose / Buchse|electric
+nature|spruce|Fichte|tree
+nature|pine|Kiefer (Baum)|tree
+nature|oak|Eiche|tree
+nature|beech|Buche|tree
+nature|birch|Birke|tree
+nature|willow|Weide (Baum)|tree
+nature|maple|Ahorn|tree
+nature|chestnut|Kastanie|tree
+nature|ash|Esche|tree
+nature|fir|Tanne|tree
+nature|trunk|Baumstamm|tree
+nature|bark|Baumrinde|tree
+nature|branch|Ast|tree
+nature|twig|Zweig|branch
+nature|root|Wurzel|plant
+nature|leaf|Blatt|plant
+nature|needle|Nadel (Baum)|conifer
+nature|cone|Zapfen|conifer
+nature|acorn|Eichel|oak
+nature|moss|Moos|plant
+nature|fern|Farn|plant
+nature|ivy|Efeu|plant
+nature|hedge|Hecke|shrubs
+nature|shrub|Strauch|plant
+nature|weed|Unkraut|plant
+nature|lawn|Rasen|grass
+nature|soil|Erde / Boden|ground
+nature|pebble|Kieselstein|stone
+nature|gravel|Kies|stone
+nature|meadow|Wiese|grass
+nature|pasture|Weidefläche|grazing
+nature|forest|Wald|tree
+nature|clearing|Lichtung|forest
+nature|pond|Teich|water
+nature|stream|Bach|water
+nature|riverbank|Flussufer|river
+nature|squirrel|Eichhörnchen|rodent
+nature|hedgehog|Igel|mammal
+nature|deer|Hirsch / Reh|ruminant
+nature|fox|Fuchs|mammal
+nature|badger|Dachs|mammal
+nature|owl|Eule|bird
+nature|sparrow|Spatz|bird
+nature|robin|Rotkehlchen|bird
+nature|beetle|Käfer|insect
+nature|wasp|Wespe|insect
+nature|caterpillar|Raupe|larva
+nature|snail|Schnecke|gastropod
+nature|earthworm|Regenwurm|worm
+nature|dandelion|Löwenzahn|plant
+weather|drizzle|Nieselregen|rain
+weather|downpour|Wolkenbruch|rain
+weather|shower|Regenschauer|rain
+weather|hail|Hagel|ice
+weather|sleet|Schneeregen|rain
+weather|frost|Frost|freez
+weather|dew|Tau|moisture
+weather|fog|Nebel|cloud
+weather|mist|leichter Nebel|water
+weather|breeze|Brise|wind
+weather|gust|Windböe|wind
+weather|thunder|Donner|sound
+weather|lightning|Blitz|electric
+weather|drought|Dürre|rain
+weather|flood|Überschwemmung|water
+weather|heatwave|Hitzewelle|heat
+weather|humidity|Luftfeuchtigkeit|moisture
+weather|forecast|Vorhersage|prediction
+weather|overcast|bedeckt|cloud
+weather|chilly|kühl|cold
+weather|mild|mild|moderate
+weather|slippery|rutschig|friction
+weather|muddy|schlammig|mud
+weather|steep|steil|slope
+weather|slope|Hang|incline
+weather|cliff|Klippe|rock
+weather|valley|Tal|mountain
+weather|ridge|Bergkamm|mountain
+weather|summit|Gipfel|highest
+weather|shore|Ufer / Küste|water
+weather|tide|Gezeiten|sea
+weather|wave|Welle|water
+weather|current|Strömung|flow
+weather|bay|Bucht|sea
+weather|peninsula|Halbinsel|land
+weather|waterfall|Wasserfall|water
+weather|trail|Wanderweg|path
+weather|puddle|Pfütze|water
+weather|sunrise|Sonnenaufgang|sun
+weather|sunset|Sonnenuntergang|sun
+body|ankle|Knöchel|joint
+body|wrist|Handgelenk|joint
+body|elbow|Ellenbogen|joint
+body|shoulder|Schulter|body
+body|chin|Kinn|face
+body|jaw|Kiefer (Körperteil)|mouth
+body|forehead|Stirn|face
+body|eyebrow|Augenbraue|eye
+body|eyelid|Augenlid|eye
+body|cheek|Wange|face
+body|throat|Hals / Rachen|neck
+body|chest|Brustkorb|body
+body|spine|Wirbelsäule|vertebra
+body|rib|Rippe|bone
+body|hip|Hüfte|body
+body|thigh|Oberschenkel|leg
+body|calf|Wade|leg
+body|heel|Ferse|foot
+body|thumb|Daumen|finger
+body|palm|Handfläche|hand
+body|bruise|blauer Fleck|injury
+body|blister|Blase (Haut)|skin
+body|rash|Hautausschlag|skin
+body|wound|Wunde|injury
+body|scar|Narbe|wound
+body|sprain|Verstauchung|joint
+body|cramp|Krampf|muscle
+body|swelling|Schwellung|swell
+body|nausea|Übelkeit|vomit
+body|dizziness|Schwindel|dizzy
+body|fever|Fieber|temperature
+body|cough|Husten|air
+body|sneeze|niesen|nose
+body|itch|Juckreiz|skin
+body|sore|wund / schmerzend|pain
+body|stiff|steif|rigid
+body|numb|taub (gefühllos)|sensation
+body|bandage|Verband|wound
+body|ointment|Salbe|skin
+body|prescription|Rezept (Arzt)|medicine
+body|painkiller|Schmerzmittel|pain
+body|appointment|Termin|meeting
+body|checkup|Kontrolluntersuchung|medical
+body|allergy|Allergie|immune
+body|symptom|Symptom|disease
+clothes|sleeve|Ärmel|garment
+clothes|collar|Kragen|neck
+clothes|cuff|Manschette|sleeve
+clothes|hem|Saum|garment
+clothes|seam|Naht|sew
+clothes|lining|Futter (Kleidung)|inner
+clothes|zipper|Reißverschluss|fasten
+clothes|button|Knopf|garment
+clothes|buckle|Schnalle|fasten
+clothes|shoelace|Schnürsenkel|shoe
+clothes|sole|Schuhsohle|shoe
+clothes|insole|Einlegesohle|shoe
+clothes|hood|Kapuze|head
+clothes|pocket|Tasche (Kleidung)|garment
+clothes|waistband|Hosenbund|waist
+clothes|belt|Gürtel|waist
+clothes|scarf|Schal|neck
+clothes|gloves|Handschuhe|hand
+clothes|mittens|Fäustlinge|hand
+clothes|beanie|Strickmütze|cap
+clothes|cardigan|Strickjacke|sweater
+clothes|sweatshirt|Sweatshirt|shirt
+clothes|raincoat|Regenmantel|rain
+clothes|suit|Anzug|clothes
+clothes|waistcoat|Weste|garment
+clothes|tights|Strumpfhose|garment
+clothes|slippers|Hausschuhe|shoe
+clothes|boots|Stiefel|shoe
+clothes|sneakers|Turnschuhe|shoe
+clothes|cotton|Baumwolle|fiber
+clothes|wool|Wolle|sheep
+clothes|linen|Leinen|flax
+clothes|silk|Seide|fiber
+clothes|leather|Leder|skin
+clothes|suede|Wildleder|leather
+clothes|velvet|Samt|fabric
+clothes|striped|gestreift|stripe
+clothes|checked|kariert|square
+clothes|wrinkled|zerknittert|wrinkle
+clothes|stain|Fleck|spot
+food|colander|Küchensieb|drain
+food|sieve|feines Sieb|mesh
+food|whisk|Schneebesen|kitchen
+food|spatula|Pfannenwender|utensil
+food|ladle|Schöpfkelle|spoon
+food|grater|Reibe|utensil
+food|peeler|Sparschäler|peel
+food|chopping board|Schneidebrett|board
+food|saucepan|Kochtopf|cooking
+food|frying pan|Bratpfanne|pan
+food|lid|Deckel|cover
+food|kettle|Wasserkocher|water
+food|oven|Backofen|heat
+food|stove|Herd|cook
+food|baking tray|Backblech|tray
+food|dough|Teig|flour
+food|batter|flüssiger Teig|flour
+food|yeast|Hefe|fungus
+food|flour|Mehl|grain
+food|breadcrumbs|Semmelbrösel|bread
+food|starch|Stärke|carbohydrate
+food|vinegar|Essig|acid
+food|broth|Brühe|soup
+food|gravy|Bratensoße|sauce
+food|leftovers|Essensreste|food
+food|portion|Portion|food
+food|pinch|Prise|amount
+food|clove|Knoblauchzehe|garlic
+food|peel|schälen|skin
+food|chop|hacken|cut
+food|slice|in Scheiben schneiden|cut
+food|dice|würfeln|cut
+food|grate|reiben|shred
+food|stir|umrühren|mix
+food|whip|aufschlagen (Sahne)|beat
+food|knead|kneten|dough
+food|simmer|köcheln|boil
+food|boil|kochen / sieden|heat
+food|roast|braten / rösten|heat
+food|bake|backen|oven
+food|steam|dämpfen|cook
+food|thaw|auftauen|frozen
+food|season|würzen|flavor
+food|ripe|reif|fruit
+food|stale|altbacken|fresh
+food|bland|fade|flavor
+food|savory|herzhaft|sweet
+food|bitter|bitter|taste
+food|sour|sauer|taste
+food|crunchy|knusprig|crunch
+road|curb|Bordstein|road
+road|sidewalk|Gehweg|pedestrian
+road|crosswalk|Fußgängerüberweg|pedestrian
+road|intersection|Kreuzung|road
+road|roundabout|Kreisverkehr|traffic
+road|lane|Fahrspur|road
+road|shoulder|Seitenstreifen|road
+road|pothole|Schlagloch|road
+road|detour|Umleitung|route
+road|toll|Maut|fee
+road|traffic jam|Stau|traffic
+road|speed limit|Geschwindigkeitsbegrenzung|speed
+road|right of way|Vorfahrt|priority
+road|license plate|Nummernschild|vehicle
+road|windshield|Windschutzscheibe|glass
+road|wiper|Scheibenwischer|windshield
+road|dashboard|Armaturenbrett|vehicle
+road|steering wheel|Lenkrad|vehicle
+road|gear|Gang|transmission
+road|clutch|Kupplung|mechanism
+road|brake|Bremse|motion
+road|accelerator|Gaspedal|pedal
+road|headlight|Scheinwerfer|vehicle
+road|indicator|Blinker|vehicle
+road|bumper|Stoßstange|vehicle
+road|trunk|Kofferraum|vehicle
+road|hood|Motorhaube|engine
+road|tire|Reifen|wheel
+road|spare tire|Ersatzreifen|tire
+road|jack|Wagenheber|lift
+road|exhaust|Auspuff|engine
+road|fuel|Kraftstoff|energy
+road|gas station|Tankstelle|fuel
+road|tow truck|Abschleppwagen|vehicle
+road|breakdown|Autopanne|failure
+road|seat belt|Sicherheitsgurt|vehicle
+road|rearview mirror|Rückspiegel|mirror
+road|pedestrian|Fußgänger|walk
+road|commute|pendeln|travel
+road|overtake|überholen|pass
+travel|boarding pass|Bordkarte|aircraft
+travel|departure|Abfahrt / Abflug|leave
+travel|arrival|Ankunft|arrive
+travel|layover|Zwischenaufenthalt|travel
+travel|stopover|Reiseunterbrechung|travel
+travel|luggage|Gepäck|bag
+travel|suitcase|Koffer|luggage
+travel|carry-on|Handgepäck|luggage
+travel|baggage claim|Gepäckausgabe|airport
+travel|customs|Zoll|duty
+travel|aisle|Gang zwischen Sitzreihen|passage
+travel|gate|Flugsteig|airport
+travel|platform|Bahnsteig|rail
+travel|fare|Fahrpreis|price
+travel|ticket|Fahrkarte|passage
+travel|reservation|Reservierung|booking
+travel|accommodation|Unterkunft|lodging
+travel|vacancy|freies Zimmer|room
+travel|reception|Rezeption|hotel
+travel|deposit|Kaution / Anzahlung|money
+travel|receipt|Kassenbeleg|payment
+travel|refund|Rückerstattung|money
+travel|cancellation|Stornierung|cancel
+travel|delay|Verspätung|late
+travel|itinerary|Reiseplan|route
+travel|destination|Reiseziel|place
+travel|landmark|Sehenswürdigkeit / Orientierungspunkt|recognizable
+travel|guidebook|Reiseführer (Buch)|book
+travel|rental|Miete / Vermietung|rent
+travel|insurance|Versicherung|risk
+travel|passport|Reisepass|document
+travel|visa|Visum|entry
+travel|currency|Währung|money
+travel|exchange rate|Wechselkurs|currency
+travel|cash|Bargeld|money
+travel|ATM|Geldautomat|cash
+travel|tip|Trinkgeld|gratuity
+travel|sightseeing|Besichtigung von Sehenswürdigkeiten|tour
+travel|souvenir|Andenken|reminder
+travel|queue|Warteschlange|line
+people|neighbor|Nachbar|near
+people|colleague|Kollege|profession
+people|acquaintance|Bekannter|person
+people|relative|Verwandter|family
+people|sibling|Geschwister|parent
+people|nephew|Neffe|son
+people|niece|Nichte|daughter
+people|in-law|angeheirateter Verwandter|marriage
+people|roommate|Mitbewohner|room
+people|stranger|Fremder|unknown
+people|reliable|zuverlässig|trust
+people|thoughtful|aufmerksam / rücksichtsvoll|consider
+people|considerate|rücksichtsvoll|others
+people|stubborn|stur|change
+people|shy|schüchtern|timid
+people|outgoing|kontaktfreudig|sociable
+people|generous|großzügig|give
+people|stingy|geizig|money
+people|honest|ehrlich|truth
+people|polite|höflich|manners
+people|rude|unhöflich|manners
+people|awkward|unangenehm / unbeholfen|clumsy
+people|confident|selbstbewusst|sure
+people|embarrassed|verlegen|shame
+people|disappointed|enttäuscht|expectation
+people|relieved|erleichtert|relief
+people|grateful|dankbar|thank
+people|curious|neugierig|know
+people|jealous|eifersüchtig|rival
+people|proud|stolz|satisfaction
+people|trust|Vertrauen|confidence
+people|apologize|sich entschuldigen|sorry
+people|forgive|verzeihen|pardon
+people|blame|die Schuld geben|responsible
+people|argue|streiten|disagree
+people|persuade|überreden|convince
+people|encourage|ermutigen|courage
+people|reassure|beruhigen / versichern|confidence
+people|compliment|Kompliment|praise
+people|favor|Gefallen|kind
+work|deadline|Abgabetermin|time
+work|schedule|Zeitplan|time
+work|appointment|geschäftlicher Termin|meeting
+work|agenda|Tagesordnung|meeting
+work|minutes|Sitzungsprotokoll|meeting
+work|proposal|Vorschlag / Angebot|plan
+work|quote|Preisangebot|price
+work|invoice|Rechnung|payment
+work|expense|Ausgabe / Kosten|cost
+work|revenue|Umsatz|income
+work|profit|Gewinn|income
+work|budget|Budget|money
+work|supplier|Lieferant|supply
+work|customer|Kunde|buy
+work|client|Auftraggeber|service
+work|contract|Vertrag|agreement
+work|agreement|Vereinbarung|agree
+work|requirement|Anforderung|necessary
+work|feedback|Rückmeldung|information
+work|outcome|Ergebnis|result
+work|issue|Problem / Angelegenheit|matter
+work|priority|Priorität|importance
+work|approach|Herangehensweise|method
+work|progress|Fortschritt|advance
+work|setback|Rückschlag|progress
+work|workload|Arbeitsbelastung|work
+work|overtime|Überstunden|work
+work|leave|Urlaub / Freistellung|absence
+work|salary|Gehalt|pay
+work|wage|Lohn|pay
+work|benefit|Zusatzleistung|employee
+work|recruit|einstellen / anwerben|employ
+work|resign|kündigen|position
+work|delegate|delegieren|authority
+work|negotiate|verhandeln|agreement
+work|approve|genehmigen|accept
+work|postpone|verschieben|later
+work|confirm|bestätigen|verify
+work|attach|anhängen|join
+work|available|verfügbar|use
+phrases|fair enough|gut / verständlich|reasonable
+phrases|by the way|übrigens|incidentally
+phrases|as far as I know|soweit ich weiß|knowledge
+phrases|to be honest|ehrlich gesagt|honest
+phrases|never mind|macht nichts|worry
+phrases|no wonder|kein Wunder|surprise
+phrases|it depends|es kommt darauf an|depend
+phrases|in a nutshell|kurz gesagt|summary
+phrases|on the other hand|andererseits|contrast
+phrases|after all|schließlich|consider
+phrases|so far|bisher|time
+phrases|sooner or later|früher oder später|eventually
+phrases|from time to time|ab und zu|occasionally
+phrases|once in a while|hin und wieder|occasionally
+phrases|all of a sudden|ganz plötzlich|suddenly
+phrases|for the time being|vorerst|present
+phrases|in the meantime|in der Zwischenzeit|meanwhile
+phrases|at least|wenigstens|minimum
+phrases|at most|höchstens|maximum
+phrases|in advance|im Voraus|before
+phrases|on purpose|absichtlich|intentionally
+phrases|by accident|aus Versehen|unintentionally
+phrases|out of the blue|aus heiterem Himmel|unexpected
+phrases|a piece of cake|ein Kinderspiel|easy
+phrases|hang on|warte kurz|wait
+phrases|figure out|herausfinden|understand
+phrases|find out|in Erfahrung bringen|discover
+phrases|look up|nachschlagen|reference
+phrases|look after|sich kümmern um|care
+phrases|look forward to|sich freuen auf|anticipate
+phrases|put off|aufschieben|postpone
+phrases|give up|aufgeben|quit
+phrases|run out of|nichts mehr haben von|supply
+phrases|come across|zufällig finden / begegnen|chance
+phrases|get along|miteinander auskommen|relationship
+phrases|bring up|ein Thema ansprechen|mention
+phrases|turn down|ablehnen|reject
+phrases|turn up|auftauchen|arrive
+phrases|work out|eine Lösung finden|solve
+phrases|carry on|weitermachen|continue
+phrases|catch up|aufholen|reach
+phrases|end up|letztlich landen / enden|finally
+phrases|take over|übernehmen|control
+phrases|deal with|sich befassen mit|handle
+phrases|get rid of|loswerden|remove
+phrases|make up for|wiedergutmachen|compensate
+phrases|keep in mind|im Hinterkopf behalten|remember
+phrases|take your time|lass dir Zeit|hurry
+phrases|let me know|gib mir Bescheid|inform
+phrases|help yourself|bedien dich|serve
