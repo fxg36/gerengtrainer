@@ -1,0 +1,114 @@
+.meaning-cue {
+  text-align: left;
+  border-left: 3px solid #8b9dad;
+  background: #edf0ec;
+  padding: 16px 18px;
+  margin: 16px 0 24px;
+}
+.meaning-cue .small-label {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.meaning-cue p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 8px 0 0;
+  overflow-wrap: anywhere;
+}
+.sense-context-detail {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.sense-context-detail p {
+  font-size: 1rem;
+  margin: 8px 0 0;
+}
+.related-meanings {
+  margin: 24px 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.related-meanings h3 {
+  font-size: 1.125rem;
+}
+.related-meanings button {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  gap: 5px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.related-meanings button strong {
+  font-size: 1rem;
+}
+.related-meanings button span {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.meaning-group {
+  border-bottom: 1px solid var(--line);
+}
+.meaning-group > summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  cursor: pointer;
+  background: #f6f1e4;
+}
+.meaning-group > summary strong {
+  font-size: 1.125rem;
+}
+.meaning-group > summary span {
+  font-size: 0.875rem;
+}
+.meaning-group .dictionary-row {
+  border-left: 3px solid #a4b5c3;
+}
+.dictionary-word .meaning-preview {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted);
+  white-space: normal;
+}
+.meaning-group-note {
+  padding: 0 18px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+@media (max-width: 560px) {
+  .lexical-training .training-progress {
+    margin: 12px 0 18px;
+  }
+  .exercise-card.has-meaning {
+    padding: 20px 18px;
+  }
+  .exercise-card.has-meaning h1 {
+    margin: 16px 0;
+    line-height: 1.25;
+  }
+  .exercise-card.has-meaning > .small-label {
+    line-height: 1.5;
+  }
+  .exercise-card.has-meaning .think-hint {
+    margin-bottom: 18px;
+  }
+  .meaning-cue {
+    padding: 14px;
+    margin: 12px 0 18px;
+  }
+  .meaning-group > summary {
+    padding: 16px 14px;
+    flex-wrap: wrap;
+  }
+}
+.answer-explanation {
+  white-space: pre-line;
+}

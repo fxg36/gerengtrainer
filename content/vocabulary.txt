@@ -1,4 +1,6 @@
 # topic|English|Deutsch|optional English sense hint
+repair|lay|verlegen|building materials
+work|publish|verlegen|printed work
 home|hinge|Scharnier|joint
 home|outlet|Steckdose|electric
 home|porcelain|Porzellan|ceramic

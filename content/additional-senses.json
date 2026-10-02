@@ -1,0 +1,26 @@
+[
+  {
+    "word": "lay",
+    "id": "wkt-c43c5e90d22849db3762",
+    "pos": "verb",
+    "gloss": "To install certain building materials, laying one thing on top of another.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "word": "publish",
+    "id": "wkt-472985986658b7d42e84",
+    "pos": "verb",
+    "gloss": "To issue (something, such as printed work) for distribution and/or sale.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": null
+  }
+]

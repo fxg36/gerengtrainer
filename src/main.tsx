@@ -3,7 +3,14 @@ import ReactDOM from "react-dom/client";
 import "@fontsource-variable/dm-sans";
 import "@fontsource/dm-serif-display/latin-400.css";
 import "./style.css";
+import "./notebook.css";
+import "./analytics.css";
+import "./typography.css";
+import "./native.css";
+import { isNative } from "./platform";
 import App from "./App";
+
+if (isNative) document.documentElement.classList.add("native-app");
 
 class Boundary extends React.Component<
   { children: React.ReactNode },

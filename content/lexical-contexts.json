@@ -1,0 +1,2151 @@
+{
+  "repair|lay": {
+    "de": "Handwerk: Parkett, Fliesen oder andere Bodenbeläge anbringen.",
+    "en": "To put flooring, tiles or similar building materials into position."
+  },
+  "work|publish": {
+    "de": "Verlagswesen: Ein Buch herstellen und auf den Markt bringen.",
+    "en": "To produce a book and make it available for sale or distribution."
+  },
+  "home|hinge": {
+    "de": "Das bewegliche Gelenk, an dem eine Tür hängt und schwenkt.",
+    "en": "The moving joint that allows a door to swing open and shut."
+  },
+  "home|outlet": {
+    "de": "Elektroanschluss in der Wand, in den man einen Stecker steckt.",
+    "en": "An electrical connection in a wall where a plug is inserted."
+  },
+  "home|porcelain": {
+    "de": "Ein hartes, meist weißes Keramikmaterial.",
+    "en": "A hard, usually white ceramic material."
+  },
+  "home|china": {
+    "de": "Feines Geschirr aus Keramik, zum Beispiel Teller und Tassen.",
+    "en": "Fine ceramic tableware, such as plates and cups."
+  },
+  "home|shelf": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A flat, rigid structure, fixed at right angles to a wall or forming a part of a cabinet, desk, etc., and used to display, store, or support objects."
+  },
+  "home|drawer": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "An open-topped box that can be slid in and out of the cabinet that contains it, used for storing clothing or other articles."
+  },
+  "home|cupboard": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A cabinet, closet, or other piece of furniture with shelves intended for storing cookware, dishware, or food; similar cabinets or closets used for storing other items."
+  },
+  "home|wardrobe": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A movable cupboard or cabinet designed for storing clothes, particularly as a large piece of bedroom furniture."
+  },
+  "home|ceiling": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "The overhead closure of a room."
+  },
+  "home|floor": {
+    "de": "Die Fläche eines Raums, auf der man steht und geht.",
+    "en": "The surface of a room that people stand and walk on."
+  },
+  "home|curtain": {
+    "de": "Wohntextilien: Stoffe und weiche Einrichtungsgegenstände.",
+    "en": "A piece of cloth covering a window, bed, etc. to offer privacy and keep out light."
+  },
+  "home|blinds": {
+    "de": "Verstellbarer Sicht- oder Sonnenschutz vor einem Fenster.",
+    "en": "Adjustable coverings used to block light or views through a window."
+  },
+  "home|carpet": {
+    "de": "Wohntextilien: Stoffe und weiche Einrichtungsgegenstände.",
+    "en": "A fabric used as a complete floor covering."
+  },
+  "home|rug": {
+    "de": "Wohntextilien: Stoffe und weiche Einrichtungsgegenstände.",
+    "en": "A partial covering for a floor."
+  },
+  "home|cushion": {
+    "de": "Wohntextilien: Stoffe und weiche Einrichtungsgegenstände.",
+    "en": "A soft mass of material stuffed into a cloth bag, used for comfort or support."
+  },
+  "home|pillow": {
+    "de": "Wohntextilien: Stoffe und weiche Einrichtungsgegenstände.",
+    "en": "A soft cushion used to support the head in bed."
+  },
+  "home|blanket": {
+    "de": "Wohntextilien: Stoffe und weiche Einrichtungsgegenstände.",
+    "en": "A heavy, loosely woven fabric, usually large and woollen, used for warmth while sleeping or resting."
+  },
+  "home|duvet": {
+    "de": "Eine gefüllte Bettdecke, meist mit einem abnehmbaren Bezug.",
+    "en": "A soft, filled bed cover, usually inside a removable cover."
+  },
+  "home|mattress": {
+    "de": "Wohntextilien: Stoffe und weiche Einrichtungsgegenstände.",
+    "en": "A pad on which a person can recline and sleep, usually having an inner section of coiled springs covered with foam or other cushioning material then enclosed with cloth fabric."
+  },
+  "home|pillowcase": {
+    "de": "Wohntextilien: Stoffe und weiche Einrichtungsgegenstände.",
+    "en": "A washable, easily removable cloth cover for pillows."
+  },
+  "home|towel": {
+    "de": "Wohntextilien: Stoffe und weiche Einrichtungsgegenstände.",
+    "en": "A cloth used for wiping, especially one used for drying anything wet, such as a person after a bath."
+  },
+  "home|faucet": {
+    "de": "Wasser, Strom und feste Anschlüsse in einer Wohnung.",
+    "en": "An exposed plumbing fitting; a tap or spigot; a regulator for controlling the flow of a liquid from a reservoir."
+  },
+  "home|sink": {
+    "de": "Wasser, Strom und feste Anschlüsse in einer Wohnung.",
+    "en": "A basin used for holding water for washing."
+  },
+  "home|bathtub": {
+    "de": "Wasser, Strom und feste Anschlüsse in einer Wohnung.",
+    "en": "A large container for holding water in which a person may bathe (take a bath)."
+  },
+  "home|shower": {
+    "de": "Badezimmer: Vorrichtung, unter der man sich mit herabfallendem Wasser wäscht.",
+    "en": "Bathroom equipment that sprays water over a person for washing."
+  },
+  "home|drain": {
+    "de": "Öffnung oder Leitung, durch die Wasser abfließt.",
+    "en": "An opening or pipe through which water flows away."
+  },
+  "home|mirror": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A smooth surface, usually made of glass with reflective material painted on the underside, that reflects light so as to give an image of what is in front of it."
+  },
+  "home|doormat": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A coarse mat at the entrance to a house, upon which one wipes one's shoes."
+  },
+  "home|doorbell": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A bell, buzzer, or chime device mounted on or adjacent to a door's exterior, meant to be rung by a visitor to announce one's presence."
+  },
+  "home|threshold": {
+    "de": "Der untere Übergang im Türrahmen, über den man tritt.",
+    "en": "The bottom part of a doorway that someone steps over."
+  },
+  "home|staircase": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A flight of stairs; a stairway."
+  },
+  "home|railing": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A fence or barrier consisting of one or more horizontal rails and vertical supports."
+  },
+  "home|attic": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "The space, often unfinished and with sloped walls, directly below the roof in the uppermost part of a house or other building, generally used for storage or habitation."
+  },
+  "home|basement": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A floor of a building below ground level."
+  },
+  "home|balcony": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "An accessible structure extending from a building, especially outside a window."
+  },
+  "home|chimney": {
+    "de": "Ein Schacht, durch den Rauch vom Kamin nach draußen abzieht.",
+    "en": "A passage that carries smoke from a fireplace up and out of a building."
+  },
+  "home|fireplace": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "An open hearth for holding a fire at the base of a chimney."
+  },
+  "home|radiator": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A finned metal fixture that carries hot water or steam in order to heat a room."
+  },
+  "home|thermostat": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "A device that automatically responds to changes in temperature by activating a heating or cooling system to maintain the temperature at a desired setting."
+  },
+  "home|vacuum cleaner": {
+    "de": "Den Haushalt sauber halten und Wäsche pflegen.",
+    "en": "A device that uses suction, and often agitation, in order to remove dirt and other debris from carpets and hard floors."
+  },
+  "home|broom": {
+    "de": "Den Haushalt sauber halten und Wäsche pflegen.",
+    "en": "A domestic utensil with fibers bound together at the end of a long handle, used for sweeping."
+  },
+  "home|dustpan": {
+    "de": "Den Haushalt sauber halten und Wäsche pflegen.",
+    "en": "A flat scoop with a handle, into which dust, dirt and other material is conveyed with a brush or broom."
+  },
+  "home|mop": {
+    "de": "Den Haushalt sauber halten und Wäsche pflegen.",
+    "en": "An implement for washing floors or similar, made of a piece of cloth, or a collection of thrums, or coarse yarn, fastened to a handle."
+  },
+  "home|detergent": {
+    "de": "Den Haushalt sauber halten und Wäsche pflegen.",
+    "en": "Any non-soap cleaning agent, especially a synthetic surfactant."
+  },
+  "home|laundry": {
+    "de": "Den Haushalt sauber halten und Wäsche pflegen.",
+    "en": "A place or room where laundering is done - including, by extension, other forms of laundering than clothes washing."
+  },
+  "home|clothespin": {
+    "de": "Den Haushalt sauber halten und Wäsche pflegen.",
+    "en": "A clip or fastener used to secure garments to a clothesline while drying, and sometimes for other applications requiring holding or pinching."
+  },
+  "home|furniture": {
+    "de": "Im Haushalt: Gegenstände, Räume und Ausstattung einer Wohnung.",
+    "en": "Large movable item(s), usually in a room, which enhance(s) the room's characteristics, functionally or decoratively."
+  },
+  "home|landlord": {
+    "de": "Eine Wohnung mieten oder vermieten.",
+    "en": "A person that leases real property; a lessor."
+  },
+  "home|tenant": {
+    "de": "Eine Wohnung mieten oder vermieten.",
+    "en": "One who holds a lease (a tenancy)."
+  },
+  "home|rent": {
+    "de": "Eine Wohnung mieten oder vermieten.",
+    "en": "A payment made by a tenant at intervals in order to lease a property."
+  },
+  "repair|breaker box": {
+    "de": "Der Kasten mit den Schaltern, die elektrische Stromkreise absichern.",
+    "en": "The enclosure containing switches that protect electrical circuits."
+  },
+  "repair|screw": {
+    "de": "Ein Metallteil mit Gewinde, das man zum Befestigen in ein Material dreht.",
+    "en": "A metal fastener with a spiral thread that is turned into wood or another material."
+  },
+  "repair|screwdriver": {
+    "de": "Werkzeug oder Zubehör für handwerkliche Arbeiten.",
+    "en": "A hand tool or power tool which engages with the head of a screw and allows torque to be applied to turn the screw, thus driving it in or loosening it."
+  },
+  "repair|nail": {
+    "de": "Ein spitzer Metallstift, den man mit dem Hammer einschlägt.",
+    "en": "A pointed metal fastener driven in with a hammer."
+  },
+  "repair|hammer": {
+    "de": "Werkzeug oder Zubehör für handwerkliche Arbeiten.",
+    "en": "A tool with a heavy head and a handle used for pounding."
+  },
+  "repair|pliers": {
+    "de": "Werkzeug oder Zubehör für handwerkliche Arbeiten.",
+    "en": "A pincer-like gripping tool that multiplies the strength of the user's hand, often used for bending things."
+  },
+  "repair|wrench": {
+    "de": "Werkzeug oder Zubehör für handwerkliche Arbeiten.",
+    "en": "A hand tool for making rotational adjustments, such as fitting nuts and bolts, or fitting pipes."
+  },
+  "repair|drill": {
+    "de": "Eine Maschine, mit der man Löcher in ein Material bohrt.",
+    "en": "A tool used to make holes in a material."
+  },
+  "repair|saw": {
+    "de": "Ein Werkzeug mit gezahntem Blatt zum Zerteilen von Material.",
+    "en": "A tool with a toothed blade used to cut through material."
+  },
+  "repair|ladder": {
+    "de": "Werkzeug oder Zubehör für handwerkliche Arbeiten.",
+    "en": "A frame, usually portable, of wood, metal, or rope, used for ascent and descent, consisting of two side pieces to which are fastened rungs (cross strips or rounds acting as steps)."
+  },
+  "repair|tape measure": {
+    "de": "Werkzeug oder Zubehör für handwerkliche Arbeiten.",
+    "en": "A graduated flexible ribbon used for measuring lengths."
+  },
+  "repair|spirit level": {
+    "de": "Ein Messwerkzeug, mit dem man prüft, ob etwas waagerecht ist.",
+    "en": "A tool used to check whether a surface is horizontal."
+  },
+  "repair|sandpaper": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "Strong paper coated with (traditionally) sand or (today) manufactured aluminum oxide, silicon carbide, or other abrasive material, used for smoothing and polishing."
+  },
+  "repair|paintbrush": {
+    "de": "Werkzeug oder Zubehör für handwerkliche Arbeiten.",
+    "en": "A thin brush for applying paint."
+  },
+  "repair|roller": {
+    "de": "Werkzeug oder Zubehör für handwerkliche Arbeiten.",
+    "en": "A cylindrical tool for applying paint or ink."
+  },
+  "repair|varnish": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "A clear or translucent liquid coating composed of resin dissolved in a solvent, which dries by evaporation to form a hard, protective, and typically glossy finish."
+  },
+  "repair|glue": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "A hard gelatin made by boiling bones and hides, used in solution as an adhesive; or any sticky adhesive substance."
+  },
+  "repair|adhesive tape": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "Tape with an adhesive film on one side, used to attach materials to something."
+  },
+  "repair|bolt": {
+    "de": "Ein Metallstift mit Kopf und Gewinde, der oft mit einer Mutter Teile zusammenhält.",
+    "en": "A metal fastener with a head and a thread, often tightened with a nut."
+  },
+  "repair|nut": {
+    "de": "Ein Befestigungsteil mit Innengewinde, das auf einen Bolzen geschraubt wird.",
+    "en": "A fastener with an internal thread that screws onto a bolt."
+  },
+  "repair|washer": {
+    "de": "Eine flache Scheibe unter einer Schraube oder Mutter.",
+    "en": "A flat ring placed under a screw head or nut."
+  },
+  "repair|wire": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "Metal formed into a thin, even thread, now usually by being drawn through a hole in a steel die."
+  },
+  "repair|cable": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "An assembly of two or more wires, used for electrical power or data circuits; one or more and/or the whole may be insulated."
+  },
+  "repair|plug": {
+    "de": "Das Anschlussstück am Kabelende, das in eine Steckdose passt.",
+    "en": "The connector at the end of a cable that fits into an electrical socket."
+  },
+  "repair|fuse": {
+    "de": "Ein Schutzteil, das bei zu starkem Strom schmilzt und den Stromkreis unterbricht.",
+    "en": "A safety part that melts and breaks an electrical circuit when too much current flows."
+  },
+  "repair|pipe": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "A rigid tube that transports water, steam, or other fluid, as used in plumbing and numerous other applications."
+  },
+  "repair|leak": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "A crack, crevice, fissure, or hole which admits water or other fluid, or lets it escape."
+  },
+  "repair|seal": {
+    "de": "Ein Bauteil, das verhindert, dass Wasser oder Luft durch eine Verbindung tritt.",
+    "en": "A component that stops water or air leaking through a joint."
+  },
+  "repair|rust": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "The deteriorated state of iron or steel as a result of moisture and oxidation; it consists mostly of iron(III) oxide (ferric oxide) and iron(II) oxide (ferrous oxide)."
+  },
+  "repair|scratch": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "A disruption, mark or shallow cut on a surface made by scratching."
+  },
+  "repair|dent": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "A shallow deformation in the surface of an object, produced by an impact."
+  },
+  "repair|crack": {
+    "de": "Beim Bauen und Reparieren: Werkzeug, Material oder Bauteil.",
+    "en": "The sharp sound made when solid material breaks."
+  },
+  "repair|wood": {
+    "de": "Ein Material, das beim Bauen oder Renovieren verwendet wird.",
+    "en": "The substance making up the central part of the trunk and branches of a tree. Used as a material for construction, to manufacture various items, etc. or as fuel."
+  },
+  "repair|plywood": {
+    "de": "Eine Holzplatte aus mehreren miteinander verleimten dünnen Holzschichten.",
+    "en": "A board made from thin layers of wood glued together."
+  },
+  "repair|steel": {
+    "de": "Ein Material, das beim Bauen oder Renovieren verwendet wird.",
+    "en": "An artificial metal produced from iron, harder and more elastic than elemental iron; used figuratively as a symbol of hardness."
+  },
+  "repair|copper": {
+    "de": "Ein Material, das beim Bauen oder Renovieren verwendet wird.",
+    "en": "A reddish-brown metallic chemical element (symbol Cu) with the atomic number 29; also, the metal made up of this element."
+  },
+  "repair|brass": {
+    "de": "Eine gelbliche Metalllegierung aus Kupfer und Zink.",
+    "en": "A yellowish metal alloy made from copper and zinc."
+  },
+  "repair|concrete": {
+    "de": "Ein Material, das beim Bauen oder Renovieren verwendet wird.",
+    "en": "A building material created by mixing cement, water, and aggregate such as gravel and sand."
+  },
+  "repair|brick": {
+    "de": "Ein Material, das beim Bauen oder Renovieren verwendet wird.",
+    "en": "A hardened rectangular block of mud, clay etc., used for building."
+  },
+  "repair|tile": {
+    "de": "Ein Material, das beim Bauen oder Renovieren verwendet wird.",
+    "en": "A regularly-shaped slab of clay or other material, affixed to cover or decorate a surface, as in a roof-tile, glazed tile, stove tile, carpet tile, etc."
+  },
+  "repair|tighten": {
+    "de": "Eine Tätigkeit beim Reparieren oder Zusammenbauen.",
+    "en": "To make tighter."
+  },
+  "repair|loosen": {
+    "de": "Eine Tätigkeit beim Reparieren oder Zusammenbauen.",
+    "en": "To make loose."
+  },
+  "repair|replace": {
+    "de": "Eine Tätigkeit beim Reparieren oder Zusammenbauen.",
+    "en": "To supply or substitute an equivalent with."
+  },
+  "repair|repair": {
+    "de": "Eine Tätigkeit beim Reparieren oder Zusammenbauen.",
+    "en": "To restore to good working order, fix, or improve damaged condition; to mend; to remedy."
+  },
+  "repair|assemble": {
+    "de": "Eine Tätigkeit beim Reparieren oder Zusammenbauen.",
+    "en": "To put together."
+  },
+  "repair|measure": {
+    "de": "Eine Tätigkeit beim Reparieren oder Zusammenbauen.",
+    "en": "To ascertain the quantity of a unit of material via calculated comparison with respect to a standard."
+  },
+  "repair|install": {
+    "de": "Eine Tätigkeit beim Reparieren oder Zusammenbauen.",
+    "en": "To connect, set up or prepare something for use"
+  },
+  "repair|unplug": {
+    "de": "Eine Tätigkeit beim Reparieren oder Zusammenbauen.",
+    "en": "To disconnect from a supply, especially an electrical socket."
+  },
+  "repair|insulation": {
+    "de": "Ein Material, das beim Bauen oder Renovieren verwendet wird.",
+    "en": "Any of a variety of materials designed to reduce the flow of heat, either from or into a building."
+  },
+  "repair|socket": {
+    "de": "Eine Anschlussöffnung für einen elektrischen Stecker.",
+    "en": "A connection point into which an electrical plug fits."
+  },
+  "nature|spruce": {
+    "de": "Eine Baumart; zum Beispiel bei einem Spaziergang im Wald.",
+    "en": "Any of various large coniferous evergreen trees or shrubs from the genus Picea, found in northern temperate and boreal regions; originally and more fully spruce fir."
+  },
+  "nature|pine": {
+    "de": "Eine Baumart: Nadelbaum mit meist langen, paarweise oder in Büscheln wachsenden Nadeln.",
+    "en": "A coniferous tree, often with long needles growing in pairs or clusters."
+  },
+  "nature|oak": {
+    "de": "Eine Baumart; zum Beispiel bei einem Spaziergang im Wald.",
+    "en": "A deciduous tree with distinctive deeply lobed leaves, acorns, and notably strong wood, typically of England and northeastern North America, included in genus Quercus."
+  },
+  "nature|beech": {
+    "de": "Eine Baumart; zum Beispiel bei einem Spaziergang im Wald.",
+    "en": "A tree of the genus Fagus having a smooth, light grey trunk, oval, pointed leaves, and many branches."
+  },
+  "nature|birch": {
+    "de": "Eine Baumart; zum Beispiel bei einem Spaziergang im Wald.",
+    "en": "Any of various trees of the genus Betula, native to countries in the Northern Hemisphere."
+  },
+  "nature|willow": {
+    "de": "Eine Baumart; zum Beispiel bei einem Spaziergang im Wald.",
+    "en": "Any of various deciduous trees or shrubs in the genus Salix, in the willow family Salicaceae, found primarily on moist soils in cooler zones in the northern hemisphere."
+  },
+  "nature|maple": {
+    "de": "Ein Laubbaum mit handförmigen Blättern und geflügelten Samen.",
+    "en": "A tree with hand-shaped leaves and winged seeds."
+  },
+  "nature|chestnut": {
+    "de": "Die braune, essbare Nuss der Edelkastanie.",
+    "en": "The brown, edible nut of the sweet chestnut tree."
+  },
+  "nature|ash": {
+    "de": "Eine Laubbaumart, deren Blätter aus mehreren kleinen Blättchen bestehen.",
+    "en": "A deciduous tree with compound leaves made up of several leaflets."
+  },
+  "nature|fir": {
+    "de": "Eine Baumart; zum Beispiel bei einem Spaziergang im Wald.",
+    "en": "A conifer of the genus Abies."
+  },
+  "nature|trunk": {
+    "de": "Der feste Hauptteil eines Baumes zwischen Wurzeln und Ästen.",
+    "en": "The main upright part of a tree between its roots and branches."
+  },
+  "nature|bark": {
+    "de": "Die schützende äußere Schicht eines Baumstamms.",
+    "en": "The protective outer layer of a tree stem."
+  },
+  "nature|branch": {
+    "de": "Ein Teil eines Baumes oder etwas, das an ihm wächst.",
+    "en": "The woody part of a tree arising from the trunk and usually dividing."
+  },
+  "nature|twig": {
+    "de": "Ein Teil eines Baumes oder etwas, das an ihm wächst.",
+    "en": "A small thin branch of a tree or bush."
+  },
+  "nature|root": {
+    "de": "Der meist unterirdische Teil einer Pflanze, der Wasser aufnimmt und Halt gibt.",
+    "en": "The part of a plant, usually underground, that takes in water and holds it in place."
+  },
+  "nature|leaf": {
+    "de": "Ein Teil eines Baumes oder etwas, das an ihm wächst.",
+    "en": "The usually green and flat organ that represents the most prominent feature of most vegetative plants."
+  },
+  "nature|needle": {
+    "de": "Ein schmales, spitzes Blatt eines Nadelbaums.",
+    "en": "A thin, pointed leaf of a coniferous tree."
+  },
+  "nature|cone": {
+    "de": "Der holzige Fruchtstand eines Nadelbaums.",
+    "en": "The woody seed-bearing structure of a coniferous tree."
+  },
+  "nature|acorn": {
+    "de": "Ein Teil eines Baumes oder etwas, das an ihm wächst.",
+    "en": "The fruit of the oak, being an oval nut growing in a woody cup or cupule."
+  },
+  "nature|moss": {
+    "de": "Eine Pflanze oder Bewuchs in einem Garten oder in der Natur.",
+    "en": "Any alga, lichen, bryophyte, or other plant of seemingly simple structure."
+  },
+  "nature|fern": {
+    "de": "Eine grüne Pflanze mit meist gefiederten Blättern, die oft im Wald wächst.",
+    "en": "A green plant with long, divided leaves, often found in shady places.",
+    "example": "Ferns grow in the shade. – Farne wachsen im Schatten."
+  },
+  "nature|ivy": {
+    "de": "Eine Pflanze oder Bewuchs in einem Garten oder in der Natur.",
+    "en": "Any of several woody, climbing, or trailing evergreen plants of the genus Hedera."
+  },
+  "nature|hedge": {
+    "de": "Eine Pflanze oder Bewuchs in einem Garten oder in der Natur.",
+    "en": "A thicket of bushes or other shrubbery, especially one planted as a fence between two portions of land, or to separate the parts of a garden."
+  },
+  "nature|shrub": {
+    "de": "Eine Pflanze oder Bewuchs in einem Garten oder in der Natur.",
+    "en": "A woody plant smaller than a tree, and usually with several stems from the same base."
+  },
+  "nature|weed": {
+    "de": "Eine Pflanze oder Bewuchs in einem Garten oder in der Natur.",
+    "en": "Any plant unwanted at the place where and at the time when it is growing."
+  },
+  "nature|lawn": {
+    "de": "Eine Pflanze oder Bewuchs in einem Garten oder in der Natur.",
+    "en": "Ground (generally in front of or around a house) covered with grass kept closely mown."
+  },
+  "nature|soil": {
+    "de": "Draußen in der Natur: Pflanzen, Tiere und Landschaft.",
+    "en": "A mixture of mineral particles and organic material, used to support plant growth."
+  },
+  "nature|pebble": {
+    "de": "Draußen in der Natur: Pflanzen, Tiere und Landschaft.",
+    "en": "A small stone, especially one rounded by the action of water."
+  },
+  "nature|gravel": {
+    "de": "Draußen in der Natur: Pflanzen, Tiere und Landschaft.",
+    "en": "Small fragments of rock, used for laying on the beds of roads and railways, and as ballast."
+  },
+  "nature|meadow": {
+    "de": "Eine offene Fläche mit Gras und oft auch Wildblumen.",
+    "en": "An open field covered with grass and often wildflowers."
+  },
+  "nature|pasture": {
+    "de": "Draußen in der Natur: Pflanzen, Tiere und Landschaft.",
+    "en": "Ground covered with grass or herbage, used or suitable for the grazing of livestock."
+  },
+  "nature|forest": {
+    "de": "Draußen in der Natur: Pflanzen, Tiere und Landschaft.",
+    "en": "A dense uncultivated tract of trees and undergrowth, larger than woods."
+  },
+  "nature|clearing": {
+    "de": "Eine offene Stelle ohne Bäume mitten im Wald.",
+    "en": "An open space without trees in a wooded area."
+  },
+  "nature|pond": {
+    "de": "Draußen in der Natur: Pflanzen, Tiere und Landschaft.",
+    "en": "An inland body of standing water, either natural or man-made, that is smaller than a lake."
+  },
+  "nature|stream": {
+    "de": "Draußen in der Natur: Pflanzen, Tiere und Landschaft.",
+    "en": "A small river; a large creek; a body of moving water confined by banks."
+  },
+  "nature|riverbank": {
+    "de": "Draußen in der Natur: Pflanzen, Tiere und Landschaft.",
+    "en": "A sloped side of a river acting as a barrier between the water and level ground to either side."
+  },
+  "nature|squirrel": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "Any of the rodents of the family Sciuridae."
+  },
+  "nature|hedgehog": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "A small mammal of the subfamily Erinaceinae, characterized by their spiny back and often by the habit of rolling up into a ball when attacked, native to Afro-Eurasia."
+  },
+  "nature|deer": {
+    "de": "Ein wildes Huftier aus der Familie der Hirsche, oft mit Geweih.",
+    "en": "A wild animal with hooves; males of many species have antlers."
+  },
+  "nature|fox": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "Any member of the genus Vulpes; a true fox."
+  },
+  "nature|badger": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "Any member of species of the genera Meles, Arctonyx, Mellivora or Taxidea, of mammals."
+  },
+  "nature|owl": {
+    "de": "Ein Vogel mit großen, nach vorn gerichteten Augen, der meist nachts jagt.",
+    "en": "A bird with large, forward-facing eyes that usually hunts at night."
+  },
+  "nature|sparrow": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "The house sparrow, Passer domesticus; a small bird with a short bill, and brown, white and gray feathers."
+  },
+  "nature|robin": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "A European robin, Erithacus rubecula."
+  },
+  "nature|beetle": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "Any of numerous species of insect in the order Coleoptera characterized by a pair of hard, shell-like front wings which cover and protect a pair of rear wings when at rest."
+  },
+  "nature|wasp": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "Any of many types of stinging flying insect resembling a hornet."
+  },
+  "nature|caterpillar": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "The larva of a butterfly or moth; leafworm."
+  },
+  "nature|snail": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "Any of very many animals (either hermaphroditic or nonhermaphroditic), of the class Gastropoda, having a coiled shell."
+  },
+  "nature|earthworm": {
+    "de": "Ein Tier, das draußen in der Natur lebt.",
+    "en": "A worm that lives in the ground."
+  },
+  "nature|dandelion": {
+    "de": "Eine Wildpflanze mit gelben Blüten, deren Samen später eine Pusteblume bilden.",
+    "en": "A wild plant with yellow flowers that later form a ball of fluffy seeds."
+  },
+  "weather|drizzle": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "Light rain."
+  },
+  "weather|downpour": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "A heavy fall of rain."
+  },
+  "weather|shower": {
+    "de": "Wetter: ein kurzer, örtlich begrenzter Regenguss.",
+    "en": "Weather: a brief, localised burst of rain."
+  },
+  "weather|hail": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "Balls or pieces of ice falling as precipitation, often in connection with a thunderstorm."
+  },
+  "weather|sleet": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "Pellets of ice made of mostly-frozen raindrops or refrozen melted snowflakes."
+  },
+  "weather|frost": {
+    "de": "Eine dünne Schicht kleiner Eiskristalle auf kalten Oberflächen.",
+    "en": "A thin layer of ice crystals that forms on cold surfaces."
+  },
+  "weather|dew": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "Any moisture from the atmosphere condensed by cool bodies upon their surfaces."
+  },
+  "weather|fog": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "A thick cloud that forms near the ground; the obscurity of such a cloud."
+  },
+  "weather|mist": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "Water or other liquid finely suspended in air. (Compare fog, haze.)"
+  },
+  "weather|breeze": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "A light, gentle wind."
+  },
+  "weather|gust": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "A strong, abrupt rush of wind."
+  },
+  "weather|thunder": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "The loud rumbling, cracking, or crashing sound caused by expansion of rapidly heated air around a lightning bolt."
+  },
+  "weather|lightning": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "A flash of light produced by short-duration, high-voltage discharge of electricity within a cloud, between clouds, or between a cloud and the earth."
+  },
+  "weather|drought": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "A period of unusually low rainfall, longer and more severe than a dry spell."
+  },
+  "weather|flood": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "An overflow of a large amount of water (usually disastrous) from a lake or other body of water due to excessive rainfall or other input of water."
+  },
+  "weather|heatwave": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "Describing the weather, for example in a weather forecast."
+  },
+  "weather|humidity": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "Dampness, especially that of the air."
+  },
+  "weather|forecast": {
+    "de": "Eine Aussage darüber, wie das Wetter voraussichtlich wird.",
+    "en": "A prediction of what the weather will be like."
+  },
+  "weather|overcast": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "Covered with clouds; overshadowed; darkened; (meteorology) more than 90% covered by clouds."
+  },
+  "weather|chilly": {
+    "de": "Das Wetter beschreiben, etwa in einem Wetterbericht.",
+    "en": "Cold enough to cause discomfort."
+  },
+  "weather|mild": {
+    "de": "Wetter: weder besonders kalt noch besonders heiß.",
+    "en": "Weather that is neither particularly cold nor particularly hot."
+  },
+  "weather|slippery": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "Of a surface, having low friction, often due to being covered in a non-viscous liquid, and therefore hard to grip, hard to stand on without falling, etc."
+  },
+  "weather|muddy": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "Covered or splashed with, or full of, mud (“wet soil”)."
+  },
+  "weather|steep": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "Of a near-vertical gradient; of a slope, surface, curve, etc. that proceeds upward or downward at an angle approaching vertical."
+  },
+  "weather|slope": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "A surface that either inclines or declines in a regular manner from the perspective of an observer."
+  },
+  "weather|cliff": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "A vertical (or nearly vertical) rock face."
+  },
+  "weather|valley": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "An elongated depression cast between hills or mountains, often with a river flowing through it."
+  },
+  "weather|ridge": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "A chain of mountains."
+  },
+  "weather|summit": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "The highest point of a hill, mountain, or similar geographical feature."
+  },
+  "weather|shore": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "Land adjoining a non-flowing body of water, such as an ocean, lake or pond."
+  },
+  "weather|tide": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "The daily fluctuation in the level of the sea caused by the gravitational influence of the moon and the sun."
+  },
+  "weather|wave": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "A moving disturbance in the level of a body of liquid; an undulation."
+  },
+  "weather|current": {
+    "de": "Die gerichtete Bewegung von Wasser, etwa in einem Fluss.",
+    "en": "Water moving steadily in one direction, for example in a river."
+  },
+  "weather|bay": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "A body of water (especially the sea) contained by a concave shoreline."
+  },
+  "weather|peninsula": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "A piece of land projecting into water from a larger land mass."
+  },
+  "weather|waterfall": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "A flow of water over the edge of a cliff."
+  },
+  "weather|trail": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "A route for travel over land, especially a narrow, unpaved pathway for use by hikers, horseback riders, etc."
+  },
+  "weather|puddle": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "A small, often temporary, pool of water, usually on a path or road."
+  },
+  "weather|sunrise": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "The time of day when the sun appears above the eastern horizon."
+  },
+  "weather|sunset": {
+    "de": "Unterwegs in der Natur: Gelände, Wasser und Umgebung.",
+    "en": "The moment each evening when the sun disappears below the western horizon."
+  },
+  "body|ankle": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The skeletal joint which connects the foot with the leg; the uppermost portion of the foot and lowermost portion of the leg, which contain this skeletal joint."
+  },
+  "body|wrist": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The complex joint between forearm bones, carpus, and metacarpals where the hand is attached to the arm; the carpus in a narrow sense."
+  },
+  "body|elbow": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The joint between the upper arm and the forearm."
+  },
+  "body|shoulder": {
+    "de": "Das Gelenk und der Körperbereich, wo der Arm mit dem Rumpf verbunden ist.",
+    "en": "The joint and surrounding area where the arm meets the torso."
+  },
+  "body|chin": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The bottom of a face, (specifically) the typically jutting jawline below the mouth."
+  },
+  "body|jaw": {
+    "de": "Der knöcherne Teil des Gesichts, in dem die Zähne sitzen.",
+    "en": "The bony part of the face that holds the teeth."
+  },
+  "body|forehead": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The part of the face above the eyebrows and below the hairline."
+  },
+  "body|eyebrow": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The hair that grows over the bone ridge above the eye socket."
+  },
+  "body|eyelid": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "A thin skin membrane that covers and moves over an eye."
+  },
+  "body|cheek": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The soft skin on each side of the face, below the eyes; the outer surface of the sides of the oral cavity."
+  },
+  "body|throat": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The front part of the neck."
+  },
+  "body|chest": {
+    "de": "Der vordere Oberkörper zwischen Hals und Bauch.",
+    "en": "The front of the upper body between the neck and abdomen."
+  },
+  "body|spine": {
+    "de": "Die Reihe von Knochen im Rücken, die den Körper stützt.",
+    "en": "The row of bones down your back that supports your body."
+  },
+  "body|rib": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "Any of a series of long curved bones occurring in 12 pairs in humans and other animals and extending from the spine to or toward the sternum."
+  },
+  "body|hip": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The outward-projecting parts of the pelvis and top of the femur and the overlying tissue."
+  },
+  "body|thigh": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The upper leg of a human, between the hip and the knee."
+  },
+  "body|calf": {
+    "de": "Der hintere Muskelbereich des Unterschenkels.",
+    "en": "The muscular back part of the lower leg."
+  },
+  "body|heel": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The rear part of the foot, where it joins the leg."
+  },
+  "body|thumb": {
+    "de": "Ein Körperteil eines Menschen.",
+    "en": "The shortest and thickest digit of the hand that for humans has the most mobility and can be made to oppose (moved to touch) all of the other fingers."
+  },
+  "body|palm": {
+    "de": "Die innere Fläche der Hand zwischen Fingern und Handgelenk.",
+    "en": "The inner surface of the hand between the fingers and wrist."
+  },
+  "body|bruise": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "A purplish mark on the skin due to leakage of blood from capillaries under the surface that have been damaged by a blow."
+  },
+  "body|blister": {
+    "de": "Eine kleine, mit Flüssigkeit gefüllte Blase auf der Haut, etwa durch Reibung.",
+    "en": "A small bubble of fluid under the skin, often caused by rubbing."
+  },
+  "body|rash": {
+    "de": "Eine gereizte Hautstelle mit roten Flecken oder kleinen Erhebungen.",
+    "en": "An area of irritated skin with red spots or small bumps."
+  },
+  "body|wound": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "An injury, such as a cut, stab, or tear, to a (usually external) part of the body."
+  },
+  "body|scar": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "A permanent mark on the skin, sometimes caused by the healing of a wound."
+  },
+  "body|sprain": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "The act or result of spraining; lameness caused by spraining"
+  },
+  "body|cramp": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "A painful contraction of a muscle which cannot be controlled; (sometimes) a similar pain even without noticeable contraction."
+  },
+  "body|swelling": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "The state of being swollen."
+  },
+  "body|nausea": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "A feeling of illness or discomfort in the digestive system, usually characterized by a strong urge to vomit."
+  },
+  "body|dizziness": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "The state of being dizzy; the sensation of instability."
+  },
+  "body|fever": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "A higher than normal body temperature of a person (or, generally, a mammal), usually caused by disease."
+  },
+  "body|cough": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "A sudden, often involuntary expulsion of air from the lungs through the glottis (causing a short, explosive sound), and out through the mouth."
+  },
+  "body|sneeze": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "To expel air as a reflex induced by an irritation in the nose."
+  },
+  "body|itch": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "A sensation felt on an area of the skin that causes a person or animal to want to scratch said area."
+  },
+  "body|sore": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "Causing pain or discomfort; painfully sensitive."
+  },
+  "body|stiff": {
+    "de": "Eine Verletzung, Beschwerde oder körperliche Empfindung beschreiben.",
+    "en": "Rigid; hard to bend; inflexible."
+  },
+  "body|numb": {
+    "de": "Körpergefühl: An einer Stelle kaum oder nichts mehr spüren.",
+    "en": "Having little or no physical sensation in a part of the body."
+  },
+  "body|bandage": {
+    "de": "Bei einem Arztbesuch oder in der Apotheke.",
+    "en": "A strip of gauze or similar material used to protect or support a wound or injury."
+  },
+  "body|ointment": {
+    "de": "Bei einem Arztbesuch oder in der Apotheke.",
+    "en": "A viscous preparation of oils and/or fats, usually containing medication, used as a treatment or as an emollient."
+  },
+  "body|prescription": {
+    "de": "Bei einem Arztbesuch oder in der Apotheke.",
+    "en": "A written order from an authorized medical practitioner for provision of a medicine or other treatment, such as (ophthalmology) the specific lenses needed for a pair of glasses."
+  },
+  "body|painkiller": {
+    "de": "Bei einem Arztbesuch oder in der Apotheke.",
+    "en": "A drug that numbs the pain in the body."
+  },
+  "body|appointment": {
+    "de": "Ein vereinbarter Zeitpunkt für ein Treffen, etwa beim Arzt.",
+    "en": "An arranged meeting at a particular time, such as a visit to a doctor."
+  },
+  "body|checkup": {
+    "de": "Bei einem Arztbesuch oder in der Apotheke.",
+    "en": "A routine visit to the doctor, dentist, or the like."
+  },
+  "body|allergy": {
+    "de": "Eine überempfindliche Reaktion des Körpers auf Stoffe wie Pollen oder bestimmte Lebensmittel.",
+    "en": "A reaction to something that is harmless to most people, such as pollen or a certain food."
+  },
+  "body|symptom": {
+    "de": "Eine wahrgenommene Beschwerde, die auf eine Krankheit hinweisen kann, etwa Kopfschmerzen.",
+    "en": "A change you notice in how you feel that may indicate an illness, such as a headache."
+  },
+  "clothes|sleeve": {
+    "de": "Ein Teil eines Kleidungsstücks oder Schuhs.",
+    "en": "The part of a garment that covers the arm."
+  },
+  "clothes|collar": {
+    "de": "Ein Teil eines Kleidungsstücks oder Schuhs.",
+    "en": "The part of an upper garment (shirt, jacket, etc.) that fits around the neck and throat, especially if sewn from a separate piece of fabric."
+  },
+  "clothes|cuff": {
+    "de": "Der Abschluss eines Ärmels rund um das Handgelenk.",
+    "en": "The end of a sleeve around the wrist."
+  },
+  "clothes|hem": {
+    "de": "Ein Teil eines Kleidungsstücks oder Schuhs.",
+    "en": "An utterance or sound of the voice like \"hem\", often indicative of hesitation or doubt, sometimes used to call attention."
+  },
+  "clothes|seam": {
+    "de": "Ein Teil eines Kleidungsstücks oder Schuhs.",
+    "en": "A folded-back and stitched piece of fabric; especially, the stitching that joins two or more pieces of fabric."
+  },
+  "clothes|lining": {
+    "de": "Die innere Stoffschicht eines Kleidungsstücks.",
+    "en": "The inner layer of fabric inside a garment."
+  },
+  "clothes|zipper": {
+    "de": "Ein Teil eines Kleidungsstücks oder Schuhs.",
+    "en": "A zip fastener."
+  },
+  "clothes|button": {
+    "de": "Ein Teil eines Kleidungsstücks oder Schuhs.",
+    "en": "A knob or disc that is passed through a loop or (buttonhole), serving as a fastener."
+  },
+  "clothes|buckle": {
+    "de": "Ein Verschluss an einem Gürtel oder Riemen.",
+    "en": "A clasp used to fasten a belt or strap."
+  },
+  "clothes|shoelace": {
+    "de": "Ein Teil eines Kleidungsstücks oder Schuhs.",
+    "en": "A lace used for fastening a shoe."
+  },
+  "clothes|sole": {
+    "de": "Die unterste Fläche eines Schuhs, die den Boden berührt.",
+    "en": "The bottom part of a shoe that touches the ground."
+  },
+  "clothes|insole": {
+    "de": "Ein Teil eines Kleidungsstücks oder Schuhs.",
+    "en": "The inside sole of a shoe or other footwear."
+  },
+  "clothes|hood": {
+    "de": "Der Teil einer Jacke oder eines Pullovers, den man über den Kopf ziehen kann.",
+    "en": "The part of a jacket or sweatshirt that can be pulled over the head."
+  },
+  "clothes|pocket": {
+    "de": "Ein Teil eines Kleidungsstücks oder Schuhs.",
+    "en": "A bag stitched to an item of clothing, used for carrying small items."
+  },
+  "clothes|waistband": {
+    "de": "Ein Teil eines Kleidungsstücks oder Schuhs.",
+    "en": "A band of fabric encircling the waist, especially a part of a pair of pants or a skirt."
+  },
+  "clothes|belt": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "A band worn around the waist to hold clothing to one's body (usually pants), hold weapons (such as a gun or sword), or serve as a decorative piece of clothing."
+  },
+  "clothes|scarf": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "A long, often knitted, garment worn around the neck."
+  },
+  "clothes|gloves": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "An item of clothing, a part of it or the material it is made from."
+  },
+  "clothes|mittens": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "An item of clothing, a part of it or the material it is made from."
+  },
+  "clothes|beanie": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "A cap that fits the head closely, usually knitted from wool."
+  },
+  "clothes|cardigan": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "A type of sweater or jumper that fastens up the front with buttons or a zipper, usually machine- or hand-knitted from wool."
+  },
+  "clothes|sweatshirt": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "A loose shirt, usually made of a knit fleece, for athletic wear and now often used as casual apparel."
+  },
+  "clothes|raincoat": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "A waterproof coat to be worn in the rain; (loosely) any coat or jacket with this purpose."
+  },
+  "clothes|suit": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "A set of clothes to be worn together, now especially a man's matching jacket and trousers (also business suit or lounge suit), or a similar outfit for a woman."
+  },
+  "clothes|waistcoat": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "An ornamental garment worn under a doublet."
+  },
+  "clothes|tights": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "A close-fitting, sheer or non-sheer skin-tight garment worn principally by women and girls that covers the body completely from the waist down, usually including the feet."
+  },
+  "clothes|slippers": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "An item of clothing, a part of it or the material it is made from."
+  },
+  "clothes|boots": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "An item of clothing, a part of it or the material it is made from."
+  },
+  "clothes|sneakers": {
+    "de": "Kleidung: ein Kleidungsstück, ein Teil davon oder dessen Material.",
+    "en": "An item of clothing, a part of it or the material it is made from."
+  },
+  "clothes|cotton": {
+    "de": "Ein Stoff oder Material, aus dem Kleidung hergestellt wird.",
+    "en": "A plant of genus Gossypium, used as a source of such fiber."
+  },
+  "clothes|wool": {
+    "de": "Ein Stoff oder Material, aus dem Kleidung hergestellt wird.",
+    "en": "The hair of the sheep, llama and some other ruminants."
+  },
+  "clothes|linen": {
+    "de": "Ein Stoff oder Material, aus dem Kleidung hergestellt wird.",
+    "en": "Thread or cloth made from flax fiber."
+  },
+  "clothes|silk": {
+    "de": "Ein Stoff oder Material, aus dem Kleidung hergestellt wird.",
+    "en": "A fine fiber excreted by the silkworm or other arthropod (such as a spider)."
+  },
+  "clothes|leather": {
+    "de": "Ein Stoff oder Material, aus dem Kleidung hergestellt wird.",
+    "en": "A tough material produced from the skin of animals, by tanning or similar process, used e.g. for clothing; often denotes leather from cattle when no qualifier specifies otherwise."
+  },
+  "clothes|suede": {
+    "de": "Ein Stoff oder Material, aus dem Kleidung hergestellt wird.",
+    "en": "A type of soft leather, made from calfskin, with a brushed texture to resemble fabric, often used to make boots, clothing and fashion accessories."
+  },
+  "clothes|velvet": {
+    "de": "Ein Stoff oder Material, aus dem Kleidung hergestellt wird.",
+    "en": "A closely woven fabric (originally of silk, now also of cotton or man-made fibres) with a thick short pile on one side."
+  },
+  "clothes|striped": {
+    "de": "Das Muster oder den Zustand von Kleidung beschreiben.",
+    "en": "Having stripes, decorated or marked with bands differing in color."
+  },
+  "clothes|checked": {
+    "de": "Ein Kleidungsstück mit einem Muster aus sich kreuzenden Linien und Quadraten.",
+    "en": "Fabric with a pattern of crossing lines that form squares."
+  },
+  "clothes|wrinkled": {
+    "de": "Das Muster oder den Zustand von Kleidung beschreiben.",
+    "en": "Uneven, with many furrows and prominent points, often in reference to the skin or hide of animals."
+  },
+  "clothes|stain": {
+    "de": "Eine verfärbte Stelle auf einem Kleidungsstück, etwa durch Kaffee.",
+    "en": "A discoloured mark on clothing, for example from spilled coffee."
+  },
+  "food|colander": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A bowl-shaped kitchen utensil with holes in it used for draining food that has been cooking in water, such as pasta."
+  },
+  "food|sieve": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A device with a mesh, grate, or otherwise perforated bottom to separate, in a granular material, larger particles from smaller ones, or to separate solid objects from a liquid."
+  },
+  "food|whisk": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A kitchen utensil, now usually made from stiff wire loops fixed to a handle (and formerly of twigs), used for whipping (or a mechanical device with the same function)."
+  },
+  "food|spatula": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A kitchen utensil consisting of a flat surface attached to a long handle, used for turning, lifting, or stirring food."
+  },
+  "food|ladle": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A deep-bowled spoonlike utensil with a long, usually curved, handle."
+  },
+  "food|grater": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "a tool with which one grates, especially foods such as cheese, to facilitate getting small particles or shreds off a solid lump"
+  },
+  "food|peeler": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A household utensil for peeling fruit or vegetables."
+  },
+  "food|chopping board": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "Synonym of cutting board."
+  },
+  "food|saucepan": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A deep cooking vessel with a long protruding handle and sometimes a lid; used for boiling, stewing and making sauces."
+  },
+  "food|frying pan": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A long-handled, shallow pan used for frying food."
+  },
+  "food|lid": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "The top or cover of a container."
+  },
+  "food|kettle": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A vessel or appliance used to boil water for the preparation of hot beverages and other foodstuffs."
+  },
+  "food|oven": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A chamber used for baking or heating."
+  },
+  "food|stove": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "A device for heating food, (UK) a cooker."
+  },
+  "food|baking tray": {
+    "de": "Ein Küchenutensil oder Gerät zum Kochen und Backen.",
+    "en": "An oven-proof metal tray used to hold foods in the oven."
+  },
+  "food|dough": {
+    "de": "Lebensmittel, Zutaten und Mengen beim Kochen oder Backen.",
+    "en": "A thick, malleable substance made by mixing flour with other ingredients such as water, eggs, or butter, that is made into a particular form and then baked."
+  },
+  "food|batter": {
+    "de": "Eine flüssige Mischung aus Mehl und weiteren Zutaten, etwa für Pfannkuchen.",
+    "en": "A pourable mixture of flour and other ingredients used for pancakes or coating food."
+  },
+  "food|yeast": {
+    "de": "Lebensmittel, Zutaten und Mengen beim Kochen oder Backen.",
+    "en": "A single-celled fungus of any of a wide variety of taxonomic families."
+  },
+  "food|flour": {
+    "de": "Lebensmittel, Zutaten und Mengen beim Kochen oder Backen.",
+    "en": "Powder obtained by grinding or milling cereal grains, especially wheat, or other foodstuffs such as soybeans and potatoes, and used to bake bread, cakes, and pastry."
+  },
+  "food|breadcrumbs": {
+    "de": "Lebensmittel, Zutaten und Mengen beim Kochen oder Backen.",
+    "en": "Food, ingredients and quantities used in cooking or baking."
+  },
+  "food|starch": {
+    "de": "Ein Stoff aus Pflanzen, der beim Kochen zum Andicken verwendet wird.",
+    "en": "A plant-derived substance used to thicken sauces when cooking."
+  },
+  "food|vinegar": {
+    "de": "Lebensmittel, Zutaten und Mengen beim Kochen oder Backen.",
+    "en": "A sour liquid formed by the fermentation of alcohol used as a condiment or preservative; a dilute solution of acetic acid."
+  },
+  "food|broth": {
+    "de": "Lebensmittel, Zutaten und Mengen beim Kochen oder Backen.",
+    "en": "A soup made from broth and other ingredients such as vegetables, herbs or diced meat."
+  },
+  "food|gravy": {
+    "de": "Lebensmittel, Zutaten und Mengen beim Kochen oder Backen.",
+    "en": "A dark savoury sauce prepared from stock and usually meat juices; brown gravy."
+  },
+  "food|leftovers": {
+    "de": "Lebensmittel, Zutaten und Mengen beim Kochen oder Backen.",
+    "en": "Food, ingredients and quantities used in cooking or baking."
+  },
+  "food|portion": {
+    "de": "Lebensmittel, Zutaten und Mengen beim Kochen oder Backen.",
+    "en": "An allocated amount."
+  },
+  "food|pinch": {
+    "de": "Eine kleine Menge, die zwischen Daumen und Finger passt, etwa Salz.",
+    "en": "A small amount held between the thumb and a finger, such as salt."
+  },
+  "food|clove": {
+    "de": "Ein einzelnes Teilstück einer Knoblauchknolle.",
+    "en": "One segment of a bulb of garlic."
+  },
+  "food|peel": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To remove the skin or outer covering of."
+  },
+  "food|chop": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To cut into pieces with short, vigorous cutting motions."
+  },
+  "food|slice": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To cut into slices."
+  },
+  "food|dice": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To cut into small cubes."
+  },
+  "food|grate": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To shred (things, usually foodstuffs), by rubbing across a grater."
+  },
+  "food|stir": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To disturb the relative position of the particles (of a liquid or similar) by passing an object through it."
+  },
+  "food|whip": {
+    "de": "In der Küche: Sahne kräftig schlagen, bis sie luftig wird.",
+    "en": "To beat cream vigorously until it becomes light and airy."
+  },
+  "food|knead": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To work and press into a mass, usually with the hands; especially, to work, as by repeated pressure with the knuckles, into a well mixed mass, the materials of bread, cake, etc."
+  },
+  "food|simmer": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To cook or undergo heating slowly at or below the boiling point."
+  },
+  "food|boil": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To heat to the point where it begins to turn into a gas."
+  },
+  "food|roast": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To cook food by heating in an oven or over a fire without covering, resulting in a crisp, possibly even slightly charred appearance."
+  },
+  "food|bake": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To cook (something) in an oven (for someone)."
+  },
+  "food|steam": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To cook with steam."
+  },
+  "food|thaw": {
+    "de": "Eine Tätigkeit bei der Zubereitung von Essen.",
+    "en": "To gradually cause (something frozen, such as earth, ice, or snow) to melt or soften by raising the temperature."
+  },
+  "food|season": {
+    "de": "Beim Kochen Kräuter, Salz oder Gewürze hinzufügen.",
+    "en": "To add salt, herbs or spices to food."
+  },
+  "food|ripe": {
+    "de": "Geschmack, Frische oder Beschaffenheit von Lebensmitteln.",
+    "en": "Of a fruit, vegetable, seed, etc., ready for reaping or gathering; having attained perfection; mature."
+  },
+  "food|stale": {
+    "de": "Brot oder Gebäck ist nicht mehr frisch und weich.",
+    "en": "Bread or baked food that is no longer fresh and soft."
+  },
+  "food|bland": {
+    "de": "Essen, das wenig Geschmack hat.",
+    "en": "Food with very little flavour."
+  },
+  "food|savory": {
+    "de": "Essen mit würzigem, salzigem Geschmack.",
+    "en": "Food with a salty or spicy flavour rather than a sweet one."
+  },
+  "food|bitter": {
+    "de": "Geschmack, Frische oder Beschaffenheit von Lebensmitteln.",
+    "en": "Having an acrid taste (usually from a basic substance)."
+  },
+  "food|sour": {
+    "de": "Geschmack, Frische oder Beschaffenheit von Lebensmitteln.",
+    "en": "Made rancid by fermentation, etc."
+  },
+  "food|crunchy": {
+    "de": "Geschmack, Frische oder Beschaffenheit von Lebensmitteln.",
+    "en": "Likely to crunch, especially with reference to food when it is eaten."
+  },
+  "road|curb": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A concrete margin along the edge of a road; a kerb (UK, Australia, New Zealand)."
+  },
+  "road|sidewalk": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A paved footpath located at the side of a road, for the use of pedestrians."
+  },
+  "road|crosswalk": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A point designated for pedestrians to cross a street."
+  },
+  "road|intersection": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "The junction of two (or more) paths, streets, highways, or other thoroughfares."
+  },
+  "road|roundabout": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A road junction at which traffic streams circularly around a central island."
+  },
+  "road|lane": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A lengthwise division of roadway intended for a single line of vehicles."
+  },
+  "road|shoulder": {
+    "de": "Der Randstreifen neben der Fahrbahn, etwa zum Anhalten im Notfall.",
+    "en": "The strip beside the traffic lanes where a vehicle may stop in an emergency."
+  },
+  "road|pothole": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A shallow pit or other edged depression in a road's surface, especially when caused by erosion, weather or traffic."
+  },
+  "road|detour": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A diversion or deviation from one's original route."
+  },
+  "road|toll": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A fee paid for some liberty or privilege, particularly for the privilege of passing over a bridge or on a highway, or for that of vending goods in a fair, market, etc."
+  },
+  "road|traffic jam": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A situation in which road traffic accumulates until it is stationary or very slow."
+  },
+  "road|speed limit": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "The maximum speed permitted by law for vehicles."
+  },
+  "road|right of way": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "The right to proceed first in traffic, on land, on water or in the air. Also in metaphorical senses."
+  },
+  "road|license plate": {
+    "de": "Das Schild am Fahrzeug mit seiner amtlichen Buchstaben- und Zahlenkombination.",
+    "en": "A plate on a vehicle showing its official letters and numbers."
+  },
+  "road|windshield": {
+    "de": "Die große Glasscheibe vorne am Auto, durch die man auf die Straße schaut.",
+    "en": "The large glass window at the front of a car."
+  },
+  "road|wiper": {
+    "de": "Ein Teil oder Ausstattungsgegenstand eines Autos.",
+    "en": "Something, such as a windscreen wiper, that is designed for wiping."
+  },
+  "road|dashboard": {
+    "de": "Ein Teil oder Ausstattungsgegenstand eines Autos.",
+    "en": "A panel beneath the windshield of a vehicle or aircraft containing indicator gauges, compartments, and sometimes controls and indicator lights."
+  },
+  "road|steering wheel": {
+    "de": "Ein Teil oder Ausstattungsgegenstand eines Autos.",
+    "en": "A wheel-shaped control that is rotated by the driver to steer, existing in most modern land vehicles."
+  },
+  "road|gear": {
+    "de": "Eine Übersetzungsstufe im Getriebe eines Fahrzeugs.",
+    "en": "A selected ratio in a vehicle's transmission."
+  },
+  "road|clutch": {
+    "de": "Der Mechanismus, der Motor und Getriebe beim Schalten trennt oder verbindet.",
+    "en": "The mechanism that connects or disconnects the engine and transmission when changing gears."
+  },
+  "road|brake": {
+    "de": "Eine Vorrichtung, mit der man ein Fahrzeug verlangsamt oder anhält.",
+    "en": "A device used to slow down or stop a vehicle."
+  },
+  "road|accelerator": {
+    "de": "Ein Teil oder Ausstattungsgegenstand eines Autos.",
+    "en": "A pedal causing the vehicle to accelerate when it is pressed."
+  },
+  "road|headlight": {
+    "de": "Ein helles Licht vorne am Fahrzeug, das die Straße beleuchtet.",
+    "en": "A bright light at the front of a vehicle that lights up the road."
+  },
+  "road|indicator": {
+    "de": "Ein Teil oder Ausstattungsgegenstand eines Autos.",
+    "en": "A turn signal; each of the flashing lights on each side of a vehicle which indicate a turn is being made to left or right, or a lane change etc."
+  },
+  "road|bumper": {
+    "de": "Ein Teil oder Ausstattungsgegenstand eines Autos.",
+    "en": "Parts at the front and back of a vehicle which are meant to absorb the impact of a collision; fender."
+  },
+  "road|trunk": {
+    "de": "Der geschlossene Stauraum eines Autos für Gepäck; amerikanisches Englisch.",
+    "en": "The enclosed luggage compartment of a car; American English."
+  },
+  "road|hood": {
+    "de": "Die aufklappbare Abdeckung über dem Motor eines Autos; amerikanisches Englisch.",
+    "en": "The hinged cover over a car engine; American English."
+  },
+  "road|tire": {
+    "de": "Ein Teil oder Ausstattungsgegenstand eines Autos.",
+    "en": "US and Canada spelling of tyre: The rubber covering on a wheel."
+  },
+  "road|spare tire": {
+    "de": "Ein Teil oder Ausstattungsgegenstand eines Autos.",
+    "en": "Used other than figuratively or idiomatically: see spare, tire."
+  },
+  "road|jack": {
+    "de": "Ein Gerät, mit dem man ein Auto zum Radwechsel anhebt.",
+    "en": "A device used to lift a car when changing a wheel."
+  },
+  "road|exhaust": {
+    "de": "Das Rohrsystem, durch das die Abgase eines Motors nach außen gelangen.",
+    "en": "The pipe system that carries waste gases away from an engine."
+  },
+  "road|fuel": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "Substance consumed to provide energy through combustion, or through chemical or nuclear reaction."
+  },
+  "road|gas station": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "An establishment which sells gasoline (petrol) and often also diesel."
+  },
+  "road|tow truck": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A truck (lorry) typically equipped with winches, chains, and related equipment, and used to tow disabled vehicles."
+  },
+  "road|breakdown": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A failure, particularly one which is mechanical in nature."
+  },
+  "road|seat belt": {
+    "de": "Ein Gurt, der Menschen während der Fahrt auf ihrem Sitz hält.",
+    "en": "A belt that holds someone in their seat while travelling in a vehicle."
+  },
+  "road|rearview mirror": {
+    "de": "Ein Teil oder Ausstattungsgegenstand eines Autos.",
+    "en": "A part of a car or a piece of equipment used with it."
+  },
+  "road|pedestrian": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "A walker; one who walks or goes on foot, especially as opposed to one who uses a vehicle."
+  },
+  "road|commute": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "To regularly travel from one's home to one's workplace or school, or vice versa."
+  },
+  "road|overtake": {
+    "de": "Im Straßenverkehr: Straßen, Fahrzeuge und ihre Ausstattung.",
+    "en": "To pass a slower moving object or entity (on the side closest to oncoming traffic)."
+  },
+  "travel|boarding pass": {
+    "de": "Am Flughafen oder während einer Flugreise.",
+    "en": "A document or card, similar to a ticket, needed in order to board an airplane or other mode of transport."
+  },
+  "travel|departure": {
+    "de": "Am Flughafen oder während einer Flugreise.",
+    "en": "The act of departing or something that has departed."
+  },
+  "travel|arrival": {
+    "de": "Am Flughafen oder während einer Flugreise.",
+    "en": "The act of arriving (reaching a certain place)."
+  },
+  "travel|layover": {
+    "de": "Am Flughafen oder während einer Flugreise.",
+    "en": "A break between stages of a journey."
+  },
+  "travel|stopover": {
+    "de": "Am Flughafen oder während einer Flugreise.",
+    "en": "A short interruption in a journey or the place visited during such an interruption."
+  },
+  "travel|luggage": {
+    "de": "Am Flughafen oder während einer Flugreise.",
+    "en": "The bags and other containers that hold a traveller's belongings."
+  },
+  "travel|suitcase": {
+    "de": "Am Flughafen oder während einer Flugreise.",
+    "en": "A large (usually rectangular) piece of luggage used for carrying clothes, and sometimes suits, when travelling."
+  },
+  "travel|carry-on": {
+    "de": "Am Flughafen oder während einer Flugreise.",
+    "en": "That luggage or baggage which is taken onto an airplane (or a ferry, etc.) with a passenger, rather than checked."
+  },
+  "travel|baggage claim": {
+    "de": "Am Flughafen oder während einer Flugreise.",
+    "en": "The designated location for receiving checked luggage, such as the baggage carousels at an airport."
+  },
+  "travel|customs": {
+    "de": "Die Kontrolle von Waren bei der Einreise in ein Land.",
+    "en": "The authority and checks concerned with goods entering a country."
+  },
+  "travel|aisle": {
+    "de": "Am Flughafen oder während einer Flugreise.",
+    "en": "A clear path/passage through rows of seating."
+  },
+  "travel|gate": {
+    "de": "Am Flughafen: der Bereich, an dem man an Bord des Flugzeugs geht.",
+    "en": "At an airport, the area where passengers board a plane."
+  },
+  "travel|platform": {
+    "de": "Am Bahnhof: der Bereich neben den Gleisen zum Ein- und Aussteigen.",
+    "en": "At a railway station, the area beside the tracks where passengers board and leave trains."
+  },
+  "travel|fare": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "Money paid for a transport ticket."
+  },
+  "travel|ticket": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "Travelling and arranging a trip."
+  },
+  "travel|reservation": {
+    "de": "Eine Buchung, zum Beispiel für ein Hotelzimmer.",
+    "en": "A booking, for example for a hotel room."
+  },
+  "travel|accommodation": {
+    "de": "Eine Unterkunft buchen oder im Hotel ankommen.",
+    "en": "Lodging in a dwelling or similar living quarters afforded to travellers in hotels or on cruise ships, or students, etc."
+  },
+  "travel|vacancy": {
+    "de": "Eine Unterkunft buchen oder im Hotel ankommen.",
+    "en": "An available room in a hotel; guest house, etc."
+  },
+  "travel|reception": {
+    "de": "Im Hotel: der Bereich, in dem Gäste einchecken.",
+    "en": "The area in a hotel where guests check in."
+  },
+  "travel|deposit": {
+    "de": "Ein vorab gezahlter Betrag als Sicherheit oder Teilzahlung bei einer Buchung.",
+    "en": "Money paid in advance as security or as part-payment for a booking."
+  },
+  "travel|receipt": {
+    "de": "Geld, Buchungen und Zahlungen auf einer Reise.",
+    "en": "A written acknowledgment that a specified article or sum of money has been received."
+  },
+  "travel|refund": {
+    "de": "Geld, Buchungen und Zahlungen auf einer Reise.",
+    "en": "An amount of money returned."
+  },
+  "travel|cancellation": {
+    "de": "Geld, Buchungen und Zahlungen auf einer Reise.",
+    "en": "The act, process, or result of cancelling; as, the cancellation of certain words in a contract, or of the contract itself."
+  },
+  "travel|delay": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "A period of time before an event occurs; the act of delaying; procrastination; lingering inactivity."
+  },
+  "travel|itinerary": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "A route or proposed route of a journey."
+  },
+  "travel|destination": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "The place set for the end of a journey or to which something is sent; place or point aimed at."
+  },
+  "travel|landmark": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "A recognizable natural or man-made feature used for navigation."
+  },
+  "travel|guidebook": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "Travelling and arranging a trip."
+  },
+  "travel|rental": {
+    "de": "Geld, Buchungen und Zahlungen auf einer Reise.",
+    "en": "Something that is rented."
+  },
+  "travel|insurance": {
+    "de": "Geld, Buchungen und Zahlungen auf einer Reise.",
+    "en": "A means of indemnity against a future occurrence of an uncertain event."
+  },
+  "travel|passport": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "An official document normally used for international journeys, which proves the identity and nationality of the person for whom it was issued."
+  },
+  "travel|visa": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "A permit to enter and leave a country, normally issued by the authorities of the country to be visited."
+  },
+  "travel|currency": {
+    "de": "Geld, Buchungen und Zahlungen auf einer Reise.",
+    "en": "Money or other items used to facilitate transactions."
+  },
+  "travel|exchange rate": {
+    "de": "Geld, Buchungen und Zahlungen auf einer Reise.",
+    "en": "The rate at which one currency may be exchanged for another currency."
+  },
+  "travel|cash": {
+    "de": "Geld, Buchungen und Zahlungen auf einer Reise.",
+    "en": "Money in the form of notes or bills and coins, as opposed to checks, credit or electronic transactions."
+  },
+  "travel|ATM": {
+    "de": "Geld, Buchungen und Zahlungen auf einer Reise.",
+    "en": "Money, bookings and payments while travelling."
+  },
+  "travel|tip": {
+    "de": "Ein zusätzlicher kleiner Geldbetrag für guten Service.",
+    "en": "An extra small payment given to someone for good service."
+  },
+  "travel|sightseeing": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "The activity of going out looking at things; tourism."
+  },
+  "travel|souvenir": {
+    "de": "Auf Reisen: unterwegs sein und eine Reise organisieren.",
+    "en": "An item of sentimental value, that is given or kept to remember an event or location."
+  },
+  "travel|queue": {
+    "de": "Eine Reihe von Menschen oder Fahrzeugen, die darauf warten, an die Reihe zu kommen.",
+    "en": "A line of people or vehicles waiting for their turn."
+  },
+  "people|neighbor": {
+    "de": "In welcher Beziehung eine Person zu jemandem steht.",
+    "en": "How one person is related or connected to another."
+  },
+  "people|colleague": {
+    "de": "In welcher Beziehung eine Person zu jemandem steht.",
+    "en": "A fellow member of a profession, staff, academic faculty or other organization; an associate, a workmate."
+  },
+  "people|acquaintance": {
+    "de": "In welcher Beziehung eine Person zu jemandem steht.",
+    "en": "A state of being acquainted with a person; originally indicating friendship, intimacy, but now suggesting a slight knowledge less deep than that of friendship; acquaintanceship."
+  },
+  "people|relative": {
+    "de": "Eine Person aus der eigenen Familie oder Verwandtschaft.",
+    "en": "A person related to someone by family ties."
+  },
+  "people|sibling": {
+    "de": "In welcher Beziehung eine Person zu jemandem steht.",
+    "en": "A person who shares a parent; one's brother or sister who one shares a parent with."
+  },
+  "people|nephew": {
+    "de": "In welcher Beziehung eine Person zu jemandem steht.",
+    "en": "A son of one's sibling, brother-in-law, or sister-in-law; either a son of one's brother (fraternal nephew) or a son of one's sister (sororal nephew)."
+  },
+  "people|niece": {
+    "de": "In welcher Beziehung eine Person zu jemandem steht.",
+    "en": "A daughter of one’s sibling, brother-in-law, or sister-in-law; either the daughter of one's brother (\"fraternal niece\"), or of one's sister (\"sororal niece\")."
+  },
+  "people|in-law": {
+    "de": "In welcher Beziehung eine Person zu jemandem steht.",
+    "en": "A relative by marriage (or through affinity)."
+  },
+  "people|roommate": {
+    "de": "In welcher Beziehung eine Person zu jemandem steht.",
+    "en": "A person with whom one shares a room, as in a dormitory, barracks, rooming house, or apartment."
+  },
+  "people|stranger": {
+    "de": "In welcher Beziehung eine Person zu jemandem steht.",
+    "en": "A person whom one does not know; a person who is neither a friend nor an acquaintance."
+  },
+  "people|reliable": {
+    "de": "Eine persönliche Eigenschaft oder ein Verhalten beschreiben.",
+    "en": "Suitable or fit to be relied on; worthy of dependence, reliance or trust; dependable, trustworthy"
+  },
+  "people|thoughtful": {
+    "de": "Aufmerksam für die Bedürfnisse anderer Menschen.",
+    "en": "Showing care and consideration for other people's needs."
+  },
+  "people|considerate": {
+    "de": "Eine persönliche Eigenschaft oder ein Verhalten beschreiben.",
+    "en": "Consciously thoughtful and observant (often of other people and their rights, needs, feelings and comfort)."
+  },
+  "people|stubborn": {
+    "de": "Eine persönliche Eigenschaft oder ein Verhalten beschreiben.",
+    "en": "Refusing to move or to change one's opinion; obstinate; firmly resisting; persistent in doing something."
+  },
+  "people|shy": {
+    "de": "Eine persönliche Eigenschaft oder ein Verhalten beschreiben.",
+    "en": "Easily frightened; timid."
+  },
+  "people|outgoing": {
+    "de": "Eine Person, die offen auf andere zugeht und gerne Kontakte knüpft.",
+    "en": "A person who is sociable and enjoys meeting others."
+  },
+  "people|generous": {
+    "de": "Eine persönliche Eigenschaft oder ein Verhalten beschreiben.",
+    "en": "Willing to give and share unsparingly; showing a readiness to give more (especially money) than is expected or needed."
+  },
+  "people|stingy": {
+    "de": "Eine persönliche Eigenschaft oder ein Verhalten beschreiben.",
+    "en": "Unwilling to spend, give, or share; ungenerous; mean."
+  },
+  "people|honest": {
+    "de": "Eine persönliche Eigenschaft oder ein Verhalten beschreiben.",
+    "en": "Scrupulous with regard to telling the truth; not given to swindling, lying, or fraud; upright."
+  },
+  "people|polite": {
+    "de": "Eine persönliche Eigenschaft oder ein Verhalten beschreiben.",
+    "en": "Well-mannered, civilized."
+  },
+  "people|rude": {
+    "de": "Eine persönliche Eigenschaft oder ein Verhalten beschreiben.",
+    "en": "Lacking in refinement or civility; bad-mannered; discourteous."
+  },
+  "people|awkward": {
+    "de": "Eine Situation oder ein Verhalten, bei dem man sich sozial unwohl fühlt.",
+    "en": "A social situation or behaviour that feels uncomfortable or clumsy."
+  },
+  "people|confident": {
+    "de": "Eine persönliche Eigenschaft oder ein Verhalten beschreiben.",
+    "en": "Very sure of something; positive."
+  },
+  "people|embarrassed": {
+    "de": "Gefühl: Nach einem peinlichen Missgeschick fühlt man sich unsicher und befangen.",
+    "en": "Feeling awkward and self-conscious after an uncomfortable social moment."
+  },
+  "people|disappointed": {
+    "de": "Ein Gefühl oder einen inneren Zustand beschreiben.",
+    "en": "Defeated of expectations or hope; experiencing disappointment; let down."
+  },
+  "people|relieved": {
+    "de": "Das Gefühl, wenn eine Sorge oder Belastung wegfällt.",
+    "en": "The feeling when a worry or burden has gone away."
+  },
+  "people|grateful": {
+    "de": "Ein Gefühl oder einen inneren Zustand beschreiben.",
+    "en": "Of a person or their actions, feelings, etc.: expressing gratitude or appreciation; appreciative, thankful."
+  },
+  "people|curious": {
+    "de": "Ein Gefühl oder einen inneren Zustand beschreiben.",
+    "en": "Tending to ask questions, or to want to explore or investigate; inquisitive; (with a negative connotation) nosy, prying."
+  },
+  "people|jealous": {
+    "de": "Ein Gefühl oder einen inneren Zustand beschreiben.",
+    "en": "Suspecting rivalry in love; troubled by worries that one might have been replaced in someone's affections; suspicious of a lover's or spouse's fidelity."
+  },
+  "people|proud": {
+    "de": "Freude darüber, etwas gut geschafft zu haben.",
+    "en": "Feeling pleased about something one has achieved."
+  },
+  "people|trust": {
+    "de": "Über Menschen, Beziehungen, Eigenschaften und Gefühle sprechen.",
+    "en": "Confidence in or reliance on some person or quality."
+  },
+  "people|apologize": {
+    "de": "Eine Handlung im Umgang mit anderen Menschen.",
+    "en": "To make an apology or excuse; to acknowledge some fault or offense, with expression of regret for it, by way of amends"
+  },
+  "people|forgive": {
+    "de": "Eine Handlung im Umgang mit anderen Menschen.",
+    "en": "To pardon (someone); to waive any negative feeling towards or desire for punishment or retribution against."
+  },
+  "people|blame": {
+    "de": "Eine Handlung im Umgang mit anderen Menschen.",
+    "en": "To censure (someone or something); to criticize."
+  },
+  "people|argue": {
+    "de": "Eine Handlung im Umgang mit anderen Menschen.",
+    "en": "To debate, disagree, or discuss opposing or differing viewpoints; to controvert; to wrangle."
+  },
+  "people|persuade": {
+    "de": "Eine Handlung im Umgang mit anderen Menschen.",
+    "en": "To successfully convince (someone) to agree to, accept, or do something, usually through reasoning and verbal influence."
+  },
+  "people|encourage": {
+    "de": "Eine Handlung im Umgang mit anderen Menschen.",
+    "en": "To mentally support; to motivate, give courage, hope or spirit."
+  },
+  "people|reassure": {
+    "de": "Eine Handlung im Umgang mit anderen Menschen.",
+    "en": "To assure anew; to restore confidence to; to free from fear or self-doubt."
+  },
+  "people|compliment": {
+    "de": "Über Menschen, Beziehungen, Eigenschaften und Gefühle sprechen.",
+    "en": "An expression of praise, congratulation, or respect."
+  },
+  "people|favor": {
+    "de": "Etwas Hilfreiches, das man für eine andere Person tut.",
+    "en": "A helpful act done for another person."
+  },
+  "work|deadline": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "A time limit in the form of a date on or before which something must be completed."
+  },
+  "work|schedule": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "A procedural plan, usually but not necessarily tabular in nature, indicating a sequence of operations and the planned times at which those operations are to occur."
+  },
+  "work|appointment": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "Working with others and organising business activities."
+  },
+  "work|agenda": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "A list of matters to be taken up (as at a meeting)."
+  },
+  "work|minutes": {
+    "de": "Die schriftliche Zusammenfassung dessen, was in einer Besprechung gesagt oder beschlossen wurde.",
+    "en": "The written record of what was discussed or decided at a meeting."
+  },
+  "work|proposal": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "A scheme or design."
+  },
+  "work|quote": {
+    "de": "Ein Angebot, das den voraussichtlichen Preis einer Leistung nennt.",
+    "en": "An offer stating the expected price of goods or a service."
+  },
+  "work|invoice": {
+    "de": "Ein Dokument, das gelieferte Waren oder Leistungen und den zu zahlenden Betrag aufführt.",
+    "en": "A document listing goods or services supplied and the amount to be paid."
+  },
+  "work|expense": {
+    "de": "Betriebliche Finanzen, Kosten und Bezahlung.",
+    "en": "A spending or consuming, often a disbursement of funds."
+  },
+  "work|revenue": {
+    "de": "Betriebliche Finanzen, Kosten und Bezahlung.",
+    "en": "The total sales; turnover."
+  },
+  "work|profit": {
+    "de": "Das Geld, das von den Einnahmen nach Abzug der Kosten übrig bleibt.",
+    "en": "The money left after costs have been taken away from income."
+  },
+  "work|budget": {
+    "de": "Betriebliche Finanzen, Kosten und Bezahlung.",
+    "en": "The amount of money or resources earmarked for a particular institution, activity or timeframe."
+  },
+  "work|supplier": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "One who supplies; a provider."
+  },
+  "work|customer": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "A person or company who purchases or receives a product or service from a business or merchant or intends to do so."
+  },
+  "work|client": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "A customer, a buyer or receiver of goods or services."
+  },
+  "work|contract": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "An agreement between two or more parties, to perform a specific job or work order, often temporary or of fixed duration and usually governed by a written agreement."
+  },
+  "work|agreement": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "An understanding between entities to follow a specific course of conduct."
+  },
+  "work|requirement": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "Something asked."
+  },
+  "work|feedback": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "Critical assessment of a process or activity or of their results."
+  },
+  "work|outcome": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "That which is produced or occurs as a result of an event or process."
+  },
+  "work|issue": {
+    "de": "Eine Angelegenheit oder ein Problem, das besprochen oder gelöst werden muss.",
+    "en": "A matter or problem that needs to be discussed or resolved."
+  },
+  "work|priority": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "An item's relative importance."
+  },
+  "work|approach": {
+    "de": "Die Art, wie man an eine Aufgabe oder ein Problem herangeht.",
+    "en": "A way of dealing with a task or problem."
+  },
+  "work|progress": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "Movement or advancement through a series of events, or points in time; development through time."
+  },
+  "work|setback": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "An obstacle, delay, disadvantage, or blow (an adverse event which slows down, or prevents progress towards a desired outcome)."
+  },
+  "work|workload": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "The amount of work assigned to a particular worker, normally in a specified time period."
+  },
+  "work|overtime": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "Working time outside of one's regular hours."
+  },
+  "work|leave": {
+    "de": "Genehmigte Zeit, in der man von der Arbeit abwesend ist.",
+    "en": "Authorised time away from work."
+  },
+  "work|salary": {
+    "de": "Betriebliche Finanzen, Kosten und Bezahlung.",
+    "en": "A fixed amount of money paid to a worker, usually calculated on a monthly or annual basis, not hourly, as wages. Implies a degree of professionalism and/or autonomy."
+  },
+  "work|wage": {
+    "de": "Betriebliche Finanzen, Kosten und Bezahlung.",
+    "en": "An amount of money paid to a worker for a specified quantity of work, usually calculated on an hourly basis and expressed in an amount of money per hour."
+  },
+  "work|benefit": {
+    "de": "Eine zusätzliche Leistung des Arbeitgebers neben dem Gehalt.",
+    "en": "An extra provided by an employer in addition to salary."
+  },
+  "work|recruit": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "To enroll or enlist new members or potential employees on behalf of an employer, organization, sports team, the military, etc."
+  },
+  "work|resign": {
+    "de": "Die eigene Stelle durch eine Kündigung aufgeben.",
+    "en": "To formally leave one's job by giving notice."
+  },
+  "work|delegate": {
+    "de": "Eine Aufgabe oder Verantwortung an eine andere Person übertragen.",
+    "en": "To give a task or responsibility to another person."
+  },
+  "work|negotiate": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "To confer with others in order to come to terms or reach an agreement."
+  },
+  "work|approve": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "To consider worthy (to); to be pleased (with); to accept."
+  },
+  "work|postpone": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "To delay or put off an event, appointment, etc."
+  },
+  "work|confirm": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "To assure the accuracy of previous statements."
+  },
+  "work|attach": {
+    "de": "Eine Datei an eine E-Mail anhängen.",
+    "en": "To include a file with an email message."
+  },
+  "work|available": {
+    "de": "Im Berufsalltag: Zusammenarbeit und geschäftliche Organisation.",
+    "en": "Such as one may avail oneself of; capable of being used for the accomplishment of a purpose."
+  },
+  "phrases|fair enough": {
+    "de": "Auf einen Standpunkt reagieren und zeigen, dass man ihn nachvollziehen kann.",
+    "en": "Acknowledging that someone's point of view is reasonable."
+  },
+  "phrases|by the way": {
+    "de": "Im Gespräch beiläufig ein anderes Thema ansprechen.",
+    "en": "Introducing another topic as an aside in a conversation."
+  },
+  "phrases|as far as I know": {
+    "de": "Eine Aussage auf den eigenen Wissensstand begrenzen.",
+    "en": "Limiting a statement to what one currently knows."
+  },
+  "phrases|to be honest": {
+    "de": "Eine offene, persönliche Einschätzung ankündigen.",
+    "en": "Introducing a frank personal opinion."
+  },
+  "phrases|never mind": {
+    "de": "Jemandem sagen, dass eine Sache kein Problem ist und nicht weiter stört.",
+    "en": "Telling someone that something does not matter or need further attention."
+  },
+  "phrases|no wonder": {
+    "de": "Zeigen, dass man etwas unter den Umständen verständlich findet.",
+    "en": "Saying that something is unsurprising given the circumstances."
+  },
+  "phrases|it depends": {
+    "de": "Erklären, dass eine Antwort von den Umständen abhängt.",
+    "en": "Saying that the answer changes according to the circumstances."
+  },
+  "phrases|in a nutshell": {
+    "de": "Eine Sache sehr kurz zusammenfassen.",
+    "en": "Summarising something very briefly."
+  },
+  "phrases|on the other hand": {
+    "de": "Einen anderen, oft gegensätzlichen Gesichtspunkt nennen.",
+    "en": "Introducing a different or contrasting point of view."
+  },
+  "phrases|after all": {
+    "de": "Eine Begründung anführen, die man berücksichtigen sollte.",
+    "en": "Giving a reason that should be taken into account."
+  },
+  "phrases|so far": {
+    "de": "Den Zeitraum bis zum jetzigen Moment beschreiben.",
+    "en": "Referring to the period up to the present moment."
+  },
+  "phrases|sooner or later": {
+    "de": "Ausdrücken, dass etwas irgendwann bestimmt passieren wird.",
+    "en": "Saying that something will eventually happen."
+  },
+  "phrases|from time to time": {
+    "de": "Beschreiben, dass etwas gelegentlich passiert.",
+    "en": "Describing something that happens occasionally."
+  },
+  "phrases|once in a while": {
+    "de": "Beschreiben, dass etwas gelegentlich, aber nicht regelmäßig passiert.",
+    "en": "Describing something that happens occasionally, but not regularly."
+  },
+  "phrases|all of a sudden": {
+    "de": "Etwas geschieht unerwartet und sehr plötzlich.",
+    "en": "Something happens unexpectedly and very suddenly."
+  },
+  "phrases|for the time being": {
+    "de": "Eine vorläufige Lösung oder einen vorübergehenden Zustand beschreiben.",
+    "en": "Describing a temporary arrangement for the present."
+  },
+  "phrases|in the meantime": {
+    "de": "Was während der Wartezeit auf ein anderes Ereignis passiert.",
+    "en": "What happens while waiting for another event."
+  },
+  "phrases|at least": {
+    "de": "Eine Untergrenze nennen oder einen tröstlichen Punkt hervorheben.",
+    "en": "Stating a minimum or pointing out a consolation."
+  },
+  "phrases|at most": {
+    "de": "Eine Obergrenze für eine Menge oder Zahl nennen.",
+    "en": "Stating the maximum possible amount or number."
+  },
+  "phrases|in advance": {
+    "de": "Etwas vor dem eigentlichen Ereignis erledigen.",
+    "en": "Doing something before the event it relates to."
+  },
+  "phrases|on purpose": {
+    "de": "Etwas bewusst und mit Absicht tun.",
+    "en": "Doing something deliberately."
+  },
+  "phrases|by accident": {
+    "de": "Etwas unabsichtlich oder aus Versehen tun.",
+    "en": "Doing something unintentionally."
+  },
+  "phrases|out of the blue": {
+    "de": "Etwas tritt völlig unerwartet ein.",
+    "en": "Something happens completely unexpectedly."
+  },
+  "phrases|a piece of cake": {
+    "de": "Bildlich ausdrücken, dass eine Aufgabe sehr einfach ist.",
+    "en": "An idiom meaning that a task is very easy."
+  },
+  "phrases|hang on": {
+    "de": "Eine andere Person bitten, einen Moment zu warten.",
+    "en": "Asking someone to wait a moment."
+  },
+  "phrases|figure out": {
+    "de": "Durch Nachdenken etwas verstehen oder eine Lösung finden.",
+    "en": "To understand something or find a solution by thinking about it."
+  },
+  "phrases|find out": {
+    "de": "Eine Information in Erfahrung bringen.",
+    "en": "To discover or obtain a piece of information."
+  },
+  "phrases|look up": {
+    "de": "Eine Information in einem Nachschlagewerk suchen.",
+    "en": "To search for information in a reference source."
+  },
+  "phrases|look after": {
+    "de": "Sich um eine Person, ein Tier oder eine Sache kümmern.",
+    "en": "To take care of a person, animal or thing."
+  },
+  "phrases|look forward to": {
+    "de": "Mit Freude an ein bevorstehendes Ereignis denken.",
+    "en": "To feel pleased and excited about a future event."
+  },
+  "phrases|put off": {
+    "de": "Einen Termin oder eine Tätigkeit auf einen späteren Zeitpunkt verschieben.",
+    "en": "To postpone an activity or event until a later time."
+  },
+  "phrases|give up": {
+    "de": "Mit einem Versuch oder einer Tätigkeit aufhören.",
+    "en": "To stop trying or stop doing an activity."
+  },
+  "phrases|run out of": {
+    "de": "Von einem Vorrat nichts mehr übrig haben.",
+    "en": "To have none of a supply left."
+  },
+  "phrases|come across": {
+    "de": "Jemandem oder etwas zufällig begegnen.",
+    "en": "To find or meet someone or something by chance."
+  },
+  "phrases|get along": {
+    "de": "Gut miteinander auskommen, etwa als Kollegen.",
+    "en": "To have a friendly relationship with someone."
+  },
+  "phrases|bring up": {
+    "de": "Ein Thema im Gespräch ansprechen.",
+    "en": "To introduce a subject into a conversation."
+  },
+  "phrases|turn down": {
+    "de": "Ein Angebot oder eine Einladung ablehnen.",
+    "en": "To refuse an offer or invitation."
+  },
+  "phrases|turn up": {
+    "de": "An einem Ort erscheinen, manchmal unerwartet.",
+    "en": "To arrive or appear somewhere, sometimes unexpectedly."
+  },
+  "phrases|work out": {
+    "de": "Durch Überlegen eine Lösung für ein Problem finden.",
+    "en": "To find a solution to a problem through thought."
+  },
+  "phrases|carry on": {
+    "de": "Eine Tätigkeit fortsetzen.",
+    "en": "To continue an activity."
+  },
+  "phrases|catch up": {
+    "de": "Einen Rückstand aufholen und denselben Stand erreichen.",
+    "en": "To reach the same position or level after falling behind."
+  },
+  "phrases|end up": {
+    "de": "Schließlich in einer bestimmten Lage oder an einem Ort landen.",
+    "en": "To finally be in a particular situation or place."
+  },
+  "phrases|take over": {
+    "de": "Eine Aufgabe, Rolle oder Verantwortung von jemandem übernehmen.",
+    "en": "To assume a task, role or responsibility from someone else."
+  },
+  "phrases|deal with": {
+    "de": "Sich um eine Angelegenheit kümmern oder ein Problem bearbeiten.",
+    "en": "To handle a matter or address a problem."
+  },
+  "phrases|get rid of": {
+    "de": "Etwas Unerwünschtes entfernen oder loswerden.",
+    "en": "To remove or dispose of something unwanted."
+  },
+  "phrases|make up for": {
+    "de": "Einen Fehler oder Nachteil durch etwas anderes ausgleichen.",
+    "en": "To compensate for a mistake or disadvantage."
+  },
+  "phrases|keep in mind": {
+    "de": "Etwas bei späteren Überlegungen berücksichtigen.",
+    "en": "To remember something when making a decision or judgement."
+  },
+  "phrases|take your time": {
+    "de": "Jemandem sagen, dass keine Eile nötig ist.",
+    "en": "Telling someone there is no need to hurry."
+  },
+  "phrases|let me know": {
+    "de": "Jemanden bitten, einen zu informieren.",
+    "en": "Asking someone to inform the speaker."
+  },
+  "phrases|help yourself": {
+    "de": "Jemandem erlauben, selbst etwas zu nehmen, etwa am Buffet.",
+    "en": "Inviting someone to take something for themselves, for example food from a buffet."
+  }
+}

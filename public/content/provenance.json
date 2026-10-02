@@ -9,15 +9,67 @@
     "license": "CC-BY-SA-4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
-  "attribution": "Wiktionary contributors. Source page URLs are stored per meaning. Extracted by Kaikki/Wiktextract. German glosses, selection and thematic mapping edited for Wortnah; draft, not human approved.",
+  "attribution": "Wiktionary contributors. Source page URLs are stored per meaning. Extracted by Kaikki/Wiktextract. German glosses, selection and thematic mapping edited for Einfach Englisch (formerly Wortnah); draft, not human approved.",
   "license": "https://creativecommons.org/licenses/by-sa/4.0/",
   "classification": {
     "method": "assistant-authored topic assignments from a fixed taxonomy; source metadata preserved",
-    "status": "draft"
+    "status": "draft",
+    "learningLevels": "Assistant-authored provisional training difficulty per selected meaning or grammar goal. Not supplied by Wiktionary, not a validated CEFR assessment. Advanced vocabulary and grammar files add original C1/C2 practice drafts; these are not externally verified CEFR classifications.",
+    "meaningContexts": "German and English sense cues authored for the selected meaning; English source definitions retained where suitable. Separate sense IDs remain separate learning targets; draft, not human approved."
   },
   "grammar": {
     "method": "assistant-authored structured task drafts; no paid API calls",
-    "humanApproved": 0
+    "referencePages": [
+      "https://englishprofile.org/?menu=english-vocabulary-profile",
+      "https://learnenglish.britishcouncil.org/free-resources/grammar/c1/inversion-conditionals",
+      "https://dictionary.cambridge.org/grammar/british-grammar/cleft-sentences-it-was-in-",
+      "https://dictionary.cambridge.org/grammar/british-grammar/conditionals-other",
+      "https://dictionary.cambridge.org/grammar/british-grammar/need",
+      "https://dictionary.cambridge.org/grammar/british-grammar/would-rather-would-",
+      "https://dictionary.cambridge.org/grammar/british-grammar/ellipsis"
+    ],
+    "referenceUse": "Grammar and level-design references only; examples are original. Advanced practice levels are provisional, not validated CEFR assignments or copied English Vocabulary Profile entries.",
+    "humanApproved": 0,
+    "textPractice": "170 writing tasks with optional hints, intended German meaning, model answers and self-assessment criteria. No automatic semantic grading; original question/answer IDs retained.",
+    "contextReferences": [
+      "https://www.cambridgeenglish.org/latinamerica/Images/167791-b2-first-handbook.pdf",
+      "https://learnenglishteens.britishcouncil.org/sites/teens/files/gs_third_conditional.pdf"
+    ]
+  },
+  "usageContexts": "82 existing senses refined with specific bilingual cues and original bilingual examples. Source definitions and sense IDs retained; editorial drafts, not human approved.",
+  "everydaySituations": {
+    "newMeanings": 251,
+    "enrichedMeanings": 11,
+    "sections": [
+      "food.restaurant",
+      "food.dietary",
+      "food.cafe",
+      "travel.hotel",
+      "travel.roomproblems",
+      "travel.journey",
+      "home.routines",
+      "repair.jobs",
+      "nature.outdoors",
+      "weather.weather",
+      "body.care",
+      "clothes.wardrobe",
+      "road.public",
+      "people.family",
+      "work.organisation",
+      "phrases.conversation",
+      "education.study",
+      "daily.planning",
+      "shopping.orders",
+      "money.payments",
+      "digital.internet",
+      "sport.fitness",
+      "leisure.together",
+      "culture.arts",
+      "society.debate",
+      "civic.services",
+      "science.environment"
+    ],
+    "method": "Original assistant-authored bilingual contexts and examples for everyday situations. Existing exact meanings reuse their IDs and sources; new meanings have no asserted dictionary match. Practice levels are provisional; human review outstanding."
   },
   "catalogue": {
     "schemaVersion": 2,

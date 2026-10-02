@@ -1,0 +1,30 @@
+[
+  {"id":"home","sections":[{"id":"routines","title":"Alltag zuhause","context":"Zuhause: Haushalt erledigen und das Zusammenleben organisieren.","entries":[
+    ["tidy up","aufräumen","phrase","A2","To put things in their proper places."],["clean up","sauber machen","phrase","A2","To remove dirt or mess from a place."],
+    ["do the laundry","Wäsche waschen","phrase","A2","To wash clothes and other fabric items."],["take out the rubbish","den Müll hinausbringen","phrase","A2","To carry household waste outside for collection."],
+    ["move in","einziehen","phrase","B1","To start living in a new home."],["share a flat","eine Wohnung teilen","phrase","B1","To live in the same flat with other people."]]}]},
+  {"id":"nature","title":"Natur & Tiere","sections":[{"id":"pets","title":"Haustiere","context":"Mit Haustieren leben: Haltung, Versorgung und Alltag.","entries":[
+    ["pet","Haustier","noun","A1","An animal kept at home for company."],["dog","Hund","noun","A1","A common domestic animal often kept as a pet."],
+    ["cat","Katze","noun","A1","A small domestic animal often kept as a pet."],["feed","füttern","verb","A2","To give food to a person or animal."],
+    ["take the dog for a walk","mit dem Hund spazieren gehen","phrase","A2","To go outside walking with a dog."],["vet","Tierarzt / Tierärztin","noun","B1","A person qualified to treat sick or injured animals."]]}]},
+  {"id":"body","sections":[{"id":"care","title":"Arztbesuch & Wohlbefinden","context":"Beim Arzt und im Alltag: Beschwerden erklären und sich erholen.","entries":[
+    ["patient","Patient / Patientin","noun","A2","A person receiving medical care."],["doctor","Arzt / Ärztin","noun","A1","A person qualified to diagnose and treat illnesses."],
+    ["prescription","Rezept (medizinisch)","noun","B1","A medical document authorising a particular medicine."],["rest","sich ausruhen","verb","A2","To stop activity for a time to regain energy."],
+    ["feel better","sich besser fühlen","phrase","A2","To be less ill or more comfortable than before."],["describe the pain","die Schmerzen beschreiben","phrase","B1","To explain what pain feels like and where it is."]]}]},
+  {"id":"food","sections":[{"id":"restaurant","title":"Restaurant & Ernährung","context":"Essen gehen: bestellen, Wünsche nennen und die Rechnung bezahlen.","entries":[
+    ["menu","Speisekarte","noun","A1","A list of food and drinks available in a restaurant."],["order a meal","ein Essen bestellen","phrase","A2","To ask a restaurant to prepare food for you."],
+    ["bill","Rechnung (im Restaurant)","noun","A2","A statement showing how much must be paid for a meal."],["vegetarian","vegetarisch","adj","A2","Containing no meat or fish."],
+    ["reserve a table","einen Tisch reservieren","phrase","A2","To arrange for a restaurant table to be kept for you."],["allergic to","allergisch gegen","phrase","B1","Having an allergy to a particular substance or food."]]}]},
+  {"id":"road","title":"Mobilität & Orientierung","description":"Zu Fuß, mit dem Rad oder mit öffentlichen Verkehrsmitteln.","sections":[{"id":"public","title":"Öffentlicher Verkehr & Fahrrad","context":"Unterwegs ohne Auto: Verbindungen finden und sich orientieren.","entries":[
+    ["bus stop","Bushaltestelle","phrase","A1","A place where buses stop for passengers."],["tram","Straßenbahn","noun","A2","A passenger vehicle that runs on rails in city streets."],
+    ["change trains","umsteigen (Zug)","phrase","A2","To leave one train and continue your journey on another."],["bicycle","Fahrrad","noun","A1","A vehicle with two wheels moved by pushing pedals."],
+    ["turn left","links abbiegen","phrase","A1","To change direction towards the left."],["ask for directions","nach dem Weg fragen","phrase","A2","To ask someone how to reach a place."]]}]},
+  {"id":"people","sections":[{"id":"family","title":"Familie & Konflikte","context":"Im Zusammenleben: füreinander sorgen, Vertrauen und Meinungsverschiedenheiten.","entries":[
+    ["family","Familie","noun","A1","People connected by close family relationships."],["friendship","Freundschaft","noun","A2","A close relationship between friends."],
+    ["trust","vertrauen","verb","B1","To believe someone is honest or will act reliably."],["have an argument","sich streiten","phrase","B1","To speak angrily with someone because you disagree."],
+    ["make up","sich versöhnen","phrase","B1","To become friendly again after an argument."],["look after","sich kümmern um","phrase","A2","To take care of someone or something."]]}]},
+  {"id":"work","sections":[{"id":"career","title":"Bewerbung & Karriere","context":"Im Berufsleben: sich bewerben, Erfahrungen beschreiben und weiterkommen.","entries":[
+    ["apply for a job","sich um eine Stelle bewerben","phrase","B1","To formally ask to be considered for a job."],["job interview","Vorstellungsgespräch","phrase","B1","A meeting to assess someone applying for a job."],
+    ["qualification","Qualifikation","noun","B1","A skill or certificate showing someone is suitable for a role."],["promotion","Beförderung","noun","B2","A move to a more senior position at work."],
+    ["work experience","Berufserfahrung","phrase","B1","Knowledge and skills gained by doing jobs."],["hire","einstellen (Personal)","verb","B1","To give someone a job."]]}]}
+]

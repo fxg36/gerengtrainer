@@ -1,0 +1,61 @@
+{
+  "home": [
+    ["furniture", "Möbel & Räume", "shelf|drawer|cupboard|wardrobe|ceiling|floor|carpet|rug|cushion|pillow|blanket|duvet|mattress|curtain|blinds"],
+    ["household", "Ausstattung & Haushalt", "" ]
+  ],
+  "repair": [
+    ["tools", "Werkzeuge & Befestigung", "screw|screwdriver|nail|hammer|pliers|wrench|drill|saw|ladder|tape measure|spirit level|bolt|nut|washer|clamp|chisel|file"],
+    ["materials", "Materialien", "plywood|timber|steel|copper|brass|aluminum|concrete|cement|plaster|brick|tile|grout|insulation|sandpaper|paintbrush|roller"],
+    ["jobs", "Reparieren & Einbauen", ""]
+  ],
+  "nature": [
+    ["plants", "Bäume & Pflanzen", "spruce|pine|oak|beech|birch|willow|maple|chestnut|ash|fir|trunk|bark|branch|twig|root|leaf|needle|cone|acorn|moss|fern|ivy|hedge|shrub|weed|lawn|dandelion"],
+    ["animals", "Tiere", "squirrel|hedgehog|deer|fox|badger|owl|sparrow|robin|beetle|wasp|caterpillar|snail|earthworm"],
+    ["outdoors", "Draußen unterwegs", ""]
+  ],
+  "weather": [
+    ["weather", "Wetter & Vorhersagen", "drizzle|downpour|shower|hail|sleet|frost|dew|fog|mist|breeze|gust|thunder|lightning|drought|flood|heatwave|humidity|forecast|overcast|chilly|mild"],
+    ["landscape", "Landschaft & Gelände", ""]
+  ],
+  "body": [
+    ["anatomy", "Körperteile", "ankle|wrist|elbow|shoulder|chin|jaw|forehead|eyebrow|eyelid|cheek|throat|chest|spine|rib|hip|thigh|calf|heel|toe|thumb|palm|fingernail|knuckle|joint|muscle|tendon|bone|skin|lung|kidney|liver"],
+    ["symptoms", "Beschwerden & Behandlung", ""]
+  ],
+  "clothes": [
+    ["details", "Kleidungsdetails", "sleeve|collar|cuff|hem|seam|lining|zipper|button|buckle|shoelace|sole|insole|hood|pocket|waistband|belt"],
+    ["fabrics", "Stoffe & Muster", "cotton|wool|linen|silk|leather|suede|denim|velvet|striped|checked|wrinkled"],
+    ["wardrobe", "Kleidung & Passform", ""]
+  ],
+  "food": [
+    ["kitchen", "Küchenausstattung", "colander|sieve|whisk|spatula|ladle|grater|peeler|chopping board|saucepan|frying pan|lid|kettle|oven|stove|baking tray"],
+    ["cooking", "Zubereiten & Kochen", "peel|chop|slice|dice|grate|stir|whip|knead|simmer|boil|roast|bake|steam|thaw|season"],
+    ["taste", "Zutaten & Geschmack", ""]
+  ],
+  "road": [
+    ["traffic", "Verkehr & Orientierung", "curb|sidewalk|crosswalk|intersection|roundabout|lane|shoulder|pothole|detour|toll|traffic jam|speed limit|right of way|commute|overtake"],
+    ["car", "Auto & Werkstatt", ""]
+  ],
+  "travel": [
+    ["journey", "Anreise & Verkehrsmittel", "boarding pass|departure|arrival|layover|stopover|luggage|suitcase|carry-on|baggage claim|customs|aisle|gate|platform|fare|ticket|passport|visa"],
+    ["stay", "Unterkunft & Reisealltag", ""]
+  ],
+  "people": [
+    ["relations", "Menschen & Beziehungen", "neighbor|colleague|acquaintance|relative|sibling|nephew|niece|in-law|roommate|stranger"],
+    ["traits", "Persönlichkeit", "reliable|thoughtful|considerate|stubborn|shy|outgoing|generous|stingy|honest|polite|rude|awkward|confident"],
+    ["feelings", "Gefühle & Miteinander", ""]
+  ],
+  "work": [
+    ["organisation", "Planung & Zusammenarbeit", "deadline|schedule|agenda|minutes|proposal|confirm|attach|postpone|delegate|negotiate|approve"],
+    ["business", "Geschäftsalltag", ""]
+  ],
+  "phrases": [
+    ["conversation", "Gespräche führen", "fair enough|by the way|as far as I know|to be honest|never mind|no wonder|it depends|in a nutshell|on the other hand|after all|let me know|help yourself|take your time"],
+    ["time", "Zeit & Häufigkeit", "so far|sooner or later|from time to time|once in a while|all of a sudden|for the time being|in the meantime|in advance"],
+    ["expressions", "Typische Wendungen", ""]
+  ],
+  "grammar": [
+    ["tenses", "Zeiten & Verbformen", ""],
+    ["structure", "Satzbau & Verknüpfungen", ""],
+    ["precision", "Genau ausdrücken", ""]
+  ]
+}

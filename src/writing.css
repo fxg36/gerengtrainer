@@ -1,0 +1,96 @@
+.exercise-card.has-writing {
+  text-align: left;
+  align-items: stretch;
+  gap: 0;
+}
+.exercise-card.has-writing h1 {
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  line-height: 1.4;
+  margin: 18px 0;
+}
+.exercise-card.has-writing .grammar-cue {
+  margin: 20px 0 12px;
+}
+.exercise-card.has-writing .writing-instruction {
+  margin: 0 0 4px;
+}
+.exercise-card.has-writing .writing-hint {
+  margin: 8px 0;
+}
+.exercise-card.has-writing .answer-reveal h2 {
+  font-size: clamp(1.4rem, 2.3vw, 1.8rem);
+  line-height: 1.45;
+}
+.exercise-card.has-writing .answer-reveal {
+  text-align: left;
+}
+.writing-practice {
+  width: 100%;
+}
+.writing-instruction {
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+.writing-hint {
+  margin: 16px 0;
+  color: var(--muted);
+}
+.writing-hint summary {
+  cursor: pointer;
+  min-height: 36px;
+  font-size: 1rem;
+}
+.writing-hint .grammar-hint {
+  margin-top: 8px;
+}
+.writing-practice label {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.writing-practice textarea {
+  width: 100%;
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.6;
+}
+.writing-practice .reveal-button {
+  width: 100%;
+  margin: 12px 0;
+}
+.writing-practice > .text-button {
+  display: block;
+  margin: 0 auto;
+  min-height: 44px;
+}
+.written-response {
+  padding: 16px 20px;
+  border-left: 3px solid #829fb6;
+  background: #edf0eb;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.written-response p {
+  margin: 8px 0;
+}
+.writing-checkpoints {
+  padding-left: 22px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.writing-checkpoints li {
+  margin: 6px 0;
+}
+@media (max-width: 560px) {
+  .exercise-card.has-writing {
+    padding: 20px 18px;
+  }
+  .exercise-card.has-writing h1 {
+    font-size: 1.5rem;
+  }
+  .written-response {
+    padding: 14px;
+  }
+}

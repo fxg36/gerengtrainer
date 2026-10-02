@@ -1,0 +1,1305 @@
+{
+  "method": "AI editorial selection of specific existing dictionary definitions. German translations and learner cues authored separately. Not human approved.",
+  "entries": [
+    {
+      "word": "school",
+      "de": "Schule",
+      "sourceId": "wkt-281d05b3c9f5b2fdd640"
+    },
+    {
+      "word": "teacher",
+      "de": "Lehrer / Lehrerin",
+      "sourceId": "wkt-d0d383dcec6a42309dc4"
+    },
+    {
+      "word": "pupil",
+      "de": "Schüler / Schülerin",
+      "sourceId": "wkt-fc66847c54beae4774d4"
+    },
+    {
+      "word": "classroom",
+      "de": "Klassenzimmer",
+      "sourceId": "wkt-f1b25bd0e718eafdbcc7"
+    },
+    {
+      "word": "homework",
+      "de": "Hausaufgaben",
+      "sourceId": "wkt-186824dd283cfe14398c"
+    },
+    {
+      "word": "subject",
+      "de": "Schulfach",
+      "sourceId": "wkt-a97705fd91ef06c91f0e"
+    },
+    {
+      "word": "explain",
+      "de": "erklären",
+      "sourceId": "wkt-a244f280d0b962a318a1"
+    },
+    {
+      "word": "university",
+      "de": "Universität",
+      "sourceId": "wkt-26420c110c5836259d91"
+    },
+    {
+      "word": "student",
+      "de": "Student / Studentin",
+      "sourceId": "wkt-bfeaf26e1c9044eb0597"
+    },
+    {
+      "word": "lecture",
+      "de": "Vorlesung",
+      "sourceId": "wkt-fffa9ca4bf7045b1165b"
+    },
+    {
+      "word": "campus",
+      "de": "Universitätsgelände",
+      "sourceId": "wkt-a5474cadac0c1b2e96b6"
+    },
+    {
+      "word": "scholarship",
+      "de": "Stipendium",
+      "sourceId": "wkt-a519f4200d5f7f498e71"
+    },
+    {
+      "word": "thesis",
+      "de": "Abschlussarbeit",
+      "sourceId": "wkt-a60b8975dd7e490d2c9b"
+    },
+    {
+      "word": "undergraduate",
+      "de": "Student / Studentin vor dem ersten Abschluss",
+      "sourceId": "wkt-8877f1e04ed1d52d4b28"
+    },
+    {
+      "word": "learn",
+      "de": "lernen",
+      "sourceId": "wkt-8b4e3690b026e42e1fc0"
+    },
+    {
+      "word": "deadline",
+      "de": "Abgabetermin",
+      "sourceId": "wkt-f7f3cb0a5052442d6e43"
+    },
+    {
+      "word": "wake up",
+      "de": "aufwachen",
+      "sourceId": "wkt-47e6031e66974a16bd0f"
+    },
+    {
+      "word": "come back",
+      "de": "zurückkommen",
+      "sourceId": "wkt-eed654f3a82300769103"
+    },
+    {
+      "word": "routine",
+      "de": "Routine / gewohnter Ablauf",
+      "sourceId": "wkt-a12694e3015e0e79c7b9"
+    },
+    {
+      "word": "habit",
+      "de": "Gewohnheit",
+      "sourceId": "wkt-6d39c8ecd109c901c03b"
+    },
+    {
+      "word": "occasionally",
+      "de": "gelegentlich",
+      "sourceId": "wkt-eae98d11fef050fcfd4e"
+    },
+    {
+      "word": "regularly",
+      "de": "regelmäßig",
+      "sourceId": "wkt-51143a112b3fa9136acf"
+    },
+    {
+      "word": "today",
+      "de": "heute",
+      "sourceId": "wkt-cb7c36b9fb76861de2b4"
+    },
+    {
+      "word": "tomorrow",
+      "de": "morgen",
+      "sourceId": "wkt-90fae96916c2fae22e20"
+    },
+    {
+      "word": "yesterday",
+      "de": "gestern",
+      "sourceId": "wkt-4ca3be0be6d669f0a604"
+    },
+    {
+      "word": "hour",
+      "de": "Stunde",
+      "sourceId": "wkt-d660d6f19c18c181d96d"
+    },
+    {
+      "word": "half",
+      "de": "Hälfte",
+      "sourceId": "wkt-a27c401682320ebfa7b7"
+    },
+    {
+      "word": "quarter",
+      "de": "Viertel",
+      "sourceId": "wkt-2e7eb2dbb81420358cc4"
+    },
+    {
+      "word": "twice",
+      "de": "zweimal",
+      "sourceId": "wkt-c4d18cbdae64a9c6567d"
+    },
+    {
+      "word": "several",
+      "de": "mehrere",
+      "sourceId": "wkt-dd22bd9463ca2a9daf30"
+    },
+    {
+      "word": "approximately",
+      "de": "ungefähr",
+      "sourceId": "wkt-d2fdb2a30f11d11dc9fc"
+    },
+    {
+      "word": "duration",
+      "de": "Dauer",
+      "sourceId": "wkt-513a2f25daf7471b163e"
+    },
+    {
+      "word": "simultaneously",
+      "de": "gleichzeitig",
+      "sourceId": "wkt-5fa487a7133a6b4c85a2"
+    },
+    {
+      "word": "appointment",
+      "de": "Termin",
+      "sourceId": "wkt-4585328ebd4276116c16"
+    },
+    {
+      "word": "reminder",
+      "de": "Erinnerung (an eine Aufgabe)",
+      "sourceId": "wkt-7f1bf90db20c04ede204"
+    },
+    {
+      "word": "arrange",
+      "de": "vereinbaren / organisieren",
+      "sourceId": "wkt-9899bc42d59832baa608"
+    },
+    {
+      "word": "postpone",
+      "de": "verschieben (auf später)",
+      "sourceId": "wkt-637272de1dee94d1fbf0"
+    },
+    {
+      "word": "available",
+      "de": "verfügbar",
+      "sourceId": "wkt-7449bdef620a5ad6ab60"
+    },
+    {
+      "word": "on time",
+      "de": "pünktlich",
+      "sourceId": "wkt-1b8dfe993d6143fb9239"
+    },
+    {
+      "word": "priority",
+      "de": "Priorität",
+      "sourceId": "wkt-c4eb3d872f6857d431a3"
+    },
+    {
+      "word": "shop",
+      "de": "Geschäft / Laden",
+      "sourceId": "wkt-8f95efbb1ac4108c05d5"
+    },
+    {
+      "word": "price",
+      "de": "Preis",
+      "sourceId": "wkt-d4d1c78d5613bf609f20"
+    },
+    {
+      "word": "basket",
+      "de": "Korb",
+      "sourceId": "wkt-ed4a5fcc1e825855169a"
+    },
+    {
+      "word": "discount",
+      "de": "Rabatt",
+      "sourceId": "wkt-0ba3a2a254815a7d97bc"
+    },
+    {
+      "word": "receipt",
+      "de": "Kassenbon / Beleg",
+      "sourceId": "wkt-6c4604e86dda1a02d27f"
+    },
+    {
+      "word": "affordable",
+      "de": "bezahlbar",
+      "sourceId": "wkt-4a5f2e315d4995cf3753"
+    },
+    {
+      "word": "try on",
+      "de": "anprobieren",
+      "sourceId": "wkt-a8066a2f4c2fc3ab5e25"
+    },
+    {
+      "word": "order",
+      "de": "Bestellung",
+      "sourceId": "wkt-f681791d1bd025a30f5f"
+    },
+    {
+      "word": "refund",
+      "de": "Rückerstattung",
+      "sourceId": "wkt-342a01b09fe59848b793"
+    },
+    {
+      "word": "exchange",
+      "de": "umtauschen",
+      "sourceId": "wkt-43b2ec2dbb0eb3a64de4"
+    },
+    {
+      "word": "damaged",
+      "de": "beschädigt",
+      "sourceId": "wkt-ad1b57b0a214ae63714b"
+    },
+    {
+      "word": "complaint",
+      "de": "Beschwerde",
+      "sourceId": "wkt-4f750fe37b031fb4f3b9"
+    },
+    {
+      "word": "pick up",
+      "de": "abholen",
+      "sourceId": "wkt-3a6ed0ab3686aff5aa3a"
+    },
+    {
+      "word": "fee",
+      "de": "Gebühr",
+      "sourceId": "wkt-096ee7285ce5b04b4af3"
+    },
+    {
+      "word": "estimate",
+      "de": "Kostenschätzung",
+      "sourceId": "wkt-77dc3dbb9442d3a4d8e0"
+    },
+    {
+      "word": "satisfied",
+      "de": "zufrieden",
+      "sourceId": "wkt-edb00aeb9cf4af7a9367"
+    },
+    {
+      "word": "money",
+      "de": "Geld",
+      "sourceId": "wkt-2162195b0de6c74349ed"
+    },
+    {
+      "word": "cash",
+      "de": "Bargeld",
+      "sourceId": "wkt-7bf4c0ed945fc6f47bd1"
+    },
+    {
+      "word": "coin",
+      "de": "Münze",
+      "sourceId": "wkt-6d8beac193a17cd91509"
+    },
+    {
+      "word": "withdraw",
+      "de": "abheben (Geld)",
+      "sourceId": "wkt-0ed446cbf314fd841818"
+    },
+    {
+      "word": "balance",
+      "de": "Kontostand",
+      "sourceId": "wkt-265ef92a0e31200adf4b"
+    },
+    {
+      "word": "save",
+      "de": "sparen (Geld)",
+      "sourceId": "wkt-820bef826839fd866e68"
+    },
+    {
+      "word": "spend",
+      "de": "ausgeben (Geld)",
+      "sourceId": "wkt-bb1a27522d5bc4ed8741"
+    },
+    {
+      "word": "earn",
+      "de": "verdienen (Geld)",
+      "sourceId": "wkt-a5619b7b52e79eefa0b8"
+    },
+    {
+      "word": "income",
+      "de": "Einkommen",
+      "sourceId": "wkt-6730d9e7b1b666432edd"
+    },
+    {
+      "word": "expense",
+      "de": "Ausgabe / Kosten",
+      "sourceId": "wkt-995cbab3269b48780ec2"
+    },
+    {
+      "word": "budget",
+      "de": "Budget",
+      "sourceId": "wkt-a0604695bac2d4f7bd69"
+    },
+    {
+      "word": "afford",
+      "de": "sich leisten können",
+      "sourceId": "wkt-6cef765dca3cf76d97fa"
+    },
+    {
+      "word": "rent",
+      "de": "Miete",
+      "sourceId": "wkt-f9972f6d2927e1f62a5b"
+    },
+    {
+      "word": "subscription",
+      "de": "Abonnement",
+      "sourceId": "wkt-7fb8f9dfee612c193005"
+    },
+    {
+      "word": "loan",
+      "de": "Darlehen / Kredit",
+      "sourceId": "wkt-c97d59a8fbe658c3281c"
+    },
+    {
+      "word": "debt",
+      "de": "Schulden",
+      "sourceId": "wkt-f6ebd112c007c4025eec"
+    },
+    {
+      "word": "borrow",
+      "de": "leihen (von jemandem)",
+      "sourceId": "wkt-a013de693cb21035df96"
+    },
+    {
+      "word": "lend",
+      "de": "verleihen (an jemanden)",
+      "sourceId": "wkt-c07e38e6c66ad95ba599"
+    },
+    {
+      "word": "premium",
+      "de": "Versicherungsbeitrag",
+      "sourceId": "wkt-3d11956678e2ec3a5185"
+    },
+    {
+      "word": "mortgage",
+      "de": "Immobilienkredit",
+      "sourceId": "wkt-a7c2478aadbf5a1c2f68"
+    },
+    {
+      "word": "computer",
+      "de": "Computer",
+      "sourceId": "wkt-80916792b62d9120b777"
+    },
+    {
+      "word": "screen",
+      "de": "Bildschirm",
+      "sourceId": "wkt-c94c21ea1d11b12baef2"
+    },
+    {
+      "word": "battery",
+      "de": "Batterie / Akku",
+      "sourceId": "wkt-c72e6e229ff089e9e559"
+    },
+    {
+      "word": "turn on",
+      "de": "einschalten",
+      "sourceId": "wkt-98896ba7ac41d5719c3f"
+    },
+    {
+      "word": "compatible",
+      "de": "kompatibel",
+      "sourceId": "wkt-9c8f3e6cfe36f9887355"
+    },
+    {
+      "word": "website",
+      "de": "Website",
+      "sourceId": "wkt-55feadaf55dcc15ec6f0"
+    },
+    {
+      "word": "install",
+      "de": "installieren",
+      "sourceId": "wkt-c82ae3546db76accec52"
+    },
+    {
+      "word": "update",
+      "de": "aktualisieren",
+      "sourceId": "wkt-6529dbef4f913fe59854"
+    },
+    {
+      "word": "password",
+      "de": "Passwort",
+      "sourceId": "wkt-40d60e196b93c02851ec"
+    },
+    {
+      "word": "privacy",
+      "de": "Privatsphäre",
+      "sourceId": "wkt-e37343ca70e8d0191dca"
+    },
+    {
+      "word": "permission",
+      "de": "Berechtigung / Erlaubnis",
+      "sourceId": "wkt-39db904ad5fc28612bc1"
+    },
+    {
+      "word": "secure",
+      "de": "sicher (vor unbefugtem Zugriff)",
+      "sourceId": "wkt-e9a84cc2958793230a8c"
+    },
+    {
+      "word": "scam",
+      "de": "Betrug / Betrugsmasche",
+      "sourceId": "wkt-a0b9fa2f3bf114be7c09"
+    },
+    {
+      "word": "suspicious",
+      "de": "verdächtig",
+      "sourceId": "wkt-42429b5ac28180cda32f"
+    },
+    {
+      "word": "verify",
+      "de": "überprüfen / bestätigen",
+      "sourceId": "wkt-697abec049e4bcd7321b"
+    },
+    {
+      "word": "consent",
+      "de": "Einwilligung",
+      "sourceId": "wkt-c4278f2dd60b45c78e29"
+    },
+    {
+      "word": "swimming",
+      "de": "Schwimmen",
+      "sourceId": "wkt-7b44106e4e46674a35a1"
+    },
+    {
+      "word": "running",
+      "de": "Laufen",
+      "sourceId": "wkt-6960efa1de756d83ba27"
+    },
+    {
+      "word": "cycling",
+      "de": "Radfahren",
+      "sourceId": "wkt-f0105bdc35f53e801916"
+    },
+    {
+      "word": "football",
+      "de": "Fußball",
+      "sourceId": "wkt-0739c896d32412c0c3d5"
+    },
+    {
+      "word": "basketball",
+      "de": "Basketball",
+      "sourceId": "wkt-04034311a9cd24e50442"
+    },
+    {
+      "word": "tennis",
+      "de": "Tennis",
+      "sourceId": "wkt-6c13160c5dae99b6e67d"
+    },
+    {
+      "word": "helmet",
+      "de": "Helm",
+      "sourceId": "wkt-651b6595845efead0ab3"
+    },
+    {
+      "word": "court",
+      "de": "Spielfeld (etwa beim Tennis)",
+      "sourceId": "wkt-413ea90be315f80549fe"
+    },
+    {
+      "word": "equipment",
+      "de": "Ausrüstung",
+      "sourceId": "wkt-bb433f7425b09fae5858"
+    },
+    {
+      "word": "exercise",
+      "de": "körperliche Übung",
+      "sourceId": "wkt-b68e6294c3d91b36945e"
+    },
+    {
+      "word": "stretch",
+      "de": "sich dehnen",
+      "sourceId": "wkt-177e50019230df25ac48"
+    },
+    {
+      "word": "work out",
+      "de": "trainieren (Fitness)",
+      "sourceId": "wkt-31974a1883ca00d8771d"
+    },
+    {
+      "word": "strength",
+      "de": "Kraft",
+      "sourceId": "wkt-82b7ff1ee6bc3f9e014c"
+    },
+    {
+      "word": "pace",
+      "de": "Tempo",
+      "sourceId": "wkt-5d8cc23a5a07f06ad6d6"
+    },
+    {
+      "word": "recover",
+      "de": "sich erholen",
+      "sourceId": "wkt-40f88ca8a39443936a89"
+    },
+    {
+      "word": "fit",
+      "de": "fit / in guter körperlicher Verfassung",
+      "sourceId": "wkt-37fadbf51e6bf33790df"
+    },
+    {
+      "word": "exhausted",
+      "de": "erschöpft",
+      "sourceId": "wkt-a621e1265591cd7e35e0"
+    },
+    {
+      "word": "improve",
+      "de": "sich verbessern / verbessern",
+      "sourceId": "wkt-8f81a61283731f330e22"
+    },
+    {
+      "word": "team",
+      "de": "Mannschaft",
+      "sourceId": "wkt-bf020dc0f52ae9af19fb"
+    },
+    {
+      "word": "match",
+      "de": "Spiel / Begegnung (Sport)",
+      "sourceId": "wkt-a2c48a00096b12ba78f2"
+    },
+    {
+      "word": "score",
+      "de": "Spielstand",
+      "sourceId": "wkt-89205b66b31de24be7fd"
+    },
+    {
+      "word": "win",
+      "de": "gewinnen",
+      "sourceId": "wkt-7219aec5923dc125c281"
+    },
+    {
+      "word": "lose",
+      "de": "verlieren (ein Spiel)",
+      "sourceId": "wkt-4cf53afc3eb5b7695758"
+    },
+    {
+      "word": "draw",
+      "de": "Unentschieden",
+      "sourceId": "wkt-0ec20e6499ef17949e76"
+    },
+    {
+      "word": "referee",
+      "de": "Schiedsrichter / Schiedsrichterin",
+      "sourceId": "wkt-63a179acfdf9b2d42469"
+    },
+    {
+      "word": "opponent",
+      "de": "Gegner / Gegnerin",
+      "sourceId": "wkt-d46d9798f28c89694647"
+    },
+    {
+      "word": "tournament",
+      "de": "Turnier",
+      "sourceId": "wkt-fc315ee45d2828059c4e"
+    },
+    {
+      "word": "qualify",
+      "de": "sich qualifizieren",
+      "sourceId": "wkt-1db18c38794bdf8455f3"
+    },
+    {
+      "word": "hobby",
+      "de": "Hobby",
+      "sourceId": "wkt-518f3168b72c7b2a3345"
+    },
+    {
+      "word": "draw",
+      "de": "zeichnen",
+      "sourceId": "wkt-a333f9821c2adb4f3aff"
+    },
+    {
+      "word": "paint",
+      "de": "malen",
+      "sourceId": "wkt-bd22f5c6ef4a6a21ff67"
+    },
+    {
+      "word": "photography",
+      "de": "Fotografie",
+      "sourceId": "wkt-7036ed87fd167a2831fd"
+    },
+    {
+      "word": "creative",
+      "de": "kreativ",
+      "sourceId": "wkt-6433c23e2e7d5d72d309"
+    },
+    {
+      "word": "inspiration",
+      "de": "Inspiration",
+      "sourceId": "wkt-9b994112090041765a87"
+    },
+    {
+      "word": "chess",
+      "de": "Schach",
+      "sourceId": "wkt-5ae2fad1cb808808fe1b"
+    },
+    {
+      "word": "puzzle",
+      "de": "Rätsel / Puzzle",
+      "sourceId": "wkt-f525c7338934bdc88f7f"
+    },
+    {
+      "word": "dice",
+      "de": "Würfel (zum Spielen)",
+      "sourceId": "wkt-fdcea481d93ea3fd374a"
+    },
+    {
+      "word": "turn",
+      "de": "Spielzug / Runde am Zug",
+      "sourceId": "wkt-3b37d08b8e93a637b508"
+    },
+    {
+      "word": "rule",
+      "de": "Spielregel",
+      "sourceId": "wkt-cfb716023439e551264e"
+    },
+    {
+      "word": "solve",
+      "de": "lösen (ein Problem)",
+      "sourceId": "wkt-dfa46e568a52b825e912"
+    },
+    {
+      "word": "challenge",
+      "de": "Herausforderung",
+      "sourceId": "wkt-7e3b3b81f07cac766ccc"
+    },
+    {
+      "word": "relax",
+      "de": "sich entspannen",
+      "sourceId": "wkt-075779d33e8e750710db"
+    },
+    {
+      "word": "entertaining",
+      "de": "unterhaltsam",
+      "sourceId": "wkt-0d60b0f2b7ab5feb79cf"
+    },
+    {
+      "word": "leisure",
+      "de": "Freizeit",
+      "sourceId": "wkt-660086ed89e4316d6c67"
+    },
+    {
+      "word": "invite",
+      "de": "einladen",
+      "sourceId": "wkt-f30bb08d1e225e24a150"
+    },
+    {
+      "word": "invitation",
+      "de": "Einladung",
+      "sourceId": "wkt-97a84eee01b0fafb39b7"
+    },
+    {
+      "word": "hang out",
+      "de": "Zeit miteinander verbringen",
+      "sourceId": "wkt-4368dabd4f4037640024"
+    },
+    {
+      "word": "picnic",
+      "de": "Picknick",
+      "sourceId": "wkt-6c2e19b27e72a20b75a2"
+    },
+    {
+      "word": "festival",
+      "de": "Festival",
+      "sourceId": "wkt-ddca4ab7748943d685e8"
+    },
+    {
+      "word": "venue",
+      "de": "Veranstaltungsort",
+      "sourceId": "wkt-ba61e6610d4f7b6cb083"
+    },
+    {
+      "word": "admission",
+      "de": "Eintritt (zu einer Veranstaltung)",
+      "sourceId": "wkt-2d24db11a4358506c0d8"
+    },
+    {
+      "word": "look forward to",
+      "de": "sich freuen auf",
+      "sourceId": "wkt-895d418940ffe9a6e2eb"
+    },
+    {
+      "word": "novel",
+      "de": "Roman",
+      "sourceId": "wkt-08a65a11ce7a19c09e7b"
+    },
+    {
+      "word": "author",
+      "de": "Autor / Autorin",
+      "sourceId": "wkt-57a73b685ef1335db586"
+    },
+    {
+      "word": "chapter",
+      "de": "Kapitel",
+      "sourceId": "wkt-d8503db68f1426ecf125"
+    },
+    {
+      "word": "plot",
+      "de": "Handlung (einer Geschichte)",
+      "sourceId": "wkt-132c22401dac67b2b52a"
+    },
+    {
+      "word": "character",
+      "de": "Figur (in einer Geschichte)",
+      "sourceId": "wkt-4c8edf219cd0b322b6ac"
+    },
+    {
+      "word": "setting",
+      "de": "Schauplatz / zeitlicher Rahmen",
+      "sourceId": "wkt-cfb7ae8b713b07a91384"
+    },
+    {
+      "word": "film",
+      "de": "Film",
+      "sourceId": "wkt-81a8b622e8df18d48376"
+    },
+    {
+      "word": "documentary",
+      "de": "Dokumentarfilm",
+      "sourceId": "wkt-5b6e3b0afe532f40f372"
+    },
+    {
+      "word": "recommend",
+      "de": "empfehlen",
+      "sourceId": "wkt-642dcfde47d7e5042584"
+    },
+    {
+      "word": "singer",
+      "de": "Sänger / Sängerin",
+      "sourceId": "wkt-59472642eee79a4ccb9c"
+    },
+    {
+      "word": "band",
+      "de": "Band / Musikgruppe",
+      "sourceId": "wkt-f18254e48bc2040b2908"
+    },
+    {
+      "word": "lyrics",
+      "de": "Liedtext",
+      "sourceId": "wkt-dbd6b6f69feec49ba828"
+    },
+    {
+      "word": "rhythm",
+      "de": "Rhythmus",
+      "sourceId": "wkt-aba77d559b442551926e"
+    },
+    {
+      "word": "audience",
+      "de": "Publikum",
+      "sourceId": "wkt-7b536c6ac0a41a84a785"
+    },
+    {
+      "word": "performance",
+      "de": "Aufführung",
+      "sourceId": "wkt-0bf00d8b274fc71da833"
+    },
+    {
+      "word": "exhibition",
+      "de": "Ausstellung",
+      "sourceId": "wkt-69a4741ba06b1492e6c5"
+    },
+    {
+      "word": "gallery",
+      "de": "Kunstgalerie",
+      "sourceId": "wkt-138038186fdee5fac419"
+    },
+    {
+      "word": "sculpture",
+      "de": "Skulptur",
+      "sourceId": "wkt-e56a56127c7e02fefae9"
+    },
+    {
+      "word": "interpret",
+      "de": "interpretieren / deuten",
+      "sourceId": "wkt-60225f259c5d66ff6c88"
+    },
+    {
+      "word": "news",
+      "de": "Nachrichten",
+      "sourceId": "wkt-02bc605b342fb58935c2"
+    },
+    {
+      "word": "newspaper",
+      "de": "Zeitung",
+      "sourceId": "wkt-e66010606917f6030a7b"
+    },
+    {
+      "word": "headline",
+      "de": "Schlagzeile",
+      "sourceId": "wkt-f96dc76ab79b6bc51814"
+    },
+    {
+      "word": "journalist",
+      "de": "Journalist / Journalistin",
+      "sourceId": "wkt-6d03f5717359afddf9fd"
+    },
+    {
+      "word": "report",
+      "de": "Bericht",
+      "sourceId": "wkt-b002a19f05d10b87747e"
+    },
+    {
+      "word": "source",
+      "de": "Informationsquelle",
+      "sourceId": "wkt-5552db03eb1839c5ad20"
+    },
+    {
+      "word": "broadcast",
+      "de": "senden / ausstrahlen",
+      "sourceId": "wkt-0875be522aa5f21a44ee"
+    },
+    {
+      "word": "reliable",
+      "de": "zuverlässig",
+      "sourceId": "wkt-98b4004bb92cd0ddec2d"
+    },
+    {
+      "word": "misleading",
+      "de": "irreführend",
+      "sourceId": "wkt-5cd868499737f12ec8bc"
+    },
+    {
+      "word": "coverage",
+      "de": "Berichterstattung",
+      "sourceId": "wkt-7d45032237ff86d77baf"
+    },
+    {
+      "word": "community",
+      "de": "Gemeinschaft",
+      "sourceId": "wkt-8d383f30f23d3fc0c8d6"
+    },
+    {
+      "word": "volunteer",
+      "de": "Freiwilliger / Freiwillige",
+      "sourceId": "wkt-4ded98e5e651c1e0c709"
+    },
+    {
+      "word": "donate",
+      "de": "spenden",
+      "sourceId": "wkt-424ef19bf9d60c75a791"
+    },
+    {
+      "word": "belong",
+      "de": "dazugehören",
+      "sourceId": "wkt-9db05a64048f3bd84d24"
+    },
+    {
+      "word": "diversity",
+      "de": "Vielfalt",
+      "sourceId": "wkt-8c23b6a37ea1a78fcdc6"
+    },
+    {
+      "word": "inclusion",
+      "de": "Inklusion / Einbeziehung",
+      "sourceId": "wkt-70c2a5269791932236e6"
+    },
+    {
+      "word": "inequality",
+      "de": "Ungleichheit",
+      "sourceId": "wkt-1402cfa8d49e6d723577"
+    },
+    {
+      "word": "discrimination",
+      "de": "Diskriminierung",
+      "sourceId": "wkt-13c9440f9fd91898ddb4"
+    },
+    {
+      "word": "government",
+      "de": "Regierung",
+      "sourceId": "wkt-c46b0abece695e249775"
+    },
+    {
+      "word": "election",
+      "de": "Wahl (politisch)",
+      "sourceId": "wkt-2746b357fb0b0e6e90c3"
+    },
+    {
+      "word": "vote",
+      "de": "abstimmen / wählen",
+      "sourceId": "wkt-7aaa9d0f8b7f5d0bef36"
+    },
+    {
+      "word": "candidate",
+      "de": "Kandidat / Kandidatin",
+      "sourceId": "wkt-94d24cccfc061b494411"
+    },
+    {
+      "word": "parliament",
+      "de": "Parlament",
+      "sourceId": "wkt-aabbdb5fb939e770714e"
+    },
+    {
+      "word": "mayor",
+      "de": "Bürgermeister / Bürgermeisterin",
+      "sourceId": "wkt-3aac9b60eb82d7a055ae"
+    },
+    {
+      "word": "policy",
+      "de": "politische Leitlinie / Maßnahme",
+      "sourceId": "wkt-a4eaf0e84ecfa6201b99"
+    },
+    {
+      "word": "majority",
+      "de": "Mehrheit",
+      "sourceId": "wkt-fa47a044fb08c4a6eebf"
+    },
+    {
+      "word": "opposition",
+      "de": "Opposition",
+      "sourceId": "wkt-054dfcf43c7c541724a0"
+    },
+    {
+      "word": "referendum",
+      "de": "Volksabstimmung",
+      "sourceId": "wkt-8f407adf7057960c3136"
+    },
+    {
+      "word": "opinion",
+      "de": "Meinung",
+      "sourceId": "wkt-ac87336e98a9735d5ce3"
+    },
+    {
+      "word": "agree",
+      "de": "zustimmen",
+      "sourceId": "wkt-f7bd437b08e76d23ff0c"
+    },
+    {
+      "word": "disagree",
+      "de": "widersprechen / anderer Meinung sein",
+      "sourceId": "wkt-265b2273ee0796f1b77f"
+    },
+    {
+      "word": "argument",
+      "de": "Argument / Begründung",
+      "sourceId": "wkt-d5ed8205245dcef24ef9"
+    },
+    {
+      "word": "evidence",
+      "de": "Belege / Nachweise",
+      "sourceId": "wkt-c797b881e79105944823"
+    },
+    {
+      "word": "claim",
+      "de": "Behauptung",
+      "sourceId": "wkt-13a425258190598f1d1f"
+    },
+    {
+      "word": "compromise",
+      "de": "Kompromiss",
+      "sourceId": "wkt-117cd6139a11ed60b1a5"
+    },
+    {
+      "word": "assumption",
+      "de": "Annahme",
+      "sourceId": "wkt-ec3f547e420332597e40"
+    },
+    {
+      "word": "form",
+      "de": "Formular",
+      "sourceId": "wkt-57814cb636eeb8bae073"
+    },
+    {
+      "word": "application",
+      "de": "Antrag",
+      "sourceId": "wkt-7a1590cbeb43ee57032e"
+    },
+    {
+      "word": "signature",
+      "de": "Unterschrift",
+      "sourceId": "wkt-c90fdb937f7334d643fd"
+    },
+    {
+      "word": "certificate",
+      "de": "Bescheinigung / Urkunde",
+      "sourceId": "wkt-3439fa24d0bb821eb69d"
+    },
+    {
+      "word": "fill in",
+      "de": "ausfüllen",
+      "sourceId": "wkt-eaf87353ba451576f384"
+    },
+    {
+      "word": "submit",
+      "de": "einreichen",
+      "sourceId": "wkt-0834aa84f25b43195d50"
+    },
+    {
+      "word": "valid",
+      "de": "gültig",
+      "sourceId": "wkt-2b1d62f6b6a916c06559"
+    },
+    {
+      "word": "register",
+      "de": "sich registrieren / anmelden",
+      "sourceId": "wkt-c9c5edadff0683226394"
+    },
+    {
+      "word": "residence",
+      "de": "Wohnsitz",
+      "sourceId": "wkt-e4e0594bc4da16f011b2"
+    },
+    {
+      "word": "permit",
+      "de": "Genehmigung",
+      "sourceId": "wkt-f1304ecdb57f931835cc"
+    },
+    {
+      "word": "eligible",
+      "de": "berechtigt / anspruchsberechtigt",
+      "sourceId": "wkt-64c7a0645b0e61ea8de7"
+    },
+    {
+      "word": "requirement",
+      "de": "Voraussetzung / Anforderung",
+      "sourceId": "wkt-7969441e529136b4737b"
+    },
+    {
+      "word": "appeal",
+      "de": "Einspruch / Rechtsmittel",
+      "sourceId": "wkt-aaaaf06de74296f250f2"
+    },
+    {
+      "word": "right",
+      "de": "Recht / Anspruch",
+      "sourceId": "wkt-fe22527d4abe15ddb2f5"
+    },
+    {
+      "word": "duty",
+      "de": "Pflicht",
+      "sourceId": "wkt-ef635b925a31c298bcf1"
+    },
+    {
+      "word": "legal",
+      "de": "rechtmäßig / gesetzlich",
+      "sourceId": "wkt-d3d37db277ada968ae82"
+    },
+    {
+      "word": "illegal",
+      "de": "rechtswidrig / illegal",
+      "sourceId": "wkt-6df927db7111d2214b36"
+    },
+    {
+      "word": "contract",
+      "de": "Vertrag",
+      "sourceId": "wkt-2313e787f59125555c8d"
+    },
+    {
+      "word": "witness",
+      "de": "Zeuge / Zeugin",
+      "sourceId": "wkt-5d1e73ca1373e2dad4bb"
+    },
+    {
+      "word": "court",
+      "de": "Gericht",
+      "sourceId": "wkt-030ea0a11fa7a7a2f280"
+    },
+    {
+      "word": "lawyer",
+      "de": "Anwalt / Anwältin",
+      "sourceId": "wkt-8a5b55272ff6d8d6c852"
+    },
+    {
+      "word": "liability",
+      "de": "Haftung",
+      "sourceId": "wkt-439d61b4670e89879094"
+    },
+    {
+      "word": "science",
+      "de": "Wissenschaft",
+      "sourceId": "wkt-917a7207529164cf3fbd"
+    },
+    {
+      "word": "scientist",
+      "de": "Wissenschaftler / Wissenschaftlerin",
+      "sourceId": "wkt-e445e246a7d7acba36cf"
+    },
+    {
+      "word": "experiment",
+      "de": "Experiment",
+      "sourceId": "wkt-85b3db1fd3db9c692644"
+    },
+    {
+      "word": "observe",
+      "de": "beobachten",
+      "sourceId": "wkt-76abcda642e9ed69b643"
+    },
+    {
+      "word": "measure",
+      "de": "messen",
+      "sourceId": "wkt-3a4eb496bb3e6cd73879"
+    },
+    {
+      "word": "data",
+      "de": "Daten",
+      "sourceId": "wkt-e67c553d997bd27f9477"
+    },
+    {
+      "word": "hypothesis",
+      "de": "Hypothese",
+      "sourceId": "wkt-ed3935145640121eb4d9"
+    },
+    {
+      "word": "sample",
+      "de": "Stichprobe / Probe",
+      "sourceId": "wkt-fca2239ebf654bd0e99c"
+    },
+    {
+      "word": "conclusion",
+      "de": "Schlussfolgerung",
+      "sourceId": "wkt-fdeaecb3a7634dde384c"
+    },
+    {
+      "word": "environment",
+      "de": "Umwelt",
+      "sourceId": "wkt-daee312cd04594355402"
+    },
+    {
+      "word": "pollution",
+      "de": "Umweltverschmutzung",
+      "sourceId": "wkt-3530db9fb7b9f3bef36d"
+    },
+    {
+      "word": "waste",
+      "de": "Abfall",
+      "sourceId": "wkt-7fd522c15118d4732c9a"
+    },
+    {
+      "word": "reduce",
+      "de": "verringern",
+      "sourceId": "wkt-999096196a093d74bf64"
+    },
+    {
+      "word": "resource",
+      "de": "Ressource / nutzbarer Vorrat",
+      "sourceId": "wkt-5b9134a9ceddb2c6b3fc"
+    },
+    {
+      "word": "sustainable",
+      "de": "nachhaltig",
+      "sourceId": "wkt-a92dd424a0cd82c8241a"
+    },
+    {
+      "word": "habitat",
+      "de": "Lebensraum",
+      "sourceId": "wkt-430370f5388a2a801e85"
+    },
+    {
+      "word": "conservation",
+      "de": "Naturschutz / Erhaltung",
+      "sourceId": "wkt-5e2ce84ca39894360ad3"
+    },
+    {
+      "word": "endangered",
+      "de": "bedroht (Tier- oder Pflanzenart)",
+      "sourceId": "wkt-affa3df9de07946f4f0c"
+    },
+    {
+      "word": "energy",
+      "de": "Energie",
+      "sourceId": "wkt-c4e20b64a41e99f373c4"
+    },
+    {
+      "word": "electricity",
+      "de": "Elektrizität / Strom",
+      "sourceId": "wkt-fcfd8b53b0ee9e43f5de"
+    },
+    {
+      "word": "fuel",
+      "de": "Brennstoff / Kraftstoff",
+      "sourceId": "wkt-a9b6392e8d23579f0d5a"
+    },
+    {
+      "word": "renewable",
+      "de": "erneuerbar",
+      "sourceId": "wkt-e6464caa668c8082d424"
+    },
+    {
+      "word": "tidy up",
+      "de": "aufräumen",
+      "sourceId": "wkt-a2677bf3f1aa57ba7795"
+    },
+    {
+      "word": "clean up",
+      "de": "sauber machen",
+      "sourceId": "wkt-7f07e56926dda44e10a5"
+    },
+    {
+      "word": "pet",
+      "de": "Haustier",
+      "sourceId": "wkt-3a591da7a0fc3627615a"
+    },
+    {
+      "word": "cat",
+      "de": "Katze",
+      "sourceId": "wkt-94f8991ea50be1f86f2d"
+    },
+    {
+      "word": "feed",
+      "de": "füttern",
+      "sourceId": "wkt-38832ea325014f0c61ce"
+    },
+    {
+      "word": "vet",
+      "de": "Tierarzt / Tierärztin",
+      "sourceId": "wkt-ca41d689ce430644e97a"
+    },
+    {
+      "word": "patient",
+      "de": "Patient / Patientin",
+      "sourceId": "wkt-c0fc79b64c518c44adfe"
+    },
+    {
+      "word": "prescription",
+      "de": "Rezept (medizinisch)",
+      "sourceId": "wkt-64d96ec770cb1f84ad90"
+    },
+    {
+      "word": "rest",
+      "de": "sich ausruhen",
+      "sourceId": "wkt-3e357c243102bdb9abf2"
+    },
+    {
+      "word": "menu",
+      "de": "Speisekarte",
+      "sourceId": "wkt-b84447979a67ad14329b"
+    },
+    {
+      "word": "bicycle",
+      "de": "Fahrrad",
+      "sourceId": "wkt-54081539c020951c9fe8"
+    },
+    {
+      "word": "family",
+      "de": "Familie",
+      "sourceId": "wkt-e71a26a0378d46c8b446"
+    },
+    {
+      "word": "friendship",
+      "de": "Freundschaft",
+      "sourceId": "wkt-f760c2455b447602b66e"
+    },
+    {
+      "word": "look after",
+      "de": "sich kümmern um",
+      "sourceId": "wkt-de491963878e87ac2819"
+    },
+    {
+      "word": "qualification",
+      "de": "Qualifikation",
+      "sourceId": "wkt-7b3e723a8af129db1cb6"
+    },
+    {
+      "word": "promotion",
+      "de": "Beförderung",
+      "sourceId": "wkt-7b899a14bcc07f719ccb"
+    },
+    {
+      "word": "hire",
+      "de": "einstellen (Personal)",
+      "sourceId": "wkt-3f743bee039ac0320e0d"
+    }
+  ]
+}

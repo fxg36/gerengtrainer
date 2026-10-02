@@ -67,18 +67,18 @@ p {
   margin-top: 0;
 }
 h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
   letter-spacing: -1.4px;
   line-height: 1.2;
   font-weight: 550;
 }
 h2 {
-  font-size: 23px;
+  font-size: 1.4375rem;
   letter-spacing: -0.55px;
   font-weight: 600;
 }
 h3 {
-  font-size: 17px;
+  font-size: 1.0625rem;
   letter-spacing: -0.2px;
   font-weight: 650;
 }
@@ -118,7 +118,7 @@ input[type="range"] {
   accent-color: var(--green);
 }
 label {
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 550;
   display: flex;
   flex-direction: column;
@@ -132,21 +132,21 @@ fieldset {
   padding: 17px;
 }
 legend {
-  font-size: 13px;
+  font-size: 1rem;
   padding: 0 6px;
 }
 ::selection {
   background: #d3e8bd;
 }
 .small {
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .muted {
   color: var(--muted);
 }
 .small-label,
 .eyebrow {
-  font-size: 10px;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 1.6px;
   line-height: 1.5;
@@ -168,7 +168,7 @@ legend {
   min-height: 45px;
   padding: 12px 21px;
   border-radius: 9px;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 600;
   transition:
     background 0.18s,
@@ -202,7 +202,7 @@ legend {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 0.875rem;
   font-weight: 600;
   min-height: 40px;
   padding: 5px 0;
@@ -229,7 +229,7 @@ legend {
   flex-wrap: wrap;
 }
 .pill {
-  font-size: 10px;
+  font-size: 0.875rem;
   letter-spacing: 0.2px;
   background: #eff2e9;
   border: 1px solid #e3e9d9;
@@ -298,7 +298,7 @@ legend {
   color: var(--ink);
   padding: 0 10px;
   letter-spacing: -1.1px;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 .brand:hover {
@@ -310,7 +310,7 @@ legend {
   border-radius: 12px;
   width: 43px;
   height: 43px;
-  font-size: 35px;
+  font-size: 2.1875rem;
   line-height: 42px;
   font-weight: 650;
   text-align: center;
@@ -319,7 +319,7 @@ legend {
   position: relative;
 }
 .brand-mark span {
-  font-size: 27px;
+  font-size: 1.6875rem;
   color: #e8bd84;
   position: absolute;
   right: 6px;
@@ -328,14 +328,14 @@ legend {
 }
 .brand-sub {
   display: block;
-  font-size: 7px;
+  font-size: 0.875rem;
   letter-spacing: 1.3px;
   font-weight: 650;
   color: #82907e;
   margin-top: 1px;
 }
 .nav-label {
-  font-size: 9px;
+  font-size: 0.875rem;
   letter-spacing: 1.6px;
   color: #929c8a;
   font-weight: 650;
@@ -349,7 +349,7 @@ legend {
   width: 100%;
   min-height: 47px;
   padding: 12px 15px;
-  font-size: 13px;
+  font-size: 1rem;
   text-align: left;
   border-radius: 9px;
   color: #738073;
@@ -373,7 +373,7 @@ legend {
 }
 .nav-count {
   margin-left: auto;
-  font-size: 10px;
+  font-size: 0.875rem;
   padding: 2px 6px;
   background: #d8e4c9;
   border-radius: 5px;
@@ -395,23 +395,23 @@ legend {
 }
 .local-card strong {
   display: block;
-  font-size: 13px;
+  font-size: 1rem;
   line-height: 1.65;
   font-weight: 600;
 }
 .local-card p {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #8b9381;
   margin: 8px 0 0;
 }
 .sidebar-bottom .nav-item {
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .sidebar-foot {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 0.875rem;
   color: #9a9f90;
   margin: 22px 15px 0;
 }
@@ -436,7 +436,7 @@ legend {
   padding: 0 44px;
 }
 .breadcrumb {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #919a8d;
   display: flex;
   align-items: center;
@@ -460,7 +460,7 @@ legend {
   align-items: center;
   gap: 7px;
   color: #7f8c79;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .avatar {
   width: 32px;
@@ -472,7 +472,7 @@ legend {
   background: #e8eddc;
   border: 3px solid #f4f5ed;
   outline: 1px solid #e0e5d5;
-  font-size: 9px;
+  font-size: 0.875rem;
   color: #647357;
   font-weight: 650;
 }
@@ -489,7 +489,7 @@ legend {
 }
 .page-heading > p,
 .page-heading > div > p {
-  font-size: 13px;
+  font-size: 1rem;
   color: #85907f;
   margin-bottom: 0;
 }
@@ -503,7 +503,7 @@ legend {
   gap: 24px;
 }
 .heading-with-action h1 {
-  font-size: 34px;
+  font-size: 2.125rem;
 }
 .today-layout {
   display: grid;
@@ -531,7 +531,7 @@ legend {
   z-index: 2;
 }
 .hero-label {
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1.8px;
   font-weight: 500;
   color: #c3d4ad;
@@ -540,25 +540,25 @@ legend {
   gap: 7px;
 }
 .tiny-spark {
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 400;
 }
 .hero h2 {
   font-family: "DM Serif Display", Georgia, serif;
-  font-size: 39px;
+  font-size: 2.4375rem;
   font-weight: 400;
   letter-spacing: -0.5px;
   line-height: 1.13;
   margin: 15px 0 13px;
 }
 .hero p {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #b4cbbd;
   line-height: 1.8;
   margin-bottom: 21px;
 }
 .hero-meta {
-  font-size: 9px;
+  font-size: 0.875rem;
   color: #9dbb9f;
   margin-top: 15px;
   display: flex;
@@ -597,7 +597,7 @@ legend {
 .art-star {
   position: absolute;
   color: #bed49c;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 1;
   z-index: 2;
 }
@@ -608,7 +608,7 @@ legend {
 .star-two {
   left: 29px;
   bottom: 9px;
-  font-size: 32px;
+  font-size: 2rem;
 }
 .floating-card {
   position: absolute;
@@ -618,14 +618,14 @@ legend {
   box-shadow: 0 9px 25px #102b2730;
 }
 .floating-card > span:first-child {
-  font-size: 6px;
+  font-size: 0.875rem;
   letter-spacing: 1px;
   display: block;
   color: #8e9b7e;
 }
 .floating-card > div {
   font-family: "DM Serif Display", Georgia, serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   letter-spacing: -0.7px;
   margin: 24px 0 5px;
 }
@@ -638,12 +638,12 @@ legend {
   height: 162px;
 }
 .front-card p {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #87917c;
   margin: 0;
 }
 .front-card .art-card-footer {
-  font-size: 6px;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -666,7 +666,7 @@ legend {
   color: #78856e !important;
 }
 .back-card > div {
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 .stats-row {
   display: grid;
@@ -693,14 +693,14 @@ legend {
   flex-shrink: 0;
 }
 .stat-card strong {
-  font-size: 23px;
+  font-size: 1.4375rem;
   display: block;
   font-weight: 550;
   line-height: 1.2;
   letter-spacing: -0.5px;
 }
 .stat-card div > span {
-  font-size: 9px;
+  font-size: 0.875rem;
   color: #89927f;
   display: block;
   margin-top: 5px;
@@ -713,20 +713,20 @@ legend {
   margin: 29px 0 17px;
 }
 .section-heading h2 {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0 0 5px;
 }
 .section-heading p {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #8d9586;
   margin: 0;
 }
 .section-heading .text-button {
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .section-heading h3 {
   margin: 0;
-  font-size: 14px;
+  font-size: 1rem;
 }
 .home-topics {
   display: grid;
@@ -766,12 +766,12 @@ legend {
   flex-shrink: 0;
 }
 .home-topic h3 {
-  font-size: 12px;
+  font-size: 0.875rem;
   margin: 0 0 8px;
   white-space: normal;
 }
 .home-topic p {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #8a947f;
   min-height: 32px;
   line-height: 1.6;
@@ -791,7 +791,7 @@ legend {
   transition: width 0.3s;
 }
 .home-topic .small {
-  font-size: 8px;
+  font-size: 0.875rem;
   display: block;
   margin-top: 10px;
 }
@@ -803,12 +803,12 @@ legend {
   color: #8b9881;
 }
 .privacy-strip > span {
-  font-size: 9px;
+  font-size: 0.875rem;
   line-height: 1.5;
   flex: 1;
 }
 .privacy-strip button {
-  font-size: 9px;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -822,7 +822,7 @@ legend {
   padding: 25px;
 }
 .panel h2 {
-  font-size: 21px;
+  font-size: 1.3125rem;
 }
 .rhythm {
   padding: 22px 20px;
@@ -834,7 +834,7 @@ legend {
   color: #a5ad9b;
 }
 .rhythm > p {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #919886;
   line-height: 1.8;
 }
@@ -855,12 +855,12 @@ legend {
   align-items: center;
   justify-content: center;
   gap: 2px;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 550;
   color: #7c8974;
 }
 .segmented > button span {
-  font-size: 8px;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 .segmented .selected {
@@ -874,7 +874,7 @@ legend {
   margin: 22px 0 20px;
 }
 .rhythm .small-label {
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1.1px;
 }
 .week {
@@ -888,7 +888,7 @@ legend {
   align-items: center;
   flex-direction: column;
   gap: 9px;
-  font-size: 8px;
+  font-size: 0.875rem;
   color: #909981;
 }
 .day-circle {
@@ -899,7 +899,7 @@ legend {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-size: 15px;
+  font-size: 1rem;
   color: #b5bea5;
   background: #f9faf4;
 }
@@ -919,7 +919,7 @@ legend {
   border-color: #3d6344;
 }
 .rhythm .week-note {
-  font-size: 9px;
+  font-size: 0.875rem;
   margin: 17px 0 0;
   line-height: 1.7;
 }
@@ -931,7 +931,7 @@ legend {
   border-radius: 15px;
 }
 .word-label {
-  font-size: 7px;
+  font-size: 0.875rem;
   letter-spacing: 1.2px;
   font-weight: 600;
   color: #7f8e65;
@@ -941,31 +941,31 @@ legend {
 }
 .word-card h3 {
   font-family: "DM Serif Display", Georgia, serif;
-  font-size: 31px;
+  font-size: 1.9375rem;
   font-weight: 400;
   letter-spacing: -0.7px;
   margin: 23px 0 6px;
 }
 .word-translation {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #7e8b71;
   margin-bottom: 19px;
 }
 .word-example {
   border-left: 2px solid #ced9b5;
   padding-left: 13px;
-  font-size: 10px;
+  font-size: 0.875rem;
   font-style: italic;
   line-height: 1.9;
   color: #71815f;
   margin-bottom: 17px;
 }
 .word-card .small {
-  font-size: 9px;
+  font-size: 0.875rem;
   line-height: 1.8;
 }
 .word-card .text-button {
-  font-size: 10px;
+  font-size: 0.875rem;
   width: 100%;
   justify-content: space-between;
   border-top: 1px solid #dce2ce;
@@ -981,7 +981,7 @@ legend {
   color: #9aa78a;
 }
 .gentle-note p {
-  font-size: 10px;
+  font-size: 0.875rem;
   margin: 0;
   line-height: 1.8;
 }
@@ -997,10 +997,10 @@ legend {
   justify-content: space-between;
   gap: 15px;
   color: #a0a895;
-  font-size: 9px;
+  font-size: 0.875rem;
 }
 .page-footer button {
-  font-size: 9px;
+  font-size: 0.875rem;
   color: #8e9b80;
   padding: 0;
   min-height: 30px;
@@ -1017,7 +1017,7 @@ legend {
   gap: 12px;
   align-items: center;
   margin: 0 0 24px;
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #66775c;
   line-height: 1.7;
 }
@@ -1045,10 +1045,10 @@ legend {
 }
 .topic-open h3 {
   margin: 0 0 9px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .topic-open p {
-  font-size: 11px;
+  font-size: 0.875rem;
   line-height: 1.7;
   color: #83907c;
   min-height: 38px;
@@ -1057,11 +1057,11 @@ legend {
   margin: 19px 0 10px;
 }
 .topic-open .small {
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .mode-badge {
   border-radius: 30px;
-  font-size: 9px;
+  font-size: 0.875rem;
   padding: 6px 9px;
   background: #f1f2eb;
   color: #8a9480;
@@ -1082,7 +1082,7 @@ legend {
 }
 .mode-select > button {
   flex: 1;
-  font-size: 10px;
+  font-size: 0.875rem;
   border-radius: 6px;
   min-height: 36px;
   color: #8a9381;
@@ -1121,20 +1121,20 @@ legend {
   margin-bottom: 20px;
 }
 .modal-head h2 {
-  font-size: 22px;
+  font-size: 1.375rem;
   letter-spacing: -0.5px;
   margin: 0;
 }
 .modal-intro,
 .modal > form > p {
-  font-size: 13px;
+  font-size: 1rem;
   color: #7e8976;
 }
 .modal p {
-  font-size: 13px;
+  font-size: 1rem;
 }
 .modal .small {
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .onboarding-topics {
   display: grid;
@@ -1150,7 +1150,7 @@ legend {
   border: 1px solid #e6e8df;
   border-radius: 10px;
   padding: 10px;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .onboarding-topics > button > svg {
   margin-left: auto;
@@ -1185,14 +1185,14 @@ legend {
   padding: 8px 14px;
   border: 1px solid #e1e7d8;
   border-radius: 7px;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .minute-buttons .selected {
   border-color: #839d67;
   background: #eff4e4;
 }
 .topic-settings > p {
-  font-size: 13px;
+  font-size: 1rem;
   color: var(--muted);
 }
 .setting-section {
@@ -1201,10 +1201,10 @@ legend {
   padding-top: 22px;
 }
 .setting-section h3 {
-  font-size: 15px;
+  font-size: 1rem;
 }
 .setting-section p {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #839078;
 }
 .quota-control {
@@ -1217,12 +1217,12 @@ legend {
   flex: 1;
 }
 .quota-control strong {
-  font-size: 13px;
+  font-size: 1rem;
   min-width: 40px;
   text-align: right;
 }
 .topic-settings .section-heading select {
-  font-size: 11px;
+  font-size: 0.875rem;
   max-width: 160px;
 }
 .topic-word-list {
@@ -1250,32 +1250,32 @@ legend {
   flex: 1;
 }
 .topic-word-list strong {
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 550;
 }
 .topic-word-list small {
   display: block;
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #8c9584;
   margin-top: 4px;
 }
 .topic-word-list .small {
-  font-size: 9px;
+  font-size: 0.875rem;
   white-space: nowrap;
 }
 .word-detail > h2 {
   font-family: "DM Serif Display", Georgia, serif;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 400;
   margin: 17px 0 8px;
 }
 .detail-translation {
-  font-size: 19px !important;
+  font-size: 1.1875rem !important;
   color: #7f906e;
   line-height: 1.6;
 }
 .source-gloss {
-  font-size: 12px !important;
+  font-size: 0.875rem !important;
   color: #85917c;
   background: #f4f6ed;
   padding: 14px;
@@ -1283,7 +1283,7 @@ legend {
   line-height: 1.8;
 }
 .word-detail blockquote {
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.7;
   font-style: italic;
   color: #6d7d60;
@@ -1292,7 +1292,7 @@ legend {
   margin: 19px 0;
 }
 .dimension-list {
-  font-size: 12px;
+  font-size: 0.875rem;
   margin: 24px 0;
 }
 .dimension-list > div {
@@ -1319,7 +1319,7 @@ legend {
 .source-note {
   padding: 15px 0;
   border-top: 1px solid var(--line);
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #929d88;
   display: flex;
   flex-direction: column;
@@ -1343,7 +1343,7 @@ legend {
 .checkbox-grid label {
   flex-direction: row;
   align-items: center;
-  font-size: 11px;
+  font-size: 0.875rem;
   margin: 0;
 }
 .custom-form label > .muted {
@@ -1370,7 +1370,7 @@ legend {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #8a967e;
   padding: 5px 0 15px;
   border-bottom: 2px solid transparent;
@@ -1384,7 +1384,7 @@ legend {
   background: #f0f3e8;
   border-radius: 5px;
   padding: 3px 6px;
-  font-size: 9px;
+  font-size: 0.875rem;
 }
 .search-row {
   display: flex;
@@ -1392,7 +1392,7 @@ legend {
   align-items: center;
 }
 .search-row select {
-  font-size: 12px;
+  font-size: 0.875rem;
   min-width: 150px;
 }
 .search-input {
@@ -1415,7 +1415,7 @@ legend {
   background: none;
   padding-left: 0;
   padding-right: 0;
-  font-size: 12px;
+  font-size: 0.875rem;
   outline-offset: 0;
 }
 .search-input button {
@@ -1432,12 +1432,12 @@ legend {
 }
 .filter-row select {
   min-height: 38px;
-  font-size: 11px;
+  font-size: 0.875rem;
   padding: 7px 11px;
 }
 .filter-row > span {
   margin-left: auto;
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .dictionary-list {
   background: #fffefa;
@@ -1468,7 +1468,7 @@ legend {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-family: "DM Serif Display", Georgia, serif;
   flex-shrink: 0;
 }
@@ -1479,23 +1479,23 @@ legend {
 .dictionary-word strong {
   display: block;
   font-weight: 550;
-  font-size: 14px;
+  font-size: 1rem;
 }
 .dictionary-word > span {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #8e9982;
   display: block;
   margin-top: 4px;
   line-height: 1.6;
 }
 .dictionary-topic {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #89967e;
   max-width: 170px;
   width: 20%;
 }
 .participation-tag {
-  font-size: 9px;
+  font-size: 0.875rem;
   color: #879778;
   min-width: 85px;
   text-align: center;
@@ -1503,9 +1503,6 @@ legend {
 }
 .participation-tag.archived {
   color: #a48d60;
-}
-.participation-tag.excluded {
-  color: #ae8170;
 }
 .dictionary-row > svg {
   color: #aab49e;
@@ -1539,7 +1536,7 @@ legend {
   overflow: hidden;
 }
 .sense-count {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #718368;
   flex-shrink: 0;
 }
@@ -1567,10 +1564,10 @@ legend {
 }
 .source-row .word-heading {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1rem;
 }
 .pos {
-  font-size: 9px;
+  font-size: 0.875rem;
   font-weight: 400;
   background: #edf1e4;
   color: #849576;
@@ -1579,12 +1576,12 @@ legend {
   margin-left: 10px;
 }
 .source-row p {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #718368;
   margin: 7px 0 0;
 }
 .source-row small {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #96a08c;
   display: block;
   margin-top: 5px;
@@ -1592,7 +1589,7 @@ legend {
 }
 .compact {
   padding: 8px 12px;
-  font-size: 11px;
+  font-size: 0.875rem;
   min-height: 40px;
 }
 .load-more {
@@ -1605,7 +1602,7 @@ legend {
   justify-content: center;
   gap: 14px;
   padding: 70px 15px;
-  font-size: 13px;
+  font-size: 1rem;
   color: #7b8e6c;
 }
 .empty {
@@ -1627,11 +1624,11 @@ legend {
   margin-bottom: 25px;
 }
 .empty h3 {
-  font-size: 21px;
+  font-size: 1.3125rem;
   font-weight: 550;
 }
 .empty p {
-  font-size: 13px;
+  font-size: 1rem;
   color: #919b85;
   line-height: 1.8;
 }
@@ -1659,16 +1656,16 @@ legend {
   top: 26px;
 }
 .metric > strong {
-  font-size: 39px;
+  font-size: 2.4375rem;
   font-weight: 550;
   letter-spacing: -1px;
   margin: 6px 0;
 }
 .metric > span:not(.stat-icon) {
-  font-size: 13px;
+  font-size: 1rem;
 }
 .metric small {
-  font-size: 10px;
+  font-size: 0.875rem;
   margin-top: 10px;
   color: #919f83;
 }
@@ -1682,7 +1679,7 @@ legend {
   margin: 30px 0 22px;
 }
 .progress-layout .week > div {
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .progress-layout .day-circle {
   width: 36px;
@@ -1703,14 +1700,14 @@ legend {
   gap: 7px;
 }
 .score-row strong {
-  font-size: 31px;
+  font-size: 1.9375rem;
   font-weight: 550;
 }
 .score-row span {
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .score-row small {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #96a187;
 }
 .topic-progress-list > div {
@@ -1732,7 +1729,7 @@ legend {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  font-size: 10px;
+  font-size: 0.875rem;
   margin-bottom: 9px;
 }
 .topic-progress-list strong {
@@ -1774,16 +1771,16 @@ legend {
 }
 .history-row strong {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .history-row small {
   display: block;
-  font-size: 10px;
+  font-size: 0.875rem;
   margin-top: 4px;
   color: #9aa38e;
 }
 .history-row > span:last-child {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #95a087;
 }
 .backup-grid {
@@ -1817,10 +1814,10 @@ legend {
   color: #8e9f77;
 }
 .backup-card h2 {
-  font-size: 23px;
+  font-size: 1.4375rem;
 }
 .backup-card > p {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #7b8a6f;
   max-width: 430px;
 }
@@ -1831,7 +1828,7 @@ legend {
   margin: 24px 0;
 }
 .backup-summary > span {
-  font-size: 10px;
+  font-size: 0.875rem;
   border: 1px solid #dbe4cf;
   border-radius: 6px;
   padding: 7px 9px;
@@ -1839,7 +1836,7 @@ legend {
   color: #7d8e6e;
 }
 .backup-card > .small {
-  font-size: 10px;
+  font-size: 0.875rem;
   margin: 15px 0 0;
 }
 .dropzone {
@@ -1855,16 +1852,16 @@ legend {
   background: #fafbf5;
 }
 .dropzone > span {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #6f825b;
 }
 .dropzone > small {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #a1ae91;
 }
 .dropzone > button {
   margin-top: 6px;
-  font-size: 11px;
+  font-size: 0.875rem;
   min-height: 40px;
 }
 .transfer-note {
@@ -1875,12 +1872,12 @@ legend {
   color: #879872;
 }
 .transfer-note h3 {
-  font-size: 14px;
+  font-size: 1rem;
   color: #5e7651;
   margin: 0 0 9px;
 }
 .transfer-note p {
-  font-size: 11px;
+  font-size: 0.875rem;
   line-height: 1.9;
   max-width: 850px;
   margin: 0;
@@ -1892,7 +1889,7 @@ legend {
 }
 .settings-grid label {
   margin-bottom: 18px;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .storage-status {
   display: flex;
@@ -1902,17 +1899,17 @@ legend {
   color: #829669;
 }
 .storage-status strong {
-  font-size: 13px;
+  font-size: 1rem;
   color: #5f7950;
   font-weight: 550;
 }
 .storage-status p {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #9aa68c;
   margin: 4px 0;
 }
 .settings-grid .secondary {
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .file-name {
   display: flex;
@@ -1923,10 +1920,10 @@ legend {
   background: #f2f6e9;
   border-radius: 9px;
   padding: 15px;
-  font-size: 12px !important;
+  font-size: 0.875rem !important;
 }
 .import-preview {
-  font-size: 12px;
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 .import-preview > div {
@@ -1954,7 +1951,7 @@ legend {
   color: #a08b65;
 }
 .import-warning p {
-  font-size: 11px;
+  font-size: 0.875rem;
   margin: 0;
   line-height: 1.8;
 }
@@ -1977,15 +1974,15 @@ legend {
   flex: 1;
 }
 .recovery-banner strong {
-  font-size: 12px;
+  font-size: 0.875rem;
   font-weight: 550;
 }
 .recovery-banner p {
-  font-size: 10px;
+  font-size: 0.875rem;
   margin: 4px 0 0;
 }
 .recovery-banner button {
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .session-main {
   max-width: 1000px;
@@ -2001,11 +1998,11 @@ legend {
   gap: 10px;
 }
 .training-top > .text-button {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: #839375;
 }
 .training-top > span {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #889d75;
 }
 .training-progress {
@@ -2025,7 +2022,7 @@ legend {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
+  font-size: 0.875rem;
   margin-bottom: 20px;
   color: #6f875d;
 }
@@ -2050,7 +2047,7 @@ legend {
   align-items: center;
 }
 .exercise-card > .small-label {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #8f9d7e;
   font-weight: 500;
   letter-spacing: 1px;
@@ -2058,7 +2055,7 @@ legend {
 .exercise-card h1 {
   font-family: "DM Serif Display", Georgia, serif;
   font-weight: 400;
-  font-size: 38px;
+  font-size: 2.375rem;
   line-height: 1.5;
   letter-spacing: -0.5px;
   margin: 32px 0 26px;
@@ -2066,7 +2063,7 @@ legend {
   overflow-wrap: anywhere;
 }
 .think-hint {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #9ca68f;
   margin: 0 0 27px;
 }
@@ -2097,7 +2094,7 @@ legend {
   display: flex;
   align-items: center;
   gap: 16px;
-  font-size: 15px;
+  font-size: 1rem;
   min-height: 53px;
   text-align: left;
 }
@@ -2126,7 +2123,7 @@ legend {
   border-radius: 6px;
   background: #f8faf3;
   color: #9bac89;
-  font-size: 10px;
+  font-size: 0.875rem;
   min-width: 25px;
   min-height: 25px;
   display: flex;
@@ -2152,14 +2149,14 @@ legend {
 }
 .answer-reveal h2 {
   font-family: "DM Serif Display", Georgia, serif;
-  font-size: 35px;
+  font-size: 2.1875rem;
   color: #648345;
   letter-spacing: -0.3px;
   font-weight: 400;
   margin: 12px 0 20px;
 }
 .answer-reveal > p {
-  font-size: 13px;
+  font-size: 1rem;
   color: #859875;
   line-height: 1.8;
 }
@@ -2173,45 +2170,47 @@ legend {
   min-width: 150px;
 }
 .answer-reveal .small {
-  font-size: 10px;
+  font-size: 0.875rem;
   margin-bottom: 0;
 }
-.feedback {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  margin-top: 21px;
-  padding: 20px;
-  border-radius: 12px;
+.review-status-slot {
+  min-height: 36px;
+  margin-bottom: 8px;
+}
+.review-status {
+  padding: 7px 11px;
+  border-radius: 8px;
   background: #eaf2dd;
-  border: 1px solid #d6e3c0;
-  color: #718f50;
+  color: #456333;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-align: left;
+  overflow-wrap: anywhere;
 }
-.feedback.again {
+.review-status.again {
   background: #f3eedf;
-  border-color: #e9dfc4;
-  color: #a38c57;
+  color: #776135;
 }
-.feedback > div {
+.review-status-line {
   display: flex;
-  gap: 13px;
+  gap: 8px;
   align-items: center;
 }
-.feedback strong {
-  font-size: 13px;
-  font-weight: 550;
-  display: block;
+.review-status-line > svg {
+  flex-shrink: 0;
 }
-.feedback small {
-  display: block;
-  font-size: 10px;
-  margin-top: 6px;
-  line-height: 1.6;
+.review-status details {
+  margin: 4px 0 0 24px;
+  font-size: 0.875rem;
 }
-.feedback .primary {
-  font-size: 12px;
-  min-width: 104px;
+.review-status summary {
+  cursor: pointer;
+}
+.review-status p {
+  margin: 6px 0;
+}
+.session-complete > .review-status {
+  margin-bottom: 20px;
 }
 .training-tools {
   display: flex;
@@ -2222,7 +2221,7 @@ legend {
   margin-top: 24px;
 }
 .training-tools > button {
-  font-size: 10px;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -2238,7 +2237,7 @@ legend {
   align-items: center;
   justify-content: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 0.875rem;
   color: #a5b196;
   margin-top: 21px;
 }
@@ -2263,19 +2262,19 @@ legend {
 }
 .completion-art > span {
   position: absolute;
-  font-size: 34px;
+  font-size: 2.125rem;
   top: -20px;
   right: -20px;
   color: #d3bc83;
 }
 .session-complete h1 {
   font-family: "DM Serif Display", Georgia, serif;
-  font-size: 43px;
+  font-size: 2.6875rem;
   font-weight: 400;
   letter-spacing: -0.7px;
 }
 .session-complete > p {
-  font-size: 13px;
+  font-size: 1rem;
   color: #8b9b7b;
   max-width: 520px;
   margin: 15px auto 27px;
@@ -2297,11 +2296,11 @@ legend {
 }
 .completion-stats strong {
   font-weight: 550;
-  font-size: 33px;
+  font-size: 2.0625rem;
   color: #5c7d3f;
 }
 .completion-stats span {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: #91a080;
 }
 .session-complete .button-row {
@@ -2309,7 +2308,7 @@ legend {
   margin: 28px 0 17px;
 }
 .session-complete > .small {
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .toast {
   position: fixed;
@@ -2326,7 +2325,7 @@ legend {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 12px;
+  font-size: 0.875rem;
   max-width: calc(100% - 35px);
   width: max-content;
   line-height: 1.6;
@@ -2346,20 +2345,20 @@ legend {
   gap: 20px;
   background: #e5eccf;
   padding: 13px 25px;
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #667e49;
 }
 .update-banner button {
   text-decoration: underline;
-  font-size: 12px;
+  font-size: 0.875rem;
   min-height: 32px;
 }
 .help-content h3 {
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 25px;
 }
 .help-content p {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: #7d8d70;
   line-height: 1.85;
 }
@@ -2381,21 +2380,21 @@ legend {
 .loading .brand-mark {
   width: 58px;
   height: 58px;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 55px;
   border-radius: 16px;
   margin-bottom: 16px;
 }
 .loading p {
-  font-size: 13px;
+  font-size: 1rem;
 }
 .fatal h1 {
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: var(--ink);
   margin-top: 20px;
 }
 .fatal p {
-  font-size: 14px;
+  font-size: 1rem;
   max-width: 600px;
 }
 .fatal .primary {
@@ -2410,7 +2409,7 @@ legend {
     padding: 35px;
   }
   .hero h2 {
-    font-size: 44px;
+    font-size: 2.75rem;
   }
   .hero-art {
     right: 24px;
@@ -2421,25 +2420,25 @@ legend {
     gap: 29px;
   }
   .hero p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .hero-label {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .home-topic h3 {
-    font-size: 14px;
+    font-size: 1rem;
   }
   .home-topic p {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .home-topic .small {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .stat-card div > span {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .word-card h3 {
-    font-size: 34px;
+    font-size: 2.125rem;
   }
 }
 @media (max-width: 1250px) {
@@ -2458,16 +2457,16 @@ legend {
     padding: 0 29px;
   }
   .brand {
-    font-size: 25px;
+    font-size: 1.5625rem;
     gap: 9px;
   }
   .brand-sub {
-    font-size: 6px;
+    font-size: 0.875rem;
   }
   .brand-mark {
     width: 39px;
     height: 39px;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 38px;
   }
   .today-layout {
@@ -2479,7 +2478,7 @@ legend {
     min-height: 300px;
   }
   .hero h2 {
-    font-size: 34px;
+    font-size: 2.125rem;
   }
   .hero-art {
     right: -52px;
@@ -2487,17 +2486,17 @@ legend {
     transform-origin: right center;
   }
   .hero p {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .hero-label {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .hero-copy .cream-button {
-    font-size: 11px;
+    font-size: 0.875rem;
     padding: 12px 17px;
   }
   .hero-meta {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .stats-row {
     gap: 9px;
@@ -2511,10 +2510,10 @@ legend {
     height: 34px;
   }
   .stat-card div > span {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .stat-card strong {
-    font-size: 21px;
+    font-size: 1.3125rem;
   }
   .home-topics {
     gap: 10px;
@@ -2523,16 +2522,16 @@ legend {
     padding: 16px 12px;
   }
   .home-topic h3 {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .home-topic p {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .home-topic .small {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .page-heading h1 {
-    font-size: 31px;
+    font-size: 1.9375rem;
   }
   .topic-grid {
     gap: 15px;
@@ -2541,13 +2540,13 @@ legend {
     padding: 19px 17px;
   }
   .topic-open h3 {
-    font-size: 14px;
+    font-size: 1rem;
   }
   .topic-open p {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .topic-open .small {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .rhythm {
     padding: 20px 16px;
@@ -2567,21 +2566,21 @@ legend {
     margin-left: 185px;
   }
   .brand {
-    font-size: 22px;
+    font-size: 1.375rem;
     gap: 8px;
     padding: 0 7px;
   }
   .brand-sub {
-    font-size: 5px;
+    font-size: 0.875rem;
     letter-spacing: 1.05px;
   }
   .nav-item {
-    font-size: 12px;
+    font-size: 0.875rem;
     padding-left: 12px;
     gap: 10px;
   }
   .sidebar-bottom .nav-item {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .local-card {
     margin-left: 3px;
@@ -2613,19 +2612,19 @@ legend {
     padding: 28px;
   }
   .hero h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   .hero p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .hero-label {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .hero-copy .cream-button {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .hero-meta {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .hero-art {
     top: 7px;
@@ -2640,7 +2639,7 @@ legend {
     display: none;
   }
   .rhythm .section-heading h3 {
-    font-size: 15px;
+    font-size: 1rem;
   }
   .rhythm {
     padding: 24px 21px;
@@ -2649,32 +2648,32 @@ legend {
     padding: 24px 21px;
   }
   .home-topic h3 {
-    font-size: 13px;
+    font-size: 1rem;
   }
   .home-topic p {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .home-topic .small {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .stat-card {
     padding: 18px 15px;
     gap: 12px;
   }
   .stat-card div > span {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .topic-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .topic-open h3 {
-    font-size: 15px;
+    font-size: 1rem;
   }
   .topic-open p {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .topic-open .small {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .dictionary-topic {
     display: none;
@@ -2683,7 +2682,7 @@ legend {
     padding: 24px;
   }
   .backup-card h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .progress-layout {
     gap: 17px;
@@ -2699,13 +2698,13 @@ legend {
     top: 20px;
   }
   .metric > strong {
-    font-size: 33px;
+    font-size: 2.0625rem;
   }
   .metric > span:not(.stat-icon) {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .metric small {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .settings-grid {
     gap: 17px;
@@ -2720,7 +2719,7 @@ legend {
     padding: 36px 25px;
   }
   .exercise-card h1 {
-    font-size: 32px;
+    font-size: 2rem;
   }
   .progress-stats {
     gap: 15px;
@@ -2736,19 +2735,19 @@ legend {
     transform: translateX(0);
   }
   .sidebar .brand {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .sidebar .brand-sub {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .sidebar .nav-item {
-    font-size: 13px;
+    font-size: 1rem;
     min-height: 48px;
   }
   .sidebar .brand-mark {
     width: 43px;
     height: 43px;
-    font-size: 35px;
+    font-size: 2.1875rem;
     line-height: 42px;
   }
   .main-shell {
@@ -2769,11 +2768,11 @@ legend {
     gap: 14px;
   }
   .breadcrumb {
-    font-size: 10px;
+    font-size: 0.875rem;
     gap: 10px;
   }
   .connection {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .connection .status-dot {
     width: 5px;
@@ -2783,15 +2782,15 @@ legend {
     padding: 27px 22px 0;
   }
   .page-heading h1 {
-    font-size: 30px;
+    font-size: 1.875rem;
     letter-spacing: -1.1px;
   }
   .page-heading > p,
   .page-heading > div > p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .eyebrow {
-    font-size: 9px;
+    font-size: 0.875rem;
     letter-spacing: 1.4px;
     margin-bottom: 12px;
   }
@@ -2829,18 +2828,18 @@ legend {
     padding: 22px 0;
   }
   .privacy-strip > span {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .page-footer {
-    font-size: 8px;
+    font-size: 0.875rem;
     margin-top: 25px;
   }
   .page-footer button {
-    font-size: 9px;
+    font-size: 0.875rem;
     min-height: 44px;
   }
   .sidebar-bottom .nav-item {
-    font-size: 12px !important;
+    font-size: 0.875rem !important;
   }
   .sidebar .local-card {
     margin-left: 9px;
@@ -2857,13 +2856,13 @@ legend {
     left: 50%;
     bottom: 18px;
     width: calc(100% - 32px);
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .backup-card {
     padding: 23px;
   }
   .backup-card h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .backup-grid {
     gap: 17px;
@@ -2874,7 +2873,7 @@ legend {
     gap: 18px;
   }
   .heading-with-action .primary {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .dictionary-controls {
     padding: 18px;
@@ -2886,10 +2885,10 @@ legend {
     gap: 20px;
   }
   .tab-switch > button {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .tab-switch span {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .filter-row select {
     max-width: 47%;
@@ -2898,7 +2897,7 @@ legend {
     gap: 10px;
   }
   .search-row select {
-    font-size: 11px;
+    font-size: 0.875rem;
     min-width: 120px;
   }
   .progress-stats {
@@ -2917,25 +2916,25 @@ legend {
     width: 17px;
   }
   .metric > strong {
-    font-size: 31px;
+    font-size: 1.9375rem;
   }
   .metric small {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .metric > span:not(.stat-icon) {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .score-row strong {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
   .score-row span {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .score-row small {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .history-row > span:last-child {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .settings-grid {
     grid-template-columns: 1fr 1fr;
@@ -2953,7 +2952,7 @@ legend {
     flex-wrap: wrap;
   }
   .training-tools > button {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .exercise-card {
     padding: 35px 24px;
@@ -2964,14 +2963,14 @@ legend {
     max-height: calc(100dvh - 30px);
   }
   .modal-head h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .onboarding-topics > button {
-    font-size: 11px;
+    font-size: 0.875rem;
     gap: 8px;
   }
   .checkbox-grid label {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .primary,
   .secondary {
@@ -2984,7 +2983,7 @@ legend {
     min-height: 44px;
   }
   .modal .topic-settings .section-heading select {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .topic-word-list > button {
     min-height: 60px;
@@ -3010,7 +3009,7 @@ legend {
     gap: 12px;
   }
   .page-heading h1 {
-    font-size: 29px;
+    font-size: 1.8125rem;
     line-height: 1.25;
     max-width: 330px;
   }
@@ -3023,15 +3022,15 @@ legend {
     min-height: 333px;
   }
   .hero h2 {
-    font-size: 38px;
+    font-size: 2.375rem;
     margin-top: 16px;
   }
   .hero-label {
-    font-size: 7px;
+    font-size: 0.875rem;
     letter-spacing: 1.4px;
   }
   .hero p {
-    font-size: 11px;
+    font-size: 0.875rem;
     max-width: 235px;
   }
   .hero-art {
@@ -3045,11 +3044,11 @@ legend {
     max-width: 100%;
   }
   .hero-copy .cream-button {
-    font-size: 12px;
+    font-size: 0.875rem;
     min-width: 190px;
   }
   .hero-meta {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .stats-row {
     gap: 8px;
@@ -3067,10 +3066,10 @@ legend {
     border-radius: 9px;
   }
   .stat-card strong {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .stat-card div > span {
-    font-size: 8px;
+    font-size: 0.875rem;
     margin-top: 5px;
     white-space: nowrap;
   }
@@ -3078,10 +3077,10 @@ legend {
     margin: 25px 0 16px;
   }
   .section-heading h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .section-heading p {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .home-topics {
     grid-template-columns: 1fr;
@@ -3108,13 +3107,13 @@ legend {
   }
   .home-topic h3 {
     grid-column: 2;
-    font-size: 13px;
+    font-size: 1rem;
     padding-right: 17px;
     margin: 0 0 5px;
   }
   .home-topic p {
     grid-column: 2;
-    font-size: 10px;
+    font-size: 0.875rem;
     margin: 0 0 13px;
     min-height: 0;
   }
@@ -3124,7 +3123,7 @@ legend {
   }
   .home-topic .small {
     grid-column: 2;
-    font-size: 8px;
+    font-size: 0.875rem;
     margin-top: 8px;
   }
   .privacy-strip {
@@ -3135,11 +3134,11 @@ legend {
     width: 16px;
   }
   .privacy-strip > span {
-    font-size: 9px;
+    font-size: 0.875rem;
     line-height: 1.7;
   }
   .privacy-strip button {
-    font-size: 9px;
+    font-size: 0.875rem;
     min-height: 35px;
   }
   .today-secondary {
@@ -3150,52 +3149,52 @@ legend {
     padding: 23px;
   }
   .rhythm .section-heading h3 {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .rhythm > p {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .segmented {
     margin-top: 17px;
   }
   .segmented > button {
     min-height: 50px;
-    font-size: 17px;
+    font-size: 1.0625rem;
   }
   .segmented > button span {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .week > div {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .day-circle {
     width: 31px;
     height: 31px;
   }
   .rhythm .week-note {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .word-card {
     padding: 25px;
   }
   .word-label {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .word-card h3 {
-    font-size: 36px;
+    font-size: 2.25rem;
     margin-top: 21px;
   }
   .word-translation {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .word-example {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .word-card .small {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .word-card .text-button {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .page-footer {
     align-items: center;
@@ -3215,10 +3214,10 @@ legend {
     margin-bottom: 18px;
   }
   .mode-select > button {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .info-strip {
-    font-size: 11px;
+    font-size: 0.875rem;
     padding: 15px;
     align-items: flex-start;
   }
@@ -3226,7 +3225,7 @@ legend {
     grid-template-columns: 1fr;
   }
   .onboarding-topics > button {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .onboarding-bottom {
     flex-direction: column;
@@ -3239,13 +3238,13 @@ legend {
     flex: 1;
   }
   .modal p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .modal-head {
     margin-bottom: 16px;
   }
   .modal-head h2 {
-    font-size: 19px;
+    font-size: 1.1875rem;
   }
   .form-grid {
     grid-template-columns: 1fr;
@@ -3255,7 +3254,7 @@ legend {
     grid-template-columns: 1fr;
   }
   .checkbox-grid label {
-    font-size: 12px;
+    font-size: 0.875rem;
     min-height: 30px;
   }
   .custom-form > .primary {
@@ -3267,27 +3266,27 @@ legend {
     gap: 4px;
   }
   .dimension-list dt {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .detail-actions > .primary,
   .detail-actions > .secondary {
     flex: 1;
     padding-left: 12px;
     padding-right: 12px;
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .tab-switch {
     gap: 12px;
   }
   .tab-switch > button {
-    font-size: 10px;
+    font-size: 0.875rem;
     gap: 5px;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: center;
   }
   .tab-switch span {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .dictionary-controls {
     padding: 16px;
@@ -3297,10 +3296,10 @@ legend {
     align-items: stretch;
   }
   .search-input input:not([type="checkbox"]) {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .search-row select {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .filter-row {
     flex-wrap: wrap;
@@ -3310,12 +3309,12 @@ legend {
     max-width: none;
     flex: 1;
     min-width: 0;
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .filter-row > span {
     flex-basis: 100%;
     text-align: right;
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .dictionary-row {
     gap: 11px;
@@ -3325,13 +3324,13 @@ legend {
     width: 32px;
     height: 32px;
     border-radius: 9px;
-    font-size: 15px;
+    font-size: 1rem;
   }
   .dictionary-word strong {
-    font-size: 13px;
+    font-size: 1rem;
   }
   .dictionary-word > span {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .participation-tag {
     display: none;
@@ -3348,13 +3347,13 @@ legend {
     display: none;
   }
   .source-row .word-heading {
-    font-size: 14px;
+    font-size: 1rem;
   }
   .source-row p {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .source-row small {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .progress-stats {
     grid-template-columns: 1fr;
@@ -3379,16 +3378,16 @@ legend {
   }
   .metric > strong {
     grid-column: 2;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 1.1;
     margin: 0 0 6px;
   }
   .metric > span:not(.stat-icon) {
-    font-size: 12px;
+    font-size: 0.875rem;
     grid-column: 2;
   }
   .metric small {
-    font-size: 10px;
+    font-size: 0.875rem;
     grid-column: 2;
     margin-top: 6px;
   }
@@ -3400,10 +3399,10 @@ legend {
     padding: 23px;
   }
   .score-row span {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .score-row small {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .history {
     padding: 21px 18px;
@@ -3412,10 +3411,10 @@ legend {
     gap: 10px;
   }
   .history-row strong {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .history-row > span:last-child {
-    font-size: 8px;
+    font-size: 0.875rem;
     max-width: 78px;
     text-align: right;
     line-height: 1.7;
@@ -3429,17 +3428,17 @@ legend {
     padding: 26px;
   }
   .backup-card h2 {
-    font-size: 23px;
+    font-size: 1.4375rem;
   }
   .backup-card > p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .backup-card > .small {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .backup-card > .primary {
     width: 100%;
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .dropzone {
     padding: 27px 20px;
@@ -3452,17 +3451,17 @@ legend {
     width: 24px;
   }
   .transfer-note h3 {
-    font-size: 13px;
+    font-size: 1rem;
     line-height: 1.6;
   }
   .transfer-note p {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .settings-grid .panel {
     padding: 24px;
   }
   .import-preview {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .import-preview > div {
     gap: 12px;
@@ -3471,24 +3470,24 @@ legend {
     justify-content: flex-end;
   }
   .modal .button-row > button {
-    font-size: 11px;
+    font-size: 0.875rem;
     padding: 12px 15px;
   }
   .training-top {
     flex-wrap: wrap;
   }
   .training-top .text-button {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .training-top > span {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .training-topic {
-    font-size: 11px;
+    font-size: 0.875rem;
     gap: 8px;
   }
   .training-topic .pill {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .exercise-card {
     padding: 30px 20px 27px;
@@ -3496,24 +3495,24 @@ legend {
     min-height: 330px;
   }
   .exercise-card h1 {
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 1.5;
     margin: 27px 0 24px;
   }
   .exercise-card > .small-label {
-    font-size: 9px;
+    font-size: 0.875rem;
     line-height: 1.8;
   }
   .think-hint {
-    font-size: 11px;
+    font-size: 0.875rem;
     line-height: 1.8;
     max-width: 240px;
   }
   .answer-reveal h2 {
-    font-size: 31px;
+    font-size: 1.9375rem;
   }
   .answer-reveal > p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .rating-buttons {
     gap: 10px;
@@ -3521,31 +3520,12 @@ legend {
   .rating-buttons > button {
     min-width: 0;
     flex: 1;
-    font-size: 12px;
+    font-size: 0.875rem;
     padding: 12px;
   }
   .answer-options > button {
-    font-size: 14px;
+    font-size: 1rem;
     gap: 12px;
-  }
-  .feedback {
-    padding: 17px 15px;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-  .feedback > div {
-    gap: 10px;
-  }
-  .feedback strong {
-    font-size: 12px;
-  }
-  .feedback small {
-    font-size: 10px;
-  }
-  .feedback .primary {
-    margin-left: auto;
-    min-width: 100%;
-    font-size: 12px;
   }
   .training-tools {
     justify-content: flex-start;
@@ -3553,30 +3533,30 @@ legend {
   }
   .training-tools > button {
     padding: 8px;
-    font-size: 9px;
+    font-size: 0.875rem;
     gap: 5px;
   }
   .training-foot {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .session-complete {
     margin: 25px auto 30px;
   }
   .session-complete h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
   .session-complete > p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .completion-stats {
     padding: 22px 12px;
     gap: 10px;
   }
   .completion-stats strong {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .completion-stats span {
-    font-size: 9px;
+    font-size: 0.875rem;
     line-height: 1.8;
   }
   .session-complete .button-row {
@@ -3586,25 +3566,25 @@ legend {
     width: 100%;
   }
   .session-complete > .small {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .update-banner {
-    font-size: 10px;
+    font-size: 0.875rem;
     gap: 12px;
     padding: 12px 17px;
   }
   .update-banner button {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .toast {
-    font-size: 11px;
+    font-size: 0.875rem;
     padding: 14px;
   }
   .word-detail > h2 {
-    font-size: 35px;
+    font-size: 2.1875rem;
   }
   .detail-translation {
-    font-size: 17px !important;
+    font-size: 1.0625rem !important;
   }
 }
 @media (prefers-reduced-motion: reduce) {

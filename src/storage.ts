@@ -26,13 +26,37 @@ function notify() {
 export async function loadState(topics: Topic[]): Promise<AppState> {
   const db = await dbPromise,
     tx = db.transaction("state", "readwrite");
-  let state = await tx.store.get("current");
-  if (!state) {
-    state = initialState(topics);
+  const stored = await tx.store.get("current");
+  const state = stored ? stateSchema.parse(stored) : initialState(topics);
+  const newTopics = topics.filter((topic) => !state.preferences[topic.id]);
+  for (const topic of newTopics)
+    state.preferences[topic.id] = {
+      mode: "paused",
+      level: null,
+      quota: 0,
+      revision: 0,
+      remainder: 0,
+      day: "",
+    };
+  const migrated =
+    stored &&
+    (newTopics.length > 0 ||
+      Object.keys(state.preferences).some(
+        (id) => state.preferences[id].mode !== stored.preferences[id]?.mode,
+      ) ||
+      Object.keys(state.participation).some(
+        (id) => state.participation[id] !== stored.participation[id],
+      ));
+  if (migrated) {
+    state.revision++;
+    state.updatedAt = new Date().toISOString();
+  }
+  if (!stored || migrated) {
     await tx.store.put(state, "current");
   }
   await tx.done;
-  return stateSchema.parse(state);
+  if (migrated) notify();
+  return state;
 }
 export async function mutateState(
   expectedRevision: number,
@@ -40,8 +64,8 @@ export async function mutateState(
 ): Promise<AppState> {
   const db = await dbPromise,
     tx = db.transaction("state", "readwrite");
-  const state: AppState = await tx.store.get("current");
-  if (state.revision !== expectedRevision) {
+  const stored = await tx.store.get("current");
+  if (stored.revision !== expectedRevision) {
     tx.abort();
     await tx.done.catch(() => {});
     throw new Error(
@@ -49,6 +73,7 @@ export async function mutateState(
     );
   }
   try {
+    const state = stateSchema.parse(stored);
     mutate(state);
     state.revision++;
     state.updatedAt = new Date().toISOString();
@@ -90,7 +115,8 @@ export async function replaceState(
   return valid;
 }
 export async function getRecovery(): Promise<AppState | null> {
-  return (await (await dbPromise).get("recovery", "before-import")) ?? null;
+  const stored = await (await dbPromise).get("recovery", "before-import");
+  return stored ? stateSchema.parse(stored) : null;
 }
 export async function deleteLocalProfile(
   topics: Topic[],

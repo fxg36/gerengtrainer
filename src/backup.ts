@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { sessionScope } from "./engine";
 import {
   stateSchema,
   targetSchema,
@@ -7,6 +8,9 @@ import {
   allTargets,
   allExercises,
   memoryKey,
+  ALL_ARCHIVE_TOPICS,
+  targetInTopic,
+  targetInSubtopic,
   type AppState,
   type Content,
 } from "./domain";
@@ -60,6 +64,15 @@ function unique(ids: string[], label: string) {
 }
 export function validateRelations(payload: BackupPayload) {
   const { state, content } = payload;
+  const sessions = [
+    ...(state.session ? [state.session] : []),
+    ...state.savedSessions,
+  ];
+  unique(
+    sessions.map((s) => s.id),
+    "Trainingsrunden",
+  );
+  unique(sessions.map(sessionScope), "Trainingsbereichen");
   unique(
     content.targets.map((t) => t.id),
     "Lerninhalten",
@@ -80,6 +93,9 @@ export function validateRelations(payload: BackupPayload) {
     state.personalExercises.map((e) => e.id),
     "eigenen Aufgaben",
   );
+  const targetById = new Map(
+    [...state.personalTargets, ...content.targets].map((t) => [t.id, t]),
+  );
   const targets = new Set(
       [...content.targets, ...state.personalTargets].map((t) => t.id),
     ),
@@ -99,9 +115,13 @@ export function validateRelations(payload: BackupPayload) {
     ...content.exercises,
     ...state.personalExercises,
     ...state.events.map((e) => e.exercise),
-    ...(state.session?.queue.map((q) => q.exercise) ?? []),
+    ...sessions.flatMap((s) => s.queue.map((q) => q.exercise)),
   ];
   for (const e of exercises) {
+    if (e.writing && (e.mode !== "recall" || e.channel !== "grammar_production" ||
+      targetById.get(e.targetId)?.kind !== "grammar" || e.options.length ||
+      (e.writing.kind === "complete") !== e.prompt.includes("___")))
+      throw new Error("Ungültige Schreibaufgabe in der Sicherung.");
     if (
       !targets.has(e.targetId) ||
       e.relatedTargetIds.some((id) => !targets.has(id))
@@ -154,8 +174,42 @@ export function validateRelations(payload: BackupPayload) {
       throw new Error("Die Reihenfolge der Lernhistorie ist ungültig.");
     lastTime.set(key, at);
   }
-  if (state.session) {
-    const s = state.session;
+  for (const s of sessions) {
+    if (s.topicId && (!topics.has(s.topicId) || s.archiveTopic))
+      throw new Error("Ungültiges Thema der Trainingsrunde.");
+    if (
+      s.subtopicId &&
+      (!s.topicId ||
+        !content.topics
+          .find((t) => t.id === s.topicId)
+          ?.subtopics?.some((sub) => sub.id === s.subtopicId))
+    )
+      throw new Error("Ungültiges Unterthema der Trainingsrunde.");
+    for (const q of s.queue) {
+      const target = targetById.get(q.exercise.targetId)!;
+      if (
+        q.topicId &&
+        (!topics.has(q.topicId) ||
+          !targetInTopic(target, q.topicId) ||
+          (s.topicId && q.topicId !== s.topicId))
+      )
+        throw new Error("Ungültiges Trainingsthema der Aufgabe.");
+      if (s.subtopicId && !targetInSubtopic(target, s.subtopicId))
+        throw new Error("Die Runde enthält Inhalte eines anderen Unterthemas.");
+    }
+    if (
+      s.topicId &&
+      s.queue.some(
+        (q) => !targetInTopic(targetById.get(q.exercise.targetId)!, s.topicId!),
+      )
+    )
+      throw new Error("Die Themenrunde enthält Inhalte eines anderen Themas.");
+    if (
+      s.archiveTopic &&
+      s.archiveTopic !== ALL_ARCHIVE_TOPICS &&
+      !topics.has(s.archiveTopic)
+    )
+      throw new Error("Die Archivrunde verweist auf ein unbekanntes Thema.");
     if (s.index > s.queue.length)
       throw new Error("Ungültige Sitzungsposition.");
     unique(
@@ -185,7 +239,7 @@ export async function parseBackup(raw: string): Promise<BackupPayload> {
     throw new Error("Die Datei enthält kein gültiges JSON.");
   }
   if (!envelope || envelope.format !== "wortnah-backup")
-    throw new Error("Das ist keine Wortnah-Sicherung.");
+    throw new Error("Das ist keine gültige Lernstand-Sicherung.");
   if (envelope.schemaVersion !== 1)
     throw new Error("Diese Sicherung benötigt eine andere App-Version.");
   if (
@@ -214,6 +268,7 @@ export function restoredState(
   for (const t of currentContent.topics)
     state.preferences[t.id] ??= {
       mode: "paused",
+      level: null,
       quota: 0,
       revision: 0,
       remainder: 0,
@@ -221,15 +276,4 @@ export function restoredState(
     };
   return state;
 }
-export function downloadText(
-  text: string,
-  name: string,
-  type = "application/json",
-) {
-  const url = URL.createObjectURL(new Blob([text], { type })),
-    a = document.createElement("a");
-  a.href = url;
-  a.download = name;
-  a.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-}
+export { exportText as downloadText } from "./platform";

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Einfach Englisch</string>
+    <string name="title_activity_main">Einfach Englisch</string>
+    <string name="package_name">app.einfachenglisch.trainer</string>
+    <string name="custom_url_scheme">app.einfachenglisch.trainer</string>
+</resources>

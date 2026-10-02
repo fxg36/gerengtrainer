@@ -1,12 +1,31 @@
 import fs from "node:fs";
 import crypto from "node:crypto";
+import { expandTopics } from "./expand-topics.mjs";
+import { addAdvancedContent, advancedReferences } from "./advanced-content.mjs";
+import { refineLearningContent } from "./context-content.mjs";
+import { addEverydayContent } from "./everyday-content.mjs";
 const read = (path) => fs.readFileSync(path, "utf8");
 const topics = JSON.parse(read("content/topics.json"));
+const levels = JSON.parse(read("content/learning-levels.json"));
+const getLevel = (kind, key) => {
+  const level = levels[kind][key];
+  if (!["A1", "A2", "B1", "B2", "C1", "C2"].includes(level))
+    throw new Error(`Missing learning level: ${kind}:${key}`);
+  return level;
+};
 const sourcePath = fs.existsSync("data/work/seed-candidates.json")
   ? "data/work/seed-candidates.json"
   : "content/source-selection.json";
-const source = JSON.parse(read(sourcePath)),
+const source = [
+    ...new Map(
+      [
+        ...JSON.parse(read(sourcePath)),
+        ...JSON.parse(read("content/additional-senses.json")),
+      ].map((row) => [row.id, row]),
+    ).values(),
+  ],
   byWord = new Map();
+const lexicalContexts = JSON.parse(read("content/lexical-contexts.json"));
 for (const row of source) {
   const key = row.word.toLowerCase();
   byWord.set(key, [...(byWord.get(key) ?? []), row]);
@@ -81,6 +100,10 @@ for (const line of read("content/vocabulary.txt")
   if (candidate) selected.push(candidate);
   else missing.push(word);
   const pos = candidate?.pos ?? expectedPos ?? "phrase";
+  const learningCue = lexicalContexts[topic + "|" + word];
+  if (!learningCue?.de || !learningCue?.en)
+    throw new Error(`Missing meaning context: ${topic}|${word}`);
+  const senseContext = { de: learningCue.de, en: learningCue.en };
   const target = {
     id,
     kind: "lexical",
@@ -89,7 +112,9 @@ for (const line of read("content/vocabulary.txt")
     de,
     gloss: candidate?.gloss ?? "",
     pos,
-    example: "",
+    example: learningCue.example ?? "",
+    senseContext,
+    level: getLevel("lexical", topic + "|" + word),
     dimensions: {
       Themen: [topic, ...(topic === "repair" ? ["home"] : [])],
       Situationen: contexts[topic],
@@ -116,7 +141,7 @@ for (const line of read("content/vocabulary.txt")
     },
     reviewStatus: "draft",
     classification: "editorial_draft",
-    version: 1,
+    version: 2,
   };
   targets.push(target);
   for (const [channel, suffix, prompt, answer, context] of [
@@ -137,17 +162,20 @@ for (const line of read("content/vocabulary.txt")
       prompt,
       answer,
       alternatives: [],
-      explanation:
-        target.gloss ||
-        "Bedeutung: " +
-          de +
-          ". Eigener Aufgabenentwurf; noch nicht fachlich freigegeben.",
+      explanation: [target.senseContext.de, target.example]
+        .filter(Boolean)
+        .join("\n"),
       context,
+      meaningCue:
+        channel === "productive_recall"
+          ? target.senseContext?.de
+          : target.senseContext?.en,
       options: [],
       relatedTargetIds: [],
-      version: 1,
+      version: 2,
     });
 }
+const grammarCues = JSON.parse(read("content/grammar-cues.json"));
 let group = null,
   variant = 0;
 for (const line of read("content/grammar.txt").split(/\r?\n/).filter(Boolean)) {
@@ -164,6 +192,7 @@ for (const line of read("content/grammar.txt").split(/\r?\n/).filter(Boolean)) {
       gloss: "",
       pos: "grammar",
       example: "",
+      level: getLevel("grammar", id),
       dimensions: {
         Themen: ["grammar"],
         Situationen: ["Alltag"],
@@ -183,6 +212,10 @@ for (const line of read("content/grammar.txt").split(/\r?\n/).filter(Boolean)) {
   }
   const [prompt, answer, ...wrong] = line.split("|");
   variant++;
+  const cue = grammarCues[group.id.replace(/^grammar-/, "")]?.[variant - 1];
+  if (!cue?.[0] || !cue?.[1])
+    throw new Error(`Missing grammar cue: ${group.id}:${variant}`);
+  const [translation, hint] = cue;
   const linked = targets
     .filter(
       (t) =>
@@ -205,15 +238,34 @@ for (const line of read("content/grammar.txt").split(/\r?\n/).filter(Boolean)) {
       alternatives: [],
       explanation: group.rule,
       context: group.title,
+      translation,
+      hint,
       options: mode === "choice" ? [answer, ...wrong] : [],
       relatedTargetIds: [],
       vocabularyTargetIds: linked,
-      version: 1,
+      version: 2,
     });
 }
+expandTopics(topics, targets, exercises, selected);
+// Grammar goals get meaningful sections without changing their stable IDs.
+for (const target of targets.filter((t) => t.kind === "grammar")) {
+  const text = `${target.word} ${target.id}`.toLowerCase();
+  const section =
+    /frage|indirekt|relativ|beding|if|satz|passiv|reported|condition/.test(text)
+      ? "structure"
+      : /vergangen|zeit|verb|have|for und since|plan|gerade|past|present|future|perfect/.test(
+            text,
+          )
+        ? "tenses"
+        : "precision";
+  target.dimensions.Unterthemen = [`grammar.${section}`];
+}
+addAdvancedContent(topics, targets, exercises);
+refineLearningContent(targets, exercises);
+const everyday = addEverydayContent(topics, targets, exercises);
 const catalogue = JSON.parse(read("public/dictionary/manifest.json"));
 const content = {
-  version: "2026.10.1-pwa-test.2",
+  version: "2026.10.2-content.10",
   topics,
   targets,
   exercises,
@@ -225,7 +277,9 @@ const content = {
     lexicalCount: targets.filter((t) => t.kind === "lexical").length,
     grammarGoals: targets.filter((t) => t.kind === "grammar").length,
     grammarVariants: exercises.filter((e) => e.mode === "choice").length,
-    missingDictionaryMatches: missing,
+    missingDictionaryMatches: targets
+      .filter((t) => t.kind === "lexical" && !t.source.sourceId)
+      .map((t) => t.word),
     humanApproved: 0,
   },
 };
@@ -247,16 +301,31 @@ fs.writeFileSync(
         ),
       ),
       attribution:
-        "Wiktionary contributors. Source page URLs are stored per meaning. Extracted by Kaikki/Wiktextract. German glosses, selection and thematic mapping edited for Wortnah; draft, not human approved.",
+        "Wiktionary contributors. Source page URLs are stored per meaning. Extracted by Kaikki/Wiktextract. German glosses, selection and thematic mapping edited for Einfach Englisch (formerly Wortnah); draft, not human approved.",
       license: "https://creativecommons.org/licenses/by-sa/4.0/",
       classification: {
         method:
           "assistant-authored topic assignments from a fixed taxonomy; source metadata preserved",
         status: "draft",
+        learningLevels: levels.method,
+        meaningContexts:
+          "German and English sense cues authored for the selected meaning; English source definitions retained where suitable. Separate sense IDs remain separate learning targets; draft, not human approved.",
       },
       grammar: {
         method: "assistant-authored structured task drafts; no paid API calls",
+        referencePages: advancedReferences,
+        referenceUse: "Grammar and level-design references only; examples are original. Advanced practice levels are provisional, not validated CEFR assignments or copied English Vocabulary Profile entries.",
         humanApproved: 0,
+        textPractice: "170 writing tasks with optional hints, intended German meaning, model answers and self-assessment criteria. No automatic semantic grading; original question/answer IDs retained.",
+        contextReferences: [
+          "https://www.cambridgeenglish.org/latinamerica/Images/167791-b2-first-handbook.pdf",
+          "https://learnenglishteens.britishcouncil.org/sites/teens/files/gs_third_conditional.pdf",
+        ],
+      },
+      usageContexts: "82 existing senses refined with specific bilingual cues and original bilingual examples. Source definitions and sense IDs retained; editorial drafts, not human approved.",
+      everydaySituations: {
+        ...everyday,
+        method: "Original assistant-authored bilingual contexts and examples for everyday situations. Existing exact meanings reuse their IDs and sources; new meanings have no asserted dictionary match. Practice levels are provisional; human review outstanding.",
       },
       catalogue,
     },

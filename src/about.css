@@ -1,0 +1,90 @@
+.about-intro {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 4px 0 20px;
+}
+.about-intro img {
+  flex: 0 0 94px;
+  object-fit: contain;
+}
+.about-app .about-intro h3 {
+  margin: 0 0 8px;
+}
+.about-app .about-intro p {
+  margin: 0;
+}
+.about-app {
+  line-height: 1.65;
+}
+.about-app h4 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #25375b;
+}
+.about-method {
+  margin: 18px 0;
+  padding: 16px 0 16px 18px;
+  border-left: 3px solid #91b3c6;
+}
+.about-method p {
+  margin-top: 0;
+}
+.about-app a {
+  color: #294b6d;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.about-note {
+  border: 1px solid #d6ccba;
+  border-radius: 10px;
+  padding: 16px;
+  background: #f1ecdf;
+}
+.about-details {
+  border-top: 1px solid #d6ccba;
+  padding: 4px 0;
+}
+.about-details summary {
+  cursor: pointer;
+  padding: 16px 4px;
+  font-weight: 700;
+  font-size: 17px;
+  color: #25375b;
+}
+.about-details summary:focus-visible {
+  outline: 2px solid #25375b;
+  outline-offset: -2px;
+}
+.about-parameters {
+  margin: 0;
+}
+.about-parameters > div {
+  padding: 12px 0;
+}
+.about-parameters dt {
+  font-weight: 700;
+  color: #25375b;
+}
+.about-parameters dd {
+  margin: 6px 0 0;
+}
+.about-licenses {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+  font-size: 14px;
+  padding: 14px;
+  background: #f1ecdf;
+  border-radius: 8px;
+}
+@media (max-width: 420px) {
+  .about-intro {
+    gap: 12px;
+  }
+  .about-intro img {
+    width: 64px;
+    flex-basis: 64px;
+  }
+}

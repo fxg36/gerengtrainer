@@ -1,0 +1,46 @@
+/* Capacitor supplies these CSS variables on older Android WebViews. iOS uses env(). */
+.native-app {
+  --device-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+  --device-bottom: var(
+    --safe-area-inset-bottom,
+    env(safe-area-inset-bottom, 0px)
+  );
+  --device-left: var(--safe-area-inset-left, env(safe-area-inset-left, 0px));
+  --device-right: var(--safe-area-inset-right, env(safe-area-inset-right, 0px));
+  color-scheme: light;
+}
+.native-app .topbar {
+  height: calc(77px + var(--device-top));
+  padding-top: var(--device-top);
+  padding-left: max(22px, var(--device-left));
+  padding-right: max(22px, var(--device-right));
+}
+.native-app .sidebar {
+  padding-top: calc(31px + var(--device-top));
+  padding-bottom: calc(18px + var(--device-bottom));
+  padding-left: max(17px, var(--device-left));
+}
+.native-app .main-content {
+  padding-left: max(23px, var(--device-left));
+  padding-right: max(23px, var(--device-right));
+  padding-bottom: calc(32px + var(--device-bottom));
+}
+.native-app .modal {
+  max-height: calc(100dvh - var(--device-top) - var(--device-bottom) - 32px);
+}
+@media (max-width: 800px) {
+  .native-app .topbar {
+    height: calc(68px + var(--device-top));
+  }
+  .native-app .main-content {
+    padding-bottom: calc(110px + var(--device-bottom));
+  }
+  .native-app .mobile-dock {
+    padding-bottom: calc(8px + var(--device-bottom));
+    padding-left: max(4px, var(--device-left));
+    padding-right: max(4px, var(--device-right));
+  }
+  .native-app .toast {
+    bottom: calc(92px + var(--device-bottom));
+  }
+}

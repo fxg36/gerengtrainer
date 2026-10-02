@@ -1,0 +1,413 @@
+{
+  "do-does": [
+    ["Arbeitet dein Nachbar von zu Hause aus?", "Ergänze do oder does."],
+    ["Passen dir diese Schuhe?", "Ergänze do oder does."],
+    ["Wo wohnt deine Schwester?", "Ergänze do oder does."],
+    ["Um wie viel Uhr schließen die Geschäfte?", "Ergänze do oder does."],
+    ["Öffnet dieser Schlüssel die Garage?", "Ergänze do oder does."]
+  ],
+  "did-questions": [
+    ["Hast du die Rechnung gestern geschickt?", "Grundform: send"],
+    ["Wo haben sie die Leiter hingestellt?", "Grundform: put"],
+    ["Hat sie am Montag den Zug erwischt?", "Grundform: catch"],
+    ["Wann hast du das Leck bemerkt?", "Grundform: notice"],
+    ["Hat er das kaputte Scharnier ersetzt?", "Grundform: replace"]
+  ],
+  "present-third": [
+    ["Mein Bruder fährt jeden Morgen zur Arbeit.", "Grundform: drive"],
+    ["Der Zug hält hier jede Stunde.", "Grundform: stop"],
+    ["Dieses Rezept reicht für vier Personen.", "Grundform: serve"],
+    ["Sie prüft ihre E-Mails vor dem Frühstück.", "Grundform: check"],
+    ["Unser Vermieter wohnt nebenan.", "Grundform: live"]
+  ],
+  "present-continuous": [
+    [
+      "Schau! Das Wasser tropft gerade durch die Decke.",
+      "Grundform: drip · ergänze auch das Hilfsverb."
+    ],
+    [
+      "Sei leise. Das Baby schläft gerade.",
+      "Grundform: sleep · ergänze auch das Hilfsverb."
+    ],
+    [
+      "Ich koche gerade das Abendessen.",
+      "Grundform: cook · ergänze auch das Hilfsverb."
+    ],
+    [
+      "Sie streichen gerade die Küche.",
+      "Grundform: paint · ergänze auch das Hilfsverb."
+    ],
+    [
+      "Wir warten gerade auf den verspäteten Zug.",
+      "Grundform: wait · ergänze auch das Hilfsverb."
+    ]
+  ],
+  "irregular-past": [
+    ["Gestern habe ich einen neuen Koffer gekauft.", "Grundform: buy"],
+    ["Sie nahm gestern den letzten Zug nach Hause.", "Grundform: take"],
+    [
+      "Wir haben den Kassenbon gestern Abend in der Schublade gefunden.",
+      "Grundform: find"
+    ],
+    [
+      "Er hat sich bei der gestrigen Wanderung am Knöchel verletzt.",
+      "Grundform: hurt"
+    ],
+    [
+      "Sie haben uns letzte Woche eine Rückerstattung gegeben.",
+      "Grundform: give"
+    ]
+  ],
+  "perfect-experience": [
+    [
+      "Hast du schon einmal ein Reh in freier Wildbahn gesehen?",
+      "Grundform: see"
+    ],
+    ["Sie ist noch nie im Ausland gewesen.", "Grundform: be"],
+    ["Wir haben die Anzahlung schon bezahlt.", "Grundform: pay"],
+    ["Ich habe gerade die letzte E-Mail geschrieben.", "Grundform: write"],
+    ["Sie haben noch nie ihr eigenes Brot gebacken.", "Grundform: bake"]
+  ],
+  "for-since": [
+    ["Ich wohne seit 2020 hier.", "Ergänze for oder since."],
+    ["Wir warten seit zwei Stunden.", "Ergänze for oder since."],
+    ["Sie arbeitet seit letztem September hier.", "Ergänze for oder since."],
+    ["Er besitzt dieses Auto seit zehn Jahren.", "Ergänze for oder since."],
+    ["Es regnet seit sechs Uhr.", "Ergänze for oder since."]
+  ],
+  "past-perfect": [
+    ["Als wir ankamen, war der Zug schon abgefahren.", "Grundform: leave"],
+    ["Sie hatte die Rechnung geschickt, bevor ich anrief.", "Grundform: send"],
+    [
+      "Mir wurde klar, dass ich meine Schlüssel zu Hause vergessen hatte.",
+      "Grundform: forget"
+    ],
+    [
+      "Vor dieser Unterrichtsstunde war er noch nie Auto gefahren.",
+      "Grundform: drive"
+    ],
+    ["Die Gäste waren angekommen, bevor der Sturm begann.", "Grundform: arrive"]
+  ],
+  "used-to": [
+    [
+      "Früher wohnte ich in Küstennähe, aber jetzt wohne ich im Landesinneren.",
+      "Grundform: live"
+    ],
+    [
+      "Früher fuhr sie mit dem Auto zur Arbeit, aber jetzt nimmt sie den Bus.",
+      "Grundform: drive"
+    ],
+    [
+      "Als wir studierten, gingen wir früher jedes Wochenende wandern.",
+      "Grundform: hike"
+    ],
+    ["Vor seiner Augenoperation trug er eine Brille.", "Grundform: wear"],
+    [
+      "Bevor sie in Rente gingen, besaßen sie eine kleine Bäckerei.",
+      "Grundform: own"
+    ]
+  ],
+  "going-to": [
+    ["Wir werden nächsten Monat die Küche renovieren.", "Grundform: renovate"],
+    ["Sie wird einen Tisch für heute Abend reservieren.", "Grundform: book"],
+    ["Ich werde morgen den Lieferanten anrufen.", "Grundform: call"],
+    ["Sie werden die alten Möbel verkaufen.", "Grundform: sell"],
+    ["Er wird im November eine neue Stelle antreten.", "Grundform: start"]
+  ],
+  "first-conditional": [
+    ["Wenn es morgen regnet, werden wir drinnen bleiben.", "Grundform: rain"],
+    ["Wenn sie jetzt losgeht, wird sie den Zug erwischen.", "Grundform: leave"],
+    [
+      "Wenn das Geschäft früh schließt, werden wir morgen hingehen.",
+      "Grundform: close"
+    ],
+    [
+      "Wenn er den Kassenbon mitbringt, wird er eine Rückerstattung bekommen.",
+      "Grundform: bring"
+    ],
+    [
+      "Wenn dieser Schlüssel abbricht, werden wir den Vermieter anrufen.",
+      "Grundform: break"
+    ]
+  ],
+  "second-conditional": [
+    ["Wenn ich mehr Zeit hätte, würde ich öfter kochen.", "Grundform: cook"],
+    [
+      "Wenn sie näher wohnen würde, würden wir sie jede Woche besuchen.",
+      "Grundform: visit"
+    ],
+    [
+      "Wenn wir ein Auto hätten, würden wir an die Küste fahren.",
+      "Grundform: drive"
+    ],
+    ["Wenn er die Antwort wüsste, würde er sie uns sagen.", "Grundform: tell"],
+    [
+      "Wenn sie einen Garten hätten, würden sie Gemüse anbauen.",
+      "Grundform: grow"
+    ]
+  ],
+  "third-conditional": [
+    [
+      "Wenn ich das Schild gesehen hätte, hätte ich angehalten.",
+      "Grundform: stop"
+    ],
+    [
+      "Wenn sie früher losgegangen wäre, hätte sie den Zug erwischt.",
+      "Grundform: catch"
+    ],
+    [
+      "Wenn wir im Voraus gebucht hätten, hätten wir weniger bezahlt.",
+      "Grundform: pay"
+    ],
+    [
+      "Wenn er Handschuhe getragen hätte, hätte er seine Hände geschützt.",
+      "Grundform: protect"
+    ],
+    ["Wenn sie angerufen hätten, hätte ich ihnen geholfen.", "Grundform: help"]
+  ],
+  "modal-base": [
+    ["Du solltest den Kassenbon aufbewahren.", "Grundform: keep"],
+    ["Kannst du dieses Schraubglas öffnen?", "Grundform: open"],
+    ["Wir müssen vor Mittag aufbrechen.", "Grundform: leave"],
+    ["Vielleicht kommt sie etwas später an.", "Grundform: arrive"],
+    ["Könntest du mir die Leiter leihen?", "Grundform: lend"]
+  ],
+  "should-have": [
+    ["Ich hätte den Wetterbericht prüfen sollen.", "Grundform: check"],
+    ["Du hättest mir von der Verspätung erzählen sollen.", "Grundform: tell"],
+    ["Wir hätten die Fahrkarten früher kaufen sollen.", "Grundform: buy"],
+    [
+      "Sie hätte bei der Reparatur Handschuhe tragen sollen.",
+      "Grundform: wear"
+    ],
+    ["Er hätte zuerst die Anleitung lesen sollen.", "Grundform: read"]
+  ],
+  "indirect-question": [
+    [
+      "Könntest du mir sagen, wo der Bahnhof ist?",
+      "Ordne diese Wörter: is · station · the"
+    ],
+    [
+      "Weißt du, wann das Geschäft öffnet?",
+      "Ordne diese Wörter: opens · shop · the"
+    ],
+    [
+      "Kannst du erklären, warum die Rechnung höher ist?",
+      "Ordne diese Wörter: higher · is · invoice · the"
+    ],
+    [
+      "Erinnerst du dich, wo wir geparkt haben?",
+      "Ordne diese Wörter: parked · we"
+    ],
+    [
+      "Könntest du mir sagen, wie viel das kostet?",
+      "Ordne diese Wörter: costs · this"
+    ]
+  ],
+  "object-pronouns": [
+    [
+      "Bitte schick die Rechnung an mich.",
+      "Ergänze das passende Objektpronomen."
+    ],
+    [
+      "Ich habe ihn am Bahnhof gesehen.",
+      "Ergänze das passende Objektpronomen."
+    ],
+    [
+      "Der Vermieter hat uns gestern angerufen.",
+      "Ergänze das passende Objektpronomen."
+    ],
+    [
+      "Könntest du ihnen mit dem Gepäck helfen?",
+      "Ergänze das passende Objektpronomen."
+    ],
+    [
+      "Ich habe ein Geschenk für sie mitgebracht.",
+      "Ergänze das passende Objektpronomen."
+    ]
+  ],
+  "possessives": [
+    [
+      "Das ist mein Koffer. Er gehört mir.",
+      "Ergänze ein eigenständiges Possessivpronomen."
+    ],
+    [
+      "Das sind deine Handschuhe. Sie gehören dir.",
+      "Ergänze ein eigenständiges Possessivpronomen."
+    ],
+    [
+      "Das ist ihr Mantel. Er gehört ihr.",
+      "Ergänze ein eigenständiges Possessivpronomen."
+    ],
+    [
+      "Das ist unsere Wohnung. Sie gehört uns.",
+      "Ergänze ein eigenständiges Possessivpronomen."
+    ],
+    [
+      "Das sind ihre Fahrkarten. Sie gehören ihnen.",
+      "Ergänze ein eigenständiges Possessivpronomen."
+    ]
+  ],
+  "reflexive": [
+    [
+      "Ich habe mich beim Zwiebelhacken geschnitten.",
+      "Ergänze das passende Reflexivpronomen."
+    ],
+    [
+      "Sie hat sich selbst beigebracht, wie man das Fahrrad repariert.",
+      "Ergänze das passende Reflexivpronomen."
+    ],
+    [
+      "Wir haben uns den Nachbarn vorgestellt.",
+      "Ergänze das passende Reflexivpronomen."
+    ],
+    [
+      "Er hat sich beim Verschieben des Schranks verletzt.",
+      "Ergänze das passende Reflexivpronomen."
+    ],
+    [
+      "Bitte bedien dich am Kuchen, Anna.",
+      "Ergänze das passende Reflexivpronomen."
+    ]
+  ],
+  "a-an": [
+    ["Wir brauchen einen Regenschirm.", "Ergänze a oder an."],
+    ["Sie ist ein ehrlicher Mensch.", "Ergänze a oder an."],
+    ["Er arbeitet an einer Universität.", "Ergänze a oder an."],
+    ["Ich habe um zehn einen Termin.", "Ergänze a oder an."],
+    ["Sie haben einen Gebrauchtwagen gekauft.", "Ergänze a oder an."]
+  ],
+  "much-many": [
+    ["Wie viel Gepäck darf ich mitnehmen?", "Ergänze much oder many."],
+    ["Wie viele Stühle brauchen wir?", "Ergänze much oder many."],
+    ["Es ist nicht mehr viel Milch übrig.", "Ergänze much oder many."],
+    ["Wie viele Schrauben fehlen?", "Ergänze much oder many."],
+    ["Wie viele Ratschläge hat sie dir gegeben?", "Ergänze much oder many."]
+  ],
+  "few-little": [
+    ["Wir haben noch ein paar Eier übrig.", "Ergänze a few oder a little."],
+    ["Gib ein wenig Mehl in die Schüssel.", "Ergänze a few oder a little."],
+    [
+      "Ich brauche ein paar Informationen zur Buchung.",
+      "Ergänze a few oder a little."
+    ],
+    ["Im Schrank sind ein paar Handtücher.", "Ergänze a few oder a little."],
+    [
+      "Wir haben vor der Abfahrt noch etwas Zeit.",
+      "Ergänze a few oder a little."
+    ]
+  ],
+  "some-any": [
+    ["Wir haben keine Ersatzbatterien.", "Ergänze any, a oder an."],
+    ["Im Zimmer stehen keine Möbel.", "Ergänze any, a oder an."],
+    ["Sie hat heute keine E-Mails bekommen.", "Ergänze any, a oder an."],
+    ["Ich brauche keinen Zucker in meinem Tee.", "Ergänze any, a oder an."],
+    [
+      "Sie haben noch keine Reservierungen vorgenommen.",
+      "Ergänze any, a oder an."
+    ]
+  ],
+  "enjoy-ing": [
+    ["Ich gehe gern im Wald spazieren.", "Grundform: walk"],
+    ["Sie kocht gern für Freunde.", "Grundform: cook"],
+    ["Wir erkunden gern neue Orte.", "Grundform: explore"],
+    ["Er restauriert gern alte Möbel.", "Grundform: restore"],
+    ["Sie lernen gern Sprachen.", "Grundform: learn"]
+  ],
+  "want-infinitive": [
+    [
+      "Ich möchte die Reservierung stornieren.",
+      "Grundform: cancel · ergänze auch to, falls nötig."
+    ],
+    [
+      "Sie möchte eine neue Stelle finden.",
+      "Grundform: find · ergänze auch to, falls nötig."
+    ],
+    [
+      "Wir möchten die Wohnung mieten.",
+      "Grundform: rent · ergänze auch to, falls nötig."
+    ],
+    [
+      "Er möchte lernen, wie man Brot backt.",
+      "Grundform: learn · ergänze auch to, falls nötig."
+    ],
+    [
+      "Sie möchten losfahren, bevor der Verkehr zunimmt.",
+      "Grundform: leave · ergänze auch to, falls nötig."
+    ]
+  ],
+  "verb-preposition": [
+    ["Unsere Pläne hängen vom Wetter ab.", "Ergänze die passende Präposition."],
+    ["Bitte hör dir die Durchsage an.", "Ergänze die passende Präposition."],
+    ["Wir warten auf den Bus.", "Ergänze die passende Präposition."],
+    [
+      "Dieser Koffer gehört meiner Schwester.",
+      "Ergänze die passende Präposition."
+    ],
+    [
+      "Ich entschuldige mich für die Verspätung.",
+      "Ergänze die passende Präposition."
+    ]
+  ],
+  "relative-who": [
+    [
+      "Die Frau, die nebenan wohnt, ist Ärztin.",
+      "Ergänze who, which oder where."
+    ],
+    [
+      "Ich kenne einen Mechaniker, der das reparieren kann.",
+      "Ergänze who, which oder where."
+    ],
+    [
+      "Der Kollege, der die E-Mail geschickt hat, ist nicht da.",
+      "Ergänze who, which oder where."
+    ],
+    [
+      "Der Gast, der das Zimmer gebucht hat, ist angekommen.",
+      "Ergänze who, which oder where."
+    ],
+    [
+      "Der Mann, der meine Schlüssel gefunden hat, hat mich angerufen.",
+      "Ergänze who, which oder where."
+    ]
+  ],
+  "comparative": [
+    ["Dieser Koffer ist leichter als meiner.", "Ergänze than, then oder as."],
+    [
+      "Die neue Strecke ist kürzer als die alte.",
+      "Ergänze than, then oder as."
+    ],
+    ["Ihre Wohnung ist größer als unsere.", "Ergänze than, then oder as."],
+    ["Der Zug ist schneller als der Bus.", "Ergänze than, then oder as."],
+    ["Diese Reparatur ist teurer als erwartet.", "Ergänze than, then oder as."]
+  ],
+  "passive": [
+    ["Das Zimmer wird jeden Morgen gereinigt.", "Grundform: clean"],
+    ["Die Rechnung wurde gestern geschickt.", "Grundform: send"],
+    ["Diese Stühle werden aus recyceltem Holz hergestellt.", "Grundform: make"],
+    ["Das Fenster wurde während des Sturms zerbrochen.", "Grundform: break"],
+    ["Frühstück wird bis zehn Uhr serviert.", "Grundform: serve"]
+  ],
+  "too-enough": [
+    [
+      "Diese Leiter ist lang genug, um das Regal zu erreichen.",
+      "Ordne diese Wörter: enough · long"
+    ],
+    [
+      "Das Zimmer ist groß genug für vier Personen.",
+      "Ordne diese Wörter: enough · large"
+    ],
+    [
+      "Die Suppe ist jetzt kühl genug zum Essen.",
+      "Ordne diese Wörter: enough · cool"
+    ],
+    [
+      "Diese Schuhe sind bequem genug zum Wandern.",
+      "Ordne diese Wörter: enough · comfortable"
+    ],
+    [
+      "Die Anweisungen sind klar genug, um sie zu befolgen.",
+      "Ordne diese Wörter: enough · clear"
+    ]
+  ]
+}

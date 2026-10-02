@@ -1,5 +1,29 @@
 [
   {
+    "word": "lay",
+    "id": "wkt-c43c5e90d22849db3762",
+    "pos": "verb",
+    "gloss": "To install certain building materials, laying one thing on top of another.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
+    "word": "publish",
+    "id": "wkt-472985986658b7d42e84",
+    "pos": "verb",
+    "gloss": "To issue (something, such as printed work) for distribution and/or sale.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "example": null
+  },
+  {
     "id": "wkt-535d9e6308fbb291941e",
     "word": "hinge",
     "pos": "noun",
@@ -6150,5 +6174,3019 @@
     "tags": [],
     "topics": [],
     "example": "Keep in mind that he does not hear too well, so you may have to speak loudly."
+  },
+  {
+    "id": "wkt-281d05b3c9f5b2fdd640",
+    "pos": "noun",
+    "gloss": "An institution dedicated to teaching and learning; an educational institution.",
+    "de": [],
+    "tags": [
+      "Canada",
+      "India",
+      "US",
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "school",
+    "example": null
+  },
+  {
+    "id": "wkt-d0d383dcec6a42309dc4",
+    "pos": "noun",
+    "gloss": "A person who teaches, especially one employed in a school; preceptor.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "teacher",
+    "example": null
+  },
+  {
+    "id": "wkt-fc66847c54beae4774d4",
+    "pos": "noun",
+    "gloss": "A learner at a school under the supervision of a teacher.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "pupil",
+    "example": null
+  },
+  {
+    "id": "wkt-f1b25bd0e718eafdbcc7",
+    "pos": "noun",
+    "gloss": "A room, often in a school, where classes take place.",
+    "de": [
+      "Klassenzimmer",
+      "Klassenraum"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "classroom",
+    "example": null
+  },
+  {
+    "id": "wkt-186824dd283cfe14398c",
+    "pos": "noun",
+    "gloss": "Exercises assigned by a teacher to a student which review concepts studied in class.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "word": "homework",
+    "example": null
+  },
+  {
+    "id": "wkt-a97705fd91ef06c91f0e",
+    "pos": "noun",
+    "gloss": "A particular area of study.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "subject",
+    "example": null
+  },
+  {
+    "id": "wkt-a244f280d0b962a318a1",
+    "pos": "verb",
+    "gloss": "To make plain, manifest, or intelligible; to clear of obscurity; to illustrate the meaning of.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "explain",
+    "example": null
+  },
+  {
+    "id": "wkt-26420c110c5836259d91",
+    "pos": "noun",
+    "gloss": "An institution of higher education that provides facilities for teaching, research, and the conferral of academic degrees across undergraduate, graduate, and often professional levels.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "university",
+    "example": null
+  },
+  {
+    "id": "wkt-bfeaf26e1c9044eb0597",
+    "pos": "noun",
+    "gloss": "A person who is enrolled at a college or university (as contrasted with a pupil or schoolchild attending a primary or secondary school).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "student",
+    "example": null
+  },
+  {
+    "id": "wkt-fffa9ca4bf7045b1165b",
+    "pos": "noun",
+    "gloss": "A spoken lesson or exposition, usually delivered to a group.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "lecture",
+    "example": null
+  },
+  {
+    "id": "wkt-a5474cadac0c1b2e96b6",
+    "pos": "noun",
+    "gloss": "The grounds or property of a school, college, university, business, church, or hospital, often understood to include buildings and other structures.",
+    "de": [],
+    "tags": [
+      "often"
+    ],
+    "topics": [],
+    "word": "campus",
+    "example": null
+  },
+  {
+    "id": "wkt-a519f4200d5f7f498e71",
+    "pos": "noun",
+    "gloss": "A grant-in-aid to a student.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "scholarship",
+    "example": null
+  },
+  {
+    "id": "wkt-a60b8975dd7e490d2c9b",
+    "pos": "noun",
+    "gloss": "A lengthy essay written to establish the validity of a thesis (sense 1.1), especially one submitted in order to complete the requirements for a non-doctoral degree in the US and a doctoral degree in the UK; a dissertation.",
+    "de": [],
+    "tags": [
+      "broadly"
+    ],
+    "topics": [],
+    "word": "thesis",
+    "example": null
+  },
+  {
+    "id": "wkt-8877f1e04ed1d52d4b28",
+    "pos": "noun",
+    "gloss": "A student at a university who has not yet received a degree.",
+    "de": [
+      "Student"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "undergraduate",
+    "example": null
+  },
+  {
+    "id": "wkt-8b4e3690b026e42e1fc0",
+    "pos": "verb",
+    "gloss": "To acquire, or attempt to acquire knowledge or an ability to do something.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "learn",
+    "example": null
+  },
+  {
+    "id": "wkt-47e6031e66974a16bd0f",
+    "pos": "verb",
+    "gloss": "To stop sleeping; to awake.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "wake up",
+    "example": null
+  },
+  {
+    "id": "wkt-eed654f3a82300769103",
+    "pos": "verb",
+    "gloss": "To return to a place.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "come back",
+    "example": null
+  },
+  {
+    "id": "wkt-a12694e3015e0e79c7b9",
+    "pos": "noun",
+    "gloss": "A course of action to be followed regularly; a standard procedure.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "routine",
+    "example": null
+  },
+  {
+    "id": "wkt-6d39c8ecd109c901c03b",
+    "pos": "noun",
+    "gloss": "An action performed repeatedly and automatically, usually without awareness.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "habit",
+    "example": null
+  },
+  {
+    "id": "wkt-eae98d11fef050fcfd4e",
+    "pos": "adv",
+    "gloss": "On occasion: at relatively infrequent intervals, from time to time, sometimes.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "occasionally",
+    "example": null
+  },
+  {
+    "id": "wkt-51143a112b3fa9136acf",
+    "pos": "adv",
+    "gloss": "With constant frequency or pattern.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "regularly",
+    "example": null
+  },
+  {
+    "id": "wkt-cb7c36b9fb76861de2b4",
+    "pos": "adv",
+    "gloss": "On the current day or date.",
+    "de": [],
+    "tags": [
+      "not-comparable"
+    ],
+    "topics": [],
+    "word": "today",
+    "example": null
+  },
+  {
+    "id": "wkt-90fae96916c2fae22e20",
+    "pos": "adv",
+    "gloss": "On the day after the present day.",
+    "de": [
+      "morgen",
+      "moorn",
+      "murgen"
+    ],
+    "tags": [
+      "not-comparable"
+    ],
+    "topics": [],
+    "word": "tomorrow",
+    "example": null
+  },
+  {
+    "id": "wkt-4ca3be0be6d669f0a604",
+    "pos": "adv",
+    "gloss": "On the day before today.",
+    "de": [
+      "gestern"
+    ],
+    "tags": [
+      "not-comparable"
+    ],
+    "topics": [],
+    "word": "yesterday",
+    "example": null
+  },
+  {
+    "id": "wkt-d660d6f19c18c181d96d",
+    "pos": "noun",
+    "gloss": "A unit of time of one twenty-fourth of a day (sixty minutes).",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "time"
+    ],
+    "word": "hour",
+    "example": null
+  },
+  {
+    "id": "wkt-a27c401682320ebfa7b7",
+    "pos": "noun",
+    "gloss": "One of two usually roughly equal parts into which anything may be divided, or considered as divided.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "half",
+    "example": null
+  },
+  {
+    "id": "wkt-2e7eb2dbb81420358cc4",
+    "pos": "noun",
+    "gloss": "Each of four equal parts into which something can be divided; a fourth part.",
+    "de": [],
+    "tags": [
+      "broadly",
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "quarter",
+    "example": null
+  },
+  {
+    "id": "wkt-c4d18cbdae64a9c6567d",
+    "pos": "adv",
+    "gloss": "Two times.",
+    "de": [
+      "zweimal",
+      "doppelt"
+    ],
+    "tags": [
+      "not-comparable"
+    ],
+    "topics": [],
+    "word": "twice",
+    "example": null
+  },
+  {
+    "id": "wkt-dd22bd9463ca2a9daf30",
+    "pos": "det",
+    "gloss": "Consisting of a number more than one (especially, more than two) but not very many.",
+    "de": [
+      "mehrere",
+      "einige"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "several",
+    "example": null
+  },
+  {
+    "id": "wkt-d2fdb2a30f11d11dc9fc",
+    "pos": "adv",
+    "gloss": "Imprecise but close to in quantity or amount.",
+    "de": [
+      "ungefähr",
+      "etwa",
+      "mehr oder weniger"
+    ],
+    "tags": [
+      "not-comparable"
+    ],
+    "topics": [],
+    "word": "approximately",
+    "example": null
+  },
+  {
+    "id": "wkt-513a2f25daf7471b163e",
+    "pos": "noun",
+    "gloss": "An amount of time or a particular time interval.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "duration",
+    "example": null
+  },
+  {
+    "id": "wkt-5fa487a7133a6b4c85a2",
+    "pos": "adv",
+    "gloss": "Occurring at the same time.",
+    "de": [
+      "gleichzeitig"
+    ],
+    "tags": [
+      "not-comparable"
+    ],
+    "topics": [],
+    "word": "simultaneously",
+    "example": null
+  },
+  {
+    "id": "wkt-7f1bf90db20c04ede204",
+    "pos": "noun",
+    "gloss": "Someone or something that reminds.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "reminder",
+    "example": null
+  },
+  {
+    "id": "wkt-9899bc42d59832baa608",
+    "pos": "verb",
+    "gloss": "To plan; to prepare in advance.",
+    "de": [],
+    "tags": [
+      "intransitive",
+      "transitive"
+    ],
+    "topics": [],
+    "word": "arrange",
+    "example": null
+  },
+  {
+    "id": "wkt-1b8dfe993d6143fb9239",
+    "pos": "adj",
+    "gloss": "Punctual or according to schedule; at the planned time.",
+    "de": [
+      "rechtzeitig"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "on time",
+    "example": null
+  },
+  {
+    "id": "wkt-8f95efbb1ac4108c05d5",
+    "pos": "noun",
+    "gloss": "An establishment that sells goods or services to the public; originally only a physical location, but now a virtual establishment as well.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "shop",
+    "example": null
+  },
+  {
+    "id": "wkt-d4d1c78d5613bf609f20",
+    "pos": "noun",
+    "gloss": "The cost required to gain possession of something.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "price",
+    "example": null
+  },
+  {
+    "id": "wkt-ed4a5fcc1e825855169a",
+    "pos": "noun",
+    "gloss": "A wire or plastic container similar in shape to a basket, used for carrying articles for purchase in a shop.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "basket",
+    "example": null
+  },
+  {
+    "id": "wkt-0ba3a2a254815a7d97bc",
+    "pos": "noun",
+    "gloss": "A reduction in price.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "discount",
+    "example": null
+  },
+  {
+    "id": "wkt-4a5f2e315d4995cf3753",
+    "pos": "adj",
+    "gloss": "Able to be afforded; inexpensive or reasonably priced.",
+    "de": [
+      "erschwinglich"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "affordable",
+    "example": null
+  },
+  {
+    "id": "wkt-a8066a2f4c2fc3ab5e25",
+    "pos": "verb",
+    "gloss": "To test the look or fit of (a garment) by wearing it.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "try on",
+    "example": null
+  },
+  {
+    "id": "wkt-f681791d1bd025a30f5f",
+    "pos": "noun",
+    "gloss": "A request for some product or service; a commission to purchase, sell, or supply goods.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "word": "order",
+    "example": null
+  },
+  {
+    "id": "wkt-43b2ec2dbb0eb3a64de4",
+    "pos": "verb",
+    "gloss": "To replace with, as a substitute.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "exchange",
+    "example": null
+  },
+  {
+    "id": "wkt-ad1b57b0a214ae63714b",
+    "pos": "adj",
+    "gloss": "That has suffered damage.",
+    "de": [
+      "beschädigt"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "damaged",
+    "example": null
+  },
+  {
+    "id": "wkt-4f750fe37b031fb4f3b9",
+    "pos": "noun",
+    "gloss": "The act of complaining.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "complaint",
+    "example": null
+  },
+  {
+    "id": "wkt-3a6ed0ab3686aff5aa3a",
+    "pos": "verb",
+    "gloss": "To collect a passenger.",
+    "de": [
+      "abholen",
+      "auflesen",
+      "aufnehmen",
+      "einsammeln",
+      "holen",
+      "aufgreifen"
+    ],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "pick up",
+    "example": null
+  },
+  {
+    "id": "wkt-096ee7285ce5b04b4af3",
+    "pos": "noun",
+    "gloss": "An amount charged for something: the base cost of purchasing some thing, service, etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "fee",
+    "example": null
+  },
+  {
+    "id": "wkt-77dc3dbb9442d3a4d8e0",
+    "pos": "noun",
+    "gloss": "A rough calculation or assessment of the value, size, or cost of something.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "estimate",
+    "example": null
+  },
+  {
+    "id": "wkt-edb00aeb9cf4af7a9367",
+    "pos": "adj",
+    "gloss": "In a state of satisfaction.",
+    "de": [
+      "zufrieden",
+      "befriedigt"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "satisfied",
+    "example": null
+  },
+  {
+    "id": "wkt-2162195b0de6c74349ed",
+    "pos": "noun",
+    "gloss": "An item of value between two or more parties used for the exchange of goods or services.",
+    "de": [],
+    "tags": [
+      "plural",
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "word": "money",
+    "example": null
+  },
+  {
+    "id": "wkt-6d8beac193a17cd91509",
+    "pos": "noun",
+    "gloss": "A piece of currency, usually metallic and in the shape of a disc, but sometimes polygonal, or with a hole in the middle.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "business",
+      "finance",
+      "money"
+    ],
+    "word": "coin",
+    "example": null
+  },
+  {
+    "id": "wkt-0ed446cbf314fd841818",
+    "pos": "verb",
+    "gloss": "To extract (money) from a bank account or other financial deposit.",
+    "de": [
+      "abheben"
+    ],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [
+      "banking",
+      "business",
+      "finance"
+    ],
+    "word": "withdraw",
+    "example": null
+  },
+  {
+    "id": "wkt-265ef92a0e31200adf4b",
+    "pos": "noun",
+    "gloss": "The result of such a procedure; the difference between credit and debit of an account.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "accounting",
+      "business",
+      "finance"
+    ],
+    "word": "balance",
+    "example": null
+  },
+  {
+    "id": "wkt-820bef826839fd866e68",
+    "pos": "verb",
+    "gloss": "To accumulate money or valuables.",
+    "de": [],
+    "tags": [
+      "intransitive",
+      "transitive"
+    ],
+    "topics": [],
+    "word": "save",
+    "example": null
+  },
+  {
+    "id": "wkt-bb1a27522d5bc4ed8741",
+    "pos": "verb",
+    "gloss": "To pay out (money).",
+    "de": [],
+    "tags": [
+      "ambitransitive"
+    ],
+    "topics": [],
+    "word": "spend",
+    "example": null
+  },
+  {
+    "id": "wkt-a5619b7b52e79eefa0b8",
+    "pos": "verb",
+    "gloss": "To receive payment for work.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "earn",
+    "example": null
+  },
+  {
+    "id": "wkt-6730d9e7b1b666432edd",
+    "pos": "noun",
+    "gloss": "Money one earns by working or by capitalising on the work of others.",
+    "de": [
+      "Einkommen"
+    ],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "income",
+    "example": null
+  },
+  {
+    "id": "wkt-6cef765dca3cf76d97fa",
+    "pos": "verb",
+    "gloss": "To incur, stand, or bear without serious detriment, as an act which might under other circumstances be injurious; (usually after an expression of ability, as could, able, difficult) to be able or rich enough; to spare.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "afford",
+    "example": null
+  },
+  {
+    "id": "wkt-7fb8f9dfee612c193005",
+    "pos": "noun",
+    "gloss": "Access to a resource for a period of time, generally for payment.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "subscription",
+    "example": null
+  },
+  {
+    "id": "wkt-c97d59a8fbe658c3281c",
+    "pos": "noun",
+    "gloss": "A sum of money or other property that a natural or legal person borrows from another with the condition that it be returned or repaid over time or at a later date (sometimes with interest).",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "banking",
+      "business",
+      "finance",
+      "law"
+    ],
+    "word": "loan",
+    "example": null
+  },
+  {
+    "id": "wkt-f6ebd112c007c4025eec",
+    "pos": "noun",
+    "gloss": "Money that one person or entity owes or is required to pay to another, generally as a result of a loan or other financial transaction.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "business",
+      "finance"
+    ],
+    "word": "debt",
+    "example": null
+  },
+  {
+    "id": "wkt-a013de693cb21035df96",
+    "pos": "verb",
+    "gloss": "To receive (something) from somebody temporarily, expecting to return it.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "borrow",
+    "example": null
+  },
+  {
+    "id": "wkt-c07e38e6c66ad95ba599",
+    "pos": "verb",
+    "gloss": "To allow to be used by someone temporarily, on condition that it or its equivalent will be returned.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "lend",
+    "example": null
+  },
+  {
+    "id": "wkt-3d11956678e2ec3a5185",
+    "pos": "noun",
+    "gloss": "The amount to be paid for an insurance policy.",
+    "de": [
+      "Versicherungsbeitrag",
+      "Versicherungsprämie"
+    ],
+    "tags": [],
+    "topics": [
+      "business",
+      "insurance"
+    ],
+    "word": "premium",
+    "example": null
+  },
+  {
+    "id": "wkt-a7c2478aadbf5a1c2f68",
+    "pos": "noun",
+    "gloss": "A legal agreement in which a borrower pledges real property as collateral for a loan used to purchase or refinance that property.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "business",
+      "law",
+      "real-estate"
+    ],
+    "word": "mortgage",
+    "example": null
+  },
+  {
+    "id": "wkt-80916792b62d9120b777",
+    "pos": "noun",
+    "gloss": "A programmable electronic device that performs mathematical calculations and logical operations, especially one that can process, store and retrieve large amounts of data very quickly; now especially, a small one for personal or home use employed for manipulating text or graphics, accessing the Internet, or playing games or media.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "computer",
+    "example": null
+  },
+  {
+    "id": "wkt-c94c21ea1d11b12baef2",
+    "pos": "noun",
+    "gloss": "The informational viewing area of electronic devices, where output is displayed.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "screen",
+    "example": null
+  },
+  {
+    "id": "wkt-c72e6e229ff089e9e559",
+    "pos": "noun",
+    "gloss": "A device used to power electric devices, consisting of one or more electrically connected electrochemical cells or (archaically) electrostatic cells.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [
+      "business",
+      "electrical-engineering",
+      "electricity",
+      "electromagnetism",
+      "electronics",
+      "energy",
+      "engineering",
+      "natural-sciences",
+      "physical-sciences",
+      "physics"
+    ],
+    "word": "battery",
+    "example": null
+  },
+  {
+    "id": "wkt-98896ba7ac41d5719c3f",
+    "pos": "verb",
+    "gloss": "To power up, to put into operation, to start, to activate (an appliance, light, mechanism, functionality etc.).",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "turn on",
+    "example": null
+  },
+  {
+    "id": "wkt-9c8f3e6cfe36f9887355",
+    "pos": "adj",
+    "gloss": "Capable of working together without conflict.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "compatible",
+    "example": null
+  },
+  {
+    "id": "wkt-55feadaf55dcc15ec6f0",
+    "pos": "noun",
+    "gloss": "A collection of interlinked web pages on the World Wide Web that are typically accessible from the same base URL and reside on the same server.",
+    "de": [
+      "Website",
+      "Webangebot",
+      "Webauftritt",
+      "Internetauftritt",
+      "Webpräsenz",
+      "Internetpräsenz"
+    ],
+    "tags": [
+      "Internet"
+    ],
+    "topics": [],
+    "word": "website",
+    "example": null
+  },
+  {
+    "id": "wkt-6529dbef4f913fe59854",
+    "pos": "verb",
+    "gloss": "To bring (a thing) up to date.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "update",
+    "example": null
+  },
+  {
+    "id": "wkt-40d60e196b93c02851ec",
+    "pos": "noun",
+    "gloss": "A word relayed to a person to gain admittance to a place or to gain access to information.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "government",
+      "military",
+      "politics",
+      "war"
+    ],
+    "word": "password",
+    "example": null
+  },
+  {
+    "id": "wkt-e37343ca70e8d0191dca",
+    "pos": "noun",
+    "gloss": "Freedom from damaging publicity, public scrutiny, surveillance, and disclosure of personal information, usually by a government or a private organization.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "privacy",
+    "example": null
+  },
+  {
+    "id": "wkt-39db904ad5fc28612bc1",
+    "pos": "noun",
+    "gloss": "authorisation; consent (especially formal consent from someone in authority)",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "permission",
+    "example": null
+  },
+  {
+    "id": "wkt-e9a84cc2958793230a8c",
+    "pos": "adj",
+    "gloss": "Free from attack or danger; protected.",
+    "de": [
+      "sicher",
+      "geschützt",
+      "beschützt"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "secure",
+    "example": null
+  },
+  {
+    "id": "wkt-a0b9fa2f3bf114be7c09",
+    "pos": "noun",
+    "gloss": "A fraudulent or dishonest deal. A swindle.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "scam",
+    "example": null
+  },
+  {
+    "id": "wkt-42429b5ac28180cda32f",
+    "pos": "adj",
+    "gloss": "Arousing suspicion.",
+    "de": [
+      "verdächtig"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "suspicious",
+    "example": null
+  },
+  {
+    "id": "wkt-697abec049e4bcd7321b",
+    "pos": "verb",
+    "gloss": "To confirm or test the truth or accuracy of something.",
+    "de": [
+      "überprüfen",
+      "verifizieren"
+    ],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "verify",
+    "example": null
+  },
+  {
+    "id": "wkt-c4278f2dd60b45c78e29",
+    "pos": "noun",
+    "gloss": "Voluntary agreement or permission.",
+    "de": [],
+    "tags": [
+      "countable",
+      "intransitive",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "consent",
+    "example": null
+  },
+  {
+    "id": "wkt-7b44106e4e46674a35a1",
+    "pos": "noun",
+    "gloss": "The act or art of sustaining and propelling the body in water.",
+    "de": [
+      "Schwimmen"
+    ],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "swimming",
+    "example": null
+  },
+  {
+    "id": "wkt-6960efa1de756d83ba27",
+    "pos": "noun",
+    "gloss": "The activity of running as a form of exercise, as a sport, or for any other reason.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "running",
+    "example": null
+  },
+  {
+    "id": "wkt-f0105bdc35f53e801916",
+    "pos": "noun",
+    "gloss": "The activity of riding cycles, especially bicycles (for transport, sport, physical exercise, recreation, tourism...)",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "cycling",
+    "example": null
+  },
+  {
+    "id": "wkt-0739c896d32412c0c3d5",
+    "pos": "noun",
+    "gloss": "Association football, also called soccer: a game in which two teams each contend to get a round ball into the other team's goal primarily by kicking the ball.",
+    "de": [],
+    "tags": [
+      "Africa",
+      "Caribbean",
+      "New-Zealand",
+      "South-Asia",
+      "UK",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "football",
+    "example": null
+  },
+  {
+    "id": "wkt-04034311a9cd24e50442",
+    "pos": "noun",
+    "gloss": "A sport in which two opposing teams of five players strive to put a ball through a hoop.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [
+      "hobbies",
+      "lifestyle",
+      "sports"
+    ],
+    "word": "basketball",
+    "example": null
+  },
+  {
+    "id": "wkt-6c13160c5dae99b6e67d",
+    "pos": "noun",
+    "gloss": "A sport played by two players (or four in doubles), who alternately strike the ball over a net using racquets.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [
+      "hobbies",
+      "lifestyle",
+      "sports"
+    ],
+    "word": "tennis",
+    "example": null
+  },
+  {
+    "id": "wkt-651b6595845efead0ab3",
+    "pos": "noun",
+    "gloss": "A hard, protective head covering, typically part of armour.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "business",
+      "clothing",
+      "fashion",
+      "lifestyle",
+      "manufacturing",
+      "textiles"
+    ],
+    "word": "helmet",
+    "example": null
+  },
+  {
+    "id": "wkt-413ea90be315f80549fe",
+    "pos": "noun",
+    "gloss": "A place arranged for playing the games of tennis, basketball, handball, badminton, volleyball, squash and some other games",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "hobbies",
+      "lifestyle",
+      "sports"
+    ],
+    "word": "court",
+    "example": null
+  },
+  {
+    "id": "wkt-bb433f7425b09fae5858",
+    "pos": "noun",
+    "gloss": "Any items used in equipping something or someone, for example things needed for an expedition or voyage.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "word": "equipment",
+    "example": null
+  },
+  {
+    "id": "wkt-b68e6294c3d91b36945e",
+    "pos": "noun",
+    "gloss": "Activity intended to improve physical, or sometimes mental, strength and fitness.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "exercise",
+    "example": null
+  },
+  {
+    "id": "wkt-177e50019230df25ac48",
+    "pos": "verb",
+    "gloss": "To extend one’s limbs or another part of the body, for example in order to improve the elasticity of one's muscles.",
+    "de": [],
+    "tags": [
+      "intransitive",
+      "transitive"
+    ],
+    "topics": [],
+    "word": "stretch",
+    "example": null
+  },
+  {
+    "id": "wkt-31974a1883ca00d8771d",
+    "pos": "verb",
+    "gloss": "To exercise, especially by lifting weights.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "work out",
+    "example": null
+  },
+  {
+    "id": "wkt-82b7ff1ee6bc3f9e014c",
+    "pos": "noun",
+    "gloss": "The quality or degree of being strong.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "strength",
+    "example": null
+  },
+  {
+    "id": "wkt-5d8cc23a5a07f06ad6d6",
+    "pos": "noun",
+    "gloss": "Speed or velocity in general.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "pace",
+    "example": null
+  },
+  {
+    "id": "wkt-40f88ca8a39443936a89",
+    "pos": "verb",
+    "gloss": "To get better, to regain health or prosperity.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "recover",
+    "example": null
+  },
+  {
+    "id": "wkt-37fadbf51e6bf33790df",
+    "pos": "adj",
+    "gloss": "In good shape; physically well.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "fit",
+    "example": null
+  },
+  {
+    "id": "wkt-a621e1265591cd7e35e0",
+    "pos": "adj",
+    "gloss": "Very tired; zonked (out).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "exhausted",
+    "example": null
+  },
+  {
+    "id": "wkt-8f81a61283731f330e22",
+    "pos": "verb",
+    "gloss": "To become better.",
+    "de": [
+      "sich verbessern"
+    ],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "improve",
+    "example": null
+  },
+  {
+    "id": "wkt-bf020dc0f52ae9af19fb",
+    "pos": "noun",
+    "gloss": "Any group of people involved in the same activity, especially sports or work.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "team",
+    "example": null
+  },
+  {
+    "id": "wkt-a2c48a00096b12ba78f2",
+    "pos": "noun",
+    "gloss": "A competitive sporting event such as a boxing meet, a baseball game, or a cricket match.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "hobbies",
+      "lifestyle",
+      "sports"
+    ],
+    "word": "match",
+    "example": null
+  },
+  {
+    "id": "wkt-89205b66b31de24be7fd",
+    "pos": "noun",
+    "gloss": "The number of points accrued by each of the participants in a game, expressed as a ratio or a series of numbers.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "score",
+    "example": null
+  },
+  {
+    "id": "wkt-7219aec5923dc125c281",
+    "pos": "verb",
+    "gloss": "To achieve victory.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "win",
+    "example": null
+  },
+  {
+    "id": "wkt-4cf53afc3eb5b7695758",
+    "pos": "verb",
+    "gloss": "To be defeated (in a game, competition, contest, etc.)",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "lose",
+    "example": null
+  },
+  {
+    "id": "wkt-0ec20e6499ef17949e76",
+    "pos": "noun",
+    "gloss": "The result of a contest that neither side has won.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "draw",
+    "example": null
+  },
+  {
+    "id": "wkt-63a179acfdf9b2d42469",
+    "pos": "noun",
+    "gloss": "An umpire or judge; an official who makes sure the rules are followed during a game.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "hobbies",
+      "lifestyle",
+      "sports"
+    ],
+    "word": "referee",
+    "example": null
+  },
+  {
+    "id": "wkt-d46d9798f28c89694647",
+    "pos": "noun",
+    "gloss": "One who opposes another physically (in a fight, sport, game, or competition).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "opponent",
+    "example": null
+  },
+  {
+    "id": "wkt-fc315ee45d2828059c4e",
+    "pos": "noun",
+    "gloss": "A series of games; either the same game played many times, or a succession of games related by a single theme; played competitively to determine a single winning team or individual.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "tournament",
+    "example": null
+  },
+  {
+    "id": "wkt-1db18c38794bdf8455f3",
+    "pos": "verb",
+    "gloss": "To compete successfully in some stage of a competition and become eligible for the next stage.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "qualify",
+    "example": null
+  },
+  {
+    "id": "wkt-518f3168b72c7b2a3345",
+    "pos": "noun",
+    "gloss": "An activity that one enjoys doing in one's spare time.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "hobby",
+    "example": null
+  },
+  {
+    "id": "wkt-a333f9821c2adb4f3aff",
+    "pos": "verb",
+    "gloss": "To produce (a figure, line, picture, representation of something, etc.) with a piece of chalk, a crayon, a pen, a pencil, or other instrument.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "draw",
+    "example": null
+  },
+  {
+    "id": "wkt-bd22f5c6ef4a6a21ff67",
+    "pos": "verb",
+    "gloss": "To create (an image) with paints.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "paint",
+    "example": null
+  },
+  {
+    "id": "wkt-7036ed87fd167a2831fd",
+    "pos": "noun",
+    "gloss": "The art and technology of producing images on photosensitive surfaces, and its digital counterpart.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "word": "photography",
+    "example": null
+  },
+  {
+    "id": "wkt-6433c23e2e7d5d72d309",
+    "pos": "adj",
+    "gloss": "Original, expressive and imaginative.",
+    "de": [
+      "kreativ",
+      "originell"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "creative",
+    "example": null
+  },
+  {
+    "id": "wkt-9b994112090041765a87",
+    "pos": "noun",
+    "gloss": "The act or process of an elevating or stimulating influence upon the intellect, emotions or creativity.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "inspiration",
+    "example": null
+  },
+  {
+    "id": "wkt-5ae2fad1cb808808fe1b",
+    "pos": "noun",
+    "gloss": "A board game for two players, each beginning with sixteen chess pieces moving according to fixed rules across a chessboard with the objective to checkmate the opposing king.",
+    "de": [
+      "Schach",
+      "Schachspiel"
+    ],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "word": "chess",
+    "example": null
+  },
+  {
+    "id": "wkt-f525c7338934bdc88f7f",
+    "pos": "noun",
+    "gloss": "Often preceded by a descriptive word: a game or toy, or a problem, requiring some effort to complete or work out, which is intended as a pastime and/or to test one's mental ability.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "word": "puzzle",
+    "example": null
+  },
+  {
+    "id": "wkt-fdcea481d93ea3fd374a",
+    "pos": "noun",
+    "gloss": "A die.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "word": "dice",
+    "example": null
+  },
+  {
+    "id": "wkt-3b37d08b8e93a637b508",
+    "pos": "noun",
+    "gloss": "One's chance to make a move in a game having two or more players.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "turn",
+    "example": null
+  },
+  {
+    "id": "wkt-cfb716023439e551264e",
+    "pos": "noun",
+    "gloss": "A regulation, law, guideline.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "rule",
+    "example": null
+  },
+  {
+    "id": "wkt-dfa46e568a52b825e912",
+    "pos": "verb",
+    "gloss": "To find an answer or solution to a problem or question; to work out.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "solve",
+    "example": null
+  },
+  {
+    "id": "wkt-7e3b3b81f07cac766ccc",
+    "pos": "noun",
+    "gloss": "A difficult task, especially one that the person making the attempt finds more enjoyable because of that difficulty.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "challenge",
+    "example": null
+  },
+  {
+    "id": "wkt-075779d33e8e750710db",
+    "pos": "verb",
+    "gloss": "To rest and become relieved of stress.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "relax",
+    "example": null
+  },
+  {
+    "id": "wkt-0d60b0f2b7ab5feb79cf",
+    "pos": "adj",
+    "gloss": "Very amusing; that entertains.",
+    "de": [
+      "unterhaltsam"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "entertaining",
+    "example": null
+  },
+  {
+    "id": "wkt-660086ed89e4316d6c67",
+    "pos": "noun",
+    "gloss": "Free time, time free from work or duties.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "leisure",
+    "example": null
+  },
+  {
+    "id": "wkt-f30bb08d1e225e24a150",
+    "pos": "verb",
+    "gloss": "To ask for the presence or participation of someone or something.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "invite",
+    "example": null
+  },
+  {
+    "id": "wkt-97a84eee01b0fafb39b7",
+    "pos": "noun",
+    "gloss": "A document or verbal message conveying an invitation.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "invitation",
+    "example": null
+  },
+  {
+    "id": "wkt-4368dabd4f4037640024",
+    "pos": "verb",
+    "gloss": "To spend time with somebody; to regularly meet with somebody.",
+    "de": [],
+    "tags": [
+      "idiomatic",
+      "intransitive",
+      "often",
+      "slang"
+    ],
+    "topics": [],
+    "word": "hang out",
+    "example": null
+  },
+  {
+    "id": "wkt-6c2e19b27e72a20b75a2",
+    "pos": "noun",
+    "gloss": "An informal social gathering, usually in a natural outdoor setting, to which the participants bring their own food and drink.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "picnic",
+    "example": null
+  },
+  {
+    "id": "wkt-ddca4ab7748943d685e8",
+    "pos": "noun",
+    "gloss": "An event or series of special events centred on the celebration or promotion of some theme or aspect of the community, often held at regular intervals.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "festival",
+    "example": null
+  },
+  {
+    "id": "wkt-ba61e6610d4f7b6cb083",
+    "pos": "noun",
+    "gloss": "A theater, auditorium, arena, or other area designated for sporting or entertainment events.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "venue",
+    "example": null
+  },
+  {
+    "id": "wkt-2d24db11a4358506c0d8",
+    "pos": "noun",
+    "gloss": "Permission to enter, or the entrance itself; admittance; entrance; access",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "admission",
+    "example": null
+  },
+  {
+    "id": "wkt-08a65a11ce7a19c09e7b",
+    "pos": "noun",
+    "gloss": "A work of prose fiction, longer than a novella.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "novel",
+    "example": null
+  },
+  {
+    "id": "wkt-57a73b685ef1335db586",
+    "pos": "noun",
+    "gloss": "Someone who writes books for a living.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "author",
+    "example": null
+  },
+  {
+    "id": "wkt-d8503db68f1426ecf125",
+    "pos": "noun",
+    "gloss": "One of the main sections into which a published work is divided, especially a book.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "chapter",
+    "example": null
+  },
+  {
+    "id": "wkt-132c22401dac67b2b52a",
+    "pos": "noun",
+    "gloss": "The course of a story, comprising a series of incidents which are gradually unfolded, sometimes by unexpected means.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "human-sciences",
+      "linguistics",
+      "narratology",
+      "sciences"
+    ],
+    "word": "plot",
+    "example": null
+  },
+  {
+    "id": "wkt-4c8edf219cd0b322b6ac",
+    "pos": "noun",
+    "gloss": "A being involved in the action of a story; a persona.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "word": "character",
+    "example": null
+  },
+  {
+    "id": "wkt-cfb7ae8b713b07a91384",
+    "pos": "noun",
+    "gloss": "The time, place and circumstance in which something (such as a story or picture) is set; context; scenario.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "setting",
+    "example": null
+  },
+  {
+    "id": "wkt-81a8b622e8df18d48376",
+    "pos": "noun",
+    "gloss": "The sequence of still images itself, which produces a moving image when played; a movie.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "word": "film",
+    "example": null
+  },
+  {
+    "id": "wkt-5b6e3b0afe532f40f372",
+    "pos": "noun",
+    "gloss": "A film, TV program, publication etc. which presents a social, political, scientific or historical subject in a factual or informative manner.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "documentary",
+    "example": null
+  },
+  {
+    "id": "wkt-642dcfde47d7e5042584",
+    "pos": "verb",
+    "gloss": "To bestow commendation on; to represent favorably; to suggest, endorse or encourage as an appropriate choice.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "recommend",
+    "example": null
+  },
+  {
+    "id": "wkt-59472642eee79a4ccb9c",
+    "pos": "noun",
+    "gloss": "A person who sings, often professionally.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "singer",
+    "example": null
+  },
+  {
+    "id": "wkt-f18254e48bc2040b2908",
+    "pos": "noun",
+    "gloss": "A group of musicians who perform together as an ensemble; sometimes, such a group working for a professional recording artist.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "band",
+    "example": null
+  },
+  {
+    "id": "wkt-dbd6b6f69feec49ba828",
+    "pos": "noun",
+    "gloss": "The words to a song (or other vocal music).",
+    "de": [],
+    "tags": [
+      "plural",
+      "plural-only"
+    ],
+    "topics": [],
+    "word": "lyrics",
+    "example": null
+  },
+  {
+    "id": "wkt-aba77d559b442551926e",
+    "pos": "noun",
+    "gloss": "The variation of strong and weak elements (such as duration, accent) of sounds, notably in speech or music, over time; a beat or meter.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "rhythm",
+    "example": null
+  },
+  {
+    "id": "wkt-7b536c6ac0a41a84a785",
+    "pos": "noun",
+    "gloss": "A group of people within hearing; specifically, a large gathering of people listening to or watching a performance, speech, etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "audience",
+    "example": null
+  },
+  {
+    "id": "wkt-0bf00d8b274fc71da833",
+    "pos": "noun",
+    "gloss": "A live show or concert.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "art",
+      "arts"
+    ],
+    "word": "performance",
+    "example": null
+  },
+  {
+    "id": "wkt-69a4741ba06b1492e6c5",
+    "pos": "noun",
+    "gloss": "A large-scale public showing of objects or products.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "exhibition",
+    "example": null
+  },
+  {
+    "id": "wkt-138038186fdee5fac419",
+    "pos": "noun",
+    "gloss": "An establishment that buys, sells, and displays works of art.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "gallery",
+    "example": null
+  },
+  {
+    "id": "wkt-e56a56127c7e02fefae9",
+    "pos": "noun",
+    "gloss": "A three-dimensional work of art created by shaping malleable objects and letting them harden or by chipping away pieces from a rock (sculpting).",
+    "de": [],
+    "tags": [
+      "countable",
+      "usually"
+    ],
+    "topics": [],
+    "word": "sculpture",
+    "example": null
+  },
+  {
+    "id": "wkt-60225f259c5d66ff6c88",
+    "pos": "verb",
+    "gloss": "To explain or tell the meaning of; to translate orally into intelligible or familiar language or terms. applied especially to language, but also to dreams, signs, conduct, mysteries, etc.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "interpret",
+    "example": null
+  },
+  {
+    "id": "wkt-02bc605b342fb58935c2",
+    "pos": "noun",
+    "gloss": "Information about current events disseminated by the media.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "news",
+    "example": null
+  },
+  {
+    "id": "wkt-e66010606917f6030a7b",
+    "pos": "noun",
+    "gloss": "A publication, usually published daily or weekly, containing news and other articles. Traditionally a print publication typically printed on cheap, low-quality paper; today usually digital and often also available in print.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "word": "newspaper",
+    "example": null
+  },
+  {
+    "id": "wkt-f96dc76ab79b6bc51814",
+    "pos": "noun",
+    "gloss": "A heading or title at the top of a page or section of text; especially, a brief line in large letters summarising or drawing attention to the following article or similar in a magazine or newspaper.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "journalism",
+      "media"
+    ],
+    "word": "headline",
+    "example": null
+  },
+  {
+    "id": "wkt-6d03f5717359afddf9fd",
+    "pos": "noun",
+    "gloss": "A reporter, someone who professionally reports on news and current events.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "journalist",
+    "example": null
+  },
+  {
+    "id": "wkt-b002a19f05d10b87747e",
+    "pos": "noun",
+    "gloss": "A piece of information describing, or an account of certain events given or presented to someone, with the most common adpositions being by (referring to creator of the report) and on (referring to the subject).",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "report",
+    "example": null
+  },
+  {
+    "id": "wkt-5552db03eb1839c5ad20",
+    "pos": "noun",
+    "gloss": "The person, place, or thing from which something (information, goods, etc.) comes or is acquired.",
+    "de": [
+      "Quelle",
+      "Ursprung"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "source",
+    "example": null
+  },
+  {
+    "id": "wkt-0875be522aa5f21a44ee",
+    "pos": "verb",
+    "gloss": "To transmit a message or signal through radio waves or electronic means.",
+    "de": [
+      "senden",
+      "verbreiten",
+      "ausstrahlen",
+      "übertragen"
+    ],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "broadcast",
+    "example": null
+  },
+  {
+    "id": "wkt-5cd868499737f12ec8bc",
+    "pos": "adj",
+    "gloss": "Deceptive or tending to mislead or create a false impression, even if technically true.",
+    "de": [
+      "irreführend",
+      "missverständlich",
+      "verwirrend"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "misleading",
+    "example": null
+  },
+  {
+    "id": "wkt-7d45032237ff86d77baf",
+    "pos": "noun",
+    "gloss": "The amount and type of attention given to an event or topic in news media or other media.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "journalism",
+      "media"
+    ],
+    "word": "coverage",
+    "example": null
+  },
+  {
+    "id": "wkt-8d383f30f23d3fc0c8d6",
+    "pos": "noun",
+    "gloss": "A group sharing common characteristics, such as the same language, law, religion, or tradition.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "word": "community",
+    "example": null
+  },
+  {
+    "id": "wkt-4ded98e5e651c1e0c709",
+    "pos": "noun",
+    "gloss": "One who enters into, or offers themselves for, any service of their own free will, especially when done without pay.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "volunteer",
+    "example": null
+  },
+  {
+    "id": "wkt-424ef19bf9d60c75a791",
+    "pos": "verb",
+    "gloss": "To make a donation; to give away something of value to support or contribute towards a cause or for the benefit of another.",
+    "de": [
+      "spenden",
+      "stiften",
+      "schenken"
+    ],
+    "tags": [
+      "ambitransitive"
+    ],
+    "topics": [],
+    "word": "donate",
+    "example": null
+  },
+  {
+    "id": "wkt-9db05a64048f3bd84d24",
+    "pos": "verb",
+    "gloss": "To be a part of a group.",
+    "de": [],
+    "tags": [
+      "intransitive",
+      "with-to"
+    ],
+    "topics": [],
+    "word": "belong",
+    "example": null
+  },
+  {
+    "id": "wkt-8c23b6a37ea1a78fcdc6",
+    "pos": "noun",
+    "gloss": "A variety; diverse types or examples.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "diversity",
+    "example": null
+  },
+  {
+    "id": "wkt-70c2a5269791932236e6",
+    "pos": "noun",
+    "gloss": "The act of including, i.e. adding or annexing, (something) to a group, set, or total.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "inclusion",
+    "example": null
+  },
+  {
+    "id": "wkt-1402cfa8d49e6d723577",
+    "pos": "noun",
+    "gloss": "A condition or state (of social, cultural, or legal matters) that is not equal; especially, such a condition that is thereby also unfair.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "inequality",
+    "example": null
+  },
+  {
+    "id": "wkt-13c9440f9fd91898ddb4",
+    "pos": "noun",
+    "gloss": "Differential treatment of an individual or group to their disadvantage; treatment or consideration based on class or category rather than individual merit; partiality; prejudice; bigotry.",
+    "de": [],
+    "tags": [
+      "countable",
+      "sometimes",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "discrimination",
+    "example": null
+  },
+  {
+    "id": "wkt-c46b0abece695e249775",
+    "pos": "noun",
+    "gloss": "The body with the power to make and/or enforce laws to control a country, land area, people or organization.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "government",
+    "example": null
+  },
+  {
+    "id": "wkt-2746b357fb0b0e6e90c3",
+    "pos": "noun",
+    "gloss": "A process of choosing a leader, members of parliament, councillors, or other representatives by popular vote.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "election",
+    "example": null
+  },
+  {
+    "id": "wkt-7aaa9d0f8b7f5d0bef36",
+    "pos": "verb",
+    "gloss": "To cast a vote; to assert a formalized choice in an election.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "vote",
+    "example": null
+  },
+  {
+    "id": "wkt-94d24cccfc061b494411",
+    "pos": "noun",
+    "gloss": "A person who seeks to be elected or appointed to a position or privilege.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "candidate",
+    "example": null
+  },
+  {
+    "id": "wkt-aabbdb5fb939e770714e",
+    "pos": "noun",
+    "gloss": "In many countries, the legislative branch of government, a deliberative assembly or set of assemblies whose elected or appointed members meet to debate the major political issues of the day, make, amend, and repeal laws, authorize the executive branch of government to collect and spend money, and in some cases exercise judicial powers; a legislature.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "parliament",
+    "example": null
+  },
+  {
+    "id": "wkt-3aac9b60eb82d7a055ae",
+    "pos": "noun",
+    "gloss": "The chief executive of the municipal government of a city, borough, etc., formerly (historical) usually appointed as a caretaker by European royal courts but now usually appointed or elected locally.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "mayor",
+    "example": null
+  },
+  {
+    "id": "wkt-a4eaf0e84ecfa6201b99",
+    "pos": "noun",
+    "gloss": "A principle of behaviour, conduct which an entity (government, organization, etc.) applies or seeks to follow, especially as formally expressed by an authoritative body.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "policy",
+    "example": null
+  },
+  {
+    "id": "wkt-fa47a044fb08c4a6eebf",
+    "pos": "noun",
+    "gloss": "More than half (50%) of some group.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "majority",
+    "example": null
+  },
+  {
+    "id": "wkt-054dfcf43c7c541724a0",
+    "pos": "noun",
+    "gloss": "A political party or movement opposed to the party or government in power.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "government",
+      "politics"
+    ],
+    "word": "opposition",
+    "example": null
+  },
+  {
+    "id": "wkt-8f407adf7057960c3136",
+    "pos": "noun",
+    "gloss": "A direct popular vote on a proposed law or constitutional amendment.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "government",
+      "politics"
+    ],
+    "word": "referendum",
+    "example": null
+  },
+  {
+    "id": "wkt-ac87336e98a9735d5ce3",
+    "pos": "noun",
+    "gloss": "A belief, judgment or perspective that a person has formed, either through objective or subjective reasoning, about a topic, issue, person or thing.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "opinion",
+    "example": null
+  },
+  {
+    "id": "wkt-f7bd437b08e76d23ff0c",
+    "pos": "verb",
+    "gloss": "To yield assent to; to approve.",
+    "de": [],
+    "tags": [
+      "Ireland",
+      "UK",
+      "transitive"
+    ],
+    "topics": [],
+    "word": "agree",
+    "example": null
+  },
+  {
+    "id": "wkt-265b2273ee0796f1b77f",
+    "pos": "verb",
+    "gloss": "To fail to agree; to have a different opinion or belief.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "disagree",
+    "example": null
+  },
+  {
+    "id": "wkt-d5ed8205245dcef24ef9",
+    "pos": "noun",
+    "gloss": "A fact or statement used to support a proposition; a reason.",
+    "de": [],
+    "tags": [
+      "also",
+      "countable",
+      "figuratively"
+    ],
+    "topics": [],
+    "word": "argument",
+    "example": null
+  },
+  {
+    "id": "wkt-c797b881e79105944823",
+    "pos": "noun",
+    "gloss": "Facts or observations presented in support of an assertion.",
+    "de": [
+      "Beweis",
+      "Indiz"
+    ],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "word": "evidence",
+    "example": null
+  },
+  {
+    "id": "wkt-13a425258190598f1d1f",
+    "pos": "noun",
+    "gloss": "A new statement of something one believes to be the truth, usually when the statement has yet to be verified or without valid evidence provided.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "claim",
+    "example": null
+  },
+  {
+    "id": "wkt-117cd6139a11ed60b1a5",
+    "pos": "noun",
+    "gloss": "The settlement of differences by arbitration or by consent reached by mutual concessions.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "compromise",
+    "example": null
+  },
+  {
+    "id": "wkt-ec3f547e420332597e40",
+    "pos": "noun",
+    "gloss": "The act of taking for granted, or supposing a thing without proof; a supposition; an unwarrantable claim.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "assumption",
+    "example": null
+  },
+  {
+    "id": "wkt-57814cb636eeb8bae073",
+    "pos": "noun",
+    "gloss": "A blank document or template to be filled in by the user.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "form",
+    "example": null
+  },
+  {
+    "id": "wkt-7a1590cbeb43ee57032e",
+    "pos": "noun",
+    "gloss": "A petition, entreaty, or other request, with the adposition for denoting the subject matter.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "law"
+    ],
+    "word": "application",
+    "example": null
+  },
+  {
+    "id": "wkt-c90fdb937f7334d643fd",
+    "pos": "noun",
+    "gloss": "A person's name, written by that person, used as identification or to signify approval of accompanying material, such as a legal contract.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "signature",
+    "example": null
+  },
+  {
+    "id": "wkt-3439fa24d0bb821eb69d",
+    "pos": "noun",
+    "gloss": "A document containing a certified statement.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "certificate",
+    "example": null
+  },
+  {
+    "id": "wkt-eaf87353ba451576f384",
+    "pos": "verb",
+    "gloss": "To complete a form or questionnaire with requested information.",
+    "de": [],
+    "tags": [
+      "UK",
+      "idiomatic",
+      "transitive"
+    ],
+    "topics": [],
+    "word": "fill in",
+    "example": null
+  },
+  {
+    "id": "wkt-0834aa84f25b43195d50",
+    "pos": "verb",
+    "gloss": "To enter or put forward for approval, consideration, marking etc.",
+    "de": [],
+    "tags": [
+      "ambitransitive"
+    ],
+    "topics": [],
+    "word": "submit",
+    "example": null
+  },
+  {
+    "id": "wkt-2b1d62f6b6a916c06559",
+    "pos": "adj",
+    "gloss": "Acceptable, proper or correct; in accordance with the rules.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "valid",
+    "example": null
+  },
+  {
+    "id": "wkt-c9c5edadff0683226394",
+    "pos": "verb",
+    "gloss": "To enter in a register; to enlist.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "register",
+    "example": null
+  },
+  {
+    "id": "wkt-e4e0594bc4da16f011b2",
+    "pos": "noun",
+    "gloss": "The place where one lives (resides); one's home.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "residence",
+    "example": null
+  },
+  {
+    "id": "wkt-f1304ecdb57f931835cc",
+    "pos": "noun",
+    "gloss": "An artifact or document rendering something allowed or legal.",
+    "de": [
+      "Genehmigung",
+      "Erlaubnis"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "permit",
+    "example": null
+  },
+  {
+    "id": "wkt-64c7a0645b0e61ea8de7",
+    "pos": "adj",
+    "gloss": "Allowed to and meeting the necessary conditions required to participate in or be chosen for something.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "eligible",
+    "example": null
+  },
+  {
+    "id": "wkt-7969441e529136b4737b",
+    "pos": "noun",
+    "gloss": "A necessity or prerequisite; something required or obligatory. Its adpositions are generally of in relation to who or what has given it, on in relation to whom or what it is given to, and for in relation to what is required.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "requirement",
+    "example": null
+  },
+  {
+    "id": "wkt-aaaaf06de74296f250f2",
+    "pos": "noun",
+    "gloss": "An application to a superior court or judge for a decision or order by an inferior court or judge to be reviewed and overturned.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "law"
+    ],
+    "word": "appeal",
+    "example": null
+  },
+  {
+    "id": "wkt-fe22527d4abe15ddb2f5",
+    "pos": "noun",
+    "gloss": "A legal, just or moral entitlement.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "right",
+    "example": null
+  },
+  {
+    "id": "wkt-ef635b925a31c298bcf1",
+    "pos": "noun",
+    "gloss": "That which one is morally or legally obligated to do.",
+    "de": [
+      "Pflicht"
+    ],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "duty",
+    "example": null
+  },
+  {
+    "id": "wkt-d3d37db277ada968ae82",
+    "pos": "adj",
+    "gloss": "Being established, permitted, required or prescribed by law.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "legal",
+    "example": null
+  },
+  {
+    "id": "wkt-6df927db7111d2214b36",
+    "pos": "adj",
+    "gloss": "Contrary to, forbidden, or not authorized by law, especially criminal law.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "illegal",
+    "example": null
+  },
+  {
+    "id": "wkt-5d1e73ca1373e2dad4bb",
+    "pos": "noun",
+    "gloss": "Someone called to give evidence in a court.",
+    "de": [
+      "Zeuge",
+      "Zeugin"
+    ],
+    "tags": [
+      "countable"
+    ],
+    "topics": [
+      "law"
+    ],
+    "word": "witness",
+    "example": null
+  },
+  {
+    "id": "wkt-030ea0a11fa7a7a2f280",
+    "pos": "noun",
+    "gloss": "The persons officially assembled under authority of law, at the appropriate time and place, for the administration of justice; an official assembly, legally met together for the transaction of judicial business; a judge or judges sitting for the hearing or trial of cases.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "law"
+    ],
+    "word": "court",
+    "example": null
+  },
+  {
+    "id": "wkt-8a5b55272ff6d8d6c852",
+    "pos": "noun",
+    "gloss": "A professional person qualified (as by a law degree or bar exam) and authorized to practice law as an attorney-at-law, solicitor, advocate, barrister or equivalent, i.e. represent parties in lawsuits or trials and give legal advice.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "lawyer",
+    "example": null
+  },
+  {
+    "id": "wkt-439d61b4670e89879094",
+    "pos": "noun",
+    "gloss": "An obligation, debt or responsibility owed to someone.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "liability",
+    "example": null
+  },
+  {
+    "id": "wkt-917a7207529164cf3fbd",
+    "pos": "noun",
+    "gloss": "The collective discipline of study or learning acquired through the scientific method; the sum of knowledge gained from such methods and discipline.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "science",
+    "example": null
+  },
+  {
+    "id": "wkt-e445e246a7d7acba36cf",
+    "pos": "noun",
+    "gloss": "One whose activities make use of the scientific method to answer questions regarding the measurable universe. A scientist may be involved in original research, or make use of the results of the research of others.",
+    "de": [
+      "Wissenschaftler",
+      "Wissenschaftlerin",
+      "Wissenschafter",
+      "Wissenschafterin"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "scientist",
+    "example": null
+  },
+  {
+    "id": "wkt-85b3db1fd3db9c692644",
+    "pos": "noun",
+    "gloss": "A test under controlled conditions made to either demonstrate a known truth, examine the validity of a hypothesis, or determine the efficacy or likelihood of something previously untried.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "experiment",
+    "example": null
+  },
+  {
+    "id": "wkt-76abcda642e9ed69b643",
+    "pos": "verb",
+    "gloss": "To notice or view, especially carefully or with attention to detail.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "observe",
+    "example": null
+  },
+  {
+    "id": "wkt-e67c553d997bd27f9477",
+    "pos": "noun",
+    "gloss": "Material recorded and known or assumed as facts and used as a basis for reasoning, discussion, or calculation, represented especially in the form of numbers, and usually structured (such as statistics).",
+    "de": [],
+    "tags": [
+      "collective",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "data",
+    "example": null
+  },
+  {
+    "id": "wkt-ed3935145640121eb4d9",
+    "pos": "noun",
+    "gloss": "A tentative conjecture explaining an observation, phenomenon or scientific problem and that can be tested by further observation, investigation, or experimentation.",
+    "de": [],
+    "tags": [],
+    "topics": [
+      "sciences"
+    ],
+    "word": "hypothesis",
+    "example": null
+  },
+  {
+    "id": "wkt-fca2239ebf654bd0e99c",
+    "pos": "noun",
+    "gloss": "A part or snippet of something taken or presented for inspection, or shown as evidence of the quality of the whole; a specimen.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "sample",
+    "example": null
+  },
+  {
+    "id": "wkt-fdeaecb3a7634dde384c",
+    "pos": "noun",
+    "gloss": "A decision reached after careful thought.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "conclusion",
+    "example": null
+  },
+  {
+    "id": "wkt-daee312cd04594355402",
+    "pos": "noun",
+    "gloss": "The natural world or ecosystem.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "environment",
+    "example": null
+  },
+  {
+    "id": "wkt-3530db9fb7b9f3bef36d",
+    "pos": "noun",
+    "gloss": "Physical contamination, now especially the contamination of the environment by harmful substances, or by disruptive levels of noise, light etc.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "word": "pollution",
+    "example": null
+  },
+  {
+    "id": "wkt-7fd522c15118d4732c9a",
+    "pos": "noun",
+    "gloss": "Excess of material, useless by-products, or damaged, unsaleable products; garbage; rubbish.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "waste",
+    "example": null
+  },
+  {
+    "id": "wkt-999096196a093d74bf64",
+    "pos": "verb",
+    "gloss": "To bring down the size, quantity, quality, value or intensity of something; to diminish, to lower.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "reduce",
+    "example": null
+  },
+  {
+    "id": "wkt-5b9134a9ceddb2c6b3fc",
+    "pos": "noun",
+    "gloss": "Something that one uses to achieve an objective, e.g. raw materials or personnel.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "resource",
+    "example": null
+  },
+  {
+    "id": "wkt-a92dd424a0cd82c8241a",
+    "pos": "adj",
+    "gloss": "Able to be produced or sustained for an indefinite period without damaging the environment, or without depleting a resource; renewable.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "sustainable",
+    "example": null
+  },
+  {
+    "id": "wkt-430370f5388a2a801e85",
+    "pos": "noun",
+    "gloss": "Conditions suitable for an organism or population of organisms to live.",
+    "de": [],
+    "tags": [
+      "uncountable"
+    ],
+    "topics": [
+      "biology",
+      "natural-sciences"
+    ],
+    "word": "habitat",
+    "example": null
+  },
+  {
+    "id": "wkt-5e2ce84ca39894360ad3",
+    "pos": "noun",
+    "gloss": "The discipline concerned with protection of biodiversity, the environment, and natural resources",
+    "de": [
+      "Naturschutz",
+      "Umweltschutz",
+      "Artenschutz",
+      "Ressourcenschutz"
+    ],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [
+      "biology",
+      "natural-sciences"
+    ],
+    "word": "conservation",
+    "example": null
+  },
+  {
+    "id": "wkt-affa3df9de07946f4f0c",
+    "pos": "adj",
+    "gloss": "in danger, at risk, said of something where there is a strong possibility something bad will happen to it (for example, a species in danger of going extinct)",
+    "de": [
+      "gefährdet"
+    ],
+    "tags": [],
+    "topics": [],
+    "word": "endangered",
+    "example": null
+  },
+  {
+    "id": "wkt-c4e20b64a41e99f373c4",
+    "pos": "noun",
+    "gloss": "The capacity to do work.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "energy",
+    "example": null
+  },
+  {
+    "id": "wkt-fcfd8b53b0ee9e43f5de",
+    "pos": "noun",
+    "gloss": "Electrical energy, as supplied by power stations or generators.",
+    "de": [],
+    "tags": [
+      "uncountable",
+      "usually"
+    ],
+    "topics": [],
+    "word": "electricity",
+    "example": null
+  },
+  {
+    "id": "wkt-e6464caa668c8082d424",
+    "pos": "adj",
+    "gloss": "Sustainable; able to be regrown or renewed; having an ongoing or continuous source of supply.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "renewable",
+    "example": null
+  },
+  {
+    "id": "wkt-a2677bf3f1aa57ba7795",
+    "pos": "verb",
+    "gloss": "To make clean, to make satisfactorily neat.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "tidy up",
+    "example": null
+  },
+  {
+    "id": "wkt-7f07e56926dda44e10a5",
+    "pos": "verb",
+    "gloss": "To make an area or a thing clean; to pick up a mess; to tidy.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "clean up",
+    "example": null
+  },
+  {
+    "id": "wkt-3a591da7a0fc3627615a",
+    "pos": "noun",
+    "gloss": "An animal kept as a companion or otherwise for pleasure, rather than for some practical benefit or use.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "pet",
+    "example": null
+  },
+  {
+    "id": "wkt-94f8991ea50be1f86f2d",
+    "pos": "noun",
+    "gloss": "A carnivorous, four-legged, generally furry domesticated species (Felis catus) of feline animal, commonly kept as a house pet.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "cat",
+    "example": null
+  },
+  {
+    "id": "wkt-38832ea325014f0c61ce",
+    "pos": "verb",
+    "gloss": "To give (someone or something) food to eat.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "feed",
+    "example": null
+  },
+  {
+    "id": "wkt-ca41d689ce430644e97a",
+    "pos": "noun",
+    "gloss": "A veterinarian or veterinary surgeon.",
+    "de": [],
+    "tags": [
+      "colloquial"
+    ],
+    "topics": [],
+    "word": "vet",
+    "example": null
+  },
+  {
+    "id": "wkt-c0fc79b64c518c44adfe",
+    "pos": "noun",
+    "gloss": "A person or animal that receives health care from a doctor, nurse, dentist, allied health practitioner, or other person educated in health care.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "patient",
+    "example": null
+  },
+  {
+    "id": "wkt-3e357c243102bdb9abf2",
+    "pos": "verb",
+    "gloss": "To cease from action, motion, work, or performance of any kind; stop; desist; be without motion.",
+    "de": [],
+    "tags": [
+      "intransitive"
+    ],
+    "topics": [],
+    "word": "rest",
+    "example": null
+  },
+  {
+    "id": "wkt-b84447979a67ad14329b",
+    "pos": "noun",
+    "gloss": "A list containing the food and beverages served at a restaurant, café, or bar. Menus may be printed on paper sheets provided to customers, put on a large poster or display board inside the establishment, displayed outside the restaurant, or digital.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "menu",
+    "example": null
+  },
+  {
+    "id": "wkt-54081539c020951c9fe8",
+    "pos": "noun",
+    "gloss": "A vehicle that has two primary wheels, one behind the other, a steering handle, and a saddle seat or seats and is usually propelled by the action of a rider’s feet upon pedals.",
+    "de": [],
+    "tags": [],
+    "topics": [],
+    "word": "bicycle",
+    "example": null
+  },
+  {
+    "id": "wkt-e71a26a0378d46c8b446",
+    "pos": "noun",
+    "gloss": "An extended family: a group of people who are related to one another by blood or marriage.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "family",
+    "example": null
+  },
+  {
+    "id": "wkt-f760c2455b447602b66e",
+    "pos": "noun",
+    "gloss": "A friendly relationship, or a relationship as friends.",
+    "de": [],
+    "tags": [
+      "countable"
+    ],
+    "topics": [],
+    "word": "friendship",
+    "example": null
+  },
+  {
+    "id": "wkt-7b3e723a8af129db1cb6",
+    "pos": "noun",
+    "gloss": "A certificate, diploma, or degree awarded after successful completion of a course, training, or exam.",
+    "de": [],
+    "tags": [
+      "UK",
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "qualification",
+    "example": null
+  },
+  {
+    "id": "wkt-7b899a14bcc07f719ccb",
+    "pos": "noun",
+    "gloss": "An advancement in rank or position.",
+    "de": [],
+    "tags": [
+      "countable",
+      "uncountable"
+    ],
+    "topics": [],
+    "word": "promotion",
+    "example": null
+  },
+  {
+    "id": "wkt-3f743bee039ac0320e0d",
+    "pos": "verb",
+    "gloss": "To employ; to obtain the services of (a person) in exchange for remuneration; to give someone a job.",
+    "de": [],
+    "tags": [
+      "transitive"
+    ],
+    "topics": [],
+    "word": "hire",
+    "example": null
   }
 ]

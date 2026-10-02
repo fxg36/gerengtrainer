@@ -1,6 +1,7 @@
 import {
   useCallback,
   useEffect,
+  useId,
   useMemo,
   useRef,
   useState,
@@ -57,25 +58,59 @@ import {
   ExternalLink,
   Clock3,
   Bookmark,
-  Ban,
   Pencil,
   MonitorSmartphone,
+  GraduationCap,
+  CalendarDays,
+  ShoppingBag,
+  Wallet,
+  Laptop,
+  Dumbbell,
+  Palette,
+  Clapperboard,
+  Landmark,
+  FileText,
+  FlaskConical,
 } from "lucide-react";
 import { useRegisterSW } from "virtual:pwa-register/react";
+import AboutApp from "./AboutApp";
+import {
+  isNative,
+  listenForNativeBack,
+  listenForNativeLinks,
+} from "./platform";
+import ArchivePage, { archiveQuotaLabel } from "./ArchivePage";
+import TimeBudget from "./TimeBudget";
+import LevelControl from "./LevelControl";
+import TopicToggle from "./TopicToggle";
+import WritingPractice from "./WritingPractice";
+import { writingLabels } from "./writing";
+import { effectiveLevel, withinLevel } from "./levels";
+import { groupMeanings, meaningSearchRank, relatedMeanings } from "./meanings";
+import "./meanings.css";
+import "./catalogue.css";
+import ProgressPage from "./ProgressPage";
 import {
   allTargets,
+  targetInTopic,
+  targetInSubtopic,
+  learningLevels,
+  type LearningLevel,
+  ALL_ARCHIVE_TOPICS,
   allExercises,
   exerciseSchema,
   targetSchema,
   topicSchema,
   lexicalExercises,
   memoryKey,
+  withExerciseCues,
   uid,
   type AppState,
   type Content,
   type Target,
   type Topic,
   type DictionaryWord,
+  type ReviewEvent,
 } from "./domain";
 import {
   loadState,
@@ -88,7 +123,10 @@ import {
 import {
   commitReview,
   dayKey,
+  findSession,
   normalizeSession,
+  openSession,
+  sessionTopicInactive,
   planSession,
   setParticipation,
   setTopic,
@@ -103,7 +141,14 @@ import {
   type BackupPayload,
 } from "./backup";
 
-type Page = "today" | "topics" | "dictionary" | "progress" | "data" | "session";
+type Page =
+  | "today"
+  | "topics"
+  | "dictionary"
+  | "archive"
+  | "progress"
+  | "data"
+  | "session";
 const icons: Record<string, typeof House> = {
   House,
   Wrench,
@@ -118,6 +163,17 @@ const icons: Record<string, typeof House> = {
   BriefcaseBusiness,
   MessagesSquare,
   SpellCheck,
+  GraduationCap,
+  CalendarDays,
+  ShoppingBag,
+  Wallet,
+  Laptop,
+  Dumbbell,
+  Palette,
+  Clapperboard,
+  Landmark,
+  FileText,
+  FlaskConical,
 };
 const number = (n: number) => n.toLocaleString("de-DE");
 const date = (value: string) =>
@@ -125,11 +181,9 @@ const date = (value: string) =>
     dateStyle: "medium",
     timeStyle: "short",
   });
-const modes = { learn: "Lernen", maintain: "Erhalten", paused: "Pausiert" };
 const statusLabels = {
   regular: "Im Training",
   archived: "Archiviert",
-  excluded: "Ausgeschlossen",
 };
 function TopicIcon({ topic, size = 22 }: { topic: Topic; size?: number }) {
   const Icon = icons[topic.icon] ?? BookOpen;
@@ -151,6 +205,7 @@ function Modal({
   wide?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
+  const titleId = useId();
   useEffect(() => {
     const d = ref.current;
     d?.showModal();
@@ -159,6 +214,7 @@ function Modal({
   return (
     <dialog
       ref={ref}
+      aria-labelledby={titleId}
       className={wide ? "modal wide" : "modal"}
       onCancel={(e) => {
         e.preventDefault();
@@ -169,7 +225,7 @@ function Modal({
       }}
     >
       <div className="modal-head">
-        <h2>{title}</h2>
+        <h2 id={titleId}>{title}</h2>
         <button
           className="icon-button"
           aria-label="Schließen"
@@ -225,7 +281,9 @@ export default function App() {
       })
     | null
   >(null);
-  const [offlineReady, setOfflineReady] = useState(false);
+  const [offlineReady, setOfflineReady] = useState(isNative);
+  const [topicQuery, setTopicQuery] = useState("");
+  const [confirmAllTopics, setConfirmAllTopics] = useState(false);
   const {
     needRefresh: [needRefresh],
     updateServiceWorker,
@@ -316,6 +374,20 @@ export default function App() {
     setMobileNav(false);
     window.scrollTo({ top: 0, behavior: "instant" });
   };
+  const nativeBack = useRef<() => boolean>(() => false);
+  nativeBack.current = () => {
+    if (mobileNav) {
+      setMobileNav(false);
+      return true;
+    }
+    if (page !== "today") {
+      navigate("today");
+      return true;
+    }
+    return false;
+  };
+  useEffect(() => listenForNativeBack(() => nativeBack.current()), []);
+  useEffect(() => listenForNativeLinks(setToast), []);
   if (loadError)
     return (
       <main className="fatal">
@@ -335,7 +407,7 @@ export default function App() {
     return (
       <main className="loading">
         <div className="brand-mark">
-          w<span>·</span>
+          <img src="/pip.svg" alt="" />
         </div>
         <p>Ein Moment für dein Englisch.</p>
         <LoaderCircle className="spin" size={24} />
@@ -346,45 +418,74 @@ export default function App() {
     today = dayKey(new Date(), state.settings.timezone);
   const todayEvents = events.filter((e) => e.day === today),
     learned = new Set(events.map((e) => e.targetId));
+  const archivedCount = targets.filter(
+    (target) => state.participation[target.id] === "archived",
+  ).length;
   const activeTopics = content.topics.filter(
-    (t) => state.preferences[t.id]?.mode !== "paused",
+    (t) => state.preferences[t.id]?.mode === "learn",
   );
+  const trainableArchivedCount = targets.filter(
+    (target) =>
+      state.participation[target.id] === "archived" &&
+      activeTopics.some((topic) => targetInTopic(target, topic.id)),
+  ).length;
   const due = targets.filter(
     (t) =>
       (state.participation[t.id] ?? "regular") === "regular" &&
-      state.preferences[t.ownerTopicId]?.mode !== "paused" &&
+      activeTopics.some((topic) => targetInTopic(t, topic.id)) &&
       Object.entries(state.memory).some(
         ([key, c]) =>
           key.startsWith(t.id + "~") && Date.parse(c.due) <= Date.now(),
       ),
   ).length;
-  const start = async (archiveTopic: string | null = null) => {
-    if (!state.settings.onboarded && !archiveTopic) {
-      setOnboarding(true);
+  const start = async (
+    archiveTopic: string | null = null,
+    topicId: string | null = null,
+    subtopicId: string | null = null,
+  ) => {
+    const selectedTopic =
+      topicId ?? (archiveTopic !== ALL_ARCHIVE_TOPICS ? archiveTopic : null);
+    if (selectedTopic && state.preferences[selectedTopic]?.mode !== "learn") {
+      setTopicDetail(
+        content.topics.find((topic) => topic.id === selectedTopic) ?? null,
+      );
+      setToast("Aktiviere dieses Thema, um es zu trainieren.");
       return;
     }
-    if (state.session && !state.session.finished && !archiveTopic) {
-      if (await act(() => {})) navigate("session");
+    if (
+      !archiveTopic &&
+      !topicId &&
+      state.settings.onboarded &&
+      !activeTopics.length
+    ) {
+      navigate("topics");
+      return;
+    }
+    if (
+      !state.settings.onboarded &&
+      !archiveTopic &&
+      !topicId &&
+      !findSession(state)
+    ) {
+      setOnboarding(true);
       return;
     }
     if (
       await act((s) => {
-        s.session = planSession(s, content, new Date(), archiveTopic);
+        openSession(s, content, new Date(), archiveTopic, topicId, subtopicId);
       })
     )
       navigate("session");
   };
   const participation = async (
     target: Target,
-    value: "regular" | "archived" | "excluded",
+    value: AppState["participation"][string],
   ) => {
     if (await act((s) => setParticipation(s, target.id, value))) {
       setToast(
         value === "regular"
           ? "Wieder im regulären Training."
-          : value === "archived"
-            ? "Archiviert. Dein Lernstand bleibt erhalten."
-            : "Ausgeschlossen. Dein Lernstand bleibt erhalten.",
+          : "Archiviert. Zählt nicht als Übung oder Lernerfolg.",
       );
       setDetail(null);
     }
@@ -393,6 +494,7 @@ export default function App() {
     { id: "today", label: "Heute", icon: House },
     { id: "topics", label: "Themen", icon: Layers3 },
     { id: "dictionary", label: "Wörterbuch", icon: BookOpen },
+    { id: "archive", label: "Archiv", icon: Archive },
     { id: "progress", label: "Fortschritt", icon: TrendingUp },
   ];
   return (
@@ -407,38 +509,48 @@ export default function App() {
           }}
         >
           <div className="brand-mark">
-            w<span>·</span>
+            <img src="/pip.svg" alt="" />
           </div>
           <span>
-            wortnah<span className="brand-sub">ENGLISCH FÜR DEINEN ALLTAG</span>
+            Einfach Englisch
+            <span className="brand-sub">
+              Wörter verstehen. Sätze sicher bilden.
+            </span>
           </span>
         </a>
-        <div className="nav-label">DEIN LERNRAUM</div>
+        <div className="nav-label">IN DIESEM HEFT</div>
         <nav aria-label="Hauptnavigation">
-          {navItems.map(({ id, label, icon: Icon }) => (
+          {navItems.map(({ id, label, icon: Icon }, index) => (
             <button
               key={id}
               className={`nav-item ${page === id ? "active" : ""}`}
+              aria-label={label}
+              aria-current={page === id ? "page" : undefined}
               onClick={() => navigate(id)}
             >
-              <Icon size={20} />
+              <span className="nav-index" aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <Icon size={18} />
               {label}
               {id === "today" && due > 0 && (
-                <span className="nav-count">{due}</span>
+                <span className="nav-count" aria-hidden="true">
+                  {due}
+                </span>
               )}
-              {page === id && <span className="nav-dot" />}
+              {id === "archive" && (
+                <span className="nav-count" aria-hidden="true">
+                  {archivedCount}
+                </span>
+              )}
             </button>
           ))}
         </nav>
         <div className="sidebar-bottom">
           <div className="local-card">
-            <ShieldCheck size={21} />
-            <strong>
-              Dein Fortschritt.
-              <br />
-              Dein Gerät.
-            </strong>
-            <p>Ohne Konto. In deinem Tempo.</p>
+            <span className="small-label">MEIN EXEMPLAR</span>
+            <strong>Lokal gespeichert.</strong>
+            <p>Ohne Konto · offline nutzbar</p>
           </div>
           <button
             className={`nav-item ${page === "data" ? "active" : ""}`}
@@ -449,11 +561,11 @@ export default function App() {
           </button>
           <button className="nav-item" onClick={() => setHelp(true)}>
             <CircleHelp size={19} />
-            Gut zu wissen
+            Über die App
           </button>
           <div className="sidebar-foot">
             <span className="status-dot" />
-            PWA · Testversion 0.1
+            Dein Englisch. Dein Tempo.
           </div>
         </div>
       </aside>
@@ -475,7 +587,7 @@ export default function App() {
               <Menu />
             </button>
             <span className="breadcrumb">
-              Dein Englisch<span>/</span>
+              Notizbuch<span>/</span>
               <strong>
                 {page === "data"
                   ? "Daten & Einstellungen"
@@ -523,68 +635,65 @@ export default function App() {
           {page === "today" && (
             <>
               <div className="page-heading">
-                <div className="eyebrow">EIN KLEINER SCHRITT. JEDEN TAG.</div>
+                <div className="eyebrow">
+                  {new Date().toLocaleDateString("de-DE", {
+                    weekday: "long",
+                    day: "numeric",
+                    month: "long",
+                    timeZone: state.settings.timezone,
+                  })}
+                </div>
                 <h1>
-                  Ein guter Tag für dein Englisch
-                  <span className="heading-dot">.</span>
+                  Dein Lernheft<span className="heading-dot">.</span>
                 </h1>
-                <p>Die richtigen Worte für das, was dich im Alltag bewegt.</p>
+                <p>
+                  Vokabeln, Grammatik und ein Platz für das, was hängen bleibt.
+                </p>
               </div>
               <div className="today-layout">
                 <div className="today-primary">
                   <section className="hero">
                     <div className="hero-copy">
-                      <span className="hero-label">
-                        <span className="tiny-spark">✳</span> DEINE TÄGLICHE
-                        LERNZEIT
-                      </span>
+                      <span className="hero-label">01 / TRAINING</span>
                       <h2>
-                        Mehr im Kopf.
+                        Eine Runde
                         <br />
-                        Mehr im Gespräch.
+                        Englisch.
                       </h2>
                       <p>
-                        Wörter festigen, Neues entdecken und
-                        <br className="desktop-only" /> ganz nebenbei sicherer
-                        formulieren.
+                        Wörter abrufen. Sätze vervollständigen.
+                        <br />
+                        Mit den Themen, die du gewählt hast.
                       </p>
                       <button
                         className="cream-button"
                         disabled={busy}
                         onClick={() => start()}
                       >
-                        {state.session && !state.session.finished
-                          ? "Training fortsetzen"
-                          : !state.settings.onboarded
-                            ? "Mein Training einrichten"
-                            : "Training starten"}
+                        {state.settings.onboarded && !activeTopics.length
+                          ? "Themen auswählen"
+                          : findSession(state)
+                            ? "Training fortsetzen"
+                            : !state.settings.onboarded
+                              ? "Mein Training einrichten"
+                              : "Training starten"}
                         <ArrowRight size={19} />
                       </button>
                       <div className="hero-meta">
                         <Clock3 size={14} />
-                        Bis zu {state.settings.minutes} Minuten<span>·</span>
-                        Dein Tempo zählt
+                        Rund {state.settings.minutes} Minuten<span>·</span>
+                        {activeTopics.length} aktive Themen
                       </div>
                     </div>
-                    <div className="hero-art" aria-hidden="true">
-                      <div className="orbit orbit-one" />
-                      <div className="orbit orbit-two" />
-                      <span className="art-star star-one">✳</span>
-                      <span className="art-star star-two">✧</span>
-                      <div className="floating-card back-card">
-                        <span>ONE WORD AT A TIME</span>
-                        <div>little by little</div>
-                      </div>
-                      <div className="floating-card front-card">
-                        <span>FÜR DIE KLEINEN FORTSCHRITTE</span>
-                        <div>
-                          little by little<span className="card-period">.</span>
-                        </div>
-                        <p>Stück für Stück</p>
-                        <span className="art-card-footer">
-                          <CheckCircle2 size={15} /> Etwas bleibt immer hängen.
-                        </span>
-                      </div>
+                    <div className="notebook-mascot">
+                      <span className="bird-note">Shall we?</span>
+                      <img
+                        src="/pip.svg"
+                        alt="Pip, ein kleiner blauer Vogel mit Bleistift und Notizbuch"
+                      />
+                      <span className="bird-caption">
+                        PIP · HAT SCHON DEN STIFT
+                      </span>
                     </div>
                   </section>
                   <div className="stats-row">
@@ -616,10 +725,57 @@ export default function App() {
                       </div>
                     </div>
                   </div>
+                  <section
+                    className="home-archive"
+                    aria-label="Archivübersicht"
+                  >
+                    <div className="home-archive-label">
+                      <Archive size={22} />
+                      <div>
+                        <span className="small-label">DEIN ARCHIV</span>
+                        <h2>
+                          {archivedCount}{" "}
+                          {archivedCount === 1 ? "Eintrag" : "Einträge"}{" "}
+                          beiseitegelegt.
+                        </h2>
+                      </div>
+                    </div>
+                    <button
+                      className="home-quota"
+                      onClick={() => navigate("archive")}
+                    >
+                      <span>Archivquote</span>
+                      <strong>{archiveQuotaLabel(state)}</strong>
+                      <Pencil size={14} />
+                    </button>
+                    <div className="home-archive-actions">
+                      <button
+                        className="secondary"
+                        onClick={() => navigate("archive")}
+                      >
+                        Archiv anzeigen
+                        <ArrowRight size={16} />
+                      </button>
+                      <button
+                        className="text-button"
+                        disabled={busy || !archivedCount}
+                        onClick={() =>
+                          trainableArchivedCount
+                            ? start(ALL_ARCHIVE_TOPICS)
+                            : navigate("topics")
+                        }
+                      >
+                        <Play size={16} />
+                        {archivedCount && !trainableArchivedCount
+                          ? "Themen aktivieren"
+                          : "Archiv trainieren"}
+                      </button>
+                    </div>
+                  </section>
                   <div className="section-heading">
                     <div>
                       <h2>Deine Themen</h2>
-                      <p>Dein Alltag bestimmt, was du lernst.</p>
+                      <p>Deine Auswahl für die nächste Runde.</p>
                     </div>
                     <button
                       className="text-button"
@@ -638,8 +794,8 @@ export default function App() {
                     )
                       .slice(0, 3)
                       .map((topic) => {
-                        const tt = targets.filter(
-                            (t) => t.ownerTopicId === topic.id,
+                        const tt = targets.filter((t) =>
+                            targetInTopic(t, topic.id),
                           ),
                           done = tt.filter((t) => learned.has(t.id)).length;
                         return (
@@ -683,41 +839,48 @@ export default function App() {
                 <aside className="today-secondary">
                   <section className="panel rhythm">
                     <div className="section-heading">
-                      <h3>Dein Lernrhythmus</h3>
+                      <h3>Dein Tempo</h3>
                       <Clock3 size={18} />
                     </div>
-                    <p>Wie viel Zeit möchtest du dir nehmen?</p>
-                    <div className="segmented" aria-label="Lernzeit">
-                      {[10, 20, 40].map((minutes) => (
-                        <button
-                          key={minutes}
-                          className={
-                            state.settings.minutes === minutes ? "selected" : ""
-                          }
-                          disabled={busy}
-                          onClick={() =>
-                            act((s) => {
-                              s.settings.minutes = minutes;
-                            })
-                          }
-                        >
-                          {minutes}
-                          <span>Min.</span>
-                        </button>
-                      ))}
-                    </div>
+                    <TimeBudget
+                      value={state.settings.minutes}
+                      disabled={busy}
+                      onChange={(minutes) =>
+                        act((s) => {
+                          s.settings.minutes = minutes;
+                        })
+                      }
+                    />
+                    <p className="small muted">
+                      {state.session && !state.session.finished
+                        ? "Deine laufende Runde bleibt gespeichert. Die Einstellung gilt für die nächste Runde."
+                        : state.settings.limitNewPerDay
+                          ? `Tageslimit aktiv: ${state.settings.newPerDay} neue Wörter und ${state.settings.grammarPerDay} neue Grammatikthemen.`
+                          : "Neue Inhalte ohne Tageslimit. Fällige Wiederholungen kommen zuerst."}
+                    </p>
                     <div className="rhythm-divider" />
-                    <div className="small-label">DIESE WOCHE</div>
+                    <button
+                      className="home-level-link"
+                      onClick={() => navigate("topics")}
+                    >
+                      Trainingslevel <strong>{state.settings.level}</strong>{" "}
+                      <Pencil size={16} />
+                    </button>
+                    <div className="small-label">AN DIESEN TAGEN GEÜBT</div>
                     <Week state={state} />
                     <p className="small week-note">
                       {todayEvents.length
-                        ? "Schön, dass du dir heute Zeit genommen hast."
-                        : "Eine kleine Routine kann viel bewegen."}
+                        ? `${todayEvents.length} Antworten heute gespeichert.`
+                        : "Heute noch keine Antworten gespeichert."}
+                    </p>
+                    <p className="small muted">
+                      Ein Haken steht für einen Tag mit Antworten, nicht für ein
+                      erreichtes Zeitziel.
                     </p>
                   </section>
                   <section className="word-card">
                     <div className="word-label">
-                      <Sparkles size={16} /> EIN AUSDRUCK FÜR HEUTE
+                      <Pencil size={16} /> AM RAND NOTIERT
                     </div>
                     <h3>Fair enough.</h3>
                     <p className="word-translation">„Gut, das verstehe ich.“</p>
@@ -743,14 +906,6 @@ export default function App() {
                       <ArrowRight size={16} />
                     </button>
                   </section>
-                  <div className="gentle-note">
-                    <Leaf size={19} />
-                    <p>
-                      Du musst nicht alles wissen.
-                      <br />
-                      <strong>Nur neugierig bleiben.</strong>
-                    </p>
-                  </div>
                 </aside>
               </div>
             </>
@@ -758,74 +913,137 @@ export default function App() {
           {page === "topics" && (
             <>
               <div className="page-heading">
-                <div className="eyebrow">WAS DICH BEWEGT</div>
-                <h1>Deine Welt. Deine Wörter.</h1>
+                <div className="eyebrow">REGISTER / THEMEN</div>
+                <h1>Womit beschäftigst du dich?</h1>
                 <p>
-                  Wähle deine Themen und entscheide, was gerade zu dir passt.
+                  Aktiviere, was du üben möchtest. Trainiere einzelne Themen
+                  oder deinen Themenmix unter Heute.
                 </p>
               </div>
+              <LevelControl
+                value={state.settings.level}
+                targets={targets}
+                disabled={busy}
+                onChange={(level) =>
+                  act((s) => {
+                    s.settings.level = level;
+                  })
+                }
+              />
               <div className="info-strip">
                 <Layers3 size={20} />
                 <span>
-                  <strong>Lernen</strong> bringt Neues dazu.{" "}
-                  <strong>Erhalten</strong> wiederholt Bekanntes.{" "}
-                  <strong>Pausiert</strong> lässt deinen Stand ruhen.
+                  <strong>Du wählst die Themen. Wir planen die Übungen.</strong>{" "}
+                  Fällige Wiederholungen kommen zuerst, neue Inhalte ergänzen
+                  deine Runde. Inaktive Themen bleiben aus dem Training.
                 </span>
               </div>
+              <div className="topic-toolbar">
+                <label className="search-input topic-search">
+                  <Search size={20} />
+                  <input
+                    aria-label="Themen suchen"
+                    placeholder="Thema oder Unterthema suchen …"
+                    value={topicQuery}
+                    onChange={(e) => setTopicQuery(e.target.value)}
+                  />
+                </label>
+                <button
+                  className="secondary"
+                  disabled={
+                    busy ||
+                    content.topics.every(
+                      (topic) => state.preferences[topic.id].mode === "learn",
+                    )
+                  }
+                  onClick={() => setConfirmAllTopics(true)}
+                >
+                  <CheckCheck size={19} /> Alle Themen aktivieren
+                </button>
+              </div>
               <div className="topic-grid">
-                {content.topics.map((topic) => {
-                  const items = targets.filter(
-                      (t) => t.ownerTopicId === topic.id,
-                    ),
-                    done = items.filter((t) => learned.has(t.id)).length,
-                    pref = state.preferences[topic.id];
-                  return (
-                    <section className="topic-card" key={topic.id}>
-                      <button
-                        className="topic-open"
-                        onClick={() => setTopicDetail(topic)}
-                      >
-                        <div className="topic-card-top">
-                          <TopicIcon topic={topic} />
-                          <span className={`mode-badge ${pref.mode}`}>
-                            {modes[pref.mode]}
+                {content.topics
+                  .filter((topic) =>
+                    `${topic.title} ${topic.description} ${topic.subtopics?.map((sub) => sub.title).join(" ") ?? ""}`
+                      .toLocaleLowerCase("de")
+                      .includes(topicQuery.trim().toLocaleLowerCase("de")),
+                  )
+                  .map((topic) => {
+                    const items = targets.filter((t) =>
+                        targetInTopic(t, topic.id),
+                      ),
+                      done = items.filter((t) => learned.has(t.id)).length,
+                      pref = state.preferences[topic.id];
+                    return (
+                      <section className="topic-card" key={topic.id}>
+                        <button
+                          className="topic-open"
+                          onClick={() => setTopicDetail(topic)}
+                        >
+                          <div className="topic-card-top">
+                            <TopicIcon topic={topic} />
+                          </div>
+                          <h3>{topic.title}</h3>
+                          <p>{topic.description}</p>
+                          <span className="topic-section-note">
+                            {topic.subtopics?.length ?? 0} Unterthemen ·
+                            Auswählen & ansehen <ChevronRight size={15} />
                           </span>
+                          <div className="progress-track">
+                            <span
+                              style={{
+                                width: `${(done / items.length) * 100 || 0}%`,
+                              }}
+                            />
+                          </div>
+                          <span className="small muted">
+                            {done} von {items.length} Lernzielen bearbeitet
+                          </span>
+                          <span className="topic-level-note">
+                            {effectiveLevel(state, topic.id)} ·{" "}
+                            {pref.level ? "Eigene Stufe" : "Globales Level"} ·{" "}
+                            {
+                              items.filter((t) =>
+                                withinLevel(t, effectiveLevel(state, topic.id)),
+                              ).length
+                            }{" "}
+                            passende Ziele
+                          </span>
+                        </button>
+                        <TopicToggle
+                          title={topic.title}
+                          active={pref.mode === "learn"}
+                          disabled={busy}
+                          onChange={(active) =>
+                            void act((s) =>
+                              setTopic(s, topic.id, {
+                                mode: active ? "learn" : "paused",
+                              }),
+                            )
+                          }
+                        />
+                        <div className="topic-train-action">
+                          <button
+                            className="primary"
+                            disabled={busy || pref.mode !== "learn"}
+                            onClick={() => start(null, topic.id)}
+                            aria-label={`${topic.title}: ${findSession(state, null, topic.id) ? "Thema fortsetzen" : "Thema trainieren"}`}
+                          >
+                            <Play size={17} />
+                            {findSession(state, null, topic.id)
+                              ? "Thema fortsetzen"
+                              : "Thema trainieren"}
+                            <ArrowRight size={17} />
+                          </button>
+                          {pref.mode !== "learn" && (
+                            <p className="small muted">
+                              Zum Trainieren aktivieren.
+                            </p>
+                          )}
                         </div>
-                        <h3>{topic.title}</h3>
-                        <p>{topic.description}</p>
-                        <div className="progress-track">
-                          <span
-                            style={{
-                              width: `${(done / items.length) * 100 || 0}%`,
-                            }}
-                          />
-                        </div>
-                        <span className="small muted">
-                          {done} von {items.length} Lernzielen bearbeitet
-                        </span>
-                      </button>
-                      <div
-                        className="mode-select"
-                        aria-label={`Modus für ${topic.title}`}
-                      >
-                        {(["learn", "maintain", "paused"] as const).map(
-                          (mode) => (
-                            <button
-                              disabled={busy}
-                              key={mode}
-                              className={pref.mode === mode ? "selected" : ""}
-                              onClick={() =>
-                                act((s) => setTopic(s, topic.id, { mode }))
-                              }
-                            >
-                              {modes[mode]}
-                            </button>
-                          ),
-                        )}
-                      </div>
-                    </section>
-                  );
-                })}
+                      </section>
+                    );
+                  })}
               </div>
             </>
           )}
@@ -837,7 +1055,28 @@ export default function App() {
               onCustom={setCustom}
             />
           )}
-          {page === "progress" && <Progress state={state} content={content} />}
+          {page === "progress" && (
+            <ProgressPage
+              state={state}
+              content={content}
+              onTrain={(topicId) => start(null, topicId ?? null)}
+              onTopic={setTopicDetail}
+              onDetail={setDetail}
+            />
+          )}
+          {page === "archive" && (
+            <ArchivePage
+              state={state}
+              content={content}
+              busy={busy}
+              act={act}
+              onTrain={start}
+              onDetail={setDetail}
+              onRestore={(target) => participation(target, "regular")}
+              onDictionary={() => navigate("dictionary")}
+              onTopics={() => navigate("topics")}
+            />
+          )}
           {page === "data" && (
             <DataPage
               state={state}
@@ -864,17 +1103,47 @@ export default function App() {
               content={content}
               busy={busy}
               act={act}
-              onExit={() => navigate("today")}
+              onExit={() =>
+                navigate(
+                  state.session?.topicId
+                    ? "topics"
+                    : state.session?.archiveTopic
+                      ? "archive"
+                      : "today",
+                )
+              }
               onTopic={() => navigate("topics")}
               onParticipation={participation}
               onReport={setReport}
+              onArchive={() => navigate("archive")}
             />
           )}
           <footer className="page-footer">
-            <span>Wortnah · Ein bisschen sicherer. Jeden Tag.</span>
+            <span>
+              Einfach Englisch / Wörter verstehen. Sätze sicher bilden.
+            </span>
             <button onClick={() => setHelp(true)}>Inhalte & Quellen</button>
           </footer>
         </main>
+        {page !== "session" && (
+          <nav className="mobile-dock" aria-label="Schnellnavigation">
+            {navItems
+              .filter((item) =>
+                ["today", "topics", "dictionary", "archive"].includes(item.id),
+              )
+              .map(({ id, label, icon: Icon }) => (
+                <button
+                  key={id}
+                  className={page === id ? "active" : ""}
+                  aria-current={page === id ? "page" : undefined}
+                  onClick={() => navigate(id)}
+                >
+                  <Icon size={20} />
+                  <span>{label}</span>
+                </button>
+              ))}
+          </nav>
+        )}
       </div>
       {toast && (
         <div className="toast" role="status">
@@ -890,7 +1159,7 @@ export default function App() {
           content={content}
           state={state}
           onClose={() => setOnboarding(false)}
-          onSave={async (ids, minutes) => {
+          onSave={async (ids, minutes, level) => {
             if (
               await act((s) => {
                 for (const topic of content.topics)
@@ -898,8 +1167,9 @@ export default function App() {
                     mode: ids.includes(topic.id) ? "learn" : "paused",
                   });
                 s.settings.minutes = minutes;
+                s.settings.level = level;
                 s.settings.onboarded = true;
-                s.session = planSession(s, content);
+                openSession(s, content);
               })
             ) {
               setOnboarding(false);
@@ -907,6 +1177,47 @@ export default function App() {
             }
           }}
         />
+      )}
+      {confirmAllTopics && (
+        <Modal
+          title="Alle Themen aktivieren?"
+          onClose={() => {
+            if (!busy) setConfirmAllTopics(false);
+          }}
+        >
+          <p>
+            Möchtest du wirklich alle {content.topics.length} Themen aktivieren?
+            Die App plant neue Inhalte und Wiederholungen automatisch.
+          </p>
+          <div className="button-row">
+            <button
+              className="secondary"
+              disabled={busy}
+              onClick={() => setConfirmAllTopics(false)}
+            >
+              Nein
+            </button>
+            <button
+              className="primary"
+              disabled={busy}
+              onClick={async () => {
+                if (
+                  await act((draft) => {
+                    for (const topic of content.topics) {
+                      if (draft.preferences[topic.id].mode !== "learn")
+                        setTopic(draft, topic.id, { mode: "learn" });
+                    }
+                  })
+                ) {
+                  setConfirmAllTopics(false);
+                  setToast("Alle Themen sind jetzt aktiv.");
+                }
+              }}
+            >
+              {busy ? "Wird gespeichert …" : "Ja"}
+            </button>
+          </div>
+        </Modal>
       )}
       {topicDetail && (
         <Modal title={topicDetail.title} onClose={() => setTopicDetail(null)}>
@@ -916,6 +1227,10 @@ export default function App() {
             content={content}
             act={act}
             busy={busy}
+            onTrain={async (subtopicId) => {
+              setTopicDetail(null);
+              await start(null, topicDetail.id, subtopicId ?? null);
+            }}
             onArchive={async () => {
               setTopicDetail(null);
               await start(topicDetail.id);
@@ -937,8 +1252,31 @@ export default function App() {
             </span>
             <h2>{detail.word}</h2>
             <p className="detail-translation">{detail.de}</p>
+            {detail.senseContext && (
+              <div className="sense-context-detail">
+                <span className="small-label">GEMEINTE BEDEUTUNG</span>
+                <p lang="de">{detail.senseContext.de}</p>
+                <p lang="en">{detail.senseContext.en}</p>
+              </div>
+            )}
             {detail.gloss && <p className="source-gloss">{detail.gloss}</p>}
             {detail.example && <blockquote>{detail.example}</blockquote>}
+            {relatedMeanings(detail, targets).length > 0 && (
+              <section className="related-meanings">
+                <h3>Gleiches Wort, andere Bedeutung</h3>
+                <p className="small muted">
+                  Jede Bedeutung hat ihren eigenen Lernstand und Archivstatus.
+                </p>
+                {relatedMeanings(detail, targets).map((meaning) => (
+                  <button key={meaning.id} onClick={() => setDetail(meaning)}>
+                    <strong>
+                      {meaning.word} · {meaning.de}
+                    </strong>
+                    <span>{meaning.senseContext?.de || meaning.gloss}</span>
+                  </button>
+                ))}
+              </section>
+            )}
             <dl className="dimension-list">
               {Object.entries(detail.dimensions)
                 .filter(([, v]) => v.length)
@@ -949,7 +1287,11 @@ export default function App() {
                       {values
                         .map(
                           (v) =>
-                            content.topics.find((t) => t.id === v)?.title ?? v,
+                            content.topics.find((t) => t.id === v)?.title ??
+                            content.topics
+                              .flatMap((t) => t.subtopics ?? [])
+                              .find((sub) => sub.id === v)?.title ??
+                            v,
                         )
                         .join(" · ")}
                     </dd>
@@ -957,9 +1299,8 @@ export default function App() {
                 ))}
             </dl>
             <p className="small muted">
-              Zuständiges Trainingsthema:{" "}
-              {content.topics.find((t) => t.id === detail.ownerTopicId)?.title}.
-              Weitere Themen sind Suchmerkmale.
+              Du kannst diese Bedeutung in jedem zugeordneten Thema üben. Dein
+              Lernstand bleibt dabei derselbe.
             </p>
             <div className="detail-actions">
               <button
@@ -977,14 +1318,6 @@ export default function App() {
               >
                 <Archive size={17} />
                 Archivieren
-              </button>
-              <button
-                className="text-button danger-text"
-                disabled={busy}
-                onClick={() => participation(detail, "excluded")}
-              >
-                <Ban size={16} />
-                Ausschließen
               </button>
             </div>
             <div className="source-note">
@@ -1013,6 +1346,22 @@ export default function App() {
               <Pencil size={15} />
               Bedeutung & Zuordnung bearbeiten
             </button>
+            {detail.kind === "lexical" && (
+              <button
+                className="text-button"
+                onClick={() => {
+                  setCustom({
+                    word: detail.word,
+                    ownerTopicId: detail.ownerTopicId,
+                    pos: detail.pos,
+                  });
+                  setDetail(null);
+                }}
+              >
+                <Plus size={15} />
+                Weitere Bedeutung anlegen
+              </button>
+            )}
           </div>
         </Modal>
       )}
@@ -1057,110 +1406,33 @@ export default function App() {
                     at: new Date().toISOString(),
                     note,
                   });
-                  setParticipation(s, report.id, "excluded");
+                  setParticipation(s, report.id, "archived");
                 })
               ) {
                 setReport(null);
                 setToast(
-                  "Lokal notiert und aus dem Training genommen. Es wurde nichts versendet.",
+                  "Lokal notiert und archiviert. Es wurde nichts versendet.",
                 );
               }
             }}
           >
             <p>
-              Was ist bei „{report.word}“ unklar? Der Eintrag wird
-              ausgeschlossen, bis du ihn wieder freigibst.
+              Was ist bei „{report.word}“ unklar? Der Eintrag wird archiviert.
+              Ob er automatisch wiederholt wird, bestimmt deine Archivquote.
             </p>
             <label>
               Deine Notiz
               <textarea name="note" required maxLength={2000} rows={4} />
             </label>
             <button className="primary" type="submit" disabled={busy}>
-              Notieren & ausschließen
+              Notieren & archivieren
             </button>
           </form>
         </Modal>
       )}
       {help && (
-        <Modal title="Gut zu wissen" onClose={() => setHelp(false)}>
-          <div className="help-content">
-            <h3>Englisch für deinen Alltag</h3>
-            <p>
-              Wortnah trainiert Wortabruf, Bedeutungen und schriftliche
-              Grammatik. Die App misst keine Aussprache, kein Hörverstehen und
-              kein allgemeines Sprachniveau.
-            </p>
-            <h3>Dein Lernstand bleibt lokal</h3>
-            <p>
-              Training und eigene Inhalte werden in diesem Browser gespeichert.
-              Sichere deinen Stand regelmäßig unter „Daten & Einstellungen“.
-              Ohne Sicherung können beim Löschen der Browserdaten Lernstände
-              verloren gehen.
-            </p>
-            <h3>Wörterbuch und Testinhalte</h3>
-            <p>
-              {number(
-                content.manifest.sourceWordCount ??
-                  content.manifest.sourceCount,
-              )}{" "}
-              Wörter und Wendungen stehen im kompakten Wörterbuch bereit. Ihre
-              unterschiedlichen Bedeutungen sind unter einem Stichwort
-              zusammengefasst.{" "}
-              {targets.filter((t) => t.kind === "lexical").length} aufbereitete
-              Wörter und Wendungen und 150 Grammatikvarianten bilden den
-              Testbestand. Deutsche Übersetzungen und Themenzuordnungen sind
-              Entwürfe; die menschliche Fachprüfung steht noch aus.
-            </p>
-            <p>
-              Quelle:{" "}
-              <a
-                href="https://en.wiktionary.org"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Wiktionary und seine Mitwirkenden
-              </a>
-              , extrahiert über{" "}
-              <a
-                href="https://kaikki.org/dictionary/rawdata.html"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Kaikki/Wiktextract
-              </a>
-              . Wörterbuchinhalte:{" "}
-              <a
-                href="https://creativecommons.org/licenses/by-sa/4.0/deed.de"
-                target="_blank"
-                rel="noreferrer"
-              >
-                CC BY-SA 4.0
-              </a>
-              . Auswahl, deutsche Lernbedeutungen und Zuordnungen wurden
-              bearbeitet. Quellenlinks stehen an den Einträgen.{" "}
-              <a href="/licenses/NOTICE.txt" target="_blank" rel="noreferrer">
-                Vollständige Quellen- und Lizenzhinweise
-              </a>
-            </p>
-            <p>
-              Die Katalogauswahl nutzt wordfreq-Häufigkeitsschätzungen
-              (Sprachdaten bis etwa 2021). Sie sind kein Nachweis für die
-              Häufigkeit einer einzelnen Bedeutung. Der Katalog enthält auch
-              noch Fachbegriffe; seine Alltagsfilterung ist vorläufig.
-            </p>
-            <h3>Offline lernen</h3>
-            <p>
-              Beim ersten vollständigen Laden werden App und Inhalte
-              gespeichert. Danach kannst du offline lernen. Es gibt keine
-              Werbung, Analyse-Tracker oder KI-Aufrufe während des Trainings.
-            </p>
-            <h3>Vom Rechner aufs nächste Gerät</h3>
-            <p>
-              Die JSON-Sicherung lässt sich in diese PWA auf einem anderen Gerät
-              importieren. Das Format ist für die spätere Wortnah-Android-App
-              vorbereitet. Fremde Lern-Apps benötigen einen passenden Importer.
-            </p>
-          </div>
+        <Modal title="Über Einfach Englisch" onClose={() => setHelp(false)}>
+          <AboutApp content={content} />
         </Modal>
       )}
     </div>
@@ -1215,7 +1487,7 @@ function Onboarding({
 }: {
   content: Content;
   state: AppState;
-  onSave: (ids: string[], minutes: number) => void;
+  onSave: (ids: string[], minutes: number, level: LearningLevel) => void;
   onClose: () => void;
 }) {
   const [selected, setSelected] = useState([
@@ -1224,7 +1496,8 @@ function Onboarding({
       "phrases",
       "grammar",
     ]),
-    [minutes, setMinutes] = useState(state.settings.minutes);
+    [minutes, setMinutes] = useState(state.settings.minutes),
+    [level, setLevel] = useState(state.settings.level);
   return (
     <Modal title="Mach es zu deinem Training" onClose={onClose} wide>
       <p className="modal-intro">
@@ -1255,32 +1528,26 @@ function Onboarding({
           </button>
         ))}
       </div>
+      <LevelControl
+        value={level}
+        onChange={setLevel}
+        targets={allTargets(state, content).filter((t) =>
+          selected.some((topicId) => targetInTopic(t, topicId)),
+        )}
+      />
       <div className="onboarding-bottom">
-        <div>
-          <span className="small-label">DEINE LERNZEIT</span>
-          <div className="minute-buttons">
-            {[10, 20, 40].map((n) => (
-              <button
-                className={minutes === n ? "selected" : ""}
-                key={n}
-                onClick={() => setMinutes(n)}
-              >
-                {n} Min.
-              </button>
-            ))}
-          </div>
-        </div>
+        <TimeBudget value={minutes} onChange={setMinutes} />
         <button
           className="primary"
           disabled={!selected.length}
-          onClick={() => onSave(selected, minutes)}
+          onClick={() => onSave(selected, minutes, level)}
         >
           Los geht’s
           <ArrowRight size={18} />
         </button>
       </div>
       <p className="small muted">
-        Testbestand: Die fachliche Freigabe der Inhalte steht noch aus.
+        Deine Auswahl kannst du jederzeit in den Einstellungen ändern.
       </p>
     </Modal>
   );
@@ -1293,6 +1560,7 @@ function TopicSettings({
   content,
   act,
   busy,
+  onTrain,
   onArchive,
   onWord,
 }: {
@@ -1301,40 +1569,112 @@ function TopicSettings({
   content: Content;
   act: Act;
   busy: boolean;
+  onTrain: (subtopicId?: string) => void;
   onArchive: () => void;
   onWord: (t: Target) => void;
 }) {
   const pref = state.preferences[topic.id],
-    targets = allTargets(state, content).filter(
-      (t) => t.ownerTopicId === topic.id,
+    targets = allTargets(state, content).filter((t) =>
+      targetInTopic(t, topic.id),
     ),
     archived = targets.filter((t) => state.participation[t.id] === "archived");
   const [filter, setFilter] = useState("all");
+  const [subtopicId, setSubtopicId] = useState("");
+  const scopedTargets = targets.filter(
+    (t) => !subtopicId || targetInSubtopic(t, subtopicId),
+  );
+  const practiceTitle =
+    topic.subtopics?.find((sub) => sub.id === subtopicId)?.title ?? topic.title;
+  const [ownLevel, setOwnLevel] = useState(pref.level !== null);
+  useEffect(() => setOwnLevel(pref.level !== null), [pref.level, topic.id]);
   return (
     <div className="topic-settings">
       <p>{topic.description}</p>
-      <label>
-        Trainingsmodus
-        <select
-          value={pref.mode}
-          disabled={busy}
-          onChange={(e) =>
-            act((s) =>
-              setTopic(s, topic.id, {
-                mode: e.target.value as typeof pref.mode,
-              }),
-            )
-          }
+      <TopicToggle
+        title={topic.title}
+        active={pref.mode === "learn"}
+        disabled={busy}
+        onChange={(active) =>
+          void act((s) =>
+            setTopic(s, topic.id, { mode: active ? "learn" : "paused" }),
+          )
+        }
+      />
+      <div className="topic-practice">
+        {!!topic.subtopics?.length && (
+          <label className="subtopic-select">
+            Was möchtest du üben?
+            <select
+              aria-label="Unterthema auswählen"
+              value={subtopicId}
+              onChange={(e) => setSubtopicId(e.target.value)}
+            >
+              <option value="">
+                Ganzes Thema · {targets.length} Lernziele
+              </option>
+              {topic.subtopics.map((sub) => (
+                <option key={sub.id} value={sub.id}>
+                  {sub.title} ·{" "}
+                  {targets.filter((t) => targetInSubtopic(t, sub.id)).length}{" "}
+                  Lernziele
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
+        <button
+          className="primary"
+          disabled={busy || pref.mode !== "learn"}
+          onClick={() => onTrain(subtopicId || undefined)}
         >
-          <option value="learn">Lernen – Neues und Wiederholungen</option>
-          <option value="maintain">
-            Erhalten – nur bereits eingeführte Abrufrichtungen
-          </option>
-          <option value="paused">
-            Pausiert – keine automatischen Aufgaben
-          </option>
-        </select>
+          <Play size={18} />
+          {findSession(state, null, topic.id, subtopicId || null)
+            ? subtopicId
+              ? "Unterthema fortsetzen"
+              : "Thema fortsetzen"
+            : subtopicId
+              ? "Unterthema trainieren"
+              : "Thema trainieren"}
+          <ArrowRight size={18} />
+        </button>
+        <p className="small muted">
+          Nur {practiceTitle} · Level {effectiveLevel(state, topic.id)} · bis zu{" "}
+          {state.settings.minutes} Minuten.
+          {pref.mode === "paused"
+            ? " Aktiviere dieses Thema, um es zu trainieren. Dein Lernstand und angefangene Runden bleiben erhalten."
+            : " Neue Inhalte und fällige Wiederholungen werden automatisch geplant. Deine gemischte Runde bleibt für später gespeichert."}
+        </p>
+      </div>
+      <label className="topic-level-override">
+        <input
+          type="checkbox"
+          checked={ownLevel}
+          disabled={busy}
+          onChange={(e) => {
+            const enabled = e.target.checked;
+            const level = enabled ? state.settings.level : null;
+            setOwnLevel(enabled);
+            void act((s) => setTopic(s, topic.id, { level })).then((saved) => {
+              if (!saved) setOwnLevel(pref.level !== null);
+            });
+          }}
+        />
+        Eigenes Level für dieses Thema
       </label>
+      {ownLevel ? (
+        <LevelControl
+          label={`Trainingslevel für ${topic.title}`}
+          value={pref.level ?? state.settings.level}
+          targets={targets}
+          disabled={busy}
+          onChange={(level) => act((s) => setTopic(s, topic.id, { level }))}
+        />
+      ) : (
+        <p className="small muted">
+          Folgt deinem globalen Level {state.settings.level}. Leichtere Inhalte
+          werden automatisch beigemischt.
+        </p>
+      )}
       <div className="setting-section">
         <h3>Archiv auffrischen</h3>
         <p className="small muted">
@@ -1350,29 +1690,28 @@ function TopicSettings({
             step={5}
             value={pref.quota}
             disabled={busy}
-            onChange={(e) =>
-              act((s) =>
-                setTopic(s, topic.id, { quota: Number(e.target.value) }),
-              )
-            }
+            onChange={(e) => {
+              const quota = Number(e.target.value);
+              act((s) => setTopic(s, topic.id, { quota }));
+            }}
           />
           <strong>{pref.quota === 0 ? "Aus" : pref.quota + " %"}</strong>
         </div>
         <button
           className="secondary"
-          disabled={!archived.length || busy}
+          disabled={!archived.length || busy || pref.mode !== "learn"}
           onClick={onArchive}
         >
           <Archive size={16} />
           Archiv dieses Themas üben ({archived.length})
         </button>
         <p className="small muted">
-          Diese bewusste Archivsitzung geht auch bei pausiertem Thema. Sie
-          ändert keine Dauereinstellung.
+          Archivtraining ist bei aktivem Thema möglich, auch bei 0 %
+          Archivquote. Die Inhalte bleiben dabei im Archiv.
         </p>
       </div>
       <div className="section-heading">
-        <h3>{targets.length} Lernziele</h3>
+        <h3>{scopedTargets.length} Lernziele</h3>
         <select
           aria-label="Inhalte filtern"
           value={filter}
@@ -1381,11 +1720,10 @@ function TopicSettings({
           <option value="all">Alle Inhalte</option>
           <option value="regular">Im Training</option>
           <option value="archived">Archiviert</option>
-          <option value="excluded">Ausgeschlossen</option>
         </select>
       </div>
       <div className="topic-word-list">
-        {targets
+        {scopedTargets
           .filter(
             (t) =>
               filter === "all" ||
@@ -1440,6 +1778,13 @@ function CustomForm({
         gloss: initial.gloss ?? "",
         pos: String(data.get("pos")),
         example: String(data.get("example")).trim(),
+        senseContext: {
+          de: String(data.get("contextDe") ?? "").trim(),
+          en: String(data.get("contextEn") ?? "").trim(),
+        },
+        level: String(data.get("level"))
+          ? (String(data.get("level")) as LearningLevel)
+          : undefined,
         dimensions: {
           ...initial.dimensions,
           Themen: [
@@ -1473,6 +1818,17 @@ function CustomForm({
       wide
     >
       <form onSubmit={submit} className="custom-form">
+        <label>
+          Trainingsstufe (optional)
+          <select name="level" defaultValue={initial.level ?? ""}>
+            <option value="">Ohne Stufe – im Training mitmischen</option>
+            {learningLevels.map((level) => (
+              <option key={level} value={level}>
+                {level}
+              </option>
+            ))}
+          </select>
+        </label>
         <div className="form-grid">
           <label>
             Englischer Ausdruck
@@ -1504,6 +1860,36 @@ function CustomForm({
             placeholder="Ein Satz, der dir beim Erinnern hilft"
           />
         </label>
+        {initial.kind !== "grammar" && (
+          <fieldset>
+            <legend>Welche Bedeutung ist gemeint?</legend>
+            <p className="small muted">
+              Diese Hinweise stehen vor dem Aufdecken: Deutsch beim Abruf ins
+              Englische, Englisch in der Gegenrichtung. Eine andere Bedeutung
+              bitte als eigenen Eintrag anlegen.
+            </p>
+            <label>
+              Kontext auf Deutsch (optional)
+              <textarea
+                name="contextDe"
+                maxLength={600}
+                rows={2}
+                defaultValue={initial.senseContext?.de}
+                placeholder="z. B. Ein Gefühl nach einem peinlichen Missgeschick"
+              />
+            </label>
+            <label>
+              Kontext auf Englisch (optional)
+              <textarea
+                name="contextEn"
+                maxLength={4000}
+                rows={2}
+                defaultValue={initial.senseContext?.en ?? initial.gloss}
+                placeholder="e.g. A feeling after an awkward social moment"
+              />
+            </label>
+          </fieldset>
+        )}
         <div className="form-grid">
           <label>
             Zuständiges Trainingsthema
@@ -1590,9 +1976,11 @@ function CustomForm({
 
 function SourceWord({
   word,
+  targets,
   onCustom,
 }: {
   word: DictionaryWord;
+  targets: Target[];
   onCustom: (target: Partial<Target>) => void;
 }) {
   const [visible, setVisible] = useState(5);
@@ -1625,8 +2013,13 @@ function SourceWord({
                 onCustom({
                   id: sense.id,
                   word: word.word,
-                  de: sense.de.join(" / "),
+                  de:
+                    targets.find((t) => t.id === sense.id)?.de ??
+                    sense.de.join(" / "),
                   gloss: sense.gloss,
+                  senseContext: targets.find((t) => t.id === sense.id)
+                    ?.senseContext ?? { de: "", en: sense.gloss },
+                  level: targets.find((t) => t.id === sense.id)?.level,
                   pos: sense.pos,
                   source: {
                     name: "Wiktionary via Kaikki",
@@ -1733,16 +2126,49 @@ function Dictionary({
           t.ownerTopicId === topic) &&
         (!pos || t.pos === pos) &&
         (!status || (state.participation[t.id] ?? "regular") === status) &&
-        `${t.word} ${t.de} ${Object.values(t.dimensions).flat().join(" ")}`
+        `${t.word} ${t.de} ${t.senseContext?.de ?? ""} ${t.senseContext?.en ?? ""} ${Object.values(t.dimensions).flat().join(" ")}`
           .toLowerCase()
           .includes(query.toLowerCase()),
     );
+  filtered.sort(
+    (a, b) => meaningSearchRank(b, query) - meaningSearchRank(a, query),
+  );
+  const groups = groupMeanings(filtered, query);
+  const renderMeaning = (t: Target) => (
+    <button className="dictionary-row" key={t.id} onClick={() => onDetail(t)}>
+      <span
+        className={`word-initial ${content.topics.find((topic) => topic.id === t.ownerTopicId)?.color ?? "sage"}`}
+      >
+        {t.kind === "grammar" ? (
+          <SpellCheck size={20} />
+        ) : (
+          t.word.charAt(0).toUpperCase()
+        )}
+      </span>
+      <span className="dictionary-word">
+        <strong>{t.word}</strong>
+        <span>{t.kind === "grammar" ? "Grammatiklernziel" : t.de}</span>
+        {t.senseContext?.de && (
+          <span className="meaning-preview">{t.senseContext.de}</span>
+        )}
+      </span>
+      <span className="dictionary-topic">
+        {content.topics.find((topic) => topic.id === t.ownerTopicId)?.title}
+      </span>
+      <span
+        className={`participation-tag ${state.participation[t.id] ?? "regular"}`}
+      >
+        {statusLabels[state.participation[t.id] ?? "regular"]}
+      </span>
+      <ChevronRight size={17} />
+    </button>
+  );
   return (
     <>
       <div className="page-heading heading-with-action">
         <div>
-          <div className="eyebrow">WORTE FÜR DEINE WELT</div>
-          <h1>Entdecken & behalten.</h1>
+          <div className="eyebrow">REGISTER / WÖRTERBUCH</div>
+          <h1>Dein Wörterbuch.</h1>
           <p>
             Finde Bedeutungen, ordne sie ein und mache sie zu deinen eigenen.
           </p>
@@ -1753,23 +2179,37 @@ function Dictionary({
         </button>
       </div>
       <div className="dictionary-controls">
-        <div className="tab-switch">
+        <div
+          className="dictionary-tabs"
+          role="group"
+          aria-label="Wörterbuchbereich"
+        >
           <button
             className={!source ? "active" : ""}
+            aria-pressed={!source}
             onClick={() => setSource(false)}
           >
-            Dein Trainingsbestand <span>{targets.length}</span>
+            <Bookmark size={23} aria-hidden="true" />
+            <span className="dictionary-tab-copy">
+              <strong>Dein Trainingsbestand</strong>
+              <span>{number(targets.length)} Lernziele · zum Üben bereit</span>
+            </span>
           </button>
           <button
             className={source ? "active" : ""}
+            aria-pressed={source}
             onClick={() => setSource(true)}
           >
-            Wörterbuch entdecken{" "}
-            <span>
-              {number(
-                content.manifest.sourceWordCount ??
-                  content.manifest.sourceCount,
-              )}
+            <BookOpen size={23} aria-hidden="true" />
+            <span className="dictionary-tab-copy">
+              <strong>Wörterbuch entdecken</strong>
+              <span>
+                {number(
+                  content.manifest.sourceWordCount ??
+                    content.manifest.sourceCount,
+                )}{" "}
+                Stichwörter · Neues finden
+              </span>
             </span>
           </button>
         </div>
@@ -1835,7 +2275,6 @@ function Dictionary({
               <option value="">Alle Status</option>
               <option value="regular">Im Training</option>
               <option value="archived">Archiviert</option>
-              <option value="excluded">Ausgeschlossen</option>
             </select>
             <span className="small muted">{filtered.length} Lernziele</span>
           </div>
@@ -1870,6 +2309,7 @@ function Dictionary({
                   <SourceWord
                     key={`${word.word}:${query}:${pos}`}
                     word={word}
+                    targets={targets}
                     onCustom={onCustom}
                   />
                 ))}
@@ -1886,43 +2326,25 @@ function Dictionary({
       ) : (
         <>
           <div className="dictionary-list">
-            {filtered.slice(0, limit).map((t) => (
-              <button
-                className="dictionary-row"
-                key={t.id}
-                onClick={() => onDetail(t)}
-              >
-                <span
-                  className={`word-initial ${content.topics.find((topic) => topic.id === t.ownerTopicId)?.color ?? "sage"}`}
-                >
-                  {t.kind === "grammar" ? (
-                    <SpellCheck size={20} />
-                  ) : (
-                    t.word.charAt(0).toUpperCase()
-                  )}
-                </span>
-                <span className="dictionary-word">
-                  <strong>{t.word}</strong>
-                  <span>
-                    {t.kind === "grammar" ? "Grammatiklernziel" : t.de}
-                  </span>
-                </span>
-                <span className="dictionary-topic">
-                  {
-                    content.topics.find((topic) => topic.id === t.ownerTopicId)
-                      ?.title
-                  }
-                </span>
-                <span
-                  className={`participation-tag ${state.participation[t.id] ?? "regular"}`}
-                >
-                  {statusLabels[state.participation[t.id] ?? "regular"]}
-                </span>
-                <ChevronRight size={17} />
-              </button>
-            ))}
+            {groups.slice(0, limit).map((group) =>
+              group.targets.length === 1 ? (
+                renderMeaning(group.targets[0])
+              ) : (
+                <details key={group.key} className="meaning-group">
+                  <summary>
+                    <strong>{group.label}</strong>
+                    <span>{group.targets.length} Bedeutungen</span>
+                    <ChevronDown size={18} />
+                  </summary>
+                  <p className="meaning-group-note">
+                    Getrennte Lernziele – jede Bedeutung zählt für sich.
+                  </p>
+                  {group.targets.map(renderMeaning)}
+                </details>
+              ),
+            )}
           </div>
-          {filtered.length > limit && (
+          {groups.length > limit && (
             <button
               className="secondary load-more"
               onClick={() => setLimit(limit + 60)}
@@ -1951,6 +2373,60 @@ function Dictionary({
   );
 }
 
+function ReviewStatus({
+  review,
+  busy,
+  onRestore,
+}: {
+  review: ReviewEvent;
+  busy: boolean;
+  onRestore?: () => void;
+}) {
+  const [visible, setVisible] = useState(
+    !review.good || Date.now() - Date.parse(review.at) < 4500,
+  );
+  useEffect(() => {
+    if (!review.good) return;
+    const timer = setTimeout(
+      () => setVisible(false),
+      Math.max(0, 4500 - (Date.now() - Date.parse(review.at))),
+    );
+    return () => clearTimeout(timer);
+  }, [review.id, review.at, review.good]);
+  if (!visible) return null;
+  return (
+    <div className={`review-status ${review.good ? "success" : "again"}`}>
+      <div className="review-status-line" role="status" aria-atomic="true">
+        {review.good ? <CheckCircle2 size={16} /> : <Undo2 size={16} />}
+        <span>
+          {review.good ? (
+            "Richtig · gespeichert"
+          ) : (
+            <>
+              Letzte Antwort: noch nicht · Lösung:{" "}
+              <strong>{review.exercise.answer}</strong>
+            </>
+          )}
+        </span>
+      </div>
+      {!review.good && (
+        <details>
+          <summary>Letzte Aufgabe & Erklärung</summary>
+          <p>
+            {review.exercise.prompt.replaceAll("___", review.exercise.answer)}
+          </p>
+          <p className="answer-explanation">{review.exercise.explanation}</p>
+        </details>
+      )}
+      {!review.good && onRestore && (
+        <button className="text-button" disabled={busy} onClick={onRestore}>
+          Wieder regulär üben
+        </button>
+      )}
+    </div>
+  );
+}
+
 function Training({
   state,
   content,
@@ -1960,6 +2436,7 @@ function Training({
   onTopic,
   onParticipation,
   onReport,
+  onArchive,
 }: {
   state: AppState;
   content: Content;
@@ -1967,11 +2444,31 @@ function Training({
   act: Act;
   onExit: () => void;
   onTopic: () => void;
-  onParticipation: (t: Target, p: "regular" | "archived" | "excluded") => void;
+  onParticipation: (t: Target, p: AppState["participation"][string]) => void;
   onReport: (t: Target) => void;
+  onArchive: () => void;
 }) {
   const s = state.session,
     targets = allTargets(state, content);
+  const nextRound = useMemo(
+    () =>
+      s?.finished
+        ? planSession(
+            state,
+            content,
+            new Date(),
+            s.archiveTopic,
+            s.topicId,
+            s.subtopicId,
+          )
+        : null,
+    [state, content, s?.finished, s?.archiveTopic, s?.topicId, s?.subtopicId],
+  );
+  const promptRef = useRef<HTMLHeadingElement>(null);
+  const attemptId = s?.queue[s.index]?.attemptId;
+  useEffect(() => {
+    promptRef.current?.focus({ preventScroll: true });
+  }, [attemptId, s?.finished]);
   if (!s)
     return (
       <Empty
@@ -1984,22 +2481,60 @@ function Training({
         }
       />
     );
+  if (sessionTopicInactive(state, s))
+    return (
+      <Empty
+        title="Dieses Thema ist inaktiv."
+        description="Aktiviere es unter Themen, um deine gespeicherte Runde fortzusetzen."
+        action={
+          <button className="primary" onClick={onTopic}>
+            Themen ansehen
+          </button>
+        }
+      />
+    );
   const done = state.events.filter((e) => !e.revokedAt && e.sessionId === s.id);
+  const lastReview = done.at(-1);
+  const reviewedTarget = targets.find((t) => t.id === lastReview?.targetId);
+  const status = lastReview && (
+    <ReviewStatus
+      key={lastReview.id}
+      review={{
+        ...lastReview,
+        exercise: withExerciseCues(lastReview.exercise, content),
+      }}
+      busy={busy}
+      onRestore={
+        lastReview.mode !== "regular" &&
+        reviewedTarget &&
+        state.participation[reviewedTarget.id] === "archived"
+          ? () => onParticipation(reviewedTarget, "regular")
+          : undefined
+      }
+    />
+  );
   if (s.finished || s.index >= s.queue.length)
     return (
       <div className="session-complete">
+        {status}
         <div className="completion-art">
           <CheckCheck size={48} />
           <span>✧</span>
         </div>
-        <div className="eyebrow">EIN SCHRITT WEITER</div>
+        <div className="eyebrow">
+          {s.topicId
+            ? content.topics.find((t) => t.id === s.topicId)?.title
+            : "EIN SCHRITT WEITER"}
+        </div>
         <h1>
-          {done.length ? "Das bleibt hängen." : "Für jetzt ist alles erledigt."}
+          {done.length ? "Runde abgeschlossen." : "Keine Aufgaben offen."}
         </h1>
         <p>
           {done.length
             ? "Gut, dass du dir Zeit genommen hast. Deine Antworten sind gespeichert."
-            : "Es gibt gerade keine weiteren passenden Aufgaben. Neue Lernziele sind pro Tag begrenzt; Themen und Einstellungen bestimmst du."}
+            : state.settings.limitNewPerDay
+              ? "Gerade ist nichts fällig oder dein Tageslimit ist erreicht. Du kannst weitere Themen wählen oder das Tageslimit in den Einstellungen abschalten."
+              : "Für deine Themen ist gerade nichts mehr fällig oder neu. Wähle weitere Themen oder ergänze Wörter aus dem Wörterbuch."}
         </p>
         <div className="completion-stats">
           <div>
@@ -2016,8 +2551,33 @@ function Training({
           </div>
         </div>
         <div className="button-row">
-          <button className="primary" onClick={onExit}>
-            Zurück zu Heute
+          {!!nextRound?.queue.length && (
+            <button
+              className="primary"
+              disabled={busy}
+              onClick={() =>
+                act((d) => {
+                  d.session = planSession(
+                    d,
+                    content,
+                    new Date(),
+                    s.archiveTopic,
+                    s.topicId,
+                    s.subtopicId,
+                  );
+                })
+              }
+            >
+              Weitere Runde · {nextRound.queue.length} Aufgaben{" "}
+              <ArrowRight size={17} />
+            </button>
+          )}
+          <button className="secondary" onClick={onExit}>
+            {s.topicId
+              ? "Zurück zu Themen"
+              : s.archiveTopic
+                ? "Zurück zum Archiv"
+                : "Zurück zu Heute"}
             <ArrowRight size={17} />
           </button>
           <button className="secondary" onClick={onTopic}>
@@ -2041,18 +2601,22 @@ function Training({
       </div>
     );
   const item = s.queue[s.index],
-    exercise = item.exercise,
+    exercise = withExerciseCues(item.exercise, content),
     target = targets.find((t) => t.id === exercise.targetId)!,
-    topic = content.topics.find((t) => t.id === target.ownerTopicId)!;
+    topic = content.topics.find(
+      (t) => t.id === (item.topicId ?? target.ownerTopicId),
+    )!;
   return (
-    <div className="training">
+    <div
+      className={`training ${exercise.meaningCue ? "lexical-training" : ""}`}
+    >
       <div className="training-top">
         <button className="text-button" onClick={onExit}>
           <ChevronLeft size={17} />
           Speichern & pausieren
         </button>
         <span>
-          {s.index + 1} / {s.queue.length}
+          Aufgabe {s.index + 1} / {s.queue.length}
         </span>
         <button
           className="text-button"
@@ -2063,15 +2627,24 @@ function Training({
             })
           }
         >
-          Für heute beenden
+          Runde beenden
         </button>
       </div>
-      <div className="training-progress">
+      <div
+        className="training-progress"
+        aria-label="Position in der Runde, einschließlich übersprungener Aufgaben"
+      >
         <span style={{ width: `${(s.index / s.queue.length) * 100}%` }} />
       </div>
       <div className="training-topic">
         <TopicIcon topic={topic} size={18} />
-        <span>{topic.title}</span>
+        <span>
+          {s.subtopicId
+            ? topic.subtopics?.find((sub) => sub.id === s.subtopicId)?.title
+            : s.topicId
+              ? `Themenrunde · ${topic.title}`
+              : topic.title}
+        </span>
         <span className="pill">
           {item.mode === "regular"
             ? item.retryOf
@@ -2082,13 +2655,32 @@ function Training({
                   ? "Englisch → Deutsch"
                   : exercise.mode === "choice"
                     ? "Grammatik auswählen"
-                    : "Grammatik abrufen"
+                    : exercise.writing
+                      ? writingLabels[exercise.writing.kind]
+                      : "Grammatik abrufen"
             : "Archiv auffrischen"}
         </span>
       </div>
-      <section className={`exercise-card ${s.revealed ? "revealed" : ""}`}>
+      <div className="review-status-slot">{status}</div>
+      <section
+        key={item.attemptId}
+        className={`exercise-card ${s.revealed ? "revealed" : ""} ${exercise.meaningCue ? "has-meaning" : ""} ${exercise.writing ? "has-writing" : ""}`}
+      >
         <div className="small-label">{exercise.context}</div>
-        <h1>
+        {exercise.translation && (
+          <div className="grammar-cue">
+            <span className="small-label">DAS SOLL DER SATZ SAGEN</span>
+            <p>{exercise.translation}</p>
+          </div>
+        )}
+        {exercise.writing && (
+          <p className="writing-instruction">{exercise.writing.instruction}</p>
+        )}
+        <h1
+          ref={promptRef}
+          tabIndex={-1}
+          lang={exercise.channel === "productive_recall" ? "de" : "en"}
+        >
           {exercise.prompt.split("___").map((part, i) => (
             <span key={i}>
               {i > 0 && (
@@ -2100,15 +2692,53 @@ function Training({
             </span>
           ))}
         </h1>
-        {exercise.mode === "recall" && !s.revealed && (
+        {exercise.meaningCue && (
+          <div className="meaning-cue">
+            <span className="small-label">GEMEINTE BEDEUTUNG</span>
+            <p lang={exercise.channel === "productive_recall" ? "de" : "en"}>
+              {exercise.meaningCue}
+            </p>
+          </div>
+        )}
+        {exercise.hint &&
+          (exercise.writing ? (
+            <details className="writing-hint">
+              <summary>Tipp anzeigen</summary>
+              <p className="grammar-hint">{exercise.hint}</p>
+            </details>
+          ) : (
+            <p className="grammar-hint">{exercise.hint}</p>
+          ))}
+        {exercise.writing && (
+          <WritingPractice
+            key={item.attemptId}
+            exercise={exercise}
+            storedDraft={item.draftAnswer ?? ""}
+            revealed={s.revealed}
+            busy={busy}
+            onSave={(value, reveal) =>
+              act((draft) => {
+                const current = draft.session?.queue[draft.session.index];
+                if (!current || current.attemptId !== item.attemptId)
+                  throw new Error(
+                    "Die Aufgabe hat sich geändert. Bitte prüfe deinen aktuellen Stand.",
+                  );
+                current.draftAnswer = value;
+                if (reveal) draft.session!.revealed = true;
+              })
+            }
+          />
+        )}
+        {exercise.mode === "recall" && !exercise.writing && !s.revealed && (
           <>
             <p className="think-hint">
-              Überlege kurz oder sprich deine Antwort laut aus.
+              Rufe die Antwort ab, bevor du die Lösung ansiehst.
             </p>
             <button
               className="primary reveal-button"
               disabled={busy}
-              onClick={() =>
+              onClick={(event) =>
+                event.detail < 2 &&
                 act((d) => {
                   d.session!.revealed = true;
                 })
@@ -2124,9 +2754,9 @@ function Training({
             {exercise.options.map((option, i) => (
               <button
                 key={option}
-                disabled={busy || !!s.feedback}
-                className={`${s.feedback && option === exercise.answer ? "correct" : ""} ${s.feedback?.choice === option && !s.feedback.good ? "incorrect" : ""}`}
-                onClick={() =>
+                disabled={busy}
+                onClick={(event) =>
+                  event.detail < 2 &&
                   act((d) =>
                     commitReview(
                       d,
@@ -2142,12 +2772,6 @@ function Training({
                   {String.fromCharCode(65 + i)}
                 </span>
                 {option}
-                {s.feedback && option === exercise.answer && (
-                  <Check size={20} />
-                )}{" "}
-                {s.feedback?.choice === option && !s.feedback.good && (
-                  <X size={20} />
-                )}
               </button>
             ))}
           </div>
@@ -2156,21 +2780,43 @@ function Training({
           <div className="answer-reveal">
             {exercise.mode === "recall" && (
               <>
-                <span className="small-label">DIE ANTWORT</span>
-                <h2>{exercise.answer}</h2>
+                <span className="small-label">
+                  {target.kind === "lexical"
+                    ? exercise.channel === "receptive_recall"
+                      ? "AUF DEUTSCH"
+                      : "AUF ENGLISCH"
+                    : exercise.writing
+                      ? "EINE MUSTERLÖSUNG"
+                      : "DIE ANTWORT"}
+                </span>
+                <h2
+                  lang={exercise.channel === "receptive_recall" ? "de" : "en"}
+                >
+                  {exercise.answer}
+                </h2>
                 {exercise.alternatives.length > 0 && (
                   <p>Auch möglich: {exercise.alternatives.join(" · ")}</p>
                 )}
               </>
             )}
-            <p>{exercise.explanation}</p>
-            {exercise.mode === "recall" && !s.feedback && (
+            {exercise.explanation && (
+              <p className="answer-explanation">{exercise.explanation}</p>
+            )}
+            {exercise.writing && (
+              <ul className="writing-checkpoints">
+                {exercise.writing.checkpoints.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            )}
+            {exercise.mode === "recall" && (
               <>
                 <div className="rating-buttons">
                   <button
                     className="secondary"
                     disabled={busy}
-                    onClick={() =>
+                    onClick={(event) =>
+                      event.detail < 2 &&
                       act((d) =>
                         commitReview(d, content, item.attemptId, false, null),
                       )
@@ -2182,7 +2828,8 @@ function Training({
                   <button
                     className="primary"
                     disabled={busy}
-                    onClick={() =>
+                    onClick={(event) =>
+                      event.detail < 2 &&
                       act((d) =>
                         commitReview(d, content, item.attemptId, true, null),
                       )
@@ -2201,52 +2848,6 @@ function Training({
           </div>
         )}
       </section>
-      {s.feedback && (
-        <div
-          className={`feedback ${s.feedback.good ? "success" : "again"}`}
-          role="status"
-        >
-          <div>
-            {s.feedback.good ? <CheckCircle2 size={24} /> : <Leaf size={24} />}
-            <span>
-              <strong>
-                {s.feedback.good
-                  ? "Richtig. Gut erinnert!"
-                  : "Ein Lernschritt für das nächste Mal."}
-              </strong>
-              <small>
-                {item.mode !== "regular"
-                  ? "Der Eintrag bleibt archiviert."
-                  : "Deine nächste Wiederholung wird passend eingeplant."}
-              </small>
-            </span>
-          </div>
-          <button
-            className="primary"
-            disabled={busy}
-            onClick={() =>
-              act((d) => {
-                const session = d.session!;
-                session.index++;
-                session.revealed = false;
-                session.feedback = null;
-              })
-            }
-          >
-            Weiter
-            <ArrowRight size={17} />
-          </button>
-        </div>
-      )}
-      {s.feedback && !s.feedback.good && item.mode !== "regular" && (
-        <button
-          className="text-button"
-          disabled={busy}
-          onClick={() => onParticipation(target, "regular")}
-        >
-          Wieder regulär üben
-        </button>
-      )}
       <div className="training-tools">
         <button
           disabled={busy || !done.length}
@@ -2260,14 +2861,7 @@ function Training({
           onClick={() => onParticipation(target, "archived")}
         >
           <Archive size={16} />
-          Schon bekannt · archivieren
-        </button>
-        <button
-          disabled={busy}
-          onClick={() => onParticipation(target, "excluded")}
-        >
-          <Ban size={16} />
-          Ausschließen
+          Archivieren
         </button>
         <button onClick={() => onReport(target)}>
           <CircleHelp size={16} />
@@ -2277,147 +2871,12 @@ function Training({
       <div className="training-foot">
         <ShieldCheck size={14} />
         Dein Fortschritt wird nach jeder Antwort gespeichert.
+        <button className="text-button" onClick={onArchive}>
+          <Archive size={14} />
+          Archiv anzeigen
+        </button>
       </div>
     </div>
-  );
-}
-
-function Progress({ state, content }: { state: AppState; content: Content }) {
-  const events = state.events.filter((e) => !e.revokedAt),
-    targets = allTargets(state, content),
-    ids = new Set(events.map((e) => e.targetId)),
-    first = events.filter((e) => !e.retry),
-    recall = first.filter((e) => e.exercise.mode === "recall"),
-    choice = first.filter((e) => e.exercise.mode === "choice");
-  const accuracy = (ev: typeof events) =>
-    ev.length
-      ? Math.round((ev.filter((e) => e.good).length / ev.length) * 100) + " %"
-      : "—";
-  return (
-    <>
-      <div className="page-heading">
-        <div className="eyebrow">SICHTBAR WEITERKOMMEN</div>
-        <h1>Viele kleine Schritte.</h1>
-        <p>
-          Deine Aktivität und dein Lernverlauf – ohne künstlichen Sprachlevel.
-        </p>
-      </div>
-      <div className="progress-stats">
-        <div className="metric">
-          <span className="stat-icon sage">
-            <BookOpen />
-          </span>
-          <strong>{ids.size}</strong>
-          <span>Lernziele bearbeitet</span>
-          <small>von {targets.length} im Trainingsbestand</small>
-        </div>
-        <div className="metric">
-          <span className="stat-icon peach">
-            <CheckCheck />
-          </span>
-          <strong>{events.length}</strong>
-          <span>Antworten gegeben</span>
-          <small>
-            einschließlich {events.filter((e) => e.retry).length} Nachversuchen
-          </small>
-        </div>
-        <div className="metric">
-          <span className="stat-icon lilac">
-            <Clock3 />
-          </span>
-          <strong>{new Set(events.map((e) => e.day)).size}</strong>
-          <span>aktive Lerntage</span>
-          <small>seit deinem ersten Training</small>
-        </div>
-      </div>
-      <div className="progress-layout">
-        <section className="panel">
-          <h2>Deine letzte Woche</h2>
-          <Week state={state} />
-          <p className="small muted">
-            Ein Haken steht für einen Tag mit mindestens einer gespeicherten
-            Antwort.
-          </p>
-          <div className="score-row">
-            <div>
-              <strong>{accuracy(recall)}</strong>
-              <span>selbst abgerufen</span>
-              <small>{recall.length} Aufdeckantworten</small>
-            </div>
-            <div>
-              <strong>{accuracy(choice)}</strong>
-              <span>richtig ausgewählt</span>
-              <small>{choice.length} Auswahlantworten</small>
-            </div>
-          </div>
-          <p className="small muted">
-            Gesamter Zeitraum, ohne direkte Nachversuche. Selbstbewertung und
-            Auswahl werden getrennt ausgewertet. Kein Maß für allgemeine
-            Englischkompetenz.
-          </p>
-        </section>
-        <section className="panel">
-          <h2>In deinen Themen</h2>
-          <div className="topic-progress-list">
-            {content.topics.map((t) => {
-              const tt = targets.filter((x) => x.ownerTopicId === t.id),
-                done = tt.filter((x) => ids.has(x.id)).length;
-              return (
-                <div key={t.id}>
-                  <TopicIcon topic={t} size={16} />
-                  <div>
-                    <div>
-                      <strong>{t.title}</strong>
-                      <span>
-                        {done} / {tt.length}
-                      </span>
-                    </div>
-                    <div className="progress-track">
-                      <span
-                        style={{ width: `${(done / tt.length) * 100 || 0}%` }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-      </div>
-      <section className="panel history">
-        <h2>Deine letzten Antworten</h2>
-        {!events.length ? (
-          <p className="muted">
-            Hier wächst dein Lernverlauf, sobald du loslegst.
-          </p>
-        ) : (
-          events
-            .slice(-15)
-            .reverse()
-            .map((e) => (
-              <div className="history-row" key={e.id}>
-                <span className={`history-icon ${e.good ? "good" : ""}`}>
-                  {e.good ? <Check size={16} /> : <Undo2 size={16} />}
-                </span>
-                <div>
-                  <strong>
-                    {targets.find((t) => t.id === e.targetId)?.word ??
-                      e.exercise.prompt}
-                  </strong>
-                  <small>
-                    {e.exercise.channel.includes("recognition")
-                      ? "Auswahl"
-                      : "Selbst abgerufen"}
-                    {e.retry ? " · Nachversuch" : ""}
-                    {e.mode !== "regular" ? " · Archiv" : ""}
-                  </small>
-                </div>
-                <span>{date(e.at)}</span>
-              </div>
-            ))
-        )}
-      </section>
-    </>
   );
 }
 
@@ -2449,6 +2908,31 @@ function DataPage({
   const [deleteDialog, setDeleteDialog] = useState(false),
     [deleteConfirm, setDeleteConfirm] = useState("");
   const input = useRef<HTMLInputElement>(null);
+  const [limitDraft, setLimitDraft] = useState(state.settings.limitNewPerDay);
+  const [exportBusy, setExportBusy] = useState(false);
+  const exportLock = useRef(false);
+  async function saveFile(text: Promise<string> | string, name: string) {
+    if (exportLock.current) return;
+    exportLock.current = true;
+    setExportBusy(true);
+    try {
+      const result = await downloadText(await text, name);
+      notify(
+        result === "shared"
+          ? "Datei an den Teilen-Dialog übergeben. Prüfe, ob du sie am gewünschten Ort gespeichert hast."
+          : "Exportdatei erstellt. Bewahre sie an einem sicheren Ort auf.",
+      );
+    } catch (error) {
+      notify(error instanceof Error ? error.message : "Export fehlgeschlagen.");
+    } finally {
+      exportLock.current = false;
+      setExportBusy(false);
+    }
+  }
+  useEffect(
+    () => setLimitDraft(state.settings.limitNewPerDay),
+    [state.settings.limitNewPerDay],
+  );
   useEffect(() => {
     getRecovery().then(setRecovery);
     navigator.storage?.persisted?.().then(setPersistent);
@@ -2499,8 +2983,8 @@ function DataPage({
   return (
     <>
       <div className="page-heading">
-        <div className="eyebrow">DEIN FORTSCHRITT ZUM MITNEHMEN</div>
-        <h1>Bleibt bei dir. Geht mit dir.</h1>
+        <div className="eyebrow">REGISTER / DATEN</div>
+        <h1>Deine Daten.</h1>
         <p>
           Sichere deinen Lernstand und lerne auf einem anderen Gerät weiter.
         </p>
@@ -2513,7 +2997,7 @@ function DataPage({
           <h2>Lernstand exportieren</h2>
           <p>
             Deine Antworten, Wiederholungszeiten, Themen, eigenen Einträge und
-            eine laufende Sitzung in einer Datei.
+            alle angefangenen Trainingsrunden in einer Datei.
           </p>
           <div className="backup-summary">
             <span>
@@ -2531,24 +3015,18 @@ function DataPage({
           </div>
           <button
             className="primary"
-            onClick={async () => {
-              try {
-                downloadText(
-                  await exportBackup(state, content),
-                  `wortnah-lernstand-${dayKey(new Date(), state.settings.timezone)}.json`,
-                );
-                notify(
-                  "Exportdatei erstellt. Bewahre sie an einem sicheren Ort auf.",
-                );
-              } catch (e) {
-                notify(
-                  e instanceof Error ? e.message : "Export fehlgeschlagen.",
-                );
-              }
-            }}
+            disabled={exportBusy}
+            onClick={() =>
+              saveFile(
+                exportBackup(state, content),
+                `einfach-englisch-lernstand-${dayKey(new Date(), state.settings.timezone)}.json`,
+              )
+            }
           >
             <Download size={18} />
-            Lernstand herunterladen
+            {isNative
+              ? "Lernstand speichern / teilen"
+              : "Lernstand herunterladen"}
           </button>
           <p className="small muted">
             Die Datei enthält deine persönlichen Lerninformationen.
@@ -2560,7 +3038,7 @@ function DataPage({
           </span>
           <h2>Lernstand importieren</h2>
           <p>
-            Wähle eine Wortnah-Sicherung von deinem anderen Gerät. Vor der
+            Wähle eine Lernstand-Sicherung von deinem anderen Gerät. Vor der
             Übernahme kannst du den Inhalt prüfen.
           </p>
           <div
@@ -2573,7 +3051,11 @@ function DataPage({
             }}
           >
             <ArrowUpFromLine size={25} />
-            <span>JSON-Datei hier ablegen</span>
+            <span>
+              {isNative
+                ? "Sicherung vom Gerät öffnen"
+                : "JSON-Datei hier ablegen"}
+            </span>
             <small>oder vom Gerät auswählen</small>
             <button
               className="secondary"
@@ -2609,10 +3091,11 @@ function DataPage({
           </div>
           <button
             className="text-button"
-            onClick={async () =>
-              downloadText(
-                await exportBackup(recovery, content),
-                "wortnah-ruecksicherung.json",
+            disabled={exportBusy}
+            onClick={() =>
+              saveFile(
+                exportBackup(recovery, content),
+                "einfach-englisch-ruecksicherung.json",
               )
             }
           >
@@ -2645,42 +3128,43 @@ function DataPage({
           <p>
             Exportiere deinen Stand, übertrage die Datei und importiere sie auf
             dem Zielgerät. Die Übernahme ersetzt den dortigen Stand; zwei
-            parallele Verläufe werden nicht zusammengeführt. Die spätere
-            Wortnah-App kann dasselbe Format verwenden.
+            parallele Verläufe werden nicht zusammengeführt. Web-App, Android
+            und iOS verwenden dasselbe Dateiformat.
           </p>
         </div>
       </div>
       <div className="settings-grid">
         <section className="panel">
           <h2>Dein Training</h2>
-          <label>
-            Zeitbudget
-            <select
-              value={state.settings.minutes}
-              onChange={(e) =>
-                act((s) => {
-                  s.settings.minutes = Number(e.target.value);
-                })
-              }
-              disabled={busy}
-            >
-              {[10, 20, 40].map((n) => (
-                <option key={n} value={n}>
-                  {n} Minuten
-                </option>
-              ))}
-            </select>
-          </label>
+          <LevelControl
+            value={state.settings.level}
+            targets={allTargets(state, content)}
+            disabled={busy}
+            onChange={(level) =>
+              act((s) => {
+                s.settings.level = level;
+              })
+            }
+          />
+          <TimeBudget
+            value={state.settings.minutes}
+            disabled={busy}
+            onChange={(minutes) =>
+              act((s) => {
+                s.settings.minutes = minutes;
+              })
+            }
+          />
           <label>
             Trainingsauswahl
             <select
               value={state.settings.mode}
-              onChange={(e) =>
+              onChange={(e) => {
+                const mode = e.target.value as AppState["settings"]["mode"];
                 act((s) => {
-                  s.settings.mode = e.target
-                    .value as AppState["settings"]["mode"];
-                })
-              }
+                  s.settings.mode = mode;
+                });
+              }}
               disabled={busy}
             >
               <option value="mixed">Wortschatz & Grammatik</option>
@@ -2688,42 +3172,68 @@ function DataPage({
               <option value="grammar">Nur Grammatik</option>
             </select>
           </label>
-          <label>
-            Neue Wörter pro Tag
+          <label className="daily-limit-toggle">
             <input
-              type="number"
-              min={0}
-              max={50}
-              value={state.settings.newPerDay}
-              onChange={(e) =>
-                act((s) => {
-                  s.settings.newPerDay = Math.max(
-                    0,
-                    Math.min(50, Number(e.target.value)),
-                  );
-                })
-              }
+              type="checkbox"
+              checked={limitDraft}
               disabled={busy}
+              onChange={async (e) => {
+                const enabled = e.target.checked;
+                setLimitDraft(enabled);
+                const saved = await act((s) => {
+                  s.settings.limitNewPerDay = enabled;
+                });
+                if (!saved) setLimitDraft(state.settings.limitNewPerDay);
+              }}
             />
+            Neue Inhalte pro Tag begrenzen
           </label>
-          <label>
-            Neue Grammatiklernziele pro Tag
-            <input
-              type="number"
-              min={0}
-              max={10}
-              value={state.settings.grammarPerDay}
-              onChange={(e) =>
-                act((s) => {
-                  s.settings.grammarPerDay = Math.max(
-                    0,
-                    Math.min(10, Number(e.target.value)),
-                  );
-                })
-              }
-              disabled={busy}
-            />
-          </label>
+          <p className="small muted">
+            Ohne Tageslimit füllen neue Inhalte deine Runde auf. Bereits geübte
+            Wörter kommen wieder, wenn sie fällig sind.
+          </p>
+          {limitDraft && (
+            <>
+              <label>
+                Neue Wörter pro Tag
+                <input
+                  type="number"
+                  min={0}
+                  max={50}
+                  value={state.settings.newPerDay}
+                  onChange={(e) => {
+                    const count = Math.max(
+                      0,
+                      Math.min(50, Number(e.target.value)),
+                    );
+                    act((s) => {
+                      s.settings.newPerDay = count;
+                    });
+                  }}
+                  disabled={busy}
+                />
+              </label>
+              <label>
+                Neue Grammatiklernziele pro Tag
+                <input
+                  type="number"
+                  min={0}
+                  max={10}
+                  value={state.settings.grammarPerDay}
+                  onChange={(e) => {
+                    const count = Math.max(
+                      0,
+                      Math.min(10, Number(e.target.value)),
+                    );
+                    act((s) => {
+                      s.settings.grammarPerDay = count;
+                    });
+                  }}
+                  disabled={busy}
+                />
+              </label>
+            </>
+          )}
           <p className="small muted">
             Wiederholungen haben Vorrang. Eine begonnene Sitzung behält ihre
             geplante Länge. Lerntage richten sich nach {state.settings.timezone}
@@ -2736,47 +3246,57 @@ function DataPage({
             <ShieldCheck size={28} />
             <div>
               <strong>
-                {persistent
-                  ? "Dauerhafter Speicher erlaubt"
-                  : "Lokaler Browserspeicher"}
+                {isNative
+                  ? "Lokaler App-Speicher"
+                  : persistent
+                    ? "Dauerhafter Speicher erlaubt"
+                    : "Lokaler Browserspeicher"}
               </strong>
               <p>
-                {storage === null
-                  ? "Speicherbelegung wird ermittelt."
-                  : `${(storage / 1024 / 1024).toFixed(1)} MB lokal belegt`}
+                {isNative
+                  ? "Dein Lernstand bleibt auf diesem Gerät."
+                  : storage === null
+                    ? "Speicherbelegung wird ermittelt."
+                    : `${(storage / 1024 / 1024).toFixed(1)} MB lokal belegt`}
               </p>
             </div>
           </div>
           <p className="small muted">
-            Dauerhafter Speicher schützt besser vor automatischer Bereinigung.
-            Manuell gelöschte Browserdaten lassen sich nur mit einer Sicherung
-            wiederherstellen.
+            {isNative
+              ? "Sichere deinen Stand vor einer Deinstallation oder dem Löschen der App-Daten als Datei."
+              : "Dauerhafter Speicher schützt besser vor automatischer Bereinigung. Manuell gelöschte Browserdaten lassen sich nur mit einer Sicherung wiederherstellen."}
           </p>
-          <button
-            className="secondary"
-            onClick={async () => {
-              const ok = await navigator.storage?.persist?.();
-              setPersistent(!!ok);
-              notify(
-                ok
-                  ? "Dauerhafter Speicher ist erlaubt."
-                  : "Der Browser hat keinen dauerhaften Speicher zugesagt. Deine Exportdatei bleibt die verlässliche Sicherung.",
-              );
-            }}
-          >
-            Dauerhaften Speicher anfragen
-          </button>
-          <div className="setting-section">
-            <h3>Wie eine App verwenden</h3>
-            <p>
-              Installiere Wortnah für ein eigenes Fenster und schnellen Zugriff
-              vom Startbildschirm.
-            </p>
-            <button className="secondary" onClick={onInstall}>
-              <Plus size={17} />
-              {installPrompt ? "Wortnah installieren" : "Installationshinweis"}
+          {!isNative && (
+            <button
+              className="secondary"
+              onClick={async () => {
+                const ok = await navigator.storage?.persist?.();
+                setPersistent(!!ok);
+                notify(
+                  ok
+                    ? "Dauerhafter Speicher ist erlaubt."
+                    : "Der Browser hat keinen dauerhaften Speicher zugesagt. Deine Exportdatei bleibt die verlässliche Sicherung.",
+                );
+              }}
+            >
+              Dauerhaften Speicher anfragen
             </button>
-          </div>
+          )}
+          {!isNative && (
+            <div className="setting-section">
+              <h3>Wie eine App verwenden</h3>
+              <p>
+                Installiere Einfach Englisch für ein eigenes Fenster und
+                schnellen Zugriff vom Startbildschirm.
+              </p>
+              <button className="secondary" onClick={onInstall}>
+                <Plus size={17} />
+                {installPrompt
+                  ? "Einfach Englisch installieren"
+                  : "Installationshinweis"}
+              </button>
+            </div>
+          )}
           <div className="setting-section">
             <h3>Lokale Inhaltsmeldungen</h3>
             <p className="small muted">
@@ -2785,9 +3305,9 @@ function DataPage({
             </p>
             <button
               className="text-button"
-              disabled={!state.reports.length}
+              disabled={exportBusy || !state.reports.length}
               onClick={() =>
-                downloadText(
+                saveFile(
                   JSON.stringify(
                     {
                       format: "wortnah-content-reports",
@@ -2796,7 +3316,7 @@ function DataPage({
                     null,
                     2,
                   ),
-                  "wortnah-inhaltsmeldungen.json",
+                  "einfach-englisch-inhaltsmeldungen.json",
                 )
               }
             >
@@ -2903,11 +3423,14 @@ function DataPage({
               </dd>
             </div>
             <div>
-              <dt>Laufende Sitzung</dt>
+              <dt>Fortsetzbare Trainingsrunden</dt>
               <dd>
-                {preview.state.session && !preview.state.session.finished
-                  ? "Wird fortgesetzt"
-                  : "Keine"}
+                {
+                  [
+                    preview.state.session,
+                    ...preview.state.savedSessions,
+                  ].filter((s) => s && !s.finished).length
+                }
               </dd>
             </div>
           </dl>
