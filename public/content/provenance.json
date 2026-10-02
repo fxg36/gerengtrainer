@@ -38,8 +38,8 @@
   },
   "usageContexts": "82 existing senses refined with specific bilingual cues and original bilingual examples. Source definitions and sense IDs retained; editorial drafts, not human approved.",
   "everydaySituations": {
-    "newMeanings": 251,
-    "enrichedMeanings": 11,
+    "newMeanings": 314,
+    "enrichedMeanings": 17,
     "sections": [
       "food.restaurant",
       "food.dietary",
@@ -67,7 +67,9 @@
       "culture.arts",
       "society.debate",
       "civic.services",
-      "science.environment"
+      "science.environment",
+      "work.career",
+      "shopping.services"
     ],
     "method": "Original assistant-authored bilingual contexts and examples for everyday situations. Existing exact meanings reuse their IDs and sources; new meanings have no asserted dictionary match. Practice levels are provisional; human review outstanding."
   },

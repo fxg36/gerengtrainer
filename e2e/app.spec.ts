@@ -35,10 +35,30 @@ async function nav(page: Page, name: string) {
 }
 async function start(page: Page) {
   await page
-    .getByRole("button", { name: "Mein Training einrichten", exact: true })
+    .getByRole("button", { name: "Themen auswählen", exact: true })
     .click();
-  await page.getByRole("button", { name: "Los geht’s", exact: true }).click();
+  for (const title of [
+    "Zuhause & Wohnen",
+    "Reisen & Entdecken",
+    "Wendungen & Gespräche",
+    "Praktische Grammatik",
+  ]) {
+    await setTopicActive(
+      page.getByRole("switch", { name: `${title} aktiv`, exact: true }),
+    );
+  }
+  await today(page);
+  await page
+    .getByRole("button", { name: "Training starten", exact: true })
+    .click();
   await expect(page.locator(".exercise-card")).toBeVisible();
+}
+async function today(page: Page) {
+  const shortcut = page
+    .getByRole("navigation", { name: "Schnellnavigation" })
+    .getByRole("button", { name: "Heute", exact: true });
+  if (await shortcut.isVisible()) await shortcut.click();
+  else await nav(page, "Heute");
 }
 async function answer(page: Page) {
   const before = await state(page);
@@ -179,6 +199,107 @@ test("legacy exclusions become archive and every entry control offers only the t
   await nav(page, "Archiv");
   await expect(page.locator(".archive-entry")).toHaveCount(3);
 });
+
+for (const width of [1440, 390]) {
+  test(`Today uses the topic overview directly without a second setup at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/");
+    await page
+      .getByRole("button", { name: "Themen auswählen", exact: true })
+      .click();
+    await expect(
+      page.getByRole("heading", { name: "Womit beschäftigst du dich?" }),
+    ).toBeVisible();
+    await expect(page.getByRole("dialog")).toHaveCount(0);
+    const travel = page.getByRole("switch", {
+      name: "Reisen & Entdecken aktiv",
+      exact: true,
+    });
+    const education = page.getByRole("switch", {
+      name: "Schule, Uni & Lernen aktiv",
+      exact: true,
+    });
+    await setTopicActive(travel);
+    await setTopicActive(education);
+    await page
+      .locator(".level-control")
+      .getByRole("button", { name: "B2", exact: true })
+      .click();
+    await expect
+      .poll(async () => (await state(page)).settings.level)
+      .toBe("B2");
+    await today(page);
+    await page.getByLabel("Lernzeit in Minuten", { exact: true }).fill("3");
+    await page
+      .getByLabel("Lernzeit in Minuten", { exact: true })
+      .press("Enter");
+    await expect.poll(async () => (await state(page)).settings.minutes).toBe(3);
+    const selected = await state(page);
+    // Reproduces profiles that configured topics before using the former setup.
+    expect(selected.settings.onboarded).toBe(false);
+    await page
+      .getByRole("button", { name: "Training starten", exact: true })
+      .click();
+    await expect(page.locator(".exercise-card")).toBeVisible();
+    await expect(page.getByRole("dialog")).toHaveCount(0);
+    const started = await state(page);
+    expect(started.preferences).toEqual(selected.preferences);
+    expect(started.settings).toEqual({ ...selected.settings, onboarded: true });
+    expect(started.session.queue).toHaveLength(6);
+    expect(
+      [
+        ...new Set(started.session.queue.map((item: any) => item.topicId)),
+      ].sort(),
+    ).toEqual(["education", "travel"]);
+    await answer(page);
+    await page
+      .getByRole("button", { name: "Speichern & pausieren", exact: true })
+      .click();
+    const saved = await state(page);
+    await page.reload();
+    await expect(
+      page.getByRole("button", { name: "Training fortsetzen", exact: true }),
+    ).toBeVisible();
+    await page.screenshot({
+      path: `test-results/direct-training-start-${width}.png`,
+      animations: "disabled",
+    });
+    await page
+      .getByRole("button", { name: "Training fortsetzen", exact: true })
+      .click();
+    await expect(page.locator(".exercise-card")).toBeVisible();
+    await expect(page.getByRole("dialog")).toHaveCount(0);
+    const resumed = await state(page);
+    expect(resumed.session).toEqual(saved.session);
+    expect(resumed.preferences).toEqual(saved.preferences);
+    expect(resumed.events).toEqual(saved.events);
+    expect(resumed.memory).toEqual(saved.memory);
+
+    await page
+      .getByRole("button", { name: "Speichern & pausieren", exact: true })
+      .click();
+    const shortcut = page
+      .getByRole("navigation", { name: "Schnellnavigation" })
+      .getByRole("button", { name: "Themen", exact: true });
+    if (await shortcut.isVisible()) await shortcut.click();
+    else await nav(page, "Themen");
+    await setTopicActive(travel, false);
+    await setTopicActive(education, false);
+    const inactive = await state(page);
+    await today(page);
+    await page
+      .getByRole("button", { name: "Themen auswählen", exact: true })
+      .click();
+    await expect(
+      page.getByRole("heading", { name: "Womit beschäftigst du dich?" }),
+    ).toBeVisible();
+    await expect(page.getByRole("dialog")).toHaveCount(0);
+    expect((await state(page)).preferences).toEqual(inactive.preferences);
+    expect((await state(page)).events).toEqual(saved.events);
+  });
+}
 
 test("topic rounds resume independently of the mixed round after a reload", async ({
   page,
@@ -365,6 +486,11 @@ test("training levels persist, mix easier words and allow an optional topic over
   await page.keyboard.press("Escape");
   await global.getByRole("button", { name: "B2", exact: true }).click();
   await expect.poll(async () => (await state(page)).settings.level).toBe("B2");
+  // IndexedDB can finish before React re-enables the control. press() does not
+  // wait for enabled inputs, so WebKit otherwise sends this key to the body.
+  await expect(
+    page.getByRole("slider", { name: "Dein Trainingslevel", exact: true }),
+  ).toBeEnabled();
   await page
     .getByRole("slider", { name: "Dein Trainingslevel", exact: true })
     .press("ArrowRight");
@@ -1786,7 +1912,14 @@ test("analytics starts empty, explains its levels, and follows a review and undo
     .locator(".analytics-focus")
     .getByRole("button", { name: "Zum Training" })
     .click();
-  await page.getByRole("button", { name: "Los geht’s", exact: true }).click();
+  await expect(
+    page.getByRole("heading", { name: "Womit beschäftigst du dich?" }),
+  ).toBeVisible();
+  await setTopicActive(page.locator(".topic-card").first().getByRole("switch"));
+  await today(page);
+  await page
+    .getByRole("button", { name: "Training starten", exact: true })
+    .click();
   await answer(page);
   await nav(page, "Fortschritt");
   await expect(

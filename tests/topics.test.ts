@@ -66,6 +66,7 @@ describe("Expanded themes and shared meanings", () => {
     for (const [word, a, b] of [
       ["draw", "sport", "leisure"],
       ["court", "sport", "civic"],
+      ["strength", "sport", "work"],
     ]) {
       const first = course.targets.find(
         (t) => t.word === word && targetInTopic(t, a),
@@ -76,10 +77,16 @@ describe("Expanded themes and shared meanings", () => {
       expect(first.id).not.toBe(second.id);
       expect(first.senseContext?.en).not.toBe(second.senseContext?.en);
     }
-    const deadline = course.targets.filter((t) => t.word === "deadline");
-    expect(deadline).toHaveLength(1);
-    expect(targetInTopic(deadline[0], "work")).toBe(true);
-    expect(targetInTopic(deadline[0], "education")).toBe(true);
+    for (const [word, a, b] of [
+      ["deadline", "work", "education"],
+      ["contract", "work", "shopping"],
+      ["subscription", "money", "shopping"],
+    ]) {
+      const shared = course.targets.filter((t) => t.word === word);
+      expect(shared).toHaveLength(1);
+      expect(targetInTopic(shared[0], a)).toBe(true);
+      expect(targetInTopic(shared[0], b)).toBe(true);
+    }
   });
 
   it("trains only a chosen section, preserves its round and exports its scope", async () => {

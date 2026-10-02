@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => ({
               name: "Einfach Englisch",
               short_name: "Einfach Englisch",
               description:
-                "Textbasiertes Englischtraining: Wörter verstehen und Sätze sicher bilden. Offline und ohne Konto.",
+                "Englisch im Alltag sicher nutzen. Wortschatz und Grammatik mit Text üben – offline und ohne Konto.",
               lang: "de",
               id: "/",
               start_url: "/",

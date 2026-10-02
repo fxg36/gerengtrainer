@@ -1,5 +1,63 @@
 import { expect, test } from "@playwright/test";
 
+test("everyday additions are woven into existing themes and use the everyday subtitle", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(page).toHaveTitle(
+    "Einfach Englisch · Englisch im Alltag sicher nutzen.",
+  );
+  await expect(page.locator(".brand-sub")).toHaveText(
+    "Englisch im Alltag sicher nutzen.",
+  );
+  await page
+    .getByRole("navigation", { name: "Hauptnavigation" })
+    .getByRole("button", { name: "Themen", exact: true })
+    .click();
+  await expect(page.locator(".topic-card")).toHaveCount(24);
+  const search = page.getByRole("textbox", { name: "Themen suchen" });
+  const dialog = page.getByRole("dialog");
+  for (const [query, topic, section, word] of [
+    ["Bewerbung", "Arbeit & Beruf", "work.career", "CV"],
+    ["E-Mail", "Technik & Digitales", "digital.internet", "subject line"],
+    [
+      "Abos",
+      "Einkaufen & Dienstleistungen",
+      "shopping.services",
+      "cancel a subscription",
+    ],
+  ]) {
+    await search.fill(query);
+    await expect(page.locator(".topic-card")).toHaveCount(1);
+    await page.locator(".topic-open").click();
+    await expect(dialog).toHaveAccessibleName(topic);
+    await dialog.getByLabel("Unterthema auswählen").selectOption(section);
+    await expect(dialog.locator(".topic-word-list")).toContainText(word);
+    await page.keyboard.press("Escape");
+  }
+  await page.setViewportSize({ width: 320, height: 900 });
+  await page.locator(".topic-open").click();
+  await dialog.getByRole("switch").click();
+  await expect(dialog.getByRole("switch")).toBeChecked();
+  await dialog
+    .getByLabel("Unterthema auswählen")
+    .selectOption("shopping.services");
+  expect(await dialog.evaluate((el) => el.scrollWidth <= el.clientWidth)).toBe(
+    true,
+  );
+  await page.screenshot({
+    path: "test-results/everyday-contracts-320.png",
+    animations: "disabled",
+  });
+  await dialog
+    .getByRole("button", { name: "Unterthema trainieren", exact: true })
+    .click();
+  await expect(page.locator(".exercise-card")).toBeVisible();
+  await expect(page.locator(".training-topic")).toContainText(
+    "Dienstleistungen, Abos & Verträge",
+  );
+});
+
 test("restaurant and hotel situations are discoverable and train offline on a narrow screen", async ({
   page,
   context,

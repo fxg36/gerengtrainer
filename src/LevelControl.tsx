@@ -1,4 +1,4 @@
-import { useEffect, useId, useState } from "react";
+import { useId, useLayoutEffect, useState } from "react";
 import { learningLevels, type LearningLevel, type Target } from "./domain";
 import { levelDescriptions, withinLevel } from "./levels";
 import "./levels.css";
@@ -18,7 +18,8 @@ export default function LevelControl({
 }) {
   const id = useId();
   const [draft, setDraft] = useState(value);
-  useEffect(() => setDraft(value), [value]);
+  // Apply the saved value before another input event can edit the draft.
+  useLayoutEffect(() => setDraft(value), [value]);
   const commit = async (level: LearningLevel) => {
     setDraft(level);
     if (level !== value && (await onChange(level)) === false) setDraft(value);

@@ -1136,45 +1136,6 @@ legend {
 .modal .small {
   font-size: 0.875rem;
 }
-.onboarding-topics {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 9px;
-}
-.onboarding-topics > button {
-  min-height: 57px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid #e6e8df;
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 0.875rem;
-}
-.onboarding-topics > button > svg {
-  margin-left: auto;
-  color: #bcc5ad;
-}
-.onboarding-topics .topic-icon {
-  height: 33px;
-  width: 33px;
-  border-radius: 8px;
-}
-.onboarding-topics > button.chosen {
-  background: #f3f7e9;
-  border-color: #b5c799;
-}
-.onboarding-topics > button.chosen > svg {
-  color: #68884f;
-}
-.onboarding-bottom {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 15px;
-  margin: 27px 0 17px;
-}
 .minute-buttons {
   display: flex;
   gap: 7px;
@@ -2965,10 +2926,6 @@ legend {
   .modal-head h2 {
     font-size: 1.25rem;
   }
-  .onboarding-topics > button {
-    font-size: 0.875rem;
-    gap: 8px;
-  }
   .checkbox-grid label {
     font-size: 0.875rem;
   }
@@ -3220,19 +3177,6 @@ legend {
     font-size: 0.875rem;
     padding: 15px;
     align-items: flex-start;
-  }
-  .onboarding-topics {
-    grid-template-columns: 1fr;
-  }
-  .onboarding-topics > button {
-    font-size: 0.875rem;
-  }
-  .onboarding-bottom {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .onboarding-bottom > .primary {
-    margin-top: 7px;
   }
   .minute-buttons > button {
     flex: 1;

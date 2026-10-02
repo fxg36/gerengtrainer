@@ -51,7 +51,6 @@ import {
   MessagesSquare,
   SpellCheck,
   CheckCircle2,
-  Circle,
   Pause,
   Play,
   AlertCircle,
@@ -268,7 +267,6 @@ export default function App() {
     [busy, setBusy] = useState(false),
     [online, setOnline] = useState(navigator.onLine);
   const [mobileNav, setMobileNav] = useState(false),
-    [onboarding, setOnboarding] = useState(false),
     [detail, setDetail] = useState<Target | null>(null),
     [topicDetail, setTopicDetail] = useState<Topic | null>(null);
   const [custom, setCustom] = useState<Partial<Target> | null>(null),
@@ -452,27 +450,14 @@ export default function App() {
       setToast("Aktiviere dieses Thema, um es zu trainieren.");
       return;
     }
-    if (
-      !archiveTopic &&
-      !topicId &&
-      state.settings.onboarded &&
-      !activeTopics.length
-    ) {
+    if (!archiveTopic && !topicId && !activeTopics.length) {
       navigate("topics");
-      return;
-    }
-    if (
-      !state.settings.onboarded &&
-      !archiveTopic &&
-      !topicId &&
-      !findSession(state)
-    ) {
-      setOnboarding(true);
       return;
     }
     if (
       await act((s) => {
         openSession(s, content, new Date(), archiveTopic, topicId, subtopicId);
+        s.settings.onboarded = true;
       })
     )
       navigate("session");
@@ -513,9 +498,7 @@ export default function App() {
           </div>
           <span>
             Einfach Englisch
-            <span className="brand-sub">
-              Wörter verstehen. Sätze sicher bilden.
-            </span>
+            <span className="brand-sub">Englisch im Alltag sicher nutzen.</span>
           </span>
         </a>
         <div className="nav-label">IN DIESEM HEFT</div>
@@ -670,13 +653,11 @@ export default function App() {
                         disabled={busy}
                         onClick={() => start()}
                       >
-                        {state.settings.onboarded && !activeTopics.length
+                        {!activeTopics.length
                           ? "Themen auswählen"
                           : findSession(state)
                             ? "Training fortsetzen"
-                            : !state.settings.onboarded
-                              ? "Mein Training einrichten"
-                              : "Training starten"}
+                            : "Training starten"}
                         <ArrowRight size={19} />
                       </button>
                       <div className="hero-meta">
@@ -1119,9 +1100,7 @@ export default function App() {
             />
           )}
           <footer className="page-footer">
-            <span>
-              Einfach Englisch / Wörter verstehen. Sätze sicher bilden.
-            </span>
+            <span>Einfach Englisch / Englisch im Alltag sicher nutzen.</span>
             <button onClick={() => setHelp(true)}>Inhalte & Quellen</button>
           </footer>
         </main>
@@ -1153,30 +1132,6 @@ export default function App() {
             <X size={16} />
           </button>
         </div>
-      )}
-      {onboarding && (
-        <Onboarding
-          content={content}
-          state={state}
-          onClose={() => setOnboarding(false)}
-          onSave={async (ids, minutes, level) => {
-            if (
-              await act((s) => {
-                for (const topic of content.topics)
-                  setTopic(s, topic.id, {
-                    mode: ids.includes(topic.id) ? "learn" : "paused",
-                  });
-                s.settings.minutes = minutes;
-                s.settings.level = level;
-                s.settings.onboarded = true;
-                openSession(s, content);
-              })
-            ) {
-              setOnboarding(false);
-              navigate("session");
-            }
-          }}
-        />
       )}
       {confirmAllTopics && (
         <Modal
@@ -1476,80 +1431,6 @@ function Week({ state }: { state: AppState }) {
         </div>
       ))}
     </div>
-  );
-}
-
-function Onboarding({
-  content,
-  state,
-  onSave,
-  onClose,
-}: {
-  content: Content;
-  state: AppState;
-  onSave: (ids: string[], minutes: number, level: LearningLevel) => void;
-  onClose: () => void;
-}) {
-  const [selected, setSelected] = useState([
-      "home",
-      "travel",
-      "phrases",
-      "grammar",
-    ]),
-    [minutes, setMinutes] = useState(state.settings.minutes),
-    [level, setLevel] = useState(state.settings.level);
-  return (
-    <Modal title="Mach es zu deinem Training" onClose={onClose} wide>
-      <p className="modal-intro">
-        Womit möchtest du anfangen? Du kannst deine Auswahl jederzeit ändern.
-        Dein Fortschritt wird nur auf deinem Gerät gespeichert.
-      </p>
-      <div className="onboarding-topics">
-        {content.topics.map((t) => (
-          <button
-            key={t.id}
-            className={selected.includes(t.id) ? "chosen" : ""}
-            aria-pressed={selected.includes(t.id)}
-            onClick={() =>
-              setSelected((ids) =>
-                ids.includes(t.id)
-                  ? ids.filter((id) => id !== t.id)
-                  : [...ids, t.id],
-              )
-            }
-          >
-            <TopicIcon topic={t} size={18} />
-            <span>{t.title}</span>
-            {selected.includes(t.id) ? (
-              <CheckCircle2 size={18} />
-            ) : (
-              <Circle size={18} />
-            )}
-          </button>
-        ))}
-      </div>
-      <LevelControl
-        value={level}
-        onChange={setLevel}
-        targets={allTargets(state, content).filter((t) =>
-          selected.some((topicId) => targetInTopic(t, topicId)),
-        )}
-      />
-      <div className="onboarding-bottom">
-        <TimeBudget value={minutes} onChange={setMinutes} />
-        <button
-          className="primary"
-          disabled={!selected.length}
-          onClick={() => onSave(selected, minutes, level)}
-        >
-          Los geht’s
-          <ArrowRight size={18} />
-        </button>
-      </div>
-      <p className="small muted">
-        Deine Auswahl kannst du jederzeit in den Einstellungen ändern.
-      </p>
-    </Modal>
   );
 }
 

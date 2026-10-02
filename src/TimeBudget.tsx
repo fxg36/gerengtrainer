@@ -1,4 +1,4 @@
-import { useEffect, useId, useState } from "react";
+import { useId, useLayoutEffect, useState } from "react";
 import { sessionCapacity } from "./engine";
 
 export default function TimeBudget({
@@ -12,7 +12,8 @@ export default function TimeBudget({
 }) {
   const id = useId();
   const [draft, setDraft] = useState(String(value));
-  useEffect(() => setDraft(String(value)), [value]);
+  // A deferred effect can overwrite the next edit after an async save in WebKit.
+  useLayoutEffect(() => setDraft(String(value)), [value]);
   const minutes = Math.max(1, Math.min(120, Math.round(Number(draft) || 1)));
   const save = () => {
     setDraft(String(minutes));

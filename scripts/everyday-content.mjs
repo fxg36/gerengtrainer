@@ -123,6 +123,11 @@ export function addEverydayContent(topics, targets, exercises) {
     travel: "Anreisen, Hotels buchen und Probleme unterwegs klären.",
     home: "Wohnen, eine Wohnung finden und den Haushalt organisieren.",
     phrases: "Nachfragen, telefonieren und Missverständnisse klären.",
+    work: "Sich bewerben, im Team arbeiten und den Arbeitsalltag meistern.",
+    digital: "Geräte nutzen, Nachrichten schreiben und online zurechtkommen.",
+    shopping:
+      "Einkaufen, Dienstleistungen nutzen und Fragen zu Abos oder Verträgen klären.",
+    people: "Über Gefühle, Beziehungen, Familie und Lebensereignisse sprechen.",
   };
   for (const topic of topics)
     if (descriptions[topic.id]) topic.description = descriptions[topic.id];

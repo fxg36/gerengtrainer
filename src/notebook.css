@@ -890,16 +890,6 @@ label {
 .topic-word-list > button {
   border-color: var(--line);
 }
-.onboarding-topics > button {
-  background: var(--paper);
-  border-color: #c8c3b8;
-  border-radius: 4px;
-}
-.onboarding-topics > button.chosen {
-  background: #e4ebef;
-  border-color: #65839e;
-  color: var(--ink);
-}
 .minute-buttons .selected {
   background: var(--ink);
   color: var(--paper);
@@ -1554,10 +1544,6 @@ label {
   margin: 13px 0 0;
   line-height: 1.6;
 }
-.onboarding-bottom .time-budget {
-  flex: 1;
-  max-width: 420px;
-}
 .settings-grid .daily-limit-toggle {
   display: flex;
   flex-direction: row;
@@ -1593,13 +1579,6 @@ label {
 @media (max-width: 600px) {
   .grammar-cue p {
     font-size: 1rem;
-  }
-  .onboarding-bottom {
-    flex-wrap: wrap;
-  }
-  .onboarding-bottom .time-budget {
-    flex-basis: 100%;
-    max-width: none;
   }
 }
 @media (max-width: 350px) {

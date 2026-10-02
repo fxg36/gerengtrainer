@@ -20,14 +20,16 @@ export default function AboutApp({ content }: { content: Content }) {
         <img src="/pip.svg" alt="" width="94" height="90" />
         <div>
           <h3>Dein Englisch. Ein Stück sicherer.</h3>
-          <p>Wörter verstehen. Sätze sicher bilden.</p>
+          <p>Englisch im Alltag sicher nutzen.</p>
         </div>
       </div>
       <p>
         Du sprichst schon etwas Englisch, aber im Alltag fehlen dir manchmal die
         richtigen Wörter oder ein sicherer Satzbau? Einfach Englisch hilft dir,
-        vorhandenes Wissen aufzufrischen und gezielt zu erweitern – für Alltag,
-        Reisen, Arbeit und die Themen, die dich interessieren.
+        vorhandenes Wissen aufzufrischen und gezielt zu erweitern: im
+        Restaurant, auf Reisen, bei der Arbeit oder im Gespräch mit anderen. Im
+        Mittelpunkt stehen nützliche Wörter und Formulierungen für solche
+        Alltagssituationen.
       </p>
       <p>
         Du übst mit Text: Bedeutungen unterscheiden, Wörter abrufen, Formen

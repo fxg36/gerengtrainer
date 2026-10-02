@@ -197,7 +197,7 @@ describe("Text production and learning context", () => {
       }
     }
     const refined = course.targets.filter((t) => t.previousSupport);
-    expect(refined).toHaveLength(93);
+    expect(refined).toHaveLength(99);
     expect(new Set(refined.map((t) => t.ownerTopicId)).size).toBe(23);
     expect(refined.every((t) => t.example.split("\n").length === 2)).toBe(true);
   });

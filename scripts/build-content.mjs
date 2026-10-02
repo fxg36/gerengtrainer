@@ -265,7 +265,7 @@ refineLearningContent(targets, exercises);
 const everyday = addEverydayContent(topics, targets, exercises);
 const catalogue = JSON.parse(read("public/dictionary/manifest.json"));
 const content = {
-  version: "2026.10.2-content.10",
+  version: "2026.10.2-content.11",
   topics,
   targets,
   exercises,
