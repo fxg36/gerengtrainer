@@ -1,5 +1,17 @@
 # Prüfstand von Web-App und nativer Vorbereitung
 
+## Erste Android-Test-APK, 4. Oktober 2026
+
+Der gepushte App-Stand `65a59aa` wurde mit JDK 21, Gradle 8.14.3, Android-Plattform 36 und Build Tools 35.0.0 erfolgreich als Debug-APK kompiliert (`assembleDebug`, 244 Tasks). Das SDK wurde lokal unter `.local/android-sdk` eingerichtet; dessen Pfad und die Buildausgaben werden nicht eingecheckt. Die installierbare Datei liegt unter `.local/apk/Einfach-Englisch-1.0.0-test.apk` und ist 8.694.433 Bytes groß. SHA-256: `3d2e1b3125344e0ffda7bddf6f1b43b3fc98c7092ad3406697f4add3772727af`.
+
+`apksigner verify --verbose --print-certs` bestätigt eine gültige v2-Signatur mit dem Android-Debug-Schlüssel. `aapt dump badging` bestätigt `app.einfachenglisch.trainer`, Version 1.0.0 / Build 1, Mindest-API 24 und Ziel-API 36. Alle 40 Dateien aus `dist-native` sind im APK-Archiv unter `assets/public` vorhanden und stimmen per SHA-256 überein. `native:sync` einschließlich TypeScript-/Vite-Build sowie `native:verify` bestanden.
+
+`:app:lintDebug --rerun-tasks` bestand mit null Fehlern und 29 Warnungen. Der erste Lauf beanstandete den nicht maskierten Doppelpunkt im neu angelegten lokalen SDK-Pfad; die ignorierte `local.properties` wurde korrigiert und die Analyse vollständig wiederholt. Verbleibende Hinweise betreffen vor allem Icons/Startbilder, ungenutzte Vorlagenressourcen, Versionsupdates und explizite Regeln zur Datenübertragung ab Android 12. Sie sind vor dem Store-Release zu bewerten; ein erfolgreicher Debug-Build erledigt diese Punkte nicht.
+
+Die sechs Logiktests des Kontingents und beide Chrome-Szenarien aus `e2e/learning-offer.spec.ts` bestanden erneut (`.local/apk-learning-offer-check`). Insbesondere wird bei 750 gezählten Karten „0 Wochenkarten übrig“ angezeigt; dennoch lässt sich die nächste Aufgabe beantworten. Es gibt weiterhin keine aktive Bezahlschranke und keinen benötigten Freischaltcode.
+
+Kein physisches Android-Gerät war angeschlossen (`adb devices -l` leer). Installation, Start, native Tastatur, Offlinebetrieb und Sicherungsrundlauf auf einem echten Telefon bleiben zu prüfen. Die APK ist eine Testversion, kein Store-Release. iOS wurde nicht kompiliert. Installationshinweise und der spätere Wechsel zur Store-Version stehen in [Native Veröffentlichung](native-release.md).
+
 ## Einheitlicher Einstieg ab B1, 4. Oktober 2026
 
 Die reguläre Stufenauswahl enthält B1, B2, C1 und C2; Slider und Schaltflächen verwenden denselben Bereich. Tour und App-Information nennen denselben Einstieg. A1-/A2-Inhalte bleiben in der leichteren Beimischung und bei fälligen Wiederholungen erhalten. Bereits gespeicherte A1-/A2-Schwerpunkte bleiben als Bestandseinstellung lesbar, mit ausdrücklichem Hinweis bis zu einer bewussten Wahl ab B1. Neue Themen-Level beginnen ebenfalls mindestens bei B1; automatische Empfehlungen und der zentrale Änderungsweg bieten keine neue A1-/A2-Auswahl an.
