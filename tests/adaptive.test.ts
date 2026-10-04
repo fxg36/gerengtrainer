@@ -38,7 +38,7 @@ const fixture: Content = {
 function setup() {
   const s = initialState(fixture.topics, now);
   s.settings.level = "C2";
-  s.settings.minutes = 20;
+  s.settings.dailyCardGoal = 40;
   s.settings.limitNewPerDay = false;
   setTopic(s, "home", { mode: "learn" });
   return s;
@@ -161,7 +161,7 @@ describe("Adaptive focus and advanced content", () => {
   it("ships usable C2 goals in every topic, bilingual lexical examples and advanced grammar at C1/C2", () => {
     const s = initialState(course.topics, now);
     s.settings.level = "C2";
-    s.settings.minutes = 20;
+    s.settings.dailyCardGoal = 40;
     s.settings.limitNewPerDay = false;
     for (const topic of course.topics) {
       setTopic(s, topic.id, { mode: "learn" });

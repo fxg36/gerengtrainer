@@ -31,7 +31,7 @@ const now = new Date("2026-10-01T12:00:00Z");
 const stateFor = () => {
   const state = initialState(course.topics, now);
   state.settings.level = "C1";
-  state.settings.minutes = 120;
+  state.settings.dailyCardGoal = 240;
   for (const topic of course.topics)
     setTopic(state, topic.id, { mode: "learn" });
   return state;
@@ -43,7 +43,7 @@ describe("Expanded themes and shared meanings", () => {
       readFileSync("content/topic-expansion.json", "utf8"),
     );
     expect(expansion).toHaveLength(11);
-    expect(course.topics).toHaveLength(24);
+    expect(course.topics).toHaveLength(25);
     for (const entry of expansion) {
       const topic = course.topics.find((t) => t.id === entry.id)!;
       const targets = course.targets.filter((t) => targetInTopic(t, topic.id));

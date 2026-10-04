@@ -144,8 +144,8 @@ export default function ArchivePage({
             <ArrowRight size={18} />
           </button>
           <p className="archive-control-note">
-            Aus deinen aktiven Themen, auch bei 0 % Archivquote. Bis zu{" "}
-            {state.settings.minutes} Minuten.
+            Aus deinen aktiven Themen, auch bei 0 % Archivquote. Die Karten
+            zählen zu deinem Tagesziel von {state.settings.dailyCardGoal}.
           </p>
           {!practiceCount && archived.length > 0 && (
             <button className="secondary" onClick={onTopics}>

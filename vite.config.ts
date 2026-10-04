@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => ({
               name: "Einfach Englisch",
               short_name: "Einfach Englisch",
               description:
-                "Englisch im Alltag sicher nutzen. Wortschatz und Grammatik mit Text üben – offline und ohne Konto.",
+                "Englisch auffrischen und sicherer anwenden. Für Jugendliche und Erwachsene mit Vorkenntnissen. Wortschatz und Grammatik – offline und ohne Konto.",
               lang: "de",
               id: "/",
               start_url: "/",

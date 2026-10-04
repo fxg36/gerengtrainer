@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import TrainingEstimate from "./TrainingEstimate";
 import { findSession } from "./engine";
 import {
   focusChannels,
@@ -247,33 +248,7 @@ export default function ProgressPage({
         </div>
       </details>
 
-      <div className="analytics-cefr">
-        <div>
-          <span className="cefr-mark">A1–C2</span>
-          <div>
-            <strong>Sprachniveau: noch nicht ermittelt</strong>
-            <p>
-              Dein Lernstand hier zeigt, wie sicher du den Trainingsstoff
-              abrufst.
-            </p>
-          </div>
-        </div>
-        <details>
-          <summary>Was fehlt für eine Einstufung?</summary>
-          <p>
-            Eine fundierte Einstufung braucht passende Aufgaben für Lesen,
-            Hören, Sprechen und Schreiben. Dafür sind Wortzahlen und
-            Aufdeckantworten allein nicht ausreichend.{" "}
-            <a
-              href="https://www.coe.int/en/web/common-european-framework-reference-languages/table-2-cefr-3.3-common-reference-levels-self-assessment-grid"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CEFR-Selbsteinschätzung des Europarats
-            </a>
-          </p>
-        </details>
-      </div>
+      <TrainingEstimate state={state} content={content} now={now} />
 
       <section className="analytics-activity panel">
         <div className="section-heading">
@@ -421,10 +396,11 @@ export default function ProgressPage({
           </dl>
           <p>
             Schwächere Richtungen erhalten bis zum doppelten Gewicht bei der
-            Auswahl verfügbarer Aufgaben. Wortschatz und Grammatik bekommen
-            entsprechend mehr oder weniger Plätze pro Thema. Das ist keine feste
-            Aufgabenquote: Fälligkeiten, verfügbare Inhalte, Tageslimits und
-            Archivquoten gelten weiter. Angefangene Runden bleiben erhalten.
+            Auswahl verfügbarer Aufgaben. Gemischte Runden starten mit 80 %
+            Wortschatz und 20 % Grammatik, wenn beide aktiv sind. Sichere
+            Bereiche bekommen weniger, schwächere mehr Platz. Fälligkeiten,
+            verfügbare Inhalte, Tageslimits und Archivquoten gelten weiter.
+            Angefangene Runden bleiben erhalten.
           </p>
         </details>
       </section>

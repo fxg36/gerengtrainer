@@ -73,6 +73,34 @@
     ],
     "method": "Original assistant-authored bilingual contexts and examples for everyday situations. Existing exact meanings reuse their IDs and sources; new meanings have no asserted dictionary match. Practice levels are provisional; human review outstanding."
   },
+  "subjectExpansion": {
+    "newMeanings": 137,
+    "enrichedMeanings": 18,
+    "sections": [
+      "civic.courts",
+      "civic.contracts",
+      "business.economy",
+      "business.accounting",
+      "business.investment",
+      "business.processes",
+      "people.psychology",
+      "body.hospital",
+      "science.math",
+      "science.lab",
+      "science.physics"
+    ],
+    "referencePages": [
+      "https://www.justice.gov.uk/courts/procedure-rules/civil/glossary",
+      "https://www.bankofengland.co.uk/glossary",
+      "https://www.accaglobal.com/gb/en/study-with-acca/your-career/sectors-industries-roles/management-accountant.html",
+      "https://www.accaglobal.com/gb/en/student/exam-support-resources/fundamentals-exams-study-resources/f9/technical-articles/wcm.html",
+      "https://edu.rsc.org/resources/the-interactive-lab-primer-lab-apparatus/2266.article",
+      "https://www.maths.ox.ac.uk/study-here/undergraduate-study/tmua/mat-livestream/precision",
+      "https://dictionary.apa.org/motivation",
+      "https://www.nhs.uk/nhs-services/hospitals/going-into-hospital/being-discharged-from-hospital/"
+    ],
+    "method": "Original bilingual learning drafts and examples. References checked for specialist terminology, not copied definitions. Existing meanings retain IDs, source, level and answers; new items have provisional levels and require human editorial review."
+  },
   "catalogue": {
     "schemaVersion": 2,
     "count": 53587,

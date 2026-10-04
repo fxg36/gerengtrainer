@@ -1,4 +1,5 @@
-import { test, expect, type Page, type Locator } from "@playwright/test";
+import { type Page, type Locator } from "@playwright/test";
+import { test, expect, dismissTourWhenShown } from "./fixtures";
 import fs from "node:fs/promises";
 // Topic switches reflect the committed IndexedDB state; wait for that render.
 async function setTopicActive(control: Locator, active = true) {
@@ -99,6 +100,56 @@ async function answer(page: Page) {
     page.getByRole("button", { name: "Weiter", exact: true }),
   ).toHaveCount(0);
 }
+
+test("ending a focused round exits to Today and resumes only the saved mixed round after reload", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await start(page);
+  await answer(page);
+  const mixedId = (await state(page)).session.id;
+  await page
+    .getByRole("button", { name: "Speichern & pausieren", exact: true })
+    .click();
+  await nav(page, "Themen");
+  await page
+    .getByRole("button", {
+      name: "Zuhause & Wohnen: Thema trainieren",
+      exact: true,
+    })
+    .click();
+  await answer(page);
+  const focused = await state(page);
+  expect(focused.session.topicId).toBe("home");
+  await page.setViewportSize({ width: 320, height: 850 });
+  const end = page.getByRole("button", { name: "Runde beenden", exact: true });
+  await expect(end).toBeInViewport();
+  expect((await end.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+  await page.screenshot({
+    path: "test-results/end-topic-mobile.png",
+    animations: "disabled",
+  });
+  await end.click();
+  await expect(
+    page.getByRole("heading", { name: "Dein Lernheft." }),
+  ).toBeVisible();
+  const ended = await state(page);
+  expect(ended.session.finished).toBe(true);
+  expect(ended.events).toEqual(focused.events);
+  expect(ended.memory).toEqual(focused.memory);
+  await page.reload();
+  await page
+    .getByRole("button", { name: "Training fortsetzen", exact: true })
+    .click();
+  const resumed = await state(page);
+  expect(resumed.session.id).toBe(mixedId);
+  expect(resumed.session.topicId).toBeNull();
+  expect(resumed.session.archiveTopic).toBeNull();
+  expect(
+    resumed.savedSessions.some((s: any) => s.id === focused.session.id),
+  ).toBe(false);
+  expect(resumed.events).toEqual(focused.events);
+});
 
 test("legacy exclusions become archive and every entry control offers only the two current states", async ({
   page,
@@ -231,11 +282,12 @@ for (const width of [1440, 390]) {
       .poll(async () => (await state(page)).settings.level)
       .toBe("B2");
     await today(page);
-    await page.getByLabel("Lernzeit in Minuten", { exact: true }).fill("3");
     await page
-      .getByLabel("Lernzeit in Minuten", { exact: true })
-      .press("Enter");
-    await expect.poll(async () => (await state(page)).settings.minutes).toBe(3);
+      .getByRole("slider", { name: "Tagesziel in Karten" })
+      .press("Home");
+    await expect
+      .poll(async () => (await state(page)).settings.dailyCardGoal)
+      .toBe(30);
     const selected = await state(page);
     // Reproduces profiles that configured topics before using the former setup.
     expect(selected.settings.onboarded).toBe(false);
@@ -247,7 +299,7 @@ for (const width of [1440, 390]) {
     const started = await state(page);
     expect(started.preferences).toEqual(selected.preferences);
     expect(started.settings).toEqual({ ...selected.settings, onboarded: true });
-    expect(started.session.queue).toHaveLength(6);
+    expect(started.session.queue).toHaveLength(30);
     expect(
       [
         ...new Set(started.session.queue.map((item: any) => item.topicId)),
@@ -475,10 +527,10 @@ test("training levels persist, mix easier words and allow an optional topic over
   await page.locator(".topic-card").first().locator(".topic-open").click();
   const dialog = page.getByRole("dialog");
   await dialog.getByLabel("Eigenes Level für dieses Thema").check();
-  await dialog.getByRole("button", { name: "A2", exact: true }).click();
+  await dialog.getByRole("button", { name: "B1", exact: true }).click();
   await expect
     .poll(async () => (await state(page)).preferences.home.level)
-    .toBe("A2");
+    .toBe("B1");
   await dialog.getByLabel("Eigenes Level für dieses Thema").uncheck();
   await expect
     .poll(async () => (await state(page)).preferences.home.level)
@@ -796,10 +848,9 @@ test("archiving from training changes neither today's practice count nor learnin
   await nav(page, "Heute");
   await expect(
     page
-      .locator(".stat-card")
-      .filter({ hasText: "heute geübt" })
-      .locator("strong"),
-  ).toHaveText("0");
+      .getByRole("region", { name: "Heute geübt", exact: true })
+      .getByText("0 Karten", { exact: true }),
+  ).toBeVisible();
   await expect(page.locator(".week .done")).toHaveCount(0);
   await nav(page, "Fortschritt");
   await expect(page.locator(".learning-coverage")).toContainText("0 in Übung");
@@ -816,10 +867,9 @@ test("archiving from training changes neither today's practice count nor learnin
   await nav(page, "Heute");
   await expect(
     page
-      .locator(".stat-card")
-      .filter({ hasText: "heute geübt" })
-      .locator("strong"),
-  ).toHaveText("1");
+      .getByRole("region", { name: "Heute geübt", exact: true })
+      .getByText("1 Karte", { exact: true }),
+  ).toBeVisible();
 });
 
 test("complete learning flow, reload, undo, archive and cross-device backup", async ({
@@ -837,7 +887,7 @@ test("complete learning flow, reload, undo, archive and cross-device backup", as
     fullPage: true,
   });
   await start(page);
-  expect((await state(page)).session.queue).toHaveLength(40);
+  expect((await state(page)).session.queue).toHaveLength(50);
   const original = (await state(page)).session.queue[0];
   await answer(page);
   const afterAnswer = await state(page);
@@ -906,6 +956,7 @@ test("complete learning flow, reload, undo, archive and cross-device backup", as
       viewport: { width: 1440, height: 1000 },
     }),
     other = await second.newPage();
+  await dismissTourWhenShown(other);
   await other.goto("/");
   await expect(
     other.getByRole("heading", { name: /Dein Lernheft/ }),
@@ -1372,7 +1423,7 @@ test("all topics quick selection requires confirmation and preserves individual 
   });
   await action.click();
   const dialog = page.getByRole("dialog", { name: "Alle Themen aktivieren?" });
-  await expect(dialog).toContainText("alle 24 Themen");
+  await expect(dialog).toContainText("alle 25 Themen");
   expect(await state(page)).toEqual(before);
   await dialog.getByRole("button", { name: "Nein", exact: true }).click();
   await expect(dialog).toHaveCount(0);
@@ -1432,14 +1483,23 @@ test("settings controls save the selected values before asynchronous storage", a
   await page
     .getByRole("button", { name: "Daten & Einstellungen", exact: true })
     .click();
-  await page.getByRole("slider", { name: "Lernzeit", exact: true }).focus();
   await page
-    .getByRole("slider", { name: "Lernzeit", exact: true })
+    .getByRole("slider", { name: "Tagesziel in Karten", exact: true })
+    .focus();
+  await page
+    .getByRole("slider", { name: "Tagesziel in Karten", exact: true })
     .press("End");
-  await expect.poll(async () => (await state(page)).settings.minutes).toBe(120);
-  await page.getByLabel("Lernzeit in Minuten", { exact: true }).fill("37");
-  await page.getByLabel("Lernzeit in Minuten", { exact: true }).press("Enter");
-  await expect.poll(async () => (await state(page)).settings.minutes).toBe(37);
+  await expect
+    .poll(async () => (await state(page)).settings.dailyCardGoal)
+    .toBe(250);
+  // IndexedDB commits precede the render that unlocks this control in WebKit.
+  await expect(
+    page.getByRole("slider", { name: "Tagesziel in Karten", exact: true }),
+  ).toBeEnabled();
+  await page.getByRole("slider", { name: "Tagesziel in Karten" }).press("Home");
+  await expect
+    .poll(async () => (await state(page)).settings.dailyCardGoal)
+    .toBe(30);
   await page
     .getByLabel("Neue Inhalte pro Tag begrenzen", { exact: true })
     .check();
@@ -1459,7 +1519,7 @@ test("settings controls save the selected values before asynchronous storage", a
   await page.reload();
   const saved = await state(page);
   expect(saved.settings).toMatchObject({
-    minutes: 37,
+    dailyCardGoal: 30,
     limitNewPerDay: true,
     mode: "grammar",
     newPerDay: 9,
@@ -1478,7 +1538,7 @@ test("settings controls save the selected values before asynchronous storage", a
     .toBe(50);
 });
 
-test("successive batches introduce other words and the time slider allows two hours", async ({
+test("successive batches introduce other words and the daily goal allows 250 cards", async ({
   page,
 }) => {
   await page.goto("/");
@@ -1490,22 +1550,23 @@ test("successive batches introduce other words and the time slider allows two ho
     .poll(async () => (await state(page)).settings.mode)
     .toBe("words");
   await nav(page, "Heute");
-  await page.getByLabel("Lernzeit in Minuten", { exact: true }).fill("3");
-  await page.getByLabel("Lernzeit in Minuten", { exact: true }).press("Enter");
-  await expect.poll(async () => (await state(page)).settings.minutes).toBe(3);
+  await page.getByRole("slider", { name: "Tagesziel in Karten" }).press("Home");
+  await expect
+    .poll(async () => (await state(page)).settings.dailyCardGoal)
+    .toBe(30);
   await start(page);
   const first = (await state(page)).session;
-  expect(first.queue).toHaveLength(6);
-  for (let i = 0; i < 6; i++) await answer(page);
+  expect(first.queue).toHaveLength(30);
+  for (let i = 0; i < 30; i++) await answer(page);
   await expect(
     page.getByRole("heading", { name: "Runde abgeschlossen." }),
   ).toBeVisible();
   await page
-    .getByRole("button", { name: "Weitere Runde · 6 Aufgaben" })
+    .getByRole("button", { name: "Weitere Runde · 30 Aufgaben" })
     .click();
   const second = (await state(page)).session;
   expect(second.id).not.toBe(first.id);
-  expect(second.queue).toHaveLength(6);
+  expect(second.queue).toHaveLength(30);
   expect(
     second.queue.some((q: any) =>
       first.queue.some(
@@ -1515,10 +1576,14 @@ test("successive batches introduce other words and the time slider allows two ho
   ).toBe(false);
   await page.getByRole("button", { name: "Speichern & pausieren" }).click();
   await page
-    .getByRole("slider", { name: "Lernzeit", exact: true })
+    .getByRole("slider", { name: "Tagesziel in Karten", exact: true })
     .press("End");
-  await expect.poll(async () => (await state(page)).settings.minutes).toBe(120);
-  await expect(page.locator(".time-budget")).toContainText("240 Aufgaben");
+  await expect
+    .poll(async () => (await state(page)).settings.dailyCardGoal)
+    .toBe(250);
+  await expect(page.locator(".daily-goal-control")).toContainText(
+    "250 Karten / Tag",
+  );
   expect((await state(page)).session.id).toBe(second.id);
   for (const width of [390, 320]) {
     await page.setViewportSize({ width, height: 844 });
@@ -1535,8 +1600,8 @@ test("successive batches introduce other words and the time slider allows two ho
   });
   await page.reload();
   await expect(
-    page.getByLabel("Lernzeit in Minuten", { exact: true }),
-  ).toHaveValue("120");
+    page.getByRole("slider", { name: "Tagesziel in Karten", exact: true }),
+  ).toHaveAttribute("aria-valuenow", "250");
   await page
     .getByRole("button", { name: "Training fortsetzen", exact: true })
     .click();
@@ -1900,9 +1965,12 @@ test("analytics starts empty, explains its levels, and follows a review and undo
   await expect(page.locator(".answer-metrics > div").first()).toContainText(
     "—",
   );
-  await expect(page.locator(".analytics-cefr")).toContainText(
-    "Sprachniveau: noch nicht ermittelt",
-  );
+  await expect(
+    page.getByRole("region", { name: "Geschätzter Trainingsstand" }),
+  ).toContainText("Dein geschätzter Trainingsstand");
+  await expect(
+    page.getByRole("article", { name: "Wortschatz-Einschätzung" }),
+  ).toContainText("Noch offen");
   await page.getByText("Wie entsteht mein Lernstand?", { exact: true }).click();
   await expect(page.locator(".analytics-method")).toContainText(
     "mindestens drei erfolgreiche Erstversuche",
@@ -2043,7 +2111,7 @@ test("analytics filters real learning history by topic and period on desktop and
   await expect(
     page.locator(".analytics-metrics > div").first().locator("strong"),
   ).toHaveText("86");
-  await expect(page.locator(".analytics-topic")).toHaveCount(24);
+  await expect(page.locator(".analytics-topic")).toHaveCount(25);
   await page.screenshot({
     path: "test-results/analytics-desktop.png",
     fullPage: true,
@@ -2119,7 +2187,7 @@ test("new themes have searchable sections and section rounds resume after reload
 }) => {
   await page.goto("/");
   await nav(page, "Themen");
-  await expect(page.locator(".topic-card")).toHaveCount(24);
+  await expect(page.locator(".topic-card")).toHaveCount(25);
   await page.getByLabel("Themen suchen").fill("Campus");
   await expect(page.locator(".topic-card")).toHaveCount(1);
   await page.locator(".topic-open").click();

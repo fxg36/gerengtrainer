@@ -75,7 +75,7 @@ describe("Everyday situation expansion", () => {
 
   it("makes the new hotel material available at the topic's level and honours archive and activation settings", () => {
     const state = initialState(course.topics, now);
-    state.settings.minutes = 120;
+    state.settings.dailyCardGoal = 240;
     const checkIn = course.targets.find((t) => t.word === "check in")!;
     setTopic(state, "travel", { mode: "learn", level: "A1" });
     expect(

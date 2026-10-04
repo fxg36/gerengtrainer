@@ -1,0 +1,44 @@
+.level-suggestion {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  margin: 0 0 26px;
+  border: 1px solid #b3c5d0;
+  border-left: 3px solid #6b849e;
+  border-radius: 5px;
+  background: #e8eef0;
+}
+.level-suggestion > svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.level-suggestion > div {
+  min-width: 0;
+}
+.level-suggestion h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.level-suggestion p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+.level-suggestion details {
+  margin-top: 16px;
+}
+.level-suggestion summary {
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .level-suggestion {
+    padding: 18px 16px;
+    gap: 10px;
+  }
+  .level-suggestion > svg {
+    display: none;
+  }
+  .level-suggestion .button-row {
+    flex-wrap: wrap;
+  }
+}

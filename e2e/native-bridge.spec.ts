@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 import path from "node:path";
 
 // Real native web bundle, mocked OS bridge. Device/SDK testing is still required.

@@ -10,6 +10,7 @@ import {
 import {
   commitReview,
   findSession,
+  endSession,
   normalizeSession,
   openSession,
   planSession,
@@ -63,7 +64,7 @@ const content: Content = {
 function setup() {
   const state = initialState(topics, now);
   state.settings.timezone = "Europe/Berlin";
-  state.settings.minutes = 3;
+  state.settings.dailyCardGoal = 30;
   setTopic(state, "home", { mode: "learn" });
   setTopic(state, "travel", { mode: "learn" });
   return state;
@@ -82,6 +83,27 @@ function answer(state: ReturnType<typeof setup>, at = now) {
 }
 
 describe("Independent topic rounds", () => {
+  it("ends only the current scope, keeps answers and resumes the saved mix after reload", () => {
+    const state = setup();
+    openSession(state, content, now);
+    answer(state);
+    const mixedId = state.session!.id;
+    openSession(state, content, now, null, "travel");
+    answer(state);
+    const topicId = state.session!.id;
+    const events = structuredClone(state.events);
+    const memory = structuredClone(state.memory);
+    endSession(state);
+    const restored = stateSchema.parse(JSON.parse(JSON.stringify(state)));
+    expect(findSession(restored, null, "travel")).toBeUndefined();
+    expect(findSession(restored)?.id).toBe(mixedId);
+    expect(restored.events).toEqual(events);
+    expect(restored.memory).toEqual(memory);
+    openSession(restored, content, now);
+    expect(restored.session!.id).toBe(mixedId);
+    openSession(restored, content, now, null, "travel");
+    expect(restored.session!.id).not.toBe(topicId);
+  });
   it("blocks inactive scopes and keeps a focused round intact until reactivation, including after backup", async () => {
     const state = setup();
     openSession(state, content, now, null, "travel");
@@ -120,7 +142,7 @@ describe("Independent topic rounds", () => {
     expect(restored.preferences.travel.mode).toBe("paused");
     expect(restored.events).toEqual(state.events);
     expect(restored.memory).toEqual(state.memory);
-    expect(planSession(restored, content, now).queue).toHaveLength(6);
+    expect(planSession(restored, content, now).queue).toHaveLength(30);
   });
   it("trains only the requested active topic with its level, despite a different global content filter", () => {
     const state = setup();
@@ -130,7 +152,7 @@ describe("Independent topic rounds", () => {
     state.participation["travel-1"] = "archived";
     const before = structuredClone(state.preferences);
     openSession(state, content, now, null, "travel");
-    expect(state.session!.queue).toHaveLength(6);
+    expect(state.session!.queue).toHaveLength(18);
     expect(
       state.session!.queue.every((q) => {
         const target = targets.find((t) => t.id === q.exercise.targetId)!;
@@ -158,7 +180,7 @@ describe("Independent topic rounds", () => {
       due: now.toISOString(),
     };
     openSession(state, content, now, null, "travel");
-    expect(state.session!.queue).toHaveLength(6);
+    expect(state.session!.queue).toHaveLength(11);
     expect(state.session!.queue[0].exercise.targetId).toBe("travel-29");
   });
 

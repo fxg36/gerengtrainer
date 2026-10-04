@@ -71,13 +71,17 @@
   margin: 6px 0 0;
 }
 .about-licenses {
-  white-space: pre-wrap;
   overflow-wrap: anywhere;
   font: inherit;
   font-size: 14px;
   padding: 14px;
   background: #f1ecdf;
   border-radius: 8px;
+}
+.about-license-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
 }
 @media (max-width: 420px) {
   .about-intro {

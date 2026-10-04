@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./fixtures";
 
 test("everyday additions are woven into existing themes and use the everyday subtitle", async ({
   page,
@@ -14,7 +14,7 @@ test("everyday additions are woven into existing themes and use the everyday sub
     .getByRole("navigation", { name: "Hauptnavigation" })
     .getByRole("button", { name: "Themen", exact: true })
     .click();
-  await expect(page.locator(".topic-card")).toHaveCount(24);
+  await expect(page.locator(".topic-card")).toHaveCount(25);
   const search = page.getByRole("textbox", { name: "Themen suchen" });
   const dialog = page.getByRole("dialog");
   for (const [query, topic, section, word] of [
@@ -138,8 +138,8 @@ test("restaurant and hotel situations are discoverable and train offline on a na
   });
   await page.reload();
   await expect(
-    page.getByRole("navigation", { name: "Hauptnavigation" }),
-  ).toBeAttached();
+    page.getByRole("button", { name: "Menü öffnen", exact: true }),
+  ).toBeVisible();
   await page.getByRole("button", { name: "Menü öffnen", exact: true }).click();
   await page
     .getByRole("navigation", { name: "Hauptnavigation" })

@@ -2,11 +2,13 @@ import { useState } from "react";
 import type { Content } from "./domain";
 import { isNative } from "./platform";
 import { focusRules } from "./training-focus";
+import licenseNotices from "./license-notices.json";
 import "./about.css";
 
 export default function AboutApp({ content }: { content: Content }) {
-  const [licenses, setLicenses] = useState("");
-  const [licenseError, setLicenseError] = useState("");
+  const [licenses, setLicenses] = useState<
+    { title: string; text: string }[] | null
+  >(null);
   const lexicalCount = content.targets.filter(
     (target) => target.kind === "lexical",
   ).length;
@@ -24,18 +26,26 @@ export default function AboutApp({ content }: { content: Content }) {
         </div>
       </div>
       <p>
-        Du sprichst schon etwas Englisch, aber im Alltag fehlen dir manchmal die
-        richtigen Wörter oder ein sicherer Satzbau? Einfach Englisch hilft dir,
-        vorhandenes Wissen aufzufrischen und gezielt zu erweitern: im
-        Restaurant, auf Reisen, bei der Arbeit oder im Gespräch mit anderen. Im
-        Mittelpunkt stehen nützliche Wörter und Formulierungen für solche
-        Alltagssituationen.
+        Einfach Englisch richtet sich an Jugendliche und Erwachsene mit
+        Vorkenntnissen. Du verstehst bereits einfache englische Sätze und
+        möchtest dein Wissen auffrischen und erweitern. Im Alltag fehlen dir
+        manchmal die richtigen Wörter oder ein sicherer Satzbau? Einfach
+        Englisch hilft dir, vorhandenes Wissen aufzufrischen und gezielt zu
+        erweitern: im Restaurant, auf Reisen, bei der Arbeit oder im Gespräch
+        mit anderen. Im Mittelpunkt stehen nützliche Wörter und Formulierungen
+        für solche Alltagssituationen.
       </p>
       <p>
         Du übst mit Text: Bedeutungen unterscheiden, Wörter abrufen, Formen
         ergänzen und Sätze umformulieren. Das stärkt Grundlagen für die
         alltägliche Kommunikation. Hören, Aussprache und freie Gespräche werden
         hier nicht trainiert.
+      </p>
+      <p>
+        Wähle deinen Trainingsschwerpunkt von B1 bis C2. B1 ist unser Einstieg.
+        Einfachere A1-/A2-Inhalte bleiben zum Auffrischen enthalten. Die App
+        setzt Vorkenntnisse voraus und führt nicht von den ersten englischen
+        Wörtern an durch einen Anfängerkurs.
       </p>
 
       <h3>So lernst du hier</h3>
@@ -124,6 +134,20 @@ export default function AboutApp({ content }: { content: Content }) {
             </dd>
           </div>
           <div>
+            <dt>80 % Wortschatz · 20 % Grammatik</dt>
+            <dd>
+              So startet eine gemischte Runde, wenn Wortschatz und Grammatik
+              aktiv sind. Der Wortschatzanteil wird auf deine aktiven Themen
+              verteilt. Zusätzliche Vokabelthemen verkleinern den
+              Grammatikanteil nicht. Schwächere Bereiche erhalten mehr Gewicht.
+              Ab mindestens zehn Antworten pro Richtung und jeweils 90 % gewusst
+              erhält ein sicherer Bereich für die Platzverteilung den Faktor
+              0,75. Fehlt geeigneter Stoff, füllt der andere Bereich freie
+              Plätze. Einzelthemen, reines Wortschatz- oder Grammatiktraining
+              und bewusstes Archivtraining folgen deiner Auswahl.
+            </dd>
+          </div>
+          <div>
             <dt>60 % Schwerpunkt · 40 % Grundlagen</dt>
             <dd>
               Neue Inhalte werden nach Möglichkeit zu 60 % aus deiner gewählten
@@ -151,13 +175,13 @@ export default function AboutApp({ content }: { content: Content }) {
             <dd>
               Das Gewicht verstärkt die Priorität innerhalb fälliger Karten und
               beeinflusst bei neuen Bedeutungen die Wahl der Abrufrichtung. Die
-              mittleren Richtungsgewichte bestimmen außerdem die Plätze pro
-              Wortschatz- bzw. Grammatikthema. Sicheres wird nicht vor seinem
-              Termin zurückgeholt. Die 60/40-Levelmischung, Archivquoten und der
-              Einstieg in neue Schreibziele über eigene Satzbildung bleiben
-              erhalten. Änderungen greifen erst bei neu geplanten Runden. Diese
-              festen Regeln sind eine Gestaltungsentscheidung der App und kein
-              wissenschaftlich ermitteltes Optimum.
+              mittleren Richtungsgewichte passen außerdem die Ausgangsverteilung
+              von 80 % Wortschatz und 20 % Grammatik an. Sicheres wird nicht vor
+              seinem Termin zurückgeholt. Die 60/40-Levelmischung, Archivquoten
+              und der Einstieg in neue Schreibziele über eigene Satzbildung
+              bleiben erhalten. Änderungen greifen erst bei neu geplanten
+              Runden. Diese festen Regeln sind eine Gestaltungsentscheidung der
+              App und kein wissenschaftlich ermitteltes Optimum.
             </dd>
           </div>
           <div>
@@ -169,11 +193,14 @@ export default function AboutApp({ content }: { content: Content }) {
             </dd>
           </div>
           <div>
-            <dt>1 bis 120 Minuten</dt>
+            <dt>Dein persönliches Tagesziel</dt>
             <dd>
-              Der Zeitregler schätzt den Umfang mit zwei Aufgaben pro Minute,
-              mindestens 6 und höchstens 240 Aufgaben. Das ist eine
-              Planungshilfe, keine Zeitvorgabe oder wissenschaftliche Dosierung.
+              Wähle 30 bis 250 Karten pro Tag. Neue Runden orientieren sich an
+              den noch offenen Karten deines Ziels. Wiederholungen zählen mit;
+              bei erreichtem Ziel bleibt weiteres Üben freiwillig möglich. 50–80
+              Karten sind unser Startvorschlag, keine wissenschaftlich
+              ermittelte optimale Menge. Die Forschung unterstützt verteiltes
+              Üben und aktives Erinnern.
             </dd>
           </div>
         </dl>
@@ -259,29 +286,22 @@ export default function AboutApp({ content }: { content: Content }) {
         </p>
         <button
           className="text-button"
-          onClick={async () => {
-            if (licenses) {
-              setLicenses("");
-              return;
-            }
-            try {
-              const response = await fetch("/licenses/NOTICE.txt");
-              if (!response.ok) throw new Error();
-              setLicenses(await response.text());
-              setLicenseError("");
-            } catch {
-              setLicenseError(
-                "Die Lizenzhinweise konnten nicht geladen werden.",
-              );
-            }
-          }}
+          onClick={() => setLicenses(licenses ? null : licenseNotices)}
         >
           {licenses
             ? "Lizenzhinweise schließen"
             : "Vollständige Quellen- und Lizenzhinweise"}
         </button>
-        {licenseError && <p role="status">{licenseError}</p>}
-        {licenses && <pre className="about-licenses">{licenses}</pre>}
+        {licenses && (
+          <div className="about-licenses">
+            {licenses.map(({ title, text }) => (
+              <details key={title}>
+                <summary>{title}</summary>
+                <pre className="about-license-text">{text}</pre>
+              </details>
+            ))}
+          </div>
+        )}
       </details>
 
       <details className="about-details">

@@ -77,7 +77,7 @@ function setup() {
   const s = initialState(topics, now);
   s.settings.timezone = "Europe/Berlin";
   s.settings.onboarded = true;
-  s.settings.minutes = 10;
+  s.settings.dailyCardGoal = 30;
   s.settings.limitNewPerDay = true;
   setTopic(s, "home", { mode: "learn" });
   return s;
@@ -115,7 +115,7 @@ describe("Learning policies and scheduling", () => {
       const s = setup();
       s.settings.level = level;
       s.settings.limitNewPerDay = false;
-      s.settings.minutes = 20;
+      s.settings.dailyCardGoal = 40;
       const queue = planSession(s, levelContent, now).queue;
       expect(queue).toHaveLength(40);
       expect(new Set(queue.map((item) => item.exercise.targetId)).size).toBe(
@@ -151,13 +151,13 @@ describe("Learning policies and scheduling", () => {
     );
     expect(
       queue.filter((q) => q.exercise.targetId.startsWith("A2")),
-    ).toHaveLength(12);
+    ).toHaveLength(18);
     setTopic(s, "home", { level: null });
     expect(
       planSession(s, levelContent, now).queue.filter((q) =>
         q.exercise.targetId.startsWith("C1"),
       ),
-    ).toHaveLength(12);
+    ).toHaveLength(18);
   });
   it("keeps due reviews at any level first and leaves the running round untouched", () => {
     const s = setup();
@@ -195,10 +195,10 @@ describe("Learning policies and scheduling", () => {
       ),
     };
     const queue = planSession(s, smaller, now).queue;
-    expect(queue).toHaveLength(20);
+    expect(queue).toHaveLength(30);
     expect(
       queue.filter((q) => q.exercise.targetId.startsWith("A2")),
-    ).toHaveLength(12);
+    ).toHaveLength(18);
     s.personalTargets = targets.slice(0, 4);
     s.personalExercises = s.personalTargets.flatMap(lexicalExercises);
     expect(
@@ -313,7 +313,8 @@ describe("Learning policies and scheduling", () => {
   it("starts the next batch with other targets, without immediately reversing learned words", () => {
     const s = setup();
     s.settings.limitNewPerDay = false;
-    s.settings.minutes = 3;
+    s.settings.dailyCardGoal = 30;
+    setTopic(s, "travel", { mode: "learn" });
     s.session = planSession(s, content, now);
     const first = s.session.queue.map((q) => q.exercise.targetId);
     while (!s.session.finished) {
@@ -321,7 +322,7 @@ describe("Learning policies and scheduling", () => {
       normalizeSession(s, content, now);
     }
     const second = planSession(s, content, new Date(now.getTime() + 1000));
-    expect(second.queue).toHaveLength(6);
+    expect(second.queue).toHaveLength(10);
     expect(second.queue.some((q) => first.includes(q.exercise.targetId))).toBe(
       false,
     );
@@ -366,17 +367,17 @@ describe("Learning policies and scheduling", () => {
       planSession(s, content, new Date("2026-10-02T12:00:00Z")).queue,
     ).toHaveLength(1);
   });
-  it("plans up to 240 distinct targets for two hours, including uneven topics", () => {
+  it("plans up to 250 distinct targets for the daily goal, including uneven topics", () => {
     const real = JSON.parse(
       readFileSync("public/content/course.json", "utf8"),
     ) as Content;
     const s = initialState(real.topics, now);
-    s.settings.minutes = 120;
+    s.settings.dailyCardGoal = 250;
     for (const t of real.topics) setTopic(s, t.id, { mode: "learn" });
     const queue = planSession(s, real, now).queue;
-    expect(queue).toHaveLength(240);
-    expect(new Set(queue.map((q) => q.exercise.targetId)).size).toBe(240);
-    s.settings.minutes = 37;
+    expect(queue).toHaveLength(250);
+    expect(new Set(queue.map((q) => q.exercise.targetId)).size).toBe(250);
+    s.settings.dailyCardGoal = 74;
     expect(planSession(s, real, now).queue).toHaveLength(74);
   });
   it("pauses all non-selected topics, even when secondary topic tags match", () => {
@@ -462,7 +463,7 @@ describe("Learning policies and scheduling", () => {
     setTopic(s, "home", { quota: 20 });
     for (const t of targets) setParticipation(s, t.id, "archived");
     const session = planSession(s, content, now);
-    expect(session.queue).toHaveLength(4);
+    expect(session.queue).toHaveLength(6);
     expect(session.queue.every((q) => q.mode === "archive")).toBe(true);
   });
   it("explicit archive practice requires an active topic and leaves regular targets out", () => {
@@ -541,12 +542,12 @@ describe("Learning policies and scheduling", () => {
   });
   it("does not commit fractional archive carry during planning", () => {
     const s = setup();
-    s.settings.minutes = 3;
+    s.settings.dailyCardGoal = 30;
     setTopic(s, "home", { quota: 5 });
     s.session = planSession(s, content, now);
     expect(s.preferences.home.remainder).toBe(0);
     answer(s);
-    expect(s.preferences.home.remainder).toBeCloseTo(0.3);
+    expect(s.preferences.home.remainder).toBeCloseTo(0.5);
     const value = s.preferences.home.remainder;
     const event = s.events[0];
     commitReview(s, content, event.id, true, null, now);
@@ -792,7 +793,7 @@ describe("Portable backups", () => {
     const s = setup(),
       before = structuredClone(s),
       raw = JSON.parse(await exportBackup(s, content));
-    raw.payload.state.settings.minutes = 40;
+    raw.payload.state.settings.dailyCardGoal = 80;
     await expect(parseBackup(JSON.stringify(raw))).rejects.toThrow(/Prüfsumme/);
     expect(s).toEqual(before);
   });
@@ -856,13 +857,13 @@ describe("Portable backups", () => {
       withExerciseCues({ ...old, answer: "left" }, real).translation,
     ).toBeUndefined();
     const s = initialState(real.topics, now);
-    s.settings.minutes = 120;
+    s.settings.dailyCardGoal = 240;
     s.personalExercises = [old];
     const restored = restoredState(
       await parseBackup(await exportBackup(s, real)),
       real,
     );
-    expect(restored.settings.minutes).toBe(120);
+    expect(restored.settings.dailyCardGoal).toBe(240);
     expect(restored.settings.limitNewPerDay).toBe(false);
     expect(
       restored.personalExercises.find((e) => e.id === old.id)?.translation,

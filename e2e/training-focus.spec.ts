@@ -1,10 +1,12 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 
 test("global training focus reflects channel performance independently of report filters", async ({
   page,
 }) => {
   await page.goto("/");
-  await expect(page.locator(".hero")).toBeVisible();
+  await expect(
+    page.getByRole("region", { name: "Dein Lernmoment" }),
+  ).toBeVisible();
   await page.evaluate(async () => {
     const course = await (await fetch("/content/course.json")).json();
     await new Promise<void>((resolve, reject) => {

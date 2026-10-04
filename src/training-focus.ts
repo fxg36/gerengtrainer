@@ -65,6 +65,68 @@ export function trainingFocus(events: ReviewEvent[], now = new Date()) {
 }
 export type TrainingFocus = ReturnType<typeof trainingFocus>;
 
+export const practiceMix = {
+  words: 80,
+  grammar: 20,
+  secureAccuracy: 0.9,
+  secureWeight: 0.75,
+} as const;
+
+// Allocate domains before topics so enabling more vocabulary themes cannot
+// dilute grammar. A securely recalled domain needs less of the next round.
+export function mixedTopicBudgets(
+  slots: number,
+  topicIds: string[],
+  focus: TrainingFocus,
+) {
+  const words = topicIds.filter((id) => id !== "grammar");
+  const grammar = topicIds.includes("grammar");
+  const domainWeight = (channels: Channel[]) => {
+    const results = channels.map((channel) => focus[channel]);
+    const secure = results.every(
+      (result) =>
+        result.count >= focusRules.minimum &&
+        result.accuracy !== null &&
+        result.accuracy >= practiceMix.secureAccuracy,
+    );
+    return (
+      (results.reduce((sum, result) => sum + result.weight, 0) /
+        results.length) *
+      (secure ? practiceMix.secureWeight : 1)
+    );
+  };
+  if (!words.length || !grammar)
+    return topicBudgets(
+      slots,
+      topicIds.map(() => 1),
+    );
+  const [wordSlots, grammarSlots] = topicBudgets(slots, [
+    practiceMix.words * domainWeight(["productive_recall", "receptive_recall"]),
+    practiceMix.grammar *
+      domainWeight(["grammar_production", "grammar_recognition"]),
+  ]);
+  const wordBudgets = topicBudgets(
+    wordSlots,
+    words.map(() => 1),
+  );
+  let index = 0;
+  return topicIds.map((id) =>
+    id === "grammar" ? grammarSlots : wordBudgets[index++],
+  );
+}
+
+export function spreadPractice<T>(words: T[], grammar: T[]): T[] {
+  const total = words.length + grammar.length;
+  let wordIndex = 0,
+    grammarIndex = 0;
+  return Array.from({ length: total }, (_, i) =>
+    Math.floor(((i + 1) * grammar.length) / total) >
+    Math.floor((i * grammar.length) / total)
+      ? grammar[grammarIndex++]
+      : words[wordIndex++],
+  );
+}
+
 export function topicBudgets(slots: number, weights: number[]) {
   if (!weights.length) return [];
   const sum = weights.reduce((total, weight) => total + weight, 0);

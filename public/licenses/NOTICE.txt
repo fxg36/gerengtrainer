@@ -3,7 +3,10 @@ Einfach Englisch content attribution
 Wiktionary contributors: https://en.wiktionary.org/
 Source page links are stored per meaning. Raw extraction: Kaikki/Wiktextract, https://kaikki.org/dictionary/rawdata.html
 Wiktionary texts and adapted dictionary/learning content are distributed under CC BY-SA 4.0. German learning glosses, thematic selection and classifications were edited for Einfach Englisch (formerly Wortnah). Draft, not human approved. Original quoted examples are omitted from the general catalogue.
+License: https://creativecommons.org/licenses/by-sa/4.0/
+The full license text is bundled as CC-BY-SA-4.0.txt. These content terms do not license the application code. No endorsement by Wiktionary, Kaikki or the data authors is implied.
 
 wordfreq: Copyright 2022 Robyn Speer. Data: CC BY-SA 4.0. See wordfreq-NOTICE.txt for full attribution, including Google Books, Wikimedia, University of Leeds, ParaCrawl, OpenSubtitles and the freely available SUBTLEX data by Marc Brysbaert et al.
 
 Fonts: DM Sans and DM Serif Display, SIL Open Font License. See included licenses. Software libraries retain their respective licenses.
+The in-app license list includes the full installed npm license texts, including Capacitor, React, scheduler, Lucide/Feather, ts-fsrs, idb, zod, tslib, fonts, and the Workbox web runtime. It is generated from package-lock.json; some dependency notices are included conservatively even if their code is not bundled.

@@ -1,0 +1,163 @@
+.learning-offer-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px 24px;
+  border: 1px solid var(--line);
+  border-left: 3px solid #6b849e;
+  border-radius: 5px;
+  background: var(--paper);
+  margin: 0 0 26px;
+  padding: 20px 24px;
+}
+.allowance-status strong {
+  display: block;
+  font-size: 1.125rem;
+  margin: 6px 0;
+}
+.allowance-status p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.learning-offer-action {
+  display: grid;
+  gap: 8px;
+}
+.learning-offer-action > span,
+.offer-availability {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.offer-availability {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.nav-item.offer-nav {
+  align-items: flex-start;
+  border: 1px solid #b3bfca;
+  background: #e8eef0;
+  margin-top: 14px;
+}
+.offer-nav > svg {
+  margin-top: 3px;
+}
+.offer-nav > span {
+  min-width: 0;
+  text-align: left;
+}
+.offer-nav small {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.offer-intro {
+  margin-top: 0;
+}
+.modal[open]:has(.learning-offer-details) {
+  display: flex;
+  flex-direction: column;
+  height: min(790px, calc(100dvh - 32px));
+  overflow: hidden;
+}
+.modal:has(.learning-offer-details) > .modal-head {
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+.learning-offer-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.offer-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.offer-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.offer-options > section {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 20px;
+}
+.offer-options h3 {
+  margin: 0 0 16px;
+  font-size: 1.125rem;
+}
+.offer-options p {
+  line-height: 1.6;
+}
+.offer-unlimited {
+  background: #e8eef0;
+}
+.offer-unlimited > svg {
+  margin-bottom: 8px;
+}
+.offer-price {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+.offer-price > span {
+  display: block;
+  font:
+    0.875rem/1.5 "DM Sans Variable",
+    sans-serif;
+}
+.offer-unlimited ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+}
+.offer-unlimited li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 8px 0;
+}
+.offer-unlimited li > svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.offer-rules {
+  margin: 18px 0;
+  font-size: 0.875rem;
+}
+.offer-rules summary {
+  cursor: pointer;
+}
+.offer-footer {
+  flex-shrink: 0;
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+@media (max-width: 700px) {
+  .learning-offer-summary {
+    grid-template-columns: 1fr;
+    padding: 18px 16px;
+  }
+  .offer-options {
+    grid-template-columns: 1fr;
+  }
+  .offer-unlimited {
+    grid-row: 1;
+  }
+  .offer-options > section {
+    padding: 16px;
+  }
+  .offer-footer > button {
+    width: 100%;
+  }
+}

@@ -1,16 +1,164 @@
 # Prüfstand von Web-App und nativer Vorbereitung
 
-Stand: 2. Oktober 2026. Lokal unter Windows mit installiertem Google Chrome geprüft. Browserprüfungen betreffen den gebauten Web-Bestand; native Bridge-Aufrufe werden in Chrome simuliert. Keine Android-/iOS-Kompilierung oder Prüfung auf physischen Geräten.
+## Einheitlicher Einstieg ab B1, 4. Oktober 2026
+
+Die reguläre Stufenauswahl enthält B1, B2, C1 und C2; Slider und Schaltflächen verwenden denselben Bereich. Tour und App-Information nennen denselben Einstieg. A1-/A2-Inhalte bleiben in der leichteren Beimischung und bei fälligen Wiederholungen erhalten. Bereits gespeicherte A1-/A2-Schwerpunkte bleiben als Bestandseinstellung lesbar, mit ausdrücklichem Hinweis bis zu einer bewussten Wahl ab B1. Neue Themen-Level beginnen ebenfalls mindestens bei B1; automatische Empfehlungen und der zentrale Änderungsweg bieten keine neue A1-/A2-Auswahl an.
+
+Die Kurs-Meilensteine beginnen bei B1. A1-/A2-Kursabzeichen entfallen, dadurch gibt es insgesamt 32 Meilensteine. Heute-Zähler, Filter und Erfolgshinweise leiten ihre Werte aus derselben Liste ab; Antworten und sonstige Erfolge bleiben erhalten. Die Einschätzung unter Fortschritt kann weiterhin schwächere Grundlagen erkennen und ist unabhängig vom wählbaren Trainingsschwerpunkt.
+
+190 Logiktests sowie neun gezielt betroffene Szenarien jeweils in Chrome und WebKit bestanden (`.local/b1-entry-chrome`, `.local/b1-entry-webkit`). Geprüft sind die vier auswählbaren Stufen, Slider-Tastaturgrenzen, Themen-Overrides, alte A1- und A2-Profile, freiwillige Stufenempfehlungen, 32 Meilensteine und die angepassten Tour-/App-Texte. Ansichten bei 320/390/1440 Pixeln kontrolliert. TypeScript, Web-/native Web-Build, Synchronisierung und `native:verify` ebenfalls erfolgreich. Kein zusätzlicher vollständiger Browserlauf und kein nativer Gerätebuild für diese Anpassung.
+
+## Ergänzte App-Funktionen am 4. Oktober 2026
+
+„Ausdruck des Tages“ wechselt nach lokalem Kalender durch 19 vorhandene Wendungen mit zweisprachigem Beispiel. Die Auswahl bleibt innerhalb eines Tages und nach Neuladen gleich; Sommerzeit und Jahreswechsel sind berücksichtigt. Die Rotation benötigt kein Netz und schreibt keine Lernereignisse.
+
+Die Meilensteinübersicht enthält jetzt 34 Erfolge. Neu sind 1, 7, 30 und 100 erreichte Tagesziele sowie ein kompakter, schließbarer Hinweis auf neue Erfolge mit direktem Zugang zur Übersicht. Ein neuer Review speichert sein Tagesziel und die IDs der angezeigten Erfolge atomar. Spätere Zieländerungen, Neuladen, Rückgängig und Import vergeben keine künstlichen oder doppelten Hinweise. Ohne frühere Zielaufzeichnung werden keine historischen Tagesziele erfunden. Zurückgenommene Antworten werden weiterhin aus der tatsächlichen Abzeichenberechnung entfernt.
+
+Unter Fortschritt ergänzt eine Einschätzung die gewählte Trainingsstufe, getrennt nach Wortschatz und Grammatik. Grundlage sind unabhängige Erstantworten über mehrere Tage in beiden Richtungen, mit mindestens 40 Antworten je Bereich/Stufe und mindestens 90 % Gesamterfolg. Der gemeinsame Textübungsstand verwendet die niedrigere belegte Stufe. Die Regeln sind offengelegt, nicht wissenschaftlich validiert; Selbstbewertungen und vorläufige Inhaltsstufen fließen ein. Kein automatischer Levelwechsel oder CEFR-Zertifikat. Unveränderte Kurssnapshots bleiben nach echtem Backup-Import anrechenbar; persönlich veränderte Inhalte nicht.
+
+189 Logiktests in 21 Dateien bestanden. Der vollständige Chrome-Lauf mit 54 Szenarien bestand (`.local/engagement-completion-full-chrome`). Nach der ergänzten Prüfung des Backup-Imports und der kompakteren mobilen Erfolgsmeldung bestanden alle elf betroffenen Chrome-Szenarien erneut (`.local/engagement-completion-final-chrome`). Die neuen Abläufe prüfen insbesondere Tageswechsel, Erfolgsmeldung, Rückgängig/erneutes Antworten, Zielwechsel, Neuladen, Fortsetzung derselben Runde und tatsächliche B1-Einschätzung bei manuell gewähltem C2. Mobile Ansichten bei 320/390 Pixeln und die Einschätzung auf dem Desktop wurden visuell kontrolliert.
+
+Auch die elf betroffenen WebKit-Szenarien bestanden: zehn im Lauf `.local/engagement-completion-webkit`, das Tagesziel-Szenario nach einer Korrektur der Test-Synchronisation in `.local/engagement-completion-webkit-final`. Der Test wartet jetzt auf die sichtbare Übungskarte, bevor er prüft, ob die Antwort bereits aufgedeckt ist. Die App musste dafür nicht verändert werden.
+
+TypeScript, Web-/native Web-Build, Synchronisierung beider Capacitor-Projekte, vollständige native Asset-Prüfung sowie interne Inhaltsvalidierung bestanden. Menschliche Inhaltsfreigabe, signierte Android-/iOS-Gerätebuilds und reale Store-Käufe bleiben ausstehend. Entwicklerkonten sind laut Nutzer noch nicht eingerichtet; ausdrücklich App-Funktionen und Vorbereitung zuerst. Keine aktive Kaufsperre oder Veröffentlichung.
+
+## Veröffentlichungsprüfung am 4. Oktober 2026
+
+Der aktuelle Arbeitsstand wurde erneut geprüft. Fachliche Inhaltsfreigabe und native Gerätekompilierung stehen weiterhin aus; Einzelheiten und Umsetzungsschritte stehen im [Veröffentlichungscheck](publish-audit.md).
+
+| Prüfung | Aktuelles Ergebnis |
+| --- | --- |
+| `npm test` | 174 Tests in 18 Dateien bestanden |
+| `npm run build` / `npm run build:native` | TypeScript und beide Web-Builds bestanden |
+| Vollständiger Chrome-Lauf | 50 Szenarien bestanden; `.local/publish-audit-verified-chrome` |
+| Gezielter WebKit-Lauf | 7 Szenarien bestanden: Lizenzansicht offline, mobile Navigation, Safe Areas, Kaufvorschau, Kontingent sowie simulierte Android-/iOS-Bridges; `.local/publish-audit-verified-webkit` |
+| `npm run licenses:check` | Volltexte für 28 gesperrte npm-Pakete plus Inhaltslizenzen stimmen mit den Quellen überein |
+| `npm run content:validate` | 1.550 Ziele / 3.642 Aufgaben intern konsistent |
+| `npm run content:validate -- --release` | Erwartet fehlgeschlagen: keine menschliche Inhaltsfreigabe |
+| `npm audit --omit=dev` | Keine gemeldeten Schwachstellen; kein Ersatz für eine Sicherheitsprüfung |
+| `npx cap sync` + `npm run native:verify` | Aktuelle vollständige Web-Kopien, Konfiguration, Privacy-Manifest und Icons geprüft; kein nativer Build |
+
+Die anfängliche WebKit-Prüfung zeigte, dass die nachgeladenen Lizenztexte offline nicht verfügbar waren. Sie sind jetzt direkt im App-Bundle enthalten; der erneute Offline-Test besteht. Das unsichtbare mobile Seitenmenü ist nicht mehr per Tastatur/Screenreader erreichbar. Ein älterer Browsertest erwartete gerade diese unsichtbare Navigation nach dem Reload; er prüft jetzt den sichtbaren Menüschalter. Quellenlinks im allgemeinen Wörterbuch sowie aufklappbare Lizenzvolltexte sind ergänzt. Der übrige Lernablauf und das bisherige unverbindliche Kaufangebot bleiben erhalten.
+
+Die folgenden Abschnitte dokumentieren frühere Prüfstände.
+
+Stand: 2. Oktober 2026. Lokal unter Windows mit Google Chrome und Playwright-WebKit geprüft. Browserprüfungen betreffen den gebauten Web-Bestand; native Bridge-Aufrufe werden simuliert. Keine erfolgreiche Android-/iOS-Kompilierung oder Prüfung auf physischen Geräten. Der Android-Buildversuch stoppte am fehlenden SDK.
 
 | Prüfung | Ergebnis |
 | --- | --- |
-| `npm test` | 134 Tests in zwölf Dateien bestanden, darunter elf Prüfungen für Richtungsgewichtung, verwertbare Evidenz, Levelmischung, Fälligkeiten, Archivschutz und gespeicherte Runden |
-| `npm run content:validate` | 1.413 Ziele und 3.368 Aufgaben strukturell gültig |
+| `npm test` | 174 Tests in 18 Dateien bestanden, einschließlich 80/20-Ausgangsmix, Leistungsanpassung, Stufenempfehlungen, Fachthemen, Meilensteinen und Backup-Kompatibilität |
+| `npm run content:validate` | 1.550 Ziele und 3.642 Aufgaben strukturell gültig |
 | `npm run build` | TypeScript-Prüfung und Vite-/Service-Worker-Build erfolgreich |
 | `npm run native:sync` | Separater Web-Build ohne Service Worker erstellt; beide nativen Projekte mit fünf Plugins synchronisiert |
 | `npm run native:verify` | Vollständige Asset-Kopien, gebündelte Inhalte, App-IDs, SDK, iOS-Icon und im Xcode-Projekt eingebundenes Privacy-Manifest geprüft |
-| `npm run test:e2e` | Alle 34 Szenarien im vollständigen Lauf bestanden, darunter alltagsnahe Ergänzungen in bestehenden Themen, direkter Trainingsstart ohne doppelte Themenauswahl, Schnellauswahl, automatischer Trainingsfokus und zwei Tests des nativen Web-Builds mit simulierten Android-/iOS-Bridges |
-| `npm audit --omit=dev` | Keine bekannten Schwachstellen gemeldet |
+| Chrome-Browserszenarien | Alle 49 Szenarien im vollständigen Lauf bestanden; nach der letzten Korrektur für neue Themenlevel bei A1-Bestandsprofilen beide betroffenen Szenarien erneut bestanden |
+| `npm audit --json` | Keine bekannten Schwachstellen in Produktions- oder Entwicklungsabhängigkeiten gemeldet; kein vollständiges Sicherheitsgutachten |
+| Playwright-WebKit, zusätzliche Läufe | 36 Szenarien im früheren Gesamtlauf bestanden; alle zehn jetzt betroffenen Abläufe für 80/20-Mix, Positionierung, Level-Einstellungen, Empfehlungen und Fachthemen ebenfalls bestanden. Zwei Fälle mit Offline-Neuladen bleiben wegen des unten beschriebenen reproduzierten Frameworkfehlers ausgeklammert |
+| `npm run content:validate -- --release` | Erneut erwartungsgemäß gesperrt: menschliche Inhaltsfreigabe der 1.550 Lernziele steht aus |
+| `android/gradlew.bat :app:assembleDebug --console=plain` | Fehlgeschlagen: `SDK location not found`; Gradle läuft mit vorhandenem JDK 21, Android-SDK ist nicht eingerichtet |
+| iOS-Kompilierung / physische Geräte | Nicht durchgeführt; macOS/Xcode und echte Android-/iOS-Geräte erforderlich |
+
+## 80/20-Ausgangsmix und Positionierung für Lernende mit Vorkenntnissen
+
+Gemischte Runden teilen zuerst ihr Budget in 80 Prozent Wortschatz und 20 Prozent Grammatik. Erst danach wird der Wortschatzanteil auf die aktiven Vokabelthemen verteilt; mehr Themen verkleinern den Grammatikanteil nicht. Mittlere Richtungsgewichte passen die Anteile an. Ein Bereich mit mindestens zehn unabhängigen Antworten pro Richtung und jeweils mindestens 90 Prozent Erfolg erhält zusätzlich Faktor 0,75 bei der Platzverteilung. Sind beide Bereiche gleichermaßen sicher, bleibt ihr Verhältnis gleich. Abrufrichtungsgewichtung, Fälligkeiten und die 60/40-Stufenmischung bleiben separat bestehen. Grammatik wird über die Runde verteilt; fällige Aufgaben behalten Vorrang. Fehlende Plätze werden zuerst innerhalb des betroffenen Bereichs aufgefüllt und erst bei erschöpftem Stoff an den anderen vergeben. Inaktive Themen werden nicht eingeschaltet; reine Trainingsarten und Archivtraining folgen weiterhin ihrer Auswahl. Bestehende Runden werden nicht neu gemischt.
+
+Startseite, Tour, Levelauswahl, App-Information und Metadaten nennen Jugendliche und Erwachsene mit Vorkenntnissen als Zielgruppe. A2–C2 sind als neuer Schwerpunkt wählbar, B1 bleibt Standard. A1 ist ausgegraut und bleibt als Grundlagenmaterial und für fällige Wiederholungen verfügbar. Alte A1-Profile bleiben unverändert nutzbar; die Oberfläche erklärt den Bestandsschutz. Bei bewusst neu aktiviertem eigenen Themenlevel unter einem globalen A1-Profil wird A2 gewählt. Die Inhaltsstufen und Backup-Schemata erlauben weiterhin A1.
+
+174 Logiktests bestanden. Neue Prüfungen belegen 80/20 bei einem, drei oder 24 Wortschatzthemen, Absenkung sicherer Grammatik erst bei genügend Belegen in beiden Richtungen, Mehrgewicht schwacher Grammatik, Ausgleich leerer Themen und vollständige Belegung bei fehlendem Grammatikstoff. Alle 49 Chrome-Szenarien bestanden. Ein neuer Ablauf startet mit allen 25 Themen eine echte 50-Karten-Runde, prüft 40/10 mit jeweils einer Grammatikaufgabe pro fünf Karten sowie unveränderte Wiederaufnahme. Ein weiterer prüft A1-Bestandsschutz, ausgegraute Auswahl, A2 als Untergrenze per Tastatur und ein neues Themenlevel ab A2. Beide abschließend betroffenen Fälle nach der letzten Detailkorrektur erneut bestanden. Desktop, 390 und 320 px visuell kontrolliert; Web-Build, native Synchronisierung und native Strukturprüfung erfolgreich. Auch alle zehn gezielt betroffenen WebKit-Szenarien bestanden. Ergebnisse: `.local/mix-positioning-chrome`, `.local/mix-positioning-chrome-final` und `.local/mix-positioning-webkit`. Keine nativen Gerätetests.
+
+## Stufenempfehlungen und Fachthemen
+
+Die freiwillige Empfehlung auf Heute betrachtet höchstens 60 unabhängige Erstversuche innerhalb von 30 Tagen auf der aktuell gewählten Stufe. Erforderlich sind mindestens 40 Antworten, drei lokale Lerntage, 20 unterschiedliche Ziele (bei kleinerem Bestand alle, mindestens fünf), 90 Prozent richtige Antworten und mindestens fünf an mehreren Tagen geübte Ziele. Wortschatz oder Grammatik brauchen jeweils mindestens zehn Antworten und 85 Prozent Erfolg in beiden Richtungen; eine andere Richtung mit mindestens fünf Antworten unter 85 Prozent verhindert den Vorschlag. Die Oberfläche benennt die belegte Grundlage. Bei fehlendem Bestand auf der nächsten Stufe, C2, inaktiven Themen, Nachversuchen, Archivtraining, widerrufenen oder zukünftigen Ereignissen entsteht daraus keine Empfehlung. Dies sind Produktregeln für das Ausprobieren schwierigerer Karten, kein CEFR-Nachweis.
+
+Annahme verändert nur die globale Stufe beziehungsweise das ausdrücklich vorgeschlagene Themenlevel. Eigene Themenlevel, laufende und gespeicherte Runden, Antworten und Gedächtnis bleiben erhalten. Jede manuelle Änderung setzt den Auswertungsbeginn neu; „Später“ verlangt zusätzlich mindestens sieben Tage Pause. Entscheidungen überstehen Neuladen und Sicherung/Import; ältere Sicherungen bleiben lesbar.
+
+Die Facherweiterung ergänzt 137 Bedeutungen und präzisiert 18 vorhandene in elf Unterthemen: Gerichte, Verträge, Volkswirtschaft, Controlling/Rechnungswesen, Investitionen/Finanzierung, Unternehmensprozesse, Psychologie, Krankenhaus, Mathematik, Chemie/Labor und Physik. Wirtschaft & Unternehmen ist ein neues, bei Bestandsprofilen zunächst inaktives Hauptthema. Der Bestand umfasst nun 1.550 Ziele und 3.642 Aufgaben in 25 Themen und 88 Unterthemen. Alle bearbeiteten Bedeutungen haben zweisprachige Kontexthinweise und Beispiele; gleiche Bedeutungen teilen ihren Lernstand, unterschiedliche Bedeutungen von „defendant“ bleiben getrennt. Vergleich mit dem vorherigen Bestand bestätigt unveränderte IDs, Ausdrücke, Übersetzungen, Wortarten, Stufen und Hauptthemen der 1.413 bisherigen Ziele sowie unveränderte IDs, Zielzuordnungen, Fragen, Antworten und Richtungen der 3.368 bisherigen Aufgaben. Die neue Sprachfassung und Stufen bleiben redaktionelle Entwürfe.
+
+171 Logiktests in 18 Dateien und alle 47 Chrome-Szenarien im vollständigen Lauf bestanden. Acht gezielte Logiktests prüfen die Empfehlung einschließlich schwacher Grammatik trotz starken Wortschatzes; vier Inhaltsprüfungen sichern Umfang, gemeinsame Bedeutungen, Themenplanung sowie die Übernahme mehrfach überarbeiteter Standardhinweise aus älteren Sicherungen. Persönliche Notizen bleiben dabei erhalten. Drei neue Browserszenarien prüfen Zustimmung, Fortsetzung einer unveränderten Runde, manuellen Rückwechsel, gespeichertes Vertagen sowie Suche und gezieltes Training der neuen Unterthemen. Diese drei und drei vorhandene Level-/Einstellungsszenarien bestehen auch in WebKit. Ansichten bei 1440, 390 und 320 Pixeln visuell kontrolliert. Ergebnisse: `.local/progression-subjects-chrome` und `.local/progression-subjects-webkit`. Inhaltsvalidierung, Web-Build, native Synchronisierung und Strukturprüfung erfolgreich. Die erneute Inhaltsrelease-Prüfung blockiert weiterhin erwartungsgemäß wegen ausstehender menschlicher Freigabe. Keine native Gerätekompilierung.
+
+## Kompakte Heute-Seite mit Zielstatus und einem Trainingseinstieg
+
+„Heute geübt“ zeigt die absolute Kartenanzahl, einen deutlich sichtbaren Fortschrittsbalken mit dem aktuell gespeicherten Tagesziel als Maximum sowie offen/erreicht als Textstatus. Bei Überschreitung bleibt die tatsächliche Kartenanzahl sichtbar, der Balken endet bei 100 Prozent. Ändern des Tagesziels aktualisiert Status und Balken ohne Veränderung der Historie. Der aufklappbare Zählhinweis entfällt. Lernserie, gesamte Lerntage und geübte Lernziele stehen gemeinsam darunter.
+
+Die doppelte große Trainingskarte und die weitere Anzeige „Antworten heute“ entfallen. Ein einziger Einstieg wechselt zwischen Themenwahl, „Training starten“, „Training fortsetzen“ und „Freiwillig weiterüben“ nach erreichtem Ziel. Er verwendet weiterhin die bestehende Empfehlung für die gemischte Runde und kann keine pausierte Themenrunde versehentlich wieder aufnehmen. Eine separate Meilenstein-Karte zeigt die tatsächlich erreichten Erfolge als „X von 30 erreicht“ und öffnet die bestehende Meilenstein-Seite; der Menüeintrag bleibt erhalten.
+
+159 Logiktests und alle 44 Chrome-Szenarien im vollständigen Lauf bestanden. Erweiterte Browserprüfungen kontrollieren bei 31 beantworteten Karten den Zielwechsel 50 → 30 → 250: Status offen → erreicht → offen, Balkenwerte 31/50 → 30/30 → 31/250, unveränderte absolute Kartenanzahl, Sitzung und Kontingent sowie jeweils einen Trainingseinstieg. Meilenstein-Karte und Übersicht stimmen vor und nach der ersten Bewertung überein. Desktop, 390 und 320 px visuell kontrolliert. Web-Build, native Synchronisierung und Strukturprüfung erfolgreich. Chrome-Ergebnisse: `.local/today-compact-chrome`.
+
+Auch alle sieben betroffenen WebKit-Szenarien für Tour, Zielstatus, unmittelbare Kartenzählung, Meilenstein-Zugriff und Wiederaufnahme bestanden. Ergebnisse: `.local/today-compact-webkit`. Keine Gerätekompilierung oder physischen Gerätetests.
+
+## Meilensteine, Slider-Skala und unmittelbare Kartenzählung
+
+Ein eigener Menüpunkt „Meilensteine“ enthält 30 Erfolge für Karten, gesamte Lerntage, verschiedene Inhalte, beide Abrufrichtungen, Grammatik und A1–C2-Kursinhalte. Die bisherigen Fortschrittsauswertungen bleiben separat erhalten. Erfolge sind nach erreicht/offen filterbar und entstehen aus der vorhandenen Historie, ohne neues Speicherformat. Kursabzeichen verlangen alle Ziele der jeweiligen Kursstufe in beiden Richtungen an je drei unterschiedlichen Lerntagen über mindestens sieben Tage ohne Fehler dazwischen. Späteres Vergessen oder eine Pause löscht diese historischen Nachweise nicht; zurückgenommene Ereignisse werden hingegen nicht weiter angerechnet. Die Oberfläche bezeichnet dies ausdrücklich als Kursfortschritt, nicht als erreichtes Sprachniveau.
+
+Der Tagesziel-Regler hat 5er-Schritte bis 80, 10er-Schritte bis 120, danach 20er-Schritte bis 240 und abschließend 250. 50–80 belegt die mittleren 40 Prozent des Reglers. Pointer, Pfeiltasten, Home/End und ältere gespeicherte Zwischenwerte sind berücksichtigt. Die Forschungshinweise und das freiwillige Tagesziel bleiben unverändert.
+
+Die Untersuchung bestätigt, dass die Kartenzählung nach jeder Bewertung gespeichert wird, nicht erst am Rundenende. Der Trainingskopf zeigt nun „Heute: N / Ziel Karten“. Die Rückmeldung unterscheidet „+1 Karte zum Tagesziel“, bereits heute gezählte Bedeutung/Abrufrichtung und direkte Nachversuche. Fehler zählen weiterhin, Aufdecken allein nicht. Rückgängig und Kontingentanzeige bleiben konsistent.
+
+159 Logiktests bestanden. Im vollständigen Chrome-Lauf bestanden 42 von 44 Szenarien. Die zwei neuen Tests wurden korrigiert: Nach dem Neuladen auf das fertig geladene mobile Menü warten sowie den Singular „1 Karte“ erwarten. Anschließend bestanden alle sieben Tour-/Aktivitäts-/Meilenstein-Szenarien und drei weitere mobile Trainings-/Feedbackprüfungen. Alle elf gezielt betroffenen WebKit-Szenarien bestanden ebenfalls. Desktop, 390 und 320 px visuell kontrolliert; mobile Zusammenfassung und Filter bleiben kompakt. Ergebnisse: `.local/milestones-chrome`, `.local/milestones-chrome-final`, `.local/milestones-layout-chrome`, `.local/milestones-webkit`. Web-Build, native Synchronisierung und Strukturprüfung erfolgreich; keine Gerätekompilierung.
+
+## Tagesziel und eindeutiges Beenden von Themenrunden
+
+Aktueller Stand nach der Ablösung der Zeitplanung: freiwilliges Tagesziel von 30–250 Karten, Standard 50, unter Heute, in den Einstellungen und als letzter Tourschritt. 50–80 wird als Startvorschlag der App gekennzeichnet; keine wissenschaftliche Mindestmenge oder universelle optimale Spanne wird behauptet. Die Recherche ist in native-release.md verlinkt. Neue Runden planen die noch offenen Tageskarten; bei erreichtem Ziel sind freiwillig weitere 30 möglich. Alte Zeitfelder bleiben ausschließlich als kompatible Backup-Metadaten erhalten. Kartenzählung, kostenlose Kontingente und Rückgängig nutzen weiterhin dieselbe Definition.
+
+„Runde beenden“ ist eine große Schaltfläche, beendet die aktuelle Runde persistent und führt direkt zu Heute. Andere gespeicherte Runden und alle Antworten bleiben erhalten. Die Empfehlung auf Heute setzt ausschließlich eine gemischte Runde fort; pausierte Themen-/Unterthemen-/Archivrunden werden in ihren jeweiligen Bereichen wieder aufgenommen. Ein neuer Browsertest prüft Themenabbruch, Rückkehr zu Heute, Neuladen und das Fortsetzen der ursprünglichen gemischten Runde bei unveränderten Antworten/Gedächtniskarten.
+
+152 Logiktests bestanden, einschließlich Zielgrenzen, Migration, lokalem Tageswechsel, Tageszieländerung, Erreichen des Ziels, Rückgängig und isoliertem Beenden. Im vollständigen Chrome-Lauf bestanden zunächst 35 von 41 Szenarien. Veraltete Erwartungen zu Rundengröße und Empfehlungsbeschriftung wurden angepasst. Der neue Zielwert verwendet keine zusätzliche Status-Live-Region; die Meldungen für Export/Import bleiben eindeutig. Die mobile Anordnung wurde so verdichtet, dass große Beenden-/Pause-Schaltflächen und die Antworttaste auf 320/390 px erreichbar bleiben. Anschließend bestanden zehn von elf gezielten Nachprüfungen und nach der letzten Layoutkorrektur beide mobilen Trainingsprüfungen; damit alle 41 Szenarien im Gesamt- und Nachlauf. Ergebnisse: .local/daily-goal-chrome, .local/daily-goal-chrome-final, .local/daily-goal-mobile-final. Web-Build, native Synchronisierung und Strukturprüfung erfolgreich. Kein nativer Geräte-Build.
+
+Die acht gezielten WebKit-Szenarien für Abbruch, Tour, Tagesziel, Wiederaufnahme, Einstellungen und mobile Kartendarstellung bestehen ebenfalls (sieben im Lauf, der Einstellungstest nach Korrektur seiner Synchronisation). Der Test wartet nach einem IndexedDB-Commit ausdrücklich auf den wieder aktivierten Regler; `press()` allein wartet nicht auf dessen Aktivierung. Ergebnisse: .local/daily-goal-webkit und .local/daily-goal-webkit-final.
+
+Die folgenden Abschnitte dokumentieren frühere Zwischenstände; die damalige Rundenzeit wurde durch das persönliche Tagesziel ersetzt.
+
+## Tagesaktivität und Rundenplanung getrennt, 02.10.2026
+
+Das feste Ziel von 30 Karten wurde aus Oberfläche und Empfehlungslogik entfernt. „Heute geübt“ zeigt tatsächliche Karten ohne Zielzahl oder Erfüllungsbalken. Die Einstellung heißt „Geplante Rundenzeit“ und erläutert den Zusammenhang mit dem Umfang der nächsten Runde; sie ist kein Timer und verändert das kostenlose Kartenkontingent nicht. Tour und Angebotsdetails sind entsprechend angepasst. Das 500/250-Kontingent und 4,99 EUR Einmalkauf bleiben unverändert vorgesehen, weiterhin ohne aktive Kaufsperre.
+
+148 Einheitentests bestanden. Von 40 Chrome-Szenarien bestanden zunächst 39; der erweiterte Aktivitätstest verglich versehentlich gerenderten Text mit DOM-Text. Nach Vereinheitlichung des Textvergleichs bestand er gezielt. Acht betroffene Szenarien wurden in WebKit geprüft. Dabei wurde im Angebotstest eine Race Condition der Testvorbereitung behoben: Die Tour muss abgeschlossen sein, bevor der unveränderte Profilstand erfasst wird. Anschließend bestanden beide Angebotstests nochmals in Chrome und WebKit. Kein App-Verhalten wurde für diese Testkorrekturen abgeschwächt.
+
+Die fachliche Prüfung belegt, dass Rundenzeitänderung, Tagesaktivität und Kontingent unabhängig sind: Nach 31 Karten wird die geplante Rundenzeit auf 60 Minuten gesetzt; der Tageszähler, die 469 übrigen Einstiegskarten und die angefangene Runde bleiben identisch. Antworten und Rückgängig aktualisieren den Aktivitätszähler weiterhin sofort. Desktop und 390/320-px-Ansichten visuell geprüft. Web-Build, native Synchronisierung und Strukturprüfung erfolgreich. Ergebnisse: `.local/activity-round-regression`, `.local/activity-round-focused`, `.local/activity-round-webkit`, `.local/activity-offer-chrome`, `.local/activity-offer-webkit`.
+
+## Kontingentanzeige und Einmalkauf-Vorschau vom 02.10.2026
+
+Anzeige für 500 Einstiegskarten, anschließend 250 Karten je sieben Kalendertage und 4,99 EUR einmalig ergänzt. Auf Heute werden Restkontingent und Auffülldatum angezeigt; Heute und Hauptmenü öffnen „Unbegrenzt lernen“. Das Angebotsfenster kennzeichnet den Kauf als noch nicht verfügbar. Es gibt keine Kaufsperre oder simulierte Freischaltung.
+
+148 Einheitentests und alle 40 Chrome-Szenarien bestanden. Web-Build, nativer Web-Build, Synchronisierung und native Strukturprüfung erfolgreich. Neue Einheitentests prüfen 499/500/501, 750/751, ersten vollen Wochenumfang ohne doppelte Anrechnung, Wochenwechsel, fehlenden Übertrag, längere Pausen, Sommer-/Winterzeit und Neuberechnung nach Rückgängig. Browserprüfungen beantworten Karten tatsächlich, nehmen Bewertungen zurück, laden neu und lernen bei ausgeschöpftem Vorschaukontingent weiter. Das bloße Öffnen und Schließen des Angebots verändert den gespeicherten Zustand nicht. Ansicht und Dialog bei 1440, 390 und 320 px geprüft; Footer-Aktionen bleiben im sichtbaren Bereich. Chrome-Ergebnisse: `.local/learning-offer-regression`.
+
+Auch die sechs gezielt erneut ausgeführten WebKit-Szenarien für Tour, Tagesziel und das neue Angebot bestanden; Ergebnisse unter `.local/learning-offer-webkit-results`. Der oben dokumentierte vollständige WebKit-Lauf mit 36 bestandenen Szenarien stammt aus der vorausgegangenen Tour-Prüfung; die zwei neuen Angebotsszenarien sind zusätzlich geprüft. Die zwei bekannten Offline-Emulationsfälle bleiben offen.
+
+Die Anzeige wird aus der vorhandenen Historie hergeleitet, einschließlich alter Lerndaten. Sie ersetzt keine spätere Kaufprüfung oder manipulationsgeschützte Nutzungserfassung. Ein zahlender Nutzerstatus ist mangels echter Store-Anbindung noch nicht vorhanden. Die öffentliche Store-Freigabe bleibt offen.
+
+## Tagesziel, Empfehlungen und Tour vom 02.10.2026
+
+Nach der ersten Store-Prüfung wurden ein freiwilliges 30-Karten-Ziel, lokale Aktivitätsmeilensteine, Vorlagen für den nächsten Schritt und eine fünfteilige Tour ergänzt. Abschließend bestanden alle 142 Einheitentests, 38 Chrome-Szenarien und die 36 WebKit-Szenarien ohne die zwei bekannten Offline-Emulationsfälle. Web-Build, nativer Web-Build, Synchronisierung und native Strukturprüfung erfolgreich. Ausgaben des neuen Browserlaufs: `.local/engagement-regression-results` und `.local/engagement-webkit-results`.
+
+- Tageszählung je Ziel/Abrufrichtung/lokalem Tag: Fehler zählen, Nachversuche, Doppelzählungen, Widerrufe und zukünftige Antworten nicht. Test für lokalen Tageswechsel und unzuverlässiges importiertes `event.day`.
+- 29 → 30 → Rückgängig → 29 → 30 → 31 mit echten UI-Antworten. Zähler aktualisiert sich sofort; oberhalb 30 erscheint keine Sperre. Tagesziel unabhängig von der Lernserie; Meilensteine bleiben nach Pausen erhalten.
+- Neue Profile: Tour überspringen und neu laden, vollständiger Durchlauf zur einzigen Themenauswahl, keine voraktivierten Themen. Bestandsprofile ohne Tour-Feld bleiben ungestört. Backup-Rundlauf erhält Tourstatus und abgeleitete Aktivität.
+- Tour im Menü erneut öffnen, Beispiel aufdecken, vor/zurück, schließen und Escape. Ereignisse, Gedächtniskarten und Themenpräferenzen bleiben unverändert. Mobile Navigation und Tour-Fußzeile bei 320 px erreichbar.
+- Nach simulierter siebentägiger Pause: passender Willkommenstext, gespeicherter Fortschritt und Fortsetzen derselben Runde mit gleicher Position. Empfehlungen berücksichtigen deaktivierte Themen.
+- Screenshots der Tour und Tagesübersicht bei 320/390/1440 px kontrolliert. Eine zunächst zu hohe Trainingskopfzeile wurde verdichtet; der Aufdecken-Button ist auch bei 320 px und Bedeutungshinweis wieder vollständig im sichtbaren Bereich. Testfälle prüfen dies in Chrome und WebKit.
+
+Keine Store-Käufe, Kaufsperre, Werbung oder Übermittlung von Nutzungsdaten implementiert. Die nachstehenden Release-Blocker bleiben bestehen.
+
+## Erste zusätzliche Store-Prüfung vom 02.10.2026
+
+Die Abschlussprüfung bezieht sich auf 1.413 Lernziele und 3.368 Aufgaben. Während der ersten Prüfung kamen Inhaltsänderungen im gemeinsamen Arbeitsverzeichnis hinzu; deshalb wurden die 134 Einheitentests, 34 Chrome-Szenarien, Inhaltsvalidierung, Builds und native Synchronisierung anschließend auf dem aktuellen Stand erneut ausgeführt. Ein Hashvergleich der Quell- und Eingabedateien kontrolliert, dass der Stand während der abschließenden Prüfung unverändert bleibt.
+
+In WebKit ließ sich ein Eingabefehler reproduzieren: Nach einer gespeicherten Lernzeitänderung konnte ein verzögerter React-Effekt eine unmittelbar folgende Zahleneingabe wieder durch den alten Wert ersetzen (120 → 37 → zurück zu 120). `TimeBudget` gleicht den Entwurf jetzt vor dem nächsten Paint mit dem gespeicherten Wert ab; `LevelControl` verwendet denselben Mechanismus. Der vorhandene Einstellungstest besteht damit auch in WebKit. Beim Leveltest wurde zusätzlich nachgewiesen, dass die Pfeiltaste an `BODY` ging, solange der Regler nach der Speicherung noch deaktiviert war. Der Test wartet jetzt ausdrücklich auf den wieder aktivierten Regler; `press()` allein wartet nicht darauf ([Playwright-Aktionsprüfungen](https://playwright.dev/docs/actionability)).
+
+Zwei Szenarien für Offline-Neuladen scheitern in Playwright-WebKit 1.63.0 an `page.reload: WebKit encountered an internal error`. Derselbe Fehler wurde mit einem separaten lokalen HTTP-Server und einem minimalen Service Worker reproduziert, der ohne Netzwerkzugriff eine feste HTML-Antwort zurückgibt; Chrome besteht diesen Kontrollversuch. Das entspricht dem gemeldeten [Playwright-Fehler #42775](https://github.com/microsoft/playwright/issues/42775). Diese beiden Fälle sind **kein bestandener Safari-Offlinenachweis**. Sie bleiben Bestandteil des ungekürzten WebKit-Laufs und müssen nach Behebung des Frameworkfehlers sowie auf echten Apple-Geräten geprüft werden. Der native App-Build verwendet keinen Service Worker; das beseitigt nicht die Pflicht zum nativen Offline-Gerätetest.
+
+Reproduzierbare zusätzliche Browserprüfung (vorher Web- und nativen Web-Build erstellen):
+
+```powershell
+npx playwright install webkit
+npx playwright test --config playwright.webkit.config.ts
+# Nur die übrigen Szenarien, während die beiden bekannten Emulationsfehler offen sind:
+npx playwright test --config playwright.webkit.config.ts --grep-invert 'production service worker|restaurant and hotel'
+```
+
+Die Konfiguration überspringt selbst keine Tests. Ergebnisse liegen unter `.local/release-audit-webkit-results`. Die Layoutprüfung umfasst Heute, Themen, Wörterbuch, Archiv, Fortschritt und Einstellungen bei 1.440, 1.024, 780, 390 und 320 px sowie das mobile Menü: keine horizontalen Überläufe oder abgeschnittenen Textcontainer, mindestens 14 px Text bei Standardschriftgröße. Ausgewählte Handyansichten wurden visuell kontrolliert. Dies ersetzt weder große Systemschrift auf Geräten noch ein Screenreader-Audit.
+
+**Freigabeurteil:** Für weitere interne Tests vorbereitet; noch keine öffentliche Store-Freigabe. Fachliche Inhaltsprüfung samt Freigabeimport, native Kompilierung/Signierung, reale Geräteprüfung sowie bestätigte Anbieter-, Support- und Datenschutzangaben bleiben offen. Kosten, Veröffentlichungsschritte und Finanzierungsvorschlag stehen in [native-release.md](native-release.md).
 
 ## Verhalten im Browser
 

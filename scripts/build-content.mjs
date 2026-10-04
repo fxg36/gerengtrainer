@@ -4,6 +4,7 @@ import { expandTopics } from "./expand-topics.mjs";
 import { addAdvancedContent, advancedReferences } from "./advanced-content.mjs";
 import { refineLearningContent } from "./context-content.mjs";
 import { addEverydayContent } from "./everyday-content.mjs";
+import { addSubjectContent, subjectReferences } from "./subject-content.mjs";
 const read = (path) => fs.readFileSync(path, "utf8");
 const topics = JSON.parse(read("content/topics.json"));
 const levels = JSON.parse(read("content/learning-levels.json"));
@@ -263,9 +264,10 @@ for (const target of targets.filter((t) => t.kind === "grammar")) {
 addAdvancedContent(topics, targets, exercises);
 refineLearningContent(targets, exercises);
 const everyday = addEverydayContent(topics, targets, exercises);
+const subjects = addSubjectContent(topics, targets, exercises);
 const catalogue = JSON.parse(read("public/dictionary/manifest.json"));
 const content = {
-  version: "2026.10.2-content.11",
+  version: "2026.10.2-content.12",
   topics,
   targets,
   exercises,
@@ -314,18 +316,28 @@ fs.writeFileSync(
       grammar: {
         method: "assistant-authored structured task drafts; no paid API calls",
         referencePages: advancedReferences,
-        referenceUse: "Grammar and level-design references only; examples are original. Advanced practice levels are provisional, not validated CEFR assignments or copied English Vocabulary Profile entries.",
+        referenceUse:
+          "Grammar and level-design references only; examples are original. Advanced practice levels are provisional, not validated CEFR assignments or copied English Vocabulary Profile entries.",
         humanApproved: 0,
-        textPractice: "170 writing tasks with optional hints, intended German meaning, model answers and self-assessment criteria. No automatic semantic grading; original question/answer IDs retained.",
+        textPractice:
+          "170 writing tasks with optional hints, intended German meaning, model answers and self-assessment criteria. No automatic semantic grading; original question/answer IDs retained.",
         contextReferences: [
           "https://www.cambridgeenglish.org/latinamerica/Images/167791-b2-first-handbook.pdf",
           "https://learnenglishteens.britishcouncil.org/sites/teens/files/gs_third_conditional.pdf",
         ],
       },
-      usageContexts: "82 existing senses refined with specific bilingual cues and original bilingual examples. Source definitions and sense IDs retained; editorial drafts, not human approved.",
+      usageContexts:
+        "82 existing senses refined with specific bilingual cues and original bilingual examples. Source definitions and sense IDs retained; editorial drafts, not human approved.",
       everydaySituations: {
         ...everyday,
-        method: "Original assistant-authored bilingual contexts and examples for everyday situations. Existing exact meanings reuse their IDs and sources; new meanings have no asserted dictionary match. Practice levels are provisional; human review outstanding.",
+        method:
+          "Original assistant-authored bilingual contexts and examples for everyday situations. Existing exact meanings reuse their IDs and sources; new meanings have no asserted dictionary match. Practice levels are provisional; human review outstanding.",
+      },
+      subjectExpansion: {
+        ...subjects,
+        referencePages: subjectReferences,
+        method:
+          "Original bilingual learning drafts and examples. References checked for specialist terminology, not copied definitions. Existing meanings retain IDs, source, level and answers; new items have provisional levels and require human editorial review.",
       },
       catalogue,
     },

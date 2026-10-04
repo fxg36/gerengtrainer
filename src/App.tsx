@@ -9,6 +9,7 @@ import {
   type FormEvent,
 } from "react";
 import {
+  Award,
   ArrowDownToLine,
   ArrowRight,
   ArrowUpFromLine,
@@ -55,7 +56,6 @@ import {
   Play,
   AlertCircle,
   ExternalLink,
-  Clock3,
   Bookmark,
   Pencil,
   MonitorSmartphone,
@@ -73,13 +73,38 @@ import {
 } from "lucide-react";
 import { useRegisterSW } from "virtual:pwa-register/react";
 import AboutApp from "./AboutApp";
+import AppTour from "./AppTour";
+import DailyProgress, { DailyActivity } from "./DailyProgress";
+import MilestonesPage, { MilestonesSummary } from "./MilestonesPage";
+import AchievementNotice from "./AchievementNotice";
+import {
+  buildAchievements,
+  recordNewAchievements,
+  type Achievement,
+} from "./achievements";
+import DailyExpression from "./DailyExpression";
+import LevelSuggestion from "./LevelSuggestion";
+import {
+  changeTrainingLevel,
+  snoozeLevelRecommendation,
+} from "./level-recommendation";
+import { reviewCountHint } from "./learning-activity";
+import { LearningOfferSummary, LearningOfferDetails } from "./LearningOffer";
+import { freeAllowance, unlimitedPrice } from "./learning-offer";
+import {
+  buildEngagement,
+  recommendNext,
+  TOUR_VERSION,
+  type Engagement,
+} from "./engagement";
 import {
   isNative,
   listenForNativeBack,
   listenForNativeLinks,
 } from "./platform";
 import ArchivePage, { archiveQuotaLabel } from "./ArchivePage";
-import TimeBudget from "./TimeBudget";
+import DailyGoal from "./DailyGoal";
+import { endSession } from "./engine";
 import LevelControl from "./LevelControl";
 import TopicToggle from "./TopicToggle";
 import WritingPractice from "./WritingPractice";
@@ -145,6 +170,7 @@ type Page =
   | "topics"
   | "dictionary"
   | "archive"
+  | "milestones"
   | "progress"
   | "data"
   | "session";
@@ -259,6 +285,11 @@ function Empty({
 }
 
 export default function App() {
+  const [now, setNow] = useState(() => new Date());
+  const [tourOpen, setTourOpen] = useState(false);
+  const [firstTour, setFirstTour] = useState(false);
+  const [offerOpen, setOfferOpen] = useState(false);
+  const [newAchievements, setNewAchievements] = useState<Achievement[]>([]);
   const [content, setContent] = useState<Content | null>(null),
     [state, setState] = useState<AppState | null>(null),
     [loadError, setLoadError] = useState("");
@@ -309,6 +340,10 @@ export default function App() {
         if (mounted) {
           setContent(data);
           setState(saved);
+          if (saved.settings.tourVersion < TOUR_VERSION) {
+            setFirstTour(true);
+            setTourOpen(true);
+          }
         }
       })
       .catch((e) => mounted && setLoadError(e.message));
@@ -350,11 +385,29 @@ export default function App() {
       lock.current = true;
       setBusy(true);
       try {
+        let fresh: Achievement[] = [];
         const updated = await mutateState(state.revision, (draft) => {
           fn(draft);
           normalizeSession(draft, content);
+          fresh = recordNewAchievements(state, draft, content);
         });
         setState(updated);
+        setNewAchievements((previous) => {
+          if (!previous.length) return fresh;
+          const earned = new Set(
+            buildAchievements(updated, content)
+              .filter((item) => item.earned)
+              .map((item) => item.id),
+          );
+          return [
+            ...previous.filter(
+              (item) =>
+                earned.has(item.id) &&
+                !fresh.some((added) => added.id === item.id),
+            ),
+            ...fresh,
+          ];
+        });
         return true;
       } catch (e) {
         setToast(e instanceof Error ? e.message : "Speichern fehlgeschlagen.");
@@ -386,6 +439,21 @@ export default function App() {
   };
   useEffect(() => listenForNativeBack(() => nativeBack.current()), []);
   useEffect(() => listenForNativeLinks(setToast), []);
+  useEffect(() => {
+    const refresh = () => setNow(new Date());
+    const timer = window.setInterval(refresh, 60000);
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", refresh);
+    };
+  }, []);
+  const progress = useMemo(
+    () => (state ? buildEngagement(state, new Date()) : null),
+    [state, now],
+  );
   if (loadError)
     return (
       <main className="fatal">
@@ -401,7 +469,7 @@ export default function App() {
         </button>
       </main>
     );
-  if (!state || !content)
+  if (!state || !content || !progress)
     return (
       <main className="loading">
         <div className="brand-mark">
@@ -413,8 +481,6 @@ export default function App() {
     );
   const targets = allTargets(state, content),
     events = state.events.filter((e) => !e.revokedAt),
-    today = dayKey(new Date(), state.settings.timezone);
-  const todayEvents = events.filter((e) => e.day === today),
     learned = new Set(events.map((e) => e.targetId));
   const archivedCount = targets.filter(
     (target) => state.participation[target.id] === "archived",
@@ -462,6 +528,32 @@ export default function App() {
     )
       navigate("session");
   };
+  const recommendation = recommendNext(state, content, progress, due);
+  const allowance = freeAllowance(progress);
+  const openOffer = () => {
+    setMobileNav(false);
+    setOfferOpen(true);
+  };
+  const openTour = () => {
+    setFirstTour(false);
+    setMobileNav(false);
+    setTourOpen(true);
+  };
+  const finishTour = async (chooseTopics = false, dailyGoal?: number) => {
+    if (busy) return false;
+    if (
+      (state.settings.tourVersion < TOUR_VERSION || dailyGoal !== undefined) &&
+      !(await act((s) => {
+        s.settings.tourVersion = TOUR_VERSION;
+        if (dailyGoal !== undefined) s.settings.dailyCardGoal = dailyGoal;
+      }))
+    )
+      return false;
+    setTourOpen(false);
+    setFirstTour(false);
+    if (chooseTopics) navigate("topics");
+    return true;
+  };
   const participation = async (
     target: Target,
     value: AppState["participation"][string],
@@ -481,10 +573,14 @@ export default function App() {
     { id: "dictionary", label: "Wörterbuch", icon: BookOpen },
     { id: "archive", label: "Archiv", icon: Archive },
     { id: "progress", label: "Fortschritt", icon: TrendingUp },
+    { id: "milestones", label: "Meilensteine", icon: Award },
   ];
   return (
     <div className="app-shell">
-      <aside className={`sidebar ${mobileNav ? "open" : ""}`}>
+      <aside
+        id="app-navigation"
+        className={`sidebar ${mobileNav ? "open" : ""}`}
+      >
         <a
           href="#"
           className="brand"
@@ -528,6 +624,13 @@ export default function App() {
               )}
             </button>
           ))}
+          <button className="nav-item offer-nav" onClick={openOffer}>
+            <Sparkles size={19} />
+            <span>
+              Unbegrenzt lernen
+              <small>{unlimitedPrice} einmalig · bald verfügbar</small>
+            </span>
+          </button>
         </nav>
         <div className="sidebar-bottom">
           <div className="local-card">
@@ -545,6 +648,10 @@ export default function App() {
           <button className="nav-item" onClick={() => setHelp(true)}>
             <CircleHelp size={19} />
             Über die App
+          </button>
+          <button className="nav-item" onClick={openTour}>
+            <Play size={19} />
+            App-Tour
           </button>
           <div className="sidebar-foot">
             <span className="status-dot" />
@@ -564,8 +671,10 @@ export default function App() {
           <div className="topbar-left">
             <button
               className="icon-button mobile-menu"
-              aria-label="Menü öffnen"
-              onClick={() => setMobileNav(true)}
+              aria-label={mobileNav ? "Menü schließen" : "Menü öffnen"}
+              aria-expanded={mobileNav}
+              aria-controls="app-navigation"
+              onClick={() => setMobileNav((open) => !open)}
             >
               <Menu />
             </button>
@@ -615,6 +724,14 @@ export default function App() {
         <main
           className={`main-content ${page === "session" ? "session-main" : ""}`}
         >
+          <AchievementNotice
+            items={newAchievements}
+            onClose={() => setNewAchievements([])}
+            onOpen={() => {
+              setNewAchievements([]);
+              navigate("milestones");
+            }}
+          />
           {page === "today" && (
             <>
               <div className="page-heading">
@@ -630,82 +747,59 @@ export default function App() {
                   Dein Lernheft<span className="heading-dot">.</span>
                 </h1>
                 <p>
-                  Vokabeln, Grammatik und ein Platz für das, was hängen bleibt.
+                  Für Jugendliche und Erwachsene mit Vorkenntnissen: Englisch
+                  auffrischen und sicherer anwenden.
                 </p>
               </div>
+              <DailyProgress
+                progress={progress}
+                recommendation={recommendation}
+                busy={busy}
+                onGoal={() =>
+                  document
+                    .querySelector<HTMLInputElement>(
+                      "#today-goal input[type=range]",
+                    )
+                    ?.focus()
+                }
+                onRecommend={() => {
+                  if (recommendation.kind === "topics") {
+                    navigate("topics");
+                  } else {
+                    const s = recommendation.session;
+                    void start(
+                      s?.archiveTopic ?? null,
+                      s?.topicId ?? null,
+                      s?.subtopicId ?? null,
+                    );
+                  }
+                }}
+              />
+              <LevelSuggestion
+                state={state}
+                content={content}
+                day={progress.today}
+                busy={busy}
+                onAccept={(suggestion) =>
+                  void act((s) =>
+                    changeTrainingLevel(s, suggestion.to, suggestion.topicId),
+                  )
+                }
+                onLater={(suggestion) =>
+                  void act((s) =>
+                    snoozeLevelRecommendation(s, suggestion.topicId),
+                  )
+                }
+              />
+              <MilestonesSummary
+                state={state}
+                content={content}
+                progress={progress}
+                onOpen={() => navigate("milestones")}
+              />
+              <LearningOfferSummary allowance={allowance} onOpen={openOffer} />
               <div className="today-layout">
                 <div className="today-primary">
-                  <section className="hero">
-                    <div className="hero-copy">
-                      <span className="hero-label">01 / TRAINING</span>
-                      <h2>
-                        Eine Runde
-                        <br />
-                        Englisch.
-                      </h2>
-                      <p>
-                        Wörter abrufen. Sätze vervollständigen.
-                        <br />
-                        Mit den Themen, die du gewählt hast.
-                      </p>
-                      <button
-                        className="cream-button"
-                        disabled={busy}
-                        onClick={() => start()}
-                      >
-                        {!activeTopics.length
-                          ? "Themen auswählen"
-                          : findSession(state)
-                            ? "Training fortsetzen"
-                            : "Training starten"}
-                        <ArrowRight size={19} />
-                      </button>
-                      <div className="hero-meta">
-                        <Clock3 size={14} />
-                        Rund {state.settings.minutes} Minuten<span>·</span>
-                        {activeTopics.length} aktive Themen
-                      </div>
-                    </div>
-                    <div className="notebook-mascot">
-                      <span className="bird-note">Shall we?</span>
-                      <img
-                        src="/pip.svg"
-                        alt="Pip, ein kleiner blauer Vogel mit Bleistift und Notizbuch"
-                      />
-                      <span className="bird-caption">
-                        PIP · HAT SCHON DEN STIFT
-                      </span>
-                    </div>
-                  </section>
-                  <div className="stats-row">
-                    <div className="stat-card">
-                      <span className="stat-icon sage">
-                        <BookOpen size={20} />
-                      </span>
-                      <div>
-                        <strong>{due}</strong>
-                        <span>zur Wiederholung</span>
-                      </div>
-                    </div>
-                    <div className="stat-card">
-                      <span className="stat-icon peach">
-                        <CheckCheck size={20} />
-                      </span>
-                      <div>
-                        <strong>{todayEvents.length}</strong>
-                        <span>heute geübt</span>
-                      </div>
-                    </div>
-                    <div className="stat-card">
-                      <span className="stat-icon lilac">
-                        <Layers3 size={20} />
-                      </span>
-                      <div>
-                        <strong>{activeTopics.length}</strong>
-                        <span>aktive Themen</span>
-                      </div>
-                    </div>
-                  </div>
                   <section
                     className="home-archive"
                     aria-label="Archivübersicht"
@@ -818,23 +912,23 @@ export default function App() {
                   </div>
                 </div>
                 <aside className="today-secondary">
-                  <section className="panel rhythm">
+                  <section className="panel rhythm" id="today-goal">
                     <div className="section-heading">
-                      <h3>Dein Tempo</h3>
-                      <Clock3 size={18} />
+                      <h3>Dein Lernrhythmus</h3>
+                      <TargetIcon size={18} />
                     </div>
-                    <TimeBudget
-                      value={state.settings.minutes}
+                    <DailyGoal
+                      value={state.settings.dailyCardGoal}
                       disabled={busy}
-                      onChange={(minutes) =>
+                      onChange={(cards) =>
                         act((s) => {
-                          s.settings.minutes = minutes;
+                          s.settings.dailyCardGoal = cards;
                         })
                       }
                     />
                     <p className="small muted">
                       {state.session && !state.session.finished
-                        ? "Deine laufende Runde bleibt gespeichert. Die Einstellung gilt für die nächste Runde."
+                        ? "Deine laufende Runde bleibt gespeichert. Neue Runden orientieren sich an den noch offenen Karten deines Tagesziels."
                         : state.settings.limitNewPerDay
                           ? `Tageslimit aktiv: ${state.settings.newPerDay} neue Wörter und ${state.settings.grammarPerDay} neue Grammatikthemen.`
                           : "Neue Inhalte ohne Tageslimit. Fällige Wiederholungen kommen zuerst."}
@@ -849,44 +943,17 @@ export default function App() {
                     </button>
                     <div className="small-label">AN DIESEN TAGEN GEÜBT</div>
                     <Week state={state} />
-                    <p className="small week-note">
-                      {todayEvents.length
-                        ? `${todayEvents.length} Antworten heute gespeichert.`
-                        : "Heute noch keine Antworten gespeichert."}
-                    </p>
-                    <p className="small muted">
-                      Ein Haken steht für einen Tag mit Antworten, nicht für ein
-                      erreichtes Zeitziel.
-                    </p>
                   </section>
-                  <section className="word-card">
-                    <div className="word-label">
-                      <Pencil size={16} /> AM RAND NOTIERT
-                    </div>
-                    <h3>Fair enough.</h3>
-                    <p className="word-translation">„Gut, das verstehe ich.“</p>
-                    <div className="word-example">
-                      “I'd rather take the train.”
-                      <br />
-                      “Fair enough.”
-                    </div>
-                    <p className="small muted">
-                      Wenn du einen Standpunkt anerkennst – auch ohne völlig
-                      zuzustimmen.
-                    </p>
-                    <button
-                      className="text-button"
-                      onClick={() => {
-                        const target = targets.find(
-                          (t) => t.word === "fair enough",
-                        );
-                        if (target) setDetail(target);
-                      }}
-                    >
-                      Ausdruck entdecken
-                      <ArrowRight size={16} />
-                    </button>
-                  </section>
+                  <DailyExpression
+                    content={content}
+                    timezone={state.settings.timezone}
+                    now={now}
+                    onOpen={(target) =>
+                      setDetail(
+                        targets.find((item) => item.id === target.id) ?? target,
+                      )
+                    }
+                  />
                 </aside>
               </div>
             </>
@@ -907,7 +974,7 @@ export default function App() {
                 disabled={busy}
                 onChange={(level) =>
                   act((s) => {
-                    s.settings.level = level;
+                    changeTrainingLevel(s, level);
                   })
                 }
               />
@@ -915,8 +982,11 @@ export default function App() {
                 <Layers3 size={20} />
                 <span>
                   <strong>Du wählst die Themen. Wir planen die Übungen.</strong>{" "}
-                  Fällige Wiederholungen kommen zuerst, neue Inhalte ergänzen
-                  deine Runde. Inaktive Themen bleiben aus dem Training.
+                  Im Themenmix starten wir mit 80 % Wortschatz und 20 %
+                  Grammatik, wenn beide aktiv sind. Dein Lernverlauf passt die
+                  Verteilung an. Fällige Wiederholungen kommen zuerst, neue
+                  Inhalte ergänzen deine Runde. Inaktive Themen bleiben aus dem
+                  Training.
                 </span>
               </div>
               <div className="topic-toolbar">
@@ -1036,6 +1106,14 @@ export default function App() {
               onCustom={setCustom}
             />
           )}
+          {page === "milestones" && (
+            <MilestonesPage
+              state={state}
+              content={content}
+              progress={progress}
+              onProgress={() => navigate("progress")}
+            />
+          )}
           {page === "progress" && (
             <ProgressPage
               state={state}
@@ -1064,7 +1142,10 @@ export default function App() {
               content={content}
               busy={busy}
               act={act}
-              onState={setState}
+              onState={(updated) => {
+                setNewAchievements([]);
+                setState(updated);
+              }}
               notify={setToast}
               installPrompt={installPrompt}
               onInstall={async () => {
@@ -1081,6 +1162,7 @@ export default function App() {
           {page === "session" && (
             <Training
               state={state}
+              progress={progress}
               content={content}
               busy={busy}
               act={act}
@@ -1093,6 +1175,14 @@ export default function App() {
                       : "today",
                 )
               }
+              onEnd={async () => {
+                if (await act(endSession)) {
+                  navigate("today");
+                  setToast(
+                    "Runde beendet. Deine Antworten bleiben gespeichert.",
+                  );
+                }
+              }}
               onTopic={() => navigate("topics")}
               onParticipation={participation}
               onReport={setReport}
@@ -1385,6 +1475,28 @@ export default function App() {
           </form>
         </Modal>
       )}
+      {tourOpen && (
+        <Modal title="Deine kurze App-Tour" onClose={() => void finishTour()}>
+          <AppTour
+            dailyGoal={state.settings.dailyCardGoal}
+            firstRun={firstTour}
+            busy={busy}
+            onFinish={finishTour}
+          />
+        </Modal>
+      )}
+      {offerOpen && (
+        <Modal
+          title="Unbegrenzt lernen"
+          wide
+          onClose={() => setOfferOpen(false)}
+        >
+          <LearningOfferDetails
+            allowance={allowance}
+            onClose={() => setOfferOpen(false)}
+          />
+        </Modal>
+      )}
       {help && (
         <Modal title="Über Einfach Englisch" onClose={() => setHelp(false)}>
           <AboutApp content={content} />
@@ -1519,8 +1631,8 @@ function TopicSettings({
           <ArrowRight size={18} />
         </button>
         <p className="small muted">
-          Nur {practiceTitle} · Level {effectiveLevel(state, topic.id)} · bis zu{" "}
-          {state.settings.minutes} Minuten.
+          Nur {practiceTitle} · Level {effectiveLevel(state, topic.id)}. Die
+          Karten zählen zu deinem Tagesziel von {state.settings.dailyCardGoal}.
           {pref.mode === "paused"
             ? " Aktiviere dieses Thema, um es zu trainieren. Dein Lernstand und angefangene Runden bleiben erhalten."
             : " Neue Inhalte und fällige Wiederholungen werden automatisch geplant. Deine gemischte Runde bleibt für später gespeichert."}
@@ -1533,11 +1645,17 @@ function TopicSettings({
           disabled={busy}
           onChange={(e) => {
             const enabled = e.target.checked;
-            const level = enabled ? state.settings.level : null;
+            const level = enabled
+              ? state.settings.level === "A1" || state.settings.level === "A2"
+                ? "B1"
+                : state.settings.level
+              : null;
             setOwnLevel(enabled);
-            void act((s) => setTopic(s, topic.id, { level })).then((saved) => {
-              if (!saved) setOwnLevel(pref.level !== null);
-            });
+            void act((s) => changeTrainingLevel(s, level, topic.id)).then(
+              (saved) => {
+                if (!saved) setOwnLevel(pref.level !== null);
+              },
+            );
           }}
         />
         Eigenes Level für dieses Thema
@@ -1548,7 +1666,9 @@ function TopicSettings({
           value={pref.level ?? state.settings.level}
           targets={targets}
           disabled={busy}
-          onChange={(level) => act((s) => setTopic(s, topic.id, { level }))}
+          onChange={(level) =>
+            act((s) => changeTrainingLevel(s, level, topic.id))
+          }
         />
       ) : (
         <p className="small muted">
@@ -1880,6 +2000,24 @@ function SourceWord({
         <ChevronDown size={18} />
       </summary>
       <div className="source-senses">
+        <p className="small">
+          Quelle:{" "}
+          <a
+            href={`https://en.wiktionary.org/wiki/${encodeURIComponent(word.word)}#English`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Wiktionary und seine Mitwirkenden
+          </a>{" "}
+          ·{" "}
+          <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            CC BY-SA 4.0
+          </a>
+        </p>
         {word.senses.slice(0, visible).map((sense) => (
           <div className="source-sense" key={sense.id}>
             <div>
@@ -2255,11 +2393,13 @@ function Dictionary({
 }
 
 function ReviewStatus({
+  countHint,
   review,
   busy,
   onRestore,
 }: {
   review: ReviewEvent;
+  countHint: string;
   busy: boolean;
   onRestore?: () => void;
 }) {
@@ -2288,6 +2428,7 @@ function ReviewStatus({
               <strong>{review.exercise.answer}</strong>
             </>
           )}
+          <span className="review-count-note">{countHint}</span>
         </span>
       </div>
       {!review.good && (
@@ -2310,20 +2451,24 @@ function ReviewStatus({
 
 function Training({
   state,
+  progress,
   content,
   busy,
   act,
   onExit,
+  onEnd,
   onTopic,
   onParticipation,
   onReport,
   onArchive,
 }: {
   state: AppState;
+  progress: Engagement;
   content: Content;
   busy: boolean;
   act: Act;
   onExit: () => void;
+  onEnd: () => Promise<void>;
   onTopic: () => void;
   onParticipation: (t: Target, p: AppState["participation"][string]) => void;
   onReport: (t: Target) => void;
@@ -2380,6 +2525,7 @@ function Training({
   const status = lastReview && (
     <ReviewStatus
       key={lastReview.id}
+      countHint={reviewCountHint(state, lastReview)}
       review={{
         ...lastReview,
         exercise: withExerciseCues(lastReview.exercise, content),
@@ -2417,6 +2563,7 @@ function Training({
               ? "Gerade ist nichts fällig oder dein Tageslimit ist erreicht. Du kannst weitere Themen wählen oder das Tageslimit in den Einstellungen abschalten."
               : "Für deine Themen ist gerade nichts mehr fällig oder neu. Wähle weitere Themen oder ergänze Wörter aus dem Wörterbuch."}
         </p>
+        <DailyActivity progress={progress} compact />
         <div className="completion-stats">
           <div>
             <strong>{done.length}</strong>
@@ -2492,25 +2639,31 @@ function Training({
       className={`training ${exercise.meaningCue ? "lexical-training" : ""}`}
     >
       <div className="training-top">
-        <button className="text-button" onClick={onExit}>
+        <button className="secondary" disabled={busy} onClick={onExit}>
           <ChevronLeft size={17} />
           Speichern & pausieren
         </button>
         <span>
           Aufgabe {s.index + 1} / {s.queue.length}
+          <span
+            className="training-daily-activity"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            Heute: {progress.todayCount} / {progress.dailyGoal} Karten
+          </span>
         </span>
         <button
-          className="text-button"
+          className="secondary session-end"
           disabled={busy}
-          onClick={() =>
-            act((d) => {
-              d.session!.finished = true;
-            })
-          }
+          onClick={() => void onEnd()}
         >
-          Runde beenden
+          <X size={18} /> Runde beenden
         </button>
       </div>
+      <p className="session-controls-note">
+        Deine Antworten bleiben gespeichert.
+      </p>
       <div
         className="training-progress"
         aria-label="Position in der Runde, einschließlich übersprungener Aufgaben"
@@ -3023,16 +3176,16 @@ function DataPage({
             disabled={busy}
             onChange={(level) =>
               act((s) => {
-                s.settings.level = level;
+                changeTrainingLevel(s, level);
               })
             }
           />
-          <TimeBudget
-            value={state.settings.minutes}
+          <DailyGoal
+            value={state.settings.dailyCardGoal}
             disabled={busy}
-            onChange={(minutes) =>
+            onChange={(cards) =>
               act((s) => {
-                s.settings.minutes = minutes;
+                s.settings.dailyCardGoal = cards;
               })
             }
           />

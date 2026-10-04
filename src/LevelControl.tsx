@@ -1,5 +1,10 @@
 import { useId, useLayoutEffect, useState } from "react";
-import { learningLevels, type LearningLevel, type Target } from "./domain";
+import {
+  learningLevels,
+  trainingLevels,
+  type LearningLevel,
+  type Target,
+} from "./domain";
 import { levelDescriptions, withinLevel } from "./levels";
 import "./levels.css";
 
@@ -18,9 +23,11 @@ export default function LevelControl({
 }) {
   const id = useId();
   const [draft, setDraft] = useState(value);
+  const legacyBasics = !trainingLevels.includes(value);
   // Apply the saved value before another input event can edit the draft.
   useLayoutEffect(() => setDraft(value), [value]);
   const commit = async (level: LearningLevel) => {
+    if (!trainingLevels.includes(level)) return;
     setDraft(level);
     if (level !== value && (await onChange(level)) === false) setDraft(value);
   };
@@ -34,35 +41,43 @@ export default function LevelControl({
   return (
     <section className="level-control" aria-labelledby={`${id}-label`}>
       <div className="level-control-heading">
-        <label id={`${id}-label`} htmlFor={id}>
+        <label id={`${id}-label`} htmlFor={legacyBasics ? undefined : id}>
           {label}
         </label>
         <strong>{draft}</strong>
       </div>
       <p className="level-description">{levelDescriptions[draft]}</p>
-      <input
-        id={id}
-        type="range"
-        min={0}
-        max={5}
-        step={1}
-        value={learningLevels.indexOf(draft)}
-        disabled={disabled}
-        aria-valuetext={`${draft} – ${levelDescriptions[draft]}`}
-        aria-describedby={`${id}-hint`}
-        onChange={(e) => setDraft(learningLevels[Number(e.target.value)])}
-        onPointerUp={(e) =>
-          void commit(learningLevels[Number(e.currentTarget.value)])
-        }
-        onKeyUp={(e) =>
-          void commit(learningLevels[Number(e.currentTarget.value)])
-        }
-        onBlur={(e) =>
-          void commit(learningLevels[Number(e.currentTarget.value)])
-        }
-      />
+      <p id={`${id}-audience`} className="small muted level-audience">
+        Dein Trainingsschwerpunkt beginnt bei B1 und reicht bis C2. Einfachere
+        A1-/A2-Inhalte bleiben zum Auffrischen dabei.
+        {legacyBasics &&
+          ` Deine bisherige ${value}-Einstellung bleibt erhalten, bis du eine Stufe ab B1 wählst.`}
+      </p>
+      {!legacyBasics && (
+        <input
+          id={id}
+          type="range"
+          min={0}
+          max={trainingLevels.length - 1}
+          step={1}
+          value={trainingLevels.indexOf(draft)}
+          disabled={disabled}
+          aria-valuetext={`${draft} – ${levelDescriptions[draft]}`}
+          aria-describedby={`${id}-audience ${id}-hint`}
+          onChange={(e) => setDraft(trainingLevels[Number(e.target.value)])}
+          onPointerUp={(e) =>
+            void commit(trainingLevels[Number(e.currentTarget.value)])
+          }
+          onKeyUp={(e) =>
+            void commit(trainingLevels[Number(e.currentTarget.value)])
+          }
+          onBlur={(e) =>
+            void commit(trainingLevels[Number(e.currentTarget.value)])
+          }
+        />
+      )}
       <div className="level-ticks" aria-label="Stufe auswählen">
-        {learningLevels.map((level) => (
+        {trainingLevels.map((level) => (
           <button
             key={level}
             type="button"

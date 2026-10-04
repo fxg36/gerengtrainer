@@ -21,6 +21,13 @@ export type Channel = z.infer<typeof channelSchema>;
 export const learningLevels = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 export const learningLevelSchema = z.enum(learningLevels);
 export type LearningLevel = z.infer<typeof learningLevelSchema>;
+// Course content and legacy profiles retain A1/A2; new training choices start at B1.
+export const trainingLevels: readonly LearningLevel[] = [
+  "B1",
+  "B2",
+  "C1",
+  "C2",
+];
 export const DEFAULT_LEVEL: LearningLevel = "B1";
 export const targetSchema = z.object({
   id,
@@ -34,6 +41,11 @@ export const targetSchema = z.object({
   senseContext: z.object({ de: text, en: text }).optional(),
   previousSupport: z
     .object({ context: z.object({ de: text, en: text }), example: text })
+    .optional(),
+  previousSupports: z
+    .array(
+      z.object({ context: z.object({ de: text, en: text }), example: text }),
+    )
     .optional(),
   level: learningLevelSchema.optional(),
   dimensions: z.record(
@@ -160,6 +172,8 @@ export const eventSchema = z.object({
   index: z.number().int().nonnegative(),
   at: iso,
   day: z.string(),
+  // Capture the goal at the answer; older backups intentionally have no snapshot.
+  dailyGoal: z.number().int().min(30).max(250).optional(),
   good: z.boolean(),
   choice: text.nullable(),
   writtenAnswer: text.optional(),
@@ -213,6 +227,8 @@ export const stateSchema = z.object({
   createdAt: iso,
   updatedAt: iso,
   settings: z.object({
+    dailyCardGoal: z.number().int().min(30).max(250).default(50),
+    // Legacy backup metadata; new planning uses dailyCardGoal.
     minutes: z.number().int().min(1).max(120),
     newPerDay: z.number().int().min(0).max(50),
     grammarPerDay: z.number().int().min(0).max(10),
@@ -220,6 +236,17 @@ export const stateSchema = z.object({
     level: learningLevelSchema.default(DEFAULT_LEVEL),
     mode: z.enum(["mixed", "words", "grammar"]),
     onboarded: z.boolean(),
+    // Existing profiles and older backups stay undisturbed; new profiles opt in below.
+    tourVersion: z.number().int().min(0).max(100).default(1),
+    levelSuggestions: z
+      .record(
+        id,
+        z.object({
+          after: iso,
+          snoozedUntil: iso.nullable(),
+        }),
+      )
+      .default({}),
     timezone: z.string().max(100),
   }),
   preferences: z.record(id, preferenceSchema),
@@ -234,6 +261,7 @@ export const stateSchema = z.object({
   ),
   memory: z.record(id, cardSchema),
   events: z.array(eventSchema).max(200000),
+  celebratedAchievements: z.array(id).max(1000).default([]),
   personalTargets: z.array(targetSchema).max(20000),
   personalExercises: z.array(exerciseSchema).max(60000),
   session: sessionSchema.nullable(),
@@ -276,6 +304,7 @@ export function initialState(topics: Topic[], now = new Date()): AppState {
     createdAt: now.toISOString(),
     updatedAt: now.toISOString(),
     settings: {
+      dailyCardGoal: 50,
       minutes: 20,
       newPerDay: 6,
       grammarPerDay: 1,
@@ -283,6 +312,8 @@ export function initialState(topics: Topic[], now = new Date()): AppState {
       level: DEFAULT_LEVEL,
       mode: "mixed",
       onboarded: false,
+      tourVersion: 0,
+      levelSuggestions: {},
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
     },
     preferences: Object.fromEntries(
@@ -301,6 +332,7 @@ export function initialState(topics: Topic[], now = new Date()): AppState {
     participation: {},
     memory: {},
     events: [],
+    celebratedAchievements: [],
     personalTargets: [],
     personalExercises: [],
     session: null,
@@ -321,6 +353,7 @@ export const allTargets = (state: AppState, content: Content) => [
         t.de === target.de &&
         t.kind === target.kind,
     );
+    const previous = current ? priorSupport(current) : [];
     return current
       ? {
           ...target,
@@ -328,7 +361,7 @@ export const allTargets = (state: AppState, content: Content) => [
           example:
             target.classification !== "user" &&
             (!target.example ||
-              target.example === current.previousSupport?.example)
+              previous.some((p) => target.example === p.example))
               ? current.example
               : target.example,
           dimensions:
@@ -353,15 +386,16 @@ export const allTargets = (state: AppState, content: Content) => [
             target.senseContext && current.senseContext
               ? {
                   ...target.senseContext,
-                  de:
-                    target.senseContext.de ===
-                    current.previousSupport?.context.de
-                      ? current.senseContext.de
-                      : target.senseContext.de,
+                  de: previous.some(
+                    (p) => target.senseContext!.de === p.context.de,
+                  )
+                    ? current.senseContext.de
+                    : target.senseContext.de,
                   en:
                     target.senseContext.en === current.gloss ||
-                    target.senseContext.en ===
-                      current.previousSupport?.context.en
+                    previous.some(
+                      (p) => target.senseContext!.en === p.context.en,
+                    )
                       ? current.senseContext.en
                       : target.senseContext.en,
                 }
@@ -370,6 +404,12 @@ export const allTargets = (state: AppState, content: Content) => [
       : target;
   }),
 ];
+function priorSupport(target: Target) {
+  return [
+    ...(target.previousSupport ? [target.previousSupport] : []),
+    ...(target.previousSupports ?? []),
+  ];
+}
 // Older backups keep their exercise snapshots. Add cues only when the actual
 // question and answer still match the bundled version; never replace history.
 export function withExerciseCues(
@@ -392,15 +432,16 @@ export function withExerciseCues(
   // exact copy; custom explanations and immutable review history stay intact.
   const rawDefinition = (value: string | undefined) =>
     !!target?.gloss && value === target.gloss;
+  const previous = target ? priorSupport(target) : [];
   return {
     ...exercise,
     explanation:
       rawDefinition(exercise.explanation) ||
-      (target?.previousSupport &&
-        exercise.explanation ===
-          [target.previousSupport.context.de, target.previousSupport.example]
-            .filter(Boolean)
-            .join("\n"))
+      previous.some(
+        (p) =>
+          exercise.explanation ===
+          [p.context.de, p.example].filter(Boolean).join("\n"),
+      )
         ? current.explanation
         : exercise.explanation,
     translation: exercise.translation ?? current.translation,
@@ -408,11 +449,11 @@ export function withExerciseCues(
     writing: exercise.writing ?? current.writing,
     meaningCue:
       rawDefinition(exercise.meaningCue) ||
-      (target?.previousSupport &&
-        exercise.meaningCue ===
-          target.previousSupport.context[
-            exercise.channel === "productive_recall" ? "de" : "en"
-          ])
+      previous.some(
+        (p) =>
+          exercise.meaningCue ===
+          p.context[exercise.channel === "productive_recall" ? "de" : "en"],
+      )
         ? current.meaningCue
         : (exercise.meaningCue ?? current.meaningCue),
   };

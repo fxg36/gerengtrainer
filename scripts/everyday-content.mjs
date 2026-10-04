@@ -5,14 +5,17 @@ const key = (word, de) => `${word}|${de}`.normalize("NFKC").toLowerCase();
 
 // Original, explicitly authored practice material. A matching spelling alone
 // is not evidence of a dictionary sense match or of a CEFR level.
-export function addEverydayContent(topics, targets, exercises) {
+export function addEverydayContent(
+  topics,
+  targets,
+  exercises,
+  { file = "content/everyday-situations.txt", prefix = "everyday" } = {},
+) {
   const meanings = new Map(targets.map((t) => [key(t.word, t.de), t]));
   const authored = new Set();
   let topic, section;
   const summary = { newMeanings: 0, enrichedMeanings: 0, sections: [] };
-  for (const raw of fs
-    .readFileSync("content/everyday-situations.txt", "utf8")
-    .split(/\r?\n/)) {
+  for (const raw of fs.readFileSync(file, "utf8").split(/\r?\n/)) {
     const line = raw.trim();
     if (!line || line.startsWith("//")) continue;
     if (line.startsWith("# ")) {
@@ -48,14 +51,22 @@ export function addEverydayContent(topics, targets, exercises) {
         throw new Error(`Conflicting existing meaning: ${word} / ${de}`);
       // Keep identity, source, level and exercise IDs for existing meanings.
       // Snapshots can update old stock hints without replacing custom edits.
-      target.previousSupport ??= {
+      const previousSupport = {
         context: { ...target.senseContext },
         example: target.example,
       };
+      if (!target.previousSupport) target.previousSupport = previousSupport;
+      else if (
+        ![target.previousSupport, ...(target.previousSupports ?? [])].some(
+          (previous) =>
+            JSON.stringify(previous) === JSON.stringify(previousSupport),
+        )
+      )
+        (target.previousSupports ??= []).push(previousSupport);
       target.version++;
       summary.enrichedMeanings++;
     } else {
-      const id = `everyday-${crypto.createHash("sha256").update(meaningKey).digest("hex").slice(0, 18)}`;
+      const id = `${prefix}-${crypto.createHash("sha256").update(meaningKey).digest("hex").slice(0, 18)}`;
       target = {
         id,
         kind: "lexical",
@@ -115,7 +126,7 @@ export function addEverydayContent(topics, targets, exercises) {
       exercise.meaningCue =
         exercise.channel === "productive_recall" ? cueDe : cueEn;
       exercise.explanation = `${cueDe}\n${target.example}`;
-      if (!target.id.startsWith("everyday-")) exercise.version++;
+      if (!target.id.startsWith(`${prefix}-`)) exercise.version++;
     }
   }
   const descriptions = {

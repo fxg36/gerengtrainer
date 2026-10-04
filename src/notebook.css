@@ -1185,9 +1185,11 @@ label {
   .sidebar {
     width: 248px;
     transform: translateX(-100%);
+    visibility: hidden;
   }
   .sidebar.open {
     transform: translateX(0);
+    visibility: visible;
   }
   .main-shell {
     margin-left: 0;

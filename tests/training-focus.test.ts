@@ -10,7 +10,12 @@ import {
   type ReviewEvent,
 } from "../src/domain";
 import { openSession, planSession, reviewCard, setTopic } from "../src/engine";
-import { topicBudgets, trainingFocus } from "../src/training-focus";
+import {
+  mixedTopicBudgets,
+  spreadPractice,
+  topicBudgets,
+  trainingFocus,
+} from "../src/training-focus";
 
 const now = new Date("2026-10-02T12:00:00Z");
 const course = JSON.parse(
@@ -48,7 +53,7 @@ const content: Content = {
 };
 function setup() {
   const state = initialState(content.topics, now);
-  state.settings.minutes = 20;
+  state.settings.dailyCardGoal = 40;
   state.settings.level = "C2";
   state.settings.limitNewPerDay = false;
   setTopic(state, "home", { mode: "learn" });
@@ -167,6 +172,74 @@ describe("Bounded performance weights", () => {
 });
 
 describe("Performance-weighted planning", () => {
+  it("starts at 80/20 regardless of the number of active vocabulary topics and spreads grammar through the round", () => {
+    const neutral = trainingFocus([], now);
+    for (const words of [1, 3, 24]) {
+      const ids = [
+        ...Array.from({ length: words }, (_, i) => `word-${i}`),
+        "grammar",
+      ];
+      const budgets = mixedTopicBudgets(50, ids, neutral);
+      expect(budgets.at(-1)).toBe(10);
+      expect(budgets.reduce((a, b) => a + b, 0)).toBe(50);
+    }
+    const state = setup();
+    setTopic(state, "grammar", { mode: "learn" });
+    const queue = planSession(state, content, now).queue;
+    expect(queue).toHaveLength(40);
+    expect(queue.filter((q) => q.topicId === "grammar")).toHaveLength(8);
+    for (let i = 0; i < 40; i += 5)
+      expect(
+        queue.slice(i, i + 5).filter((q) => q.topicId === "grammar"),
+      ).toHaveLength(1);
+    expect(spreadPractice([], [1, 2])).toEqual([1, 2]);
+    expect(spreadPractice([1, 2], [])).toEqual([1, 2]);
+    expect(spreadPractice([], [])).toEqual([]);
+  });
+  it("reduces securely recalled grammar only with enough evidence in both directions", () => {
+    const state = setup();
+    setTopic(state, "grammar", { mode: "learn" });
+    history(state, "grammar_production", 20, 20);
+    expect(
+      planSession(state, content, now).queue.filter(
+        (q) => q.topicId === "grammar",
+      ),
+    ).toHaveLength(8);
+    history(state, "grammar_recognition", 20, 20);
+    expect(
+      planSession(state, content, now).queue.filter(
+        (q) => q.topicId === "grammar",
+      ),
+    ).toHaveLength(6);
+    state.settings.mode = "grammar";
+    expect(
+      planSession(state, content, now).queue.every(
+        (q) => q.topicId === "grammar",
+      ),
+    ).toBe(true);
+  });
+  it("refills an empty vocabulary topic from other vocabulary before changing the 80/20 mix", () => {
+    const expanded = {
+      ...content,
+      topics: [...content.topics, { ...content.topics[0], id: "empty" }],
+    };
+    const state = initialState(expanded.topics, now);
+    state.settings.dailyCardGoal = 50;
+    expanded.topics.forEach((t) => setTopic(state, t.id, { mode: "learn" }));
+    const queue = planSession(state, expanded, now).queue;
+    expect(queue).toHaveLength(50);
+    expect(queue.filter((q) => q.topicId === "grammar")).toHaveLength(10);
+    const withoutGrammar = {
+      ...expanded,
+      targets: expanded.targets.filter((t) => t.kind !== "grammar"),
+      exercises: expanded.exercises.filter(
+        (e) => !e.channel.startsWith("grammar"),
+      ),
+    };
+    const fallback = planSession(state, withoutGrammar, now).queue;
+    expect(fallback).toHaveLength(50);
+    expect(fallback.every((q) => q.topicId === "home")).toBe(true);
+  });
   it.each([
     "productive_recall",
     "receptive_recall",
@@ -214,7 +287,7 @@ describe("Performance-weighted planning", () => {
       planSession(state, content, now).queue.filter(
         (q) => q.topicId === "grammar",
       ),
-    ).toHaveLength(27);
+    ).toHaveLength(13);
     state.settings.mode = "words";
     expect(
       planSession(state, content, now).queue.every((q) => q.topicId === "home"),

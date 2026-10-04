@@ -32,7 +32,7 @@ const writing = course.exercises.find(
 function setup() {
   const s = initialState(course.topics, now);
   s.settings.level = "B2";
-  s.settings.minutes = 20;
+  s.settings.dailyCardGoal = 40;
   setTopic(s, "grammar", { mode: "learn" });
   s.session = planSession(s, course, now, null, "grammar");
   s.session.queue[0].exercise = writing;
@@ -197,7 +197,7 @@ describe("Text production and learning context", () => {
       }
     }
     const refined = course.targets.filter((t) => t.previousSupport);
-    expect(refined).toHaveLength(99);
+    expect(refined).toHaveLength(112);
     expect(new Set(refined.map((t) => t.ownerTopicId)).size).toBe(23);
     expect(refined.every((t) => t.example.split("\n").length === 2)).toBe(true);
   });

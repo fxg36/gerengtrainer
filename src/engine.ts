@@ -1,7 +1,11 @@
 import { createEmptyCard, fsrs, Rating, type Card } from "ts-fsrs";
+import { dayKey } from "./learning-activity";
+import { goalSessionCapacity } from "./learning-goal";
 import { effectiveLevel, mixFreshByLevel } from "./levels";
 import {
   chooseFreshDirections,
+  mixedTopicBudgets,
+  spreadPractice,
   topicBudgets,
   trainingFocus,
 } from "./training-focus";
@@ -25,19 +29,7 @@ import {
 
 const scheduler = fsrs({ request_retention: 0.9, enable_fuzz: false });
 export const ENGINE = "ts-fsrs-5.4.2-retention-0.9" as const;
-export const sessionCapacity = (minutes: number) =>
-  Math.min(240, Math.max(6, Math.floor(minutes * 2)));
-export function dayKey(date: Date, timezone: string): string {
-  const parts = new Intl.DateTimeFormat("en-CA", {
-    timeZone: timezone,
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).formatToParts(date);
-  return ["year", "month", "day"]
-    .map((k) => parts.find((p) => p.type === k)!.value)
-    .join("-");
-}
+export { dayKey } from "./learning-activity";
 export function reviewCard(
   previous: MemoryCard | undefined,
   good: boolean,
@@ -209,7 +201,7 @@ export function planSession(
           ? t.id === "grammar"
           : t.id !== "grammar"),
     );
-  const slots = sessionCapacity(state.settings.minutes);
+  const slots = goalSessionCapacity(state, now);
   const wordLimit = state.settings.limitNewPerDay
     ? state.settings.newPerDay
     : Infinity;
@@ -217,20 +209,28 @@ export function planSession(
     ? state.settings.grammarPerDay
     : Infinity;
   const focus = trainingFocus(state.events, now);
-  const budgets = topicBudgets(
-    slots,
-    topics.map((topic) => {
-      if (archiveTopic) return 1;
-      const channels =
-        topic.id === "grammar"
-          ? (["grammar_production", "grammar_recognition"] as const)
-          : (["productive_recall", "receptive_recall"] as const);
-      return (
-        channels.reduce((sum, channel) => sum + focus[channel].weight, 0) /
-        channels.length
+  const balancedMix =
+    !archiveTopic && !topicId && state.settings.mode === "mixed";
+  const budgets = balancedMix
+    ? mixedTopicBudgets(
+        slots,
+        topics.map((topic) => topic.id),
+        focus,
+      )
+    : topicBudgets(
+        slots,
+        topics.map((topic) => {
+          if (archiveTopic) return 1;
+          const channels =
+            topic.id === "grammar"
+              ? (["grammar_production", "grammar_recognition"] as const)
+              : (["productive_recall", "receptive_recall"] as const);
+          return (
+            channels.reduce((sum, channel) => sum + focus[channel].weight, 0) /
+            channels.length
+          );
+        }),
       );
-    }),
-  );
   const active = state.events.filter(
     (e) => !e.revokedAt && e.mode === "regular",
   );
@@ -456,12 +456,27 @@ export function planSession(
     slots - topicQueues.reduce((sum, queue) => sum + queue.length, 0);
   while (remaining > 0) {
     let added = false;
-    for (const fill of fillTopic) {
-      if (!remaining) break;
-      if (fill()) {
-        remaining--;
-        added = true;
+    const needsDomain = (grammar: boolean) => {
+      const indices = topics
+        .map((topic, i) => ({ topic, i }))
+        .filter(({ topic }) => (topic.id === "grammar") === grammar);
+      return (
+        indices.reduce((sum, { i }) => sum + topicQueues[i].length, 0) <
+        indices.reduce((sum, { i }) => sum + budgets[i], 0)
+      );
+    };
+    // First refill the short domain from other eligible topics in that domain.
+    // Only a genuinely exhausted domain yields its remaining places to the other.
+    for (const preserveMix of balancedMix ? [true, false] : [false]) {
+      for (let i = 0; i < fillTopic.length; i++) {
+        if (!remaining) break;
+        if (preserveMix && !needsDomain(topics[i].id === "grammar")) continue;
+        if (fillTopic[i]()) {
+          remaining--;
+          added = true;
+        }
       }
+      if (added) break;
     }
     if (!added) break;
   }
@@ -469,6 +484,15 @@ export function planSession(
   for (let index = 0; topicQueues.some((q) => index < q.length); index++)
     for (const queue of topicQueues)
       if (queue[index]) session.queue.push(queue[index]);
+  if (balancedMix)
+    session.queue = spreadPractice(
+      session.queue.filter(
+        (item) => targetMap.get(item.exercise.targetId)?.kind !== "grammar",
+      ),
+      session.queue.filter(
+        (item) => targetMap.get(item.exercise.targetId)?.kind === "grammar",
+      ),
+    );
   const duePriority = (item: QueueItem) =>
     item.mode === "regular" &&
     state.memory[memoryKey(item.exercise.targetId, item.exercise.channel)]
@@ -498,6 +522,14 @@ export function findSession(
   const scope = sessionScope({ archiveTopic, topicId, subtopicId });
   return [state.session, ...(state.savedSessions ?? [])].find(
     (s): s is Session => !!s && !s.finished && sessionScope(s) === scope,
+  );
+}
+export function endSession(state: AppState) {
+  if (!state.session) return;
+  const scope = sessionScope(state.session);
+  state.session.finished = true;
+  state.savedSessions = state.savedSessions.filter(
+    (saved) => sessionScope(saved) !== scope,
   );
 }
 export function sessionTopicInactive(
@@ -666,6 +698,7 @@ export function commitReview(
     index: s.index,
     at: now.toISOString(),
     day: dayKey(now, state.settings.timezone),
+    dailyGoal: state.settings.dailyCardGoal,
     good,
     choice,
     writtenAnswer: withExerciseCues(item.exercise, content).writing

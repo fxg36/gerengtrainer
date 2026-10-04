@@ -1,0 +1,49 @@
+.training-estimate {
+  margin: 24px 0;
+  padding: 26px;
+}
+.training-estimate h2 {
+  margin: 8px 0;
+}
+.training-estimate p {
+  line-height: 1.6;
+}
+.estimate-domains {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+.estimate-domains article {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 5px;
+  padding: 18px;
+}
+.estimate-domains span {
+  color: var(--muted);
+}
+.estimate-domains strong {
+  display: block;
+  font-size: 1.35rem;
+  margin-top: 7px;
+}
+.estimate-domains p {
+  font-size: 0.9375rem;
+  margin-bottom: 0;
+}
+.training-estimate summary {
+  cursor: pointer;
+  padding: 10px 0;
+}
+.training-estimate details p {
+  font-size: 0.9375rem;
+}
+@media (max-width: 600px) {
+  .training-estimate {
+    padding: 20px 16px;
+  }
+  .estimate-domains {
+    grid-template-columns: 1fr;
+  }
+}
